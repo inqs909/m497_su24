@@ -1,0 +1,23 @@
+{
+  "syllabus.qmd": {
+    "syllabus.html": "47778b68"
+  },
+  "books.qmd": {
+    "books.html": "3968c903"
+  },
+  "index.qmd": {
+    "index.html": "8dbbc3f9"
+  },
+  "hw/hw1.qmd": {
+    "hw1.html": "f3c189f3"
+  },
+  "hw.qmd": {
+    "hw.html": "6d67c47a"
+  },
+  "posts/week_1.qmd": {
+    "week_1.html": "602af990"
+  },
+  "lectures/15b.qmd": {
+    "15b.html": "bf7af53b"
+  }
+}

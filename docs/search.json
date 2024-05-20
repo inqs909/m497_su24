@@ -1,0 +1,380 @@
+[
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Term: Summer 2024\nInstructor: Isaac Quintanilla Salinas\nContact: isaac.qs@csuci.edu\nOffice Location: BTE 2840\nOffice Hours:\nBy By Appointment (schedule with me) or Zoom appointment: calendly.com/isaac-qs/office-hours\nLecture: Wednesday 5:00-7:00 PM in BTE 2810 and individual appointments for registered students to work on projects.\nCourse Website: m497.inqs.info AND Canvas\n\n\n\nStudents will learn an introductory level of Monte Carlo methods related to random experiments, random number generation, random variable generations, and integration. Topics include inverse-transformation method, accept-reject algorithm, importance sampling, Markov Chains Monte Carlo. This class is useful for students who want to learn the primary engines of Monte Carlo hypothesis testing, Monte Carlo integration and optimization, and Bayesian Statistics. All analysis will be conducted in R.\n\n\n\n\n\n\n\nStatistical Computing (SC)\n\nIsaac Quintanilla Salinas\nwww.inqs.info/stat_comp\nhypothes.is/groups/xMmDdj2A/m408\n\n\n\n\n\nFor this course, we will use R, Quarto, and RStudio. Please download and install on your computer.\n\nR is a free statistical software program that is available for download at: www.r-project.org.\nR Markdown is a scientific documentation known as an RMD file that can be used to provide reproducible code and documents.\nRStudio provides free and open source tools for your data analysis in R: posit.co/downloads\ncsucistats is a developmental R package that will contain RMD templates to submit assignments for class: csucistats\n\n\n\n\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n50%\n\n\nFinal Project\n50%\n\n\n\nAt the end of the quarter, course grades will be assigned according to the following scale:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA+\n98 – 100\nB+\n87 – &lt;90\nC+\n77 – &lt;80\nD+\n67 – &lt;70\n\n\n\n\nA\n93 – &lt;98\nB\n83 – &lt;87\nC\n73 – &lt;77\nD\n63 – &lt;67\nF\n&lt; 60\n\n\nA–\n90 - &lt;93\nB-\n80 – &lt;83\nC–\n70 – &lt;73\nD–\n60 – &lt;63\n\n\n\n\n\n\n\nHomework will be assigned on a regular basis and posted here and Canvas. The homework is to help you practice the concepts learned in lecture and to help you study. You must turn in your own individual homework and show your understanding of the material.\n\n\n\nImplement a Monte Carlo Method to answer a scientific question, study a statistical model, implement a numerical algorithm, or reporting of Monte Carlo Method not mentioned in class.\n\n\n\n\nThe following outline may be subject to change. Any changes will be announced in class.\n\n\n\n\n\n\n\n\n\nWk\nTopic\nReading\nAssignment\n\n\n\n\n1\nIntro to R and Control Flow\nSC: Ch 2-3\nHW # 1\n\n\n2\nControl Flow/Functional Programming\nSC: Ch 3-4\nHW # 2\n\n\n3\nRandom Number/Variable Generation\nSC:\nHW # 3\n\n\n4\nMonte Carlo Integration\nSC:\nHW # 4\n\n\n5\nMonte Carlo Hypothesis Testing\nSC:\nHW # 5\n\n\n6\nPermutation Methods\nSC:\nHW # 6\n\n\n7\nSimulation Study: Linear Regression\nSC:\n\n\n\n8\nSimulation Study: Generalized Linear Models\nSC:\n\n\n\n9\nSimulation Study: Zero-Inflated Models\nSC:\n\n\n\n10\nSimulation Study: Mixed-Effects Models\nSC:\n\n\n\n11\nFinal Presentation\n\n\n\n\n\n\n\n\n\nAcademic Honesty:\nPlease conduct yourself with honesty and integrity. Do not submit others’ work as your own. For assignments and quizzes that allow you to work with a group, only put your name on what the group submits if you genuinely contributed to the work. Work completely independently on exams, using only the materials that are indicated as allowed. Failure to observe academic honesty results in substantial penalties that can include failing the course.\nDisabilities:\nIf you are a student with a disability requesting reasonable accommodations in this course, you need to contact Disability Accommodations and Support Services (DASS) located on the second floor of Arroyo Hall, via email accommodations@csuci.edu or call 805-437-3331. All requests for reasonable accommodations require registration with DASS in advance of need: https://www.csuci.edu/dass/students/apply-for-services.htm. Faculty, students and DASS will work together regarding classroom accommodations. You are encouraged to discuss approved.\nEmergency Procedure Notice to Students:\nCSUCI is following guidelines and public orders from the California Department of Public Health and Ventura County Public Health for the COVID-19 pandemic as it pertains to CSUCI students, employees and visitors on the campus. Students are expected to adhere to all health and safety requirements as noted on the University’s Spring 2023 Semester website or they may be subject to removal from the classroom."
+  },
+  {
+    "objectID": "syllabus.html#math-497-intro-to-monte-carlo-methods",
+    "href": "syllabus.html#math-497-intro-to-monte-carlo-methods",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Term: Summer 2024\nInstructor: Isaac Quintanilla Salinas\nContact: isaac.qs@csuci.edu\nOffice Location: BTE 2840\nOffice Hours:\nBy By Appointment (schedule with me) or Zoom appointment: calendly.com/isaac-qs/office-hours\nLecture: Wednesday 5:00-7:00 PM in BTE 2810 and individual appointments for registered students to work on projects.\nCourse Website: m497.inqs.info AND Canvas\n\n\n\nStudents will learn an introductory level of Monte Carlo methods related to random experiments, random number generation, random variable generations, and integration. Topics include inverse-transformation method, accept-reject algorithm, importance sampling, Markov Chains Monte Carlo. This class is useful for students who want to learn the primary engines of Monte Carlo hypothesis testing, Monte Carlo integration and optimization, and Bayesian Statistics. All analysis will be conducted in R.\n\n\n\n\n\n\n\nStatistical Computing (SC)\n\nIsaac Quintanilla Salinas\nwww.inqs.info/stat_comp\nhypothes.is/groups/xMmDdj2A/m408\n\n\n\n\n\nFor this course, we will use R, Quarto, and RStudio. Please download and install on your computer.\n\nR is a free statistical software program that is available for download at: www.r-project.org.\nR Markdown is a scientific documentation known as an RMD file that can be used to provide reproducible code and documents.\nRStudio provides free and open source tools for your data analysis in R: posit.co/downloads\ncsucistats is a developmental R package that will contain RMD templates to submit assignments for class: csucistats\n\n\n\n\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n50%\n\n\nFinal Project\n50%\n\n\n\nAt the end of the quarter, course grades will be assigned according to the following scale:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA+\n98 – 100\nB+\n87 – &lt;90\nC+\n77 – &lt;80\nD+\n67 – &lt;70\n\n\n\n\nA\n93 – &lt;98\nB\n83 – &lt;87\nC\n73 – &lt;77\nD\n63 – &lt;67\nF\n&lt; 60\n\n\nA–\n90 - &lt;93\nB-\n80 – &lt;83\nC–\n70 – &lt;73\nD–\n60 – &lt;63\n\n\n\n\n\n\n\nHomework will be assigned on a regular basis and posted here and Canvas. The homework is to help you practice the concepts learned in lecture and to help you study. You must turn in your own individual homework and show your understanding of the material.\n\n\n\nImplement a Monte Carlo Method to answer a scientific question, study a statistical model, implement a numerical algorithm, or reporting of Monte Carlo Method not mentioned in class.\n\n\n\n\nThe following outline may be subject to change. Any changes will be announced in class.\n\n\n\n\n\n\n\n\n\nWk\nTopic\nReading\nAssignment\n\n\n\n\n1\nIntro to R and Control Flow\nSC: Ch 2-3\nHW # 1\n\n\n2\nControl Flow/Functional Programming\nSC: Ch 3-4\nHW # 2\n\n\n3\nRandom Number/Variable Generation\nSC:\nHW # 3\n\n\n4\nMonte Carlo Integration\nSC:\nHW # 4\n\n\n5\nMonte Carlo Hypothesis Testing\nSC:\nHW # 5\n\n\n6\nPermutation Methods\nSC:\nHW # 6\n\n\n7\nSimulation Study: Linear Regression\nSC:\n\n\n\n8\nSimulation Study: Generalized Linear Models\nSC:\n\n\n\n9\nSimulation Study: Zero-Inflated Models\nSC:\n\n\n\n10\nSimulation Study: Mixed-Effects Models\nSC:\n\n\n\n11\nFinal Presentation\n\n\n\n\n\n\n\n\n\nAcademic Honesty:\nPlease conduct yourself with honesty and integrity. Do not submit others’ work as your own. For assignments and quizzes that allow you to work with a group, only put your name on what the group submits if you genuinely contributed to the work. Work completely independently on exams, using only the materials that are indicated as allowed. Failure to observe academic honesty results in substantial penalties that can include failing the course.\nDisabilities:\nIf you are a student with a disability requesting reasonable accommodations in this course, you need to contact Disability Accommodations and Support Services (DASS) located on the second floor of Arroyo Hall, via email accommodations@csuci.edu or call 805-437-3331. All requests for reasonable accommodations require registration with DASS in advance of need: https://www.csuci.edu/dass/students/apply-for-services.htm. Faculty, students and DASS will work together regarding classroom accommodations. You are encouraged to discuss approved.\nEmergency Procedure Notice to Students:\nCSUCI is following guidelines and public orders from the California Department of Public Health and Ventura County Public Health for the COVID-19 pandemic as it pertains to CSUCI students, employees and visitors on the campus. Students are expected to adhere to all health and safety requirements as noted on the University’s Spring 2023 Semester website or they may be subject to removal from the classroom."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Monte Carlo Methods!",
+    "section": "",
+    "text": "Brief Introduction\n\n\n\n\n\nWelcome to the course! This is the home page of the course where I will provide a recap on what was covered in the week. Here I will post any documents or videos for your reference. If you have any questions, please email me at isaac.qs@csuci.edu.\n\n\n\n\n\n\n\n\n\nQuarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Statistics Book\n\n\n\n\n\nhttps://openintro-ims.netlify.app/\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\nThis week is designed to be an introduction week. We will briefly discuss topics related to statistics and inference. Then we will look at installing R and RStudio as well as the basics of using R.\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "hw.html",
+    "href": "hw.html",
+    "title": "Homework",
+    "section": "",
+    "text": "Quarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\nBelow are the different homework assignments for the course. Make sure to upload your assignment as a single file on Canvas.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "hw/hw1.html",
+    "href": "hw/hw1.html",
+    "title": "Homework 1",
+    "section": "",
+    "text": "Due 2/10/24 @ 11:59 PM\nUse an RMD M408 Template to create the assignment.\nYou must comment all your code to receive credit.\nSubmit the *.html file to canvas.\nFor all problems, you must use at least one for or while loop."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-1",
+    "href": "hw/hw1.html#problem-1",
+    "title": "Homework 1",
+    "section": "Problem 1",
+    "text": "Problem 1\nUsing the following code:\n\nx &lt;- matrix(rnorm(1500), nrow = 10)\n\nWrite the code to produce the output if you use the rowMeans() on the R object x.\n\n\nAnswer\nxmeans &lt;- vector(length = nrow(x))\nfor(i in 1:nrow(x)){\n  xmeans[i] &lt;- mean(x[i,])\n}\n#xmeans"
+  },
+  {
+    "objectID": "hw/hw1.html#problem-2",
+    "href": "hw/hw1.html#problem-2",
+    "title": "Homework 1",
+    "section": "Problem 2",
+    "text": "Problem 2\nUsing the following code:\n\ny &lt;- matrix(sample(1:400, 100, replace = T), nrow = 10)\n\nFind the median value for each column of the matrix y. You are not allowed to use the median() function.\n\n\nAnswer\nymedian &lt;- vector(length = ncol(x))\nfor(i in 1:nrow(x)){\n  ymedian[i] &lt;- sum(x[5:6,]) / 2\n}\n#ymedian"
+  },
+  {
+    "objectID": "hw/hw1.html#problem-3",
+    "href": "hw/hw1.html#problem-3",
+    "title": "Homework 1",
+    "section": "Problem 3",
+    "text": "Problem 3\nWrite the code that will generate the first 1000 numbers of the Fibonacci Sequence.\n\n\nAnswer\nfib &lt;- c(0,1)\nfor(i in 3:1000){\n  fib &lt;- c(fib, fib[i-2] + fib[i-1])\n}\n#fib"
+  },
+  {
+    "objectID": "books.html",
+    "href": "books.html",
+    "title": "Books",
+    "section": "",
+    "text": "A list of recommended books to learn more about Statistics, the majority are freely available from the Broome Library:"
+  },
+  {
+    "objectID": "books.html#basics",
+    "href": "books.html#basics",
+    "title": "Books",
+    "section": "Basics",
+    "text": "Basics\n\nIntroduction to Statistics and Data Analysis\n\nHeumann and Shalabh\n\nStatistical Foundations, Reasoning and Inference\n\nKauermann, Küchenhoff, and Heumann"
+  },
+  {
+    "objectID": "books.html#regression",
+    "href": "books.html#regression",
+    "title": "Books",
+    "section": "Regression",
+    "text": "Regression\n\nGeneralized Linear Models With Examples in R\n\nDunn and Smyth\nGraduate\n\nLinear and Generalized Linear Mixed Models and Their Applications (2nd Edition)\n\nJiang and Nguyen\nGraudate\n\nRegression Modeling Strategies\n\nHarrell\nUndergraduate\n\nVector Generalized Linear and Additive Models\n\nYee\nGraduate"
+  },
+  {
+    "objectID": "books.html#nonparametric",
+    "href": "books.html#nonparametric",
+    "title": "Books",
+    "section": "Nonparametric",
+    "text": "Nonparametric\n\nSemiparametric Regression with R\n\nHarezlak, Ruppert, and Wand\nGraduate"
+  },
+  {
+    "objectID": "books.html#computational",
+    "href": "books.html#computational",
+    "title": "Books",
+    "section": "Computational",
+    "text": "Computational\n\nBootstrap Methods with applications in R\n\nDikta and Scheer\nGraduate\n\nModern Optimization with R (2nd Edition)\n\nCortez\nGraduate\n\nComputational Statistics\n\nGentle\n\nMonte Carlo and Quasi-Monte Carlo Sampling\n\nLemieux\n\nStatistics With Julia\n\nNazarathy andKlok\n\nIntroducing Monte Carlo Methods in R\n\nRobert and Casella\n\nPermutation Statistical Methods with R\n\nBerry, Kvamme, Johnston, and Mielke\n\nMonte Carlo Strategies in Scientific Computing\n\nLiu"
+  },
+  {
+    "objectID": "books.html#bayesian",
+    "href": "books.html#bayesian",
+    "title": "Books",
+    "section": "Bayesian",
+    "text": "Bayesian\n\nIntroduction to Bayesian Inference, Methods and Computation\n\nHeard\n\nApplied Bayesian Statistics\n\nCowles\n\nBayesian Statistical Modeling with Stan, R, and Python\n\nMatsuura\n\nBayesian Essentials in R\n\nMarin and Robert"
+  },
+  {
+    "objectID": "books.html#theoretical",
+    "href": "books.html#theoretical",
+    "title": "Books",
+    "section": "Theoretical",
+    "text": "Theoretical\n\nEssentials of Stochastic Processes (3rd Edition)\n\nDurrett\nGraduate\n\nA Concise Introduction to Measure Theory\n\nShirali\nGraduate\n\nLarge Sample Techniques for Statistics (2nd Edition)\n\nJiang\nGraduate\n\nA Course in Mathematical Statistics and Large Sample Theory\n\nBhattacharya, Lin, and Patrangenaru\nGraduate\n\nMixture and Hidden Markov Models with R\n\nVisser and Speekenbrink\nUndergraduate\n\nModern Mathematical Statistics (3rd Edition)\n\nDevore, Berk, and Carlton\nUndergraduate\n\nProbability Theory (3rd Edition)\n\nKlenke\nGraduate\n\nTesting Statistical Hypotheses (4th Edition)\n\nLehmann and Romano\nGraduate\n\nTheory of Point Estimation\n\nLehmann and Casella\nGraduate\nMay not be available"
+  },
+  {
+    "objectID": "books.html#longitudinal-data-analysis",
+    "href": "books.html#longitudinal-data-analysis",
+    "title": "Books",
+    "section": "Longitudinal Data Analysis",
+    "text": "Longitudinal Data Analysis\n\nLongitudinal Categorical Data Analysis\n\nSutradhar"
+  },
+  {
+    "objectID": "books.html#survival-analysis",
+    "href": "books.html#survival-analysis",
+    "title": "Books",
+    "section": "Survival Analysis",
+    "text": "Survival Analysis\n\nStatistical Modelling of Survival Data with Random Effects\n\nHa, Jeong, and Lee\n\nSurvival Analysis (3rd Edition)\n\nKleinbaum and Klein\n\nApplied Survival Analysis in R\n\nMoore\n\nBayesian Survival Analysis\n\nIbrahim, Chen, and Sinha\n\nSurvival Analysis Techniques for Censored and Truncated Data (2nd Edition)\n\nKlein and Moeschberger"
+  },
+  {
+    "objectID": "books.html#machine-learning",
+    "href": "books.html#machine-learning",
+    "title": "Books",
+    "section": "Machine Learning",
+    "text": "Machine Learning\n\nFundamental of High-Dimensional Statistics\n\nLederer\n\nAn Introduction to Statistical Learning (2nd Edition)\n\nJames, Witten, Hastie and Tibshirani\n\nStatistical Learning from a Regression Perspective (2nd Edition)\n\nBerk\n\nElements of Statistical Learning\n\nHastie, Friedman, and Tibshirani\n\nStatistics for High Dimensional Data\n\nBühlmann and van der Geer\n\nProbability and Statistics for Machine Learning\n\nDas Gupta"
+  },
+  {
+    "objectID": "books.html#time-series",
+    "href": "books.html#time-series",
+    "title": "Books",
+    "section": "Time-Series",
+    "text": "Time-Series\n\nIntroduction to Time Series and Forcasting (3rd Edition)\n\nBrockwell and Davis\n\nTime Series Analysis and Its Applications\n\nShumway and Stoffer\n\nTime Series Analysis for the State-Space Model with R/Stan\n\nHagiwara"
+  },
+  {
+    "objectID": "books.html#study-desing-and-causal-inference",
+    "href": "books.html#study-desing-and-causal-inference",
+    "title": "Books",
+    "section": "Study Desing and Causal Inference",
+    "text": "Study Desing and Causal Inference\n\nCausal Inference What IF\n\nHernán and Robins\n\nDesign of Observational Studies\n\nRosenbaum\n\n\nBolded Titles, I have read thoroughly."
+  },
+  {
+    "objectID": "posts/week_1.html",
+    "href": "posts/week_1.html",
+    "title": "Week 1",
+    "section": "",
+    "text": "Installing R and RStudio\nScripts\nR Calculator\nR Objects\nR Packages"
+  },
+  {
+    "objectID": "posts/week_1.html#learning-outcomes",
+    "href": "posts/week_1.html#learning-outcomes",
+    "title": "Week 1",
+    "section": "",
+    "text": "Installing R and RStudio\nScripts\nR Calculator\nR Objects\nR Packages"
+  },
+  {
+    "objectID": "posts/week_1.html#resources",
+    "href": "posts/week_1.html#resources",
+    "title": "Week 1",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nLecture\nSlides\nVideos"
+  },
+  {
+    "objectID": "lectures/15b.html#supervised-machine-learning",
+    "href": "lectures/15b.html#supervised-machine-learning",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Supervised Machine Learning",
+    "text": "Supervised Machine Learning\n\\[\n\\boldsymbol X = (X_1, X_2, \\cdots, X_n)\\mrTr\n\\] where\n\\[\nX_i = (x_{i1}, x_{i2}, \\cdots, x_{in})\n\\] and\n\\[\n\\boldsymbol Y = (Y_1, Y_2, \\cdots, Y_n)\\mrTr\n\\]"
+  },
+  {
+    "objectID": "lectures/15b.html#unsupervised-machine-learning-1",
+    "href": "lectures/15b.html#unsupervised-machine-learning-1",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Unsupervised Machine Learning",
+    "text": "Unsupervised Machine Learning\nGiven:\n\\[\n\\boldsymbol X = (X_1, X_2, \\cdots, X_n)\\mrTr\n\\] where\n\\[\nX_i = (x_{i1}, x_{i2}, \\cdots, x_{in})\n\\]\nGroup the data to \\(K\\) categories."
+  },
+  {
+    "objectID": "lectures/15b.html#unsupervised-machine-learning-2",
+    "href": "lectures/15b.html#unsupervised-machine-learning-2",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Unsupervised Machine Learning",
+    "text": "Unsupervised Machine Learning\nWe can naturally group data with the following techniques:\n\nPrincipal Component Analysis\nK-Means Clustering\nHierarchical Clustering\nMixture Models"
+  },
+  {
+    "objectID": "lectures/15b.html#principal-componenet-analysis",
+    "href": "lectures/15b.html#principal-componenet-analysis",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Principal Componenet Analysis",
+    "text": "Principal Componenet Analysis\nPrincipal Component Analysis (PCA) is a dimensionality reduction technique used to simplify complex datasets while retaining as much of the original variability as possible. It accomplishes this by transforming the original variables into a new set of orthogonal variables called principal components. PCA is widely used in data analysis, visualization, and machine learning for tasks such as feature extraction, data compression, and noise reduction."
+  },
+  {
+    "objectID": "lectures/15b.html#k-means-clustering",
+    "href": "lectures/15b.html#k-means-clustering",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "K-Means Clustering",
+    "text": "K-Means Clustering\nK-Means clustering is one of the most popular unsupervised machine learning algorithms used for partitioning a dataset into a predetermined number of clusters. It aims to group similar data points together and discover underlying patterns or structures within the data. K-Means is simple, efficient, and widely applicable in various domains, including data analysis, image processing, and customer segmentation."
+  },
+  {
+    "objectID": "lectures/15b.html#hierarchical-clustering",
+    "href": "lectures/15b.html#hierarchical-clustering",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Hierarchical Clustering",
+    "text": "Hierarchical Clustering\nHierarchical clustering is a method used to cluster data into a hierarchy of clusters. Unlike K-Means, which requires specifying the number of clusters upfront, hierarchical clustering builds a tree-like structure (dendrogram) that reflects the relationships between data points at different levels of granularity. Hierarchical clustering can be divided into two main types: agglomerative and divisive."
+  },
+  {
+    "objectID": "lectures/15b.html#mixture-models",
+    "href": "lectures/15b.html#mixture-models",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Mixture Models",
+    "text": "Mixture Models\nMixture models for clustering, often referred to as Gaussian Mixture Models (GMMs), are probabilistic models used to describe the distribution of data as a mixture of multiple Gaussian distributions. Unlike K-Means or hierarchical clustering, which assign data points to discrete clusters, GMMs represent each cluster as a probability distribution over the entire feature space. This allows for more flexible modeling of complex data distributions and enables soft assignment of data points to clusters based on their probabilities."
+  },
+  {
+    "objectID": "lectures/15b.html#topic-modelling",
+    "href": "lectures/15b.html#topic-modelling",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Topic Modelling",
+    "text": "Topic Modelling\nTopic modeling is a statistical technique used to identify latent topics or themes within a collection of text documents. It aims to uncover the underlying structure of the text data by automatically clustering documents into topics based on the distribution of words across documents. Topic modeling is widely used in natural language processing (NLP) and text mining for tasks such as document clustering, information retrieval, and content analysis."
+  },
+  {
+    "objectID": "lectures/15b.html#latent-dirichlet-allocation",
+    "href": "lectures/15b.html#latent-dirichlet-allocation",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Latent Dirichlet Allocation",
+    "text": "Latent Dirichlet Allocation\nLatent Dirichlet Allocation (LDA) is a probabilistic model used for topic modeling in natural language processing (NLP). LDA assumes that each document in the corpus is generated by a probabilistic process involving a mixture of topics. It posits that documents exhibit multiple topics, and each word within a document is associated with one of these topics."
+  },
+  {
+    "objectID": "lectures/15b.html#structural-topic-model",
+    "href": "lectures/15b.html#structural-topic-model",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Structural Topic Model",
+    "text": "Structural Topic Model\nThe Structural Topic Model (STM) is an extension of the Latent Dirichlet Allocation (LDA) model that incorporates document metadata and covariates to capture the structural aspects of text data. Unlike LDA, which assumes that topics are generated independently of document metadata, STM allows for the incorporation of metadata or covariates associated with each document. Covariates could include document-level characteristics such as authorship, publication year, geographic location, or any other relevant metadata."
+  },
+  {
+    "objectID": "lectures/15b.html#text-mining-resource",
+    "href": "lectures/15b.html#text-mining-resource",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Text Mining Resource",
+    "text": "Text Mining Resource"
+  },
+  {
+    "objectID": "lectures/15b.html#r-packages",
+    "href": "lectures/15b.html#r-packages",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "R Packages",
+    "text": "R Packages\n\nlibrary(tidyverse)\nlibrary(taylor)\nlibrary(tidytext)\nlibrary(stm)"
+  },
+  {
+    "objectID": "lectures/15b.html#data-cleaning",
+    "href": "lectures/15b.html#data-cleaning",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Data Cleaning",
+    "text": "Data Cleaning\n\ntidy_taylor &lt;-\n  taylor_album_songs |&gt;\n  unnest(lyrics) |&gt; \n  unnest_tokens(word, lyric)\n\n\ntidy_taylor |&gt; \n  anti_join(get_stopwords()) |&gt; \n  count(track_name, word, sort = TRUE) |&gt; \n  head(4)\n\n#&gt; # A tibble: 4 × 3\n#&gt;   track_name                          word      n\n#&gt;   &lt;chr&gt;                               &lt;chr&gt; &lt;int&gt;\n#&gt; 1 Red (Taylor's Version)              red     107\n#&gt; 2 I Did Something Bad                 di       81\n#&gt; 3 I Wish You Would (Taylor's Version) wish     81\n#&gt; 4 Shake It Off (Taylor's Version)     shake    70\n\nlyrics_sparse &lt;-\n  tidy_taylor |&gt; \n  count(track_name, word) |&gt; \n  filter(n &gt; 3) |&gt; \n  cast_sparse(track_name, word, n)"
+  },
+  {
+    "objectID": "lectures/15b.html#topic-modelling-1",
+    "href": "lectures/15b.html#topic-modelling-1",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Topic Modelling",
+    "text": "Topic Modelling\n\nset.seed(123)\ntopic_model &lt;- stm(lyrics_sparse, K = 8, verbose = FALSE)"
+  },
+  {
+    "objectID": "lectures/15b.html#summary",
+    "href": "lectures/15b.html#summary",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Summary",
+    "text": "Summary\n\nsummary(topic_model)\n\n#&gt; A topic model with 8 topics, 209 documents and a 909 word dictionary.\n\n\n#&gt; Topic 1 Top Words:\n#&gt;       Highest Prob: i, was, you, the, it, like, and \n#&gt;       FREX: red, isn't, snow, beach, him, was, too \n#&gt;       Lift: between, hair, prayer, rare, sacred, stairs, wind \n#&gt;       Score: red, snow, beach, him, was, isn't, there \n#&gt; Topic 2 Top Words:\n#&gt;       Highest Prob: i, you, the, and, me, wanna, what \n#&gt;       FREX: shake, wanna, wish, would, mm, bye, game \n#&gt;       Lift: team, stephen, hide, fancy, tear, game, bye \n#&gt;       Score: shake, wanna, wish, mm, off, fake, hung \n#&gt; Topic 3 Top Words:\n#&gt;       Highest Prob: you, i, and, the, me, to, my \n#&gt;       FREX: fly, left, losing, jump, go, someday, belong \n#&gt;       Lift: shoulda, okay, ours, superstar, slope, lately, start \n#&gt;       Score: la, times, fly, mean, bet, losing, smile \n#&gt; Topic 4 Top Words:\n#&gt;       Highest Prob: the, i, we, in, you, and, of \n#&gt;       FREX: woods, clear, huh, mine, car, getaway, walk \n#&gt;       Lift: ready, shimmer, walk, checkin, mailbox, ridin, huh \n#&gt;       Score: clear, woods, yet, daylight, out, walk, street \n#&gt; Topic 5 Top Words:\n#&gt;       Highest Prob: oh, you, and, the, this, i, is \n#&gt;       FREX: trouble, oh, rains, this, grow, asking, last \n#&gt;       Lift: promises, sing, these, lovin, rest, usin, flew \n#&gt;       Score: oh, last, trouble, asking, grow, rains, being \n#&gt; Topic 6 Top Words:\n#&gt;       Highest Prob: you, the, ooh, i, and, ah, to \n#&gt;       FREX: ha, starlight, ah, ooh, twenty, thing, whoa \n#&gt;       Lift: bought, count, keeping, everyone's, humming, kitchen, push \n#&gt;       Score: ooh, ha, ah, dorothea, starlight, twenty, you'll \n#&gt; Topic 7 Top Words:\n#&gt;       Highest Prob: you, it, a, i, and, the, we \n#&gt;       FREX: di, karma, blood, beautiful, wonderland, call, we've \n#&gt;       Lift: deep, worship, sad, turns, felt, why's, boyfriend \n#&gt;       Score: di, blood, karma, call, we've, hey, da \n#&gt; Topic 8 Top Words:\n#&gt;       Highest Prob: you, i, to, the, me, been, and \n#&gt;       FREX: york, welcome, mr, been, stay, i've, would've \n#&gt;       Lift: guiding, caught, both, quite, beat, bright, closure \n#&gt;       Score: york, welcome, stay, mr, would've, new, soundtrack"
+  },
+  {
+    "objectID": "lectures/15b.html#plot",
+    "href": "lectures/15b.html#plot",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Plot",
+    "text": "Plot\n\n\nCode\nlyrics_gamma &lt;- tidy(\n  topic_model, \n  matrix = \"gamma\",\n  document_names = rownames(lyrics_sparse)\n) \n\nlyrics_gamma |&gt; \n  left_join(\n    taylor_album_songs |&gt; \n      select(album_name, document = track_name) |&gt; \n      mutate(album_name = fct_inorder(album_name))\n  ) |&gt; \n  mutate(topic = factor(topic)) |&gt; \n  ggplot(aes(gamma, topic, fill = topic)) +\n  geom_boxplot(alpha = 0.7, show.legend = FALSE) +\n  facet_wrap(vars(album_name)) +\n  labs(x = expression(gamma))"
+  },
+  {
+    "objectID": "lectures/15b.html#significant-effects",
+    "href": "lectures/15b.html#significant-effects",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Significant Effects",
+    "text": "Significant Effects\n\n\nCode\nset.seed(909)\n\neffects &lt;-\n  estimateEffect(\n    1:8 ~ album_name,\n    topic_model,\n    taylor_album_songs |&gt; distinct(track_name, album_name) |&gt; arrange(track_name)\n  )\n\n\ntidy(effects) |&gt;  \n  filter(term != \"(Intercept)\", p.value &lt; 0.1) |&gt; \n  select(topic, term, p.value)\n\n\n#&gt; # A tibble: 8 × 3\n#&gt;   topic term                                   p.value\n#&gt;   &lt;int&gt; &lt;chr&gt;                                    &lt;dbl&gt;\n#&gt; 1     1 album_nameMidnights                    0.0313 \n#&gt; 2     2 album_nameMidnights                    0.0781 \n#&gt; 3     3 album_nameFearless (Taylor's Version)  0.0205 \n#&gt; 4     3 album_namefolklore                     0.00472\n#&gt; 5     3 album_nameSpeak Now (Taylor's Version) 0.0242 \n#&gt; 6     3 album_nameTaylor Swift                 0.0289 \n#&gt; 7     7 album_nameFearless (Taylor's Version)  0.0475 \n#&gt; 8     7 album_nameSpeak Now (Taylor's Version) 0.0441"
+  },
+  {
+    "objectID": "lectures/15b.html#topic-3",
+    "href": "lectures/15b.html#topic-3",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Topic 3",
+    "text": "Topic 3\n\ntidy(topic_model, matrix = \"lift\") |&gt; \n  filter(topic == 3)\n\n#&gt; # A tibble: 909 × 2\n#&gt;    topic term     \n#&gt;    &lt;int&gt; &lt;chr&gt;    \n#&gt;  1     3 shoulda  \n#&gt;  2     3 okay     \n#&gt;  3     3 ours     \n#&gt;  4     3 superstar\n#&gt;  5     3 slope    \n#&gt;  6     3 lately   \n#&gt;  7     3 start    \n#&gt;  8     3 under    \n#&gt;  9     3 peace    \n#&gt; 10     3 lover    \n#&gt; # ℹ 899 more rows"
+  },
+  {
+    "objectID": "lectures/15b.html#the-missing-statistics-sememster",
+    "href": "lectures/15b.html#the-missing-statistics-sememster",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "The Missing Statistics Sememster",
+    "text": "The Missing Statistics Sememster\nHere is a list of resources to expand on topics not covered in your education.\nAdapted from https://missing.csail.mit.edu/"
+  },
+  {
+    "objectID": "lectures/15b.html#introduction-to-statistics",
+    "href": "lectures/15b.html#introduction-to-statistics",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Introduction to Statistics",
+    "text": "Introduction to Statistics\n\nTraditional Statistics\nModern Basic Statistics\nStatistical Modeling\nStatistical Thinking\nStats for People Who Hate Stats"
+  },
+  {
+    "objectID": "lectures/15b.html#statistical-computing",
+    "href": "lectures/15b.html#statistical-computing",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Statistical Computing",
+    "text": "Statistical Computing\n\nComputational Statistics (2009, Springer; Download from CSUCI Library)\nBasic Elements of Computational Statistics (2017, Springer; Download from CSUCI)\nOptimization (2013, Springer; Download from CSUCI)"
+  },
+  {
+    "objectID": "lectures/15b.html#regression",
+    "href": "lectures/15b.html#regression",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Regression",
+    "text": "Regression\n\nBeyond Linear Regression\nRegression Modelling Strategies (Download from CSUCI Library)\nLinear Models\nGeneralized Linear Models With Examples in R (Download from CSUCI Library)\nLinear and Generalized Linear Mixed Models and Their Applications (2nd Edition) (Download from CSUCI Library)\nVector Generalized Linear and Additive Models; Yee (Download from CSUCI Library)"
+  },
+  {
+    "objectID": "lectures/15b.html#other-statistics-resources",
+    "href": "lectures/15b.html#other-statistics-resources",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Other Statistics Resources",
+    "text": "Other Statistics Resources\n\nStatLect\nCausal Inference\nLinear Algebra"
+  },
+  {
+    "objectID": "lectures/15b.html#r-programming",
+    "href": "lectures/15b.html#r-programming",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "R Programming",
+    "text": "R Programming\n\nBasic R\nBasic R\nAdvanced R\nEfficient R\nR Bootcamp\nDeep R\nRcpp\nRcpp 4 Everyone\nRcpp Armadillo"
+  },
+  {
+    "objectID": "lectures/15b.html#python-programming",
+    "href": "lectures/15b.html#python-programming",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Python Programming",
+    "text": "Python Programming\n\nBasic Python\nAnaconda\nLearn Python\nPython Data Science\nReticulate"
+  },
+  {
+    "objectID": "lectures/15b.html#sql",
+    "href": "lectures/15b.html#sql",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "SQL",
+    "text": "SQL\n\nSQL for Data Science\nKhan Academy\nSQLBolt\nSQLZoo"
+  },
+  {
+    "objectID": "lectures/15b.html#shell-terminal",
+    "href": "lectures/15b.html#shell-terminal",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Shell-Terminal",
+    "text": "Shell-Terminal\n\nMissing Semester\nShell\nExplain Shell\nVim Adventures\nNeovim\ntmux\nHPCC Manuals"
+  },
+  {
+    "objectID": "lectures/15b.html#git",
+    "href": "lectures/15b.html#git",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Git",
+    "text": "Git\n\nMissing Semester\nHappy Git\n\nPro Git\n\nOh S***, Git!?!\n\nGit in Simple Words"
+  },
+  {
+    "objectID": "lectures/15b.html#markdown",
+    "href": "lectures/15b.html#markdown",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Markdown",
+    "text": "Markdown\n\nR Mardown\nQuarto\nLaTeX\nLaTeX for Beginners\nTypst"
+  },
+  {
+    "objectID": "lectures/15b.html#dashboards",
+    "href": "lectures/15b.html#dashboards",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Dashboards",
+    "text": "Dashboards\n\nShiny\nQuarto Dashboards\nTableau\nPower BI"
+  },
+  {
+    "objectID": "lectures/15b.html#other-programming",
+    "href": "lectures/15b.html#other-programming",
+    "title": "Unsupervised\nMachine Learning",
+    "section": "Other Programming",
+    "text": "Other Programming\n\nCpp\nCpp Armadillo\nJulia Data Science\nArcGIS\nSAS\nStata\nSPSS\nVBA\nJMP"
+  }
+]

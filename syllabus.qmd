@@ -1,0 +1,108 @@
+---
+title: "Syllabus"
+editor: source
+format:
+  html: 
+    code-fold: true
+    html-math-method: katex
+---
+
+## Math 497: Intro to Monte Carlo Methods
+
+### Course Information
+
+**Term:** Summer 2024
+
+**Instructor:** Isaac Quintanilla Salinas
+
+**Contact:** isaac.qs\@csuci.edu
+
+**Office Location:** BTE 2840
+
+**Office Hours:**
+
+By By Appointment (schedule with me) or Zoom appointment: [calendly.com/isaac-qs/office-hours](https://calendly.com/isaac-qs/office-hours)
+
+**Lecture:** Wednesday 5:00-7:00 PM in BTE 2810 and individual appointments for registered students to work on projects.
+
+**Course Website:** m497.inqs.info AND Canvas
+
+### Course Description
+
+Students will learn an introductory level of Monte Carlo methods related to random experiments, random number generation, random variable generations, and integration. Topics include inverse-transformation method, accept-reject algorithm, importance sampling, Markov Chains Monte Carlo. This class is useful for students who want to learn the primary engines of Monte Carlo hypothesis testing, Monte Carlo integration and optimization, and Bayesian Statistics. All analysis will be conducted in R.
+
+### Learning Outcomes
+
+### Required Texts
+
+-   Statistical Computing (SC)
+    -   Isaac Quintanilla Salinas
+    -   [www.inqs.info/stat_comp](https://www.inqs.info/stat_comp/)
+    -   [hypothes.is/groups/xMmDdj2A/m408](https://hypothes.is/groups/xMmDdj2A/m408)
+
+### Required Software
+
+For this course, we will use R, Quarto, and RStudio. Please download and install on your computer.
+
+-   **R** is a free statistical software program that is available for download at: [www.r-project.org](https://www.r-project.org/).
+
+-   **R Markdown** is a scientific documentation known as an [RMD](https://rmarkdown.rstudio.com/) file that can be used to provide reproducible code and documents.
+
+-   **RStudio** provides free and open source tools for your data analysis in R: [posit.co/downloads](https://posit.co/downloads/)
+
+-   **csucistats** is a developmental R package that will contain RMD templates to submit assignments for class: [csucistats](https://www.inqs.info/csucistats/)
+
+### Course Grading
+
+| Category      | Percentage |
+|:--------------|:-----------|
+| Homework      | 50%        |
+| Final Project | 50%        |
+
+At the end of the quarter, course grades will be assigned according to the following scale:
+
+|         |            |        |            |         |            |         |            |       |       |
+|:-------|:-------|:-------|:-------|:-------|:-------|:-------|:-------|:-------|:-------|
+| **A+**  | 98 -- 100  | **B+** | 87 -- \<90 | **C+**  | 77 -- \<80 | **D+**  | 67 -- \<70 |       |       |
+| **A**   | 93 -- \<98 | **B**  | 83 -- \<87 | **C**   | 73 -- \<77 | **D**   | 63 -- \<67 | **F** | \< 60 |
+| **A--** | 90 - \<93  | **B-** | 80 -- \<83 | **C--** | 70 -- \<73 | **D--** | 60 -- \<63 |       |       |
+
+#### Homework
+
+Homework will be assigned on a regular basis and posted [here](hw.html) and Canvas. The homework is to help you practice the concepts learned in lecture and to help you study. You must turn in your own individual homework and show your understanding of the material.
+
+#### Final Project
+
+Implement a Monte Carlo Method to answer a scientific question, study a statistical model, implement a numerical algorithm, or reporting of Monte Carlo Method not mentioned in class.
+
+### Class Schedule
+
+The following outline may be subject to change. Any changes will be announced in class.
+
+| Wk  | Topic                                       | Reading    | Assignment |
+|:----|:--------------------------------------------|:-----------|:-----------|
+| 1   | Intro to R and Control Flow                 | SC: Ch 2-3 | HW \# 1    |
+| 2   | Control Flow/Functional Programming         | SC: Ch 3-4 | HW \# 2    |
+| 3   | Random Number/Variable Generation           | SC:        | HW \# 3    |
+| 4   | Monte Carlo Integration                     | SC:        | HW \# 4    |
+| 5   | Monte Carlo Hypothesis Testing              | SC:        | HW \# 5    |
+| 6   | Permutation Methods                         | SC:        | HW \# 6    |
+| 7   | Simulation Study: Linear Regression         | SC:        |            |
+| 8   | Simulation Study: Generalized Linear Models | SC:        |            |
+| 9   | Simulation Study: Zero-Inflated Models      | SC:        |            |
+| 10  | Simulation Study: Mixed-Effects Models      | SC:        |            |
+| 11  | Final Presentation                          |            |            |
+
+### University Policies
+
+1.  **Academic Honesty**:
+
+    Please conduct yourself with honesty and integrity. Do not submit others' work as your own. For assignments and quizzes that allow you to work with a group, only put your name on what the group submits if you genuinely contributed to the work. Work completely independently on exams, using only the materials that are indicated as allowed. Failure to observe academic honesty results in substantial penalties that can include failing the course.
+
+2.  **Disabilities:**
+
+    If you are a student with a disability requesting reasonable accommodations in this course, you need to contact Disability Accommodations and Support Services (DASS) located on the second floor of Arroyo Hall, via email accommodations\@csuci.edu or call 805-437-3331. All requests for reasonable accommodations require registration with DASS in advance of need: <https://www.csuci.edu/dass/students/apply-for-services.htm>. Faculty, students and DASS will work together regarding classroom accommodations. You are encouraged to discuss approved.
+
+3.  **Emergency Procedure Notice to Students:**
+
+    CSUCI is following guidelines and public orders from the California Department of Public Health and Ventura County Public Health for the COVID-19 pandemic as it pertains to CSUCI students, employees and visitors on the campus. Students are expected to adhere to all health and safety requirements as noted on the University's Spring 2023 Semester [website](https://www.csuci.edu/news/campus-updates/covid-19/index.htm) or they may be subject to removal from the classroom.

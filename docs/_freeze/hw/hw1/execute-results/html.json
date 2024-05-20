@@ -1,0 +1,15 @@
+{
+  "hash": "b3fc74f101492aac9981c1e06179dd48",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Homework 1\"\ndate: 1/23/24\neditor: visual\ndraft: false\n---\n\n\n**Due 2/10/24 \\@ 11:59 PM**\n\nUse an RMD M408 Template to create the assignment.\n\nYou must comment all your code to receive credit.\n\nSubmit the \\*.html file to canvas.\n\nFor all problems, you must use at least one `for` or `while` loop.\n\n## Problem 1\n\nUsing the following code:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nx <- matrix(rnorm(1500), nrow = 10)\n```\n:::\n\n\nWrite the code to produce the output if you use the `rowMeans()` on the R object `x`.\n\n\n::: {.cell}\n\n```{.r .cell-code  code-fold=\"true\" code-summary=\"Answer\"}\nxmeans <- vector(length = nrow(x))\nfor(i in 1:nrow(x)){\n  xmeans[i] <- mean(x[i,])\n}\n#xmeans\n```\n:::\n\n\n## Problem 2\n\nUsing the following code:\n\n\n::: {.cell}\n\n```{.r .cell-code}\ny <- matrix(sample(1:400, 100, replace = T), nrow = 10)\n```\n:::\n\n\nFind the median value for each column of the matrix `y`. You are not allowed to use the `median()` function.\n\n\n::: {.cell}\n\n```{.r .cell-code  code-fold=\"true\" code-summary=\"Answer\"}\nymedian <- vector(length = ncol(x))\nfor(i in 1:nrow(x)){\n  ymedian[i] <- sum(x[5:6,]) / 2\n}\n#ymedian\n```\n:::\n\n\n## Problem 3\n\nWrite the code that will generate the first 1000 numbers of the [Fibonacci Sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence).\n\n\n::: {.cell}\n\n```{.r .cell-code  code-fold=\"true\" code-summary=\"Answer\"}\nfib <- c(0,1)\nfor(i in 3:1000){\n  fib <- c(fib, fib[i-2] + fib[i-1])\n}\n#fib\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
