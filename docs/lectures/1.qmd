@@ -363,58 +363,6 @@ print(x)
 
 ```
 
-# `try()`
-
-## `try()`
-
-The `try()` is an extremely powerful function that will prevent a code from stopping if an error occurs.
-
-## Example
-
-```{webr-r}
-x <- sample(-10:10,1)
-if (x > 0 ){
-  stop("This is an error")
-  print("Positive")
-} else if (x == 0) {
-  print("Zero")
-} else {
-  stop("This is an error")
-  print("Negative")
-}
-print(x)
-
-```
-
-```{webr-r}
-x <- sample(-10:10,1)
-if (x > 0 ){
-  try(stop("This is an error"))
-  print("Positive")
-} else if (x == 0) {
-  print("Zero")
-} else {
-  try(stop("This is an error"))
-  print("Negative")
-}
-print(x)
-
-```
-
-```{webr-r}
-x <- sample(-10:10,1)
-if (x > 0 ){
-  try(stop("This is an error"), silent = T)
-  print("Positive")
-} else if (x == 0) {
-  print("Zero")
-} else {
-  try(stop("This is an error"), silent = T)
-  print("Negative")
-}
-print(x)
-
-```
 
 # `for` Loops
 
@@ -471,3 +419,41 @@ var(x)
 
 ```
 
+# `next` Statements
+
+## `next` Statements
+
+The `next` statement is used to skip an iteration of a loop. This is used along an `if` statement.
+
+```{r}
+#| eval: false
+
+for (i in vector){
+  perform task
+  if (condition){
+    next
+  } else {
+    perform task
+  }
+}
+
+```
+
+# `break` Statements
+
+## `break` Statements
+
+The `break` statement is used to stop a loop if the condition is met. This is used along with an `if` statement.
+
+```{r}
+#| eval: false
+
+for (i in vector){
+  perform task
+  if (condition){
+    break
+  } else {
+    perform task
+  }
+}
+```

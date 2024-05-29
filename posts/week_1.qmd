@@ -1,7 +1,7 @@
 ---
 title: "Week 1"
 date: 05-22-24
-description: This week is designed to be an introduction week. We will briefly discuss topics related to statistics and inference. Then we will look at installing R and RStudio as well as the basics of using R.
+description: This week we will dive into R and control flow programming.
 editor: visual
 editor_options: 
   chunk_output_type: console
@@ -21,6 +21,6 @@ editor_options:
 
 ## Resources
 
-| Lecture | Videos |
-|:--------|:-------|
-|         |        |
+| Lecture                                                | Videos |
+|:-------------------------------------------------------|:-------|
+| [Slide](http://m497.inqs.info/lectures/1#/title-slide) |        |
