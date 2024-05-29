@@ -35,6 +35,13 @@
     "text": "Goals for the Course\n\nGain R Programming Skills\nLearn Different Monte Carlo Methods\nConduct Simulation Studies"
   },
   {
+    "objectID": "lectures/1.html#monte-carlo-methods",
+    "href": "lectures/1.html#monte-carlo-methods",
+    "title": "Welcome to Math 497",
+    "section": "Monte Carlo Methods",
+    "text": "Monte Carlo Methods\nMonte Carlo Methods is a way to simulate a complex probability distribution using commonly used random variables."
+  },
+  {
     "objectID": "lectures/1.html#syllabus-1",
     "href": "lectures/1.html#syllabus-1",
     "title": "Welcome to Math 497",
@@ -137,7 +144,7 @@
     "href": "lectures/1.html#vectors",
     "title": "Welcome to Math 497",
     "section": "Vectors",
-    "text": "Vectors\nUse the c() function to create a container of data objects.\n\nx &lt;- c(1,2,5,6:19, 3)\ny &lt;- c(3, 4,909,456,48,56)\nz &lt;- c(x, y, 134590)"
+    "text": "Vectors\nUse the c() function to create a container of data objects.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "lectures/1.html#data-frames",
@@ -277,7 +284,7 @@
     "href": "lectures/1.html#example-4",
     "title": "Welcome to Math 497",
     "section": "Example",
-    "text": "Example\nCompute the mean:\n\\[\n\\bar x = \\frac{1}{n}\\sum^n_{i=1}x_i\n\\]\n\nx &lt;- rnorm(100)\nmean(x)\n\n#&gt; [1] -0.08894498"
+    "text": "Example\nCompute the mean:\n\\[\n\\bar x = \\frac{1}{n}\\sum^n_{i=1}x_i\n\\]\n\nx &lt;- rnorm(100)\nmean(x)\n\n#&gt; [1] -0.1486772"
   },
   {
     "objectID": "lectures/1.html#example-5",
@@ -291,7 +298,7 @@
     "href": "lectures/1.html#example-6",
     "title": "Welcome to Math 497",
     "section": "Example",
-    "text": "Example\nCompute the variance:\n\\[\ns^2 = \\frac{1}{n-1}\\sum^n_{i-1}(x_i-\\bar x)^2\n\\]\n\nx &lt;- rnorm(100)\nvar(x)\n\n#&gt; [1] 1.137316"
+    "text": "Example\nCompute the variance:\n\\[\ns^2 = \\frac{1}{n-1}\\sum^n_{i-1}(x_i-\\bar x)^2\n\\]\n\nx &lt;- rnorm(100)\nvar(x)\n\n#&gt; [1] 0.9030073"
   },
   {
     "objectID": "lectures/1.html#example-7",

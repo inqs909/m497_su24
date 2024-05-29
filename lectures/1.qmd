@@ -70,6 +70,9 @@ webr:
 
 -   Conduct Simulation Studies
 
+## Monte Carlo Methods
+
+Monte Carlo Methods is a way to simulate a complex probability distribution using commonly used random variables.
 
 
 # Syllabus
@@ -207,7 +210,7 @@ y <- matrix(1:20, nrow = 4)
 
 Use the `c()` function to create a container of data objects.
 
-```{r}
+```{webr-r}
 x <- c(1,2,5,6:19, 3)
 y <- c(3, 4,909,456,48,56)
 z <- c(x, y, 134590)
