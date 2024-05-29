@@ -1,6 +1,0 @@
-library(GLMsData)
-data("lungcap")
-lungcap
-lungcap |> glm(FEV ~ Age + Ht + Gender + Smoke, data = _)
-write.csv(lungcap, file = "lungs.csv")
-dim(lungcap)

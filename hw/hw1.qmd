@@ -1,19 +1,9 @@
 ---
 title: "Homework 1"
-date: 1/23/24
+date: 5/23/24
 editor: visual
 draft: false
 ---
-
-**Due 2/10/24 \@ 11:59 PM**
-
-Use an RMD M408 Template to create the assignment.
-
-You must comment all your code to receive credit.
-
-Submit the \*.html file to canvas.
-
-For all problems, you must use at least one `for` or `while` loop.
 
 ## Problem 1
 

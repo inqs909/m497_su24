@@ -15,7 +15,7 @@
 <link href="../site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/reveal-auto-agenda-0.0.3/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.506">
+  <meta name="generator" content="quarto-1.4.554">
 
   <title>MATH 497 - Unsupervised
 Machine Learning</title>
@@ -654,25 +654,25 @@ X_i = (x_{i1}, x_{i2}, \cdots, x_{in})
 <section id="r-packages" class="slide level2">
 <h2>R Packages</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(taylor)</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(tidytext)</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(stm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(taylor)</span>
+<span id="cb1-3"><a></a><span class="fu">library</span>(tidytext)</span>
+<span id="cb1-4"><a></a><span class="fu">library</span>(stm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="data-cleaning" class="slide level2">
 <h2>Data Cleaning</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>tidy_taylor <span class="ot">&lt;-</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>  taylor_album_songs <span class="sc">|&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">unnest</span>(lyrics) <span class="sc">|&gt;</span> </span>
-<span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">unnest_tokens</span>(word, lyric)</span>
-<span id="cb2-5"><a href="#cb2-5"></a></span>
-<span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-7"><a href="#cb2-7"></a>tidy_taylor <span class="sc">|&gt;</span> </span>
-<span id="cb2-8"><a href="#cb2-8"></a>  <span class="fu">anti_join</span>(<span class="fu">get_stopwords</span>()) <span class="sc">|&gt;</span> </span>
-<span id="cb2-9"><a href="#cb2-9"></a>  <span class="fu">count</span>(track_name, word, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-10"><a href="#cb2-10"></a>  <span class="fu">head</span>(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>tidy_taylor <span class="ot">&lt;-</span></span>
+<span id="cb2-2"><a></a>  taylor_album_songs <span class="sc">|&gt;</span></span>
+<span id="cb2-3"><a></a>  <span class="fu">unnest</span>(lyrics) <span class="sc">|&gt;</span> </span>
+<span id="cb2-4"><a></a>  <span class="fu">unnest_tokens</span>(word, lyric)</span>
+<span id="cb2-5"><a></a></span>
+<span id="cb2-6"><a></a></span>
+<span id="cb2-7"><a></a>tidy_taylor <span class="sc">|&gt;</span> </span>
+<span id="cb2-8"><a></a>  <span class="fu">anti_join</span>(<span class="fu">get_stopwords</span>()) <span class="sc">|&gt;</span> </span>
+<span id="cb2-9"><a></a>  <span class="fu">count</span>(track_name, word, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb2-10"><a></a>  <span class="fu">head</span>(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; # A tibble: 4 × 3
 #&gt;   track_name                          word      n
@@ -682,24 +682,24 @@ X_i = (x_{i1}, x_{i2}, \cdots, x_{in})
 #&gt; 3 I Wish You Would (Taylor's Version) wish     81
 #&gt; 4 Shake It Off (Taylor's Version)     shake    70</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>lyrics_sparse <span class="ot">&lt;-</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  tidy_taylor <span class="sc">|&gt;</span> </span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">count</span>(track_name, word) <span class="sc">|&gt;</span> </span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">3</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">cast_sparse</span>(track_name, word, n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>lyrics_sparse <span class="ot">&lt;-</span></span>
+<span id="cb4-2"><a></a>  tidy_taylor <span class="sc">|&gt;</span> </span>
+<span id="cb4-3"><a></a>  <span class="fu">count</span>(track_name, word) <span class="sc">|&gt;</span> </span>
+<span id="cb4-4"><a></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">3</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-5"><a></a>  <span class="fu">cast_sparse</span>(track_name, word, n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="topic-modelling-1" class="slide level2">
 <h2>Topic Modelling</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb5-2"><a href="#cb5-2"></a>topic_model <span class="ot">&lt;-</span> <span class="fu">stm</span>(lyrics_sparse, <span class="at">K =</span> <span class="dv">8</span>, <span class="at">verbose =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb5-2"><a></a>topic_model <span class="ot">&lt;-</span> <span class="fu">stm</span>(lyrics_sparse, <span class="at">K =</span> <span class="dv">8</span>, <span class="at">verbose =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="summary" class="slide level2">
 <h2>Summary</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">summary</span>(topic_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">summary</span>(topic_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; A topic model with 8 topics, 209 documents and a 909 word dictionary.</code></pre>
 </div>
@@ -752,23 +752,23 @@ X_i = (x_{i1}, x_{i2}, \cdots, x_{in})
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>lyrics_gamma <span class="ot">&lt;-</span> <span class="fu">tidy</span>(</span>
-<span id="cb9-2"><a href="#cb9-2"></a>  topic_model, </span>
-<span id="cb9-3"><a href="#cb9-3"></a>  <span class="at">matrix =</span> <span class="st">"gamma"</span>,</span>
-<span id="cb9-4"><a href="#cb9-4"></a>  <span class="at">document_names =</span> <span class="fu">rownames</span>(lyrics_sparse)</span>
-<span id="cb9-5"><a href="#cb9-5"></a>) </span>
-<span id="cb9-6"><a href="#cb9-6"></a></span>
-<span id="cb9-7"><a href="#cb9-7"></a>lyrics_gamma <span class="sc">|&gt;</span> </span>
-<span id="cb9-8"><a href="#cb9-8"></a>  <span class="fu">left_join</span>(</span>
-<span id="cb9-9"><a href="#cb9-9"></a>    taylor_album_songs <span class="sc">|&gt;</span> </span>
-<span id="cb9-10"><a href="#cb9-10"></a>      <span class="fu">select</span>(album_name, <span class="at">document =</span> track_name) <span class="sc">|&gt;</span> </span>
-<span id="cb9-11"><a href="#cb9-11"></a>      <span class="fu">mutate</span>(<span class="at">album_name =</span> <span class="fu">fct_inorder</span>(album_name))</span>
-<span id="cb9-12"><a href="#cb9-12"></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb9-13"><a href="#cb9-13"></a>  <span class="fu">mutate</span>(<span class="at">topic =</span> <span class="fu">factor</span>(topic)) <span class="sc">|&gt;</span> </span>
-<span id="cb9-14"><a href="#cb9-14"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(gamma, topic, <span class="at">fill =</span> topic)) <span class="sc">+</span></span>
-<span id="cb9-15"><a href="#cb9-15"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb9-16"><a href="#cb9-16"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(album_name)) <span class="sc">+</span></span>
-<span id="cb9-17"><a href="#cb9-17"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="fu">expression</span>(gamma))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>lyrics_gamma <span class="ot">&lt;-</span> <span class="fu">tidy</span>(</span>
+<span id="cb9-2"><a></a>  topic_model, </span>
+<span id="cb9-3"><a></a>  <span class="at">matrix =</span> <span class="st">"gamma"</span>,</span>
+<span id="cb9-4"><a></a>  <span class="at">document_names =</span> <span class="fu">rownames</span>(lyrics_sparse)</span>
+<span id="cb9-5"><a></a>) </span>
+<span id="cb9-6"><a></a></span>
+<span id="cb9-7"><a></a>lyrics_gamma <span class="sc">|&gt;</span> </span>
+<span id="cb9-8"><a></a>  <span class="fu">left_join</span>(</span>
+<span id="cb9-9"><a></a>    taylor_album_songs <span class="sc">|&gt;</span> </span>
+<span id="cb9-10"><a></a>      <span class="fu">select</span>(album_name, <span class="at">document =</span> track_name) <span class="sc">|&gt;</span> </span>
+<span id="cb9-11"><a></a>      <span class="fu">mutate</span>(<span class="at">album_name =</span> <span class="fu">fct_inorder</span>(album_name))</span>
+<span id="cb9-12"><a></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb9-13"><a></a>  <span class="fu">mutate</span>(<span class="at">topic =</span> <span class="fu">factor</span>(topic)) <span class="sc">|&gt;</span> </span>
+<span id="cb9-14"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(gamma, topic, <span class="at">fill =</span> topic)) <span class="sc">+</span></span>
+<span id="cb9-15"><a></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb9-16"><a></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(album_name)) <span class="sc">+</span></span>
+<span id="cb9-17"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="fu">expression</span>(gamma))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
@@ -778,19 +778,19 @@ X_i = (x_{i1}, x_{i2}, \cdots, x_{in})
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">set.seed</span>(<span class="dv">909</span>)</span>
-<span id="cb10-2"><a href="#cb10-2"></a></span>
-<span id="cb10-3"><a href="#cb10-3"></a>effects <span class="ot">&lt;-</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">estimateEffect</span>(</span>
-<span id="cb10-5"><a href="#cb10-5"></a>    <span class="dv">1</span><span class="sc">:</span><span class="dv">8</span> <span class="sc">~</span> album_name,</span>
-<span id="cb10-6"><a href="#cb10-6"></a>    topic_model,</span>
-<span id="cb10-7"><a href="#cb10-7"></a>    taylor_album_songs <span class="sc">|&gt;</span> <span class="fu">distinct</span>(track_name, album_name) <span class="sc">|&gt;</span> <span class="fu">arrange</span>(track_name)</span>
-<span id="cb10-8"><a href="#cb10-8"></a>  )</span>
-<span id="cb10-9"><a href="#cb10-9"></a></span>
-<span id="cb10-10"><a href="#cb10-10"></a></span>
-<span id="cb10-11"><a href="#cb10-11"></a><span class="fu">tidy</span>(effects) <span class="sc">|&gt;</span>  </span>
-<span id="cb10-12"><a href="#cb10-12"></a>  <span class="fu">filter</span>(term <span class="sc">!=</span> <span class="st">"(Intercept)"</span>, p.value <span class="sc">&lt;</span> <span class="fl">0.1</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb10-13"><a href="#cb10-13"></a>  <span class="fu">select</span>(topic, term, p.value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">set.seed</span>(<span class="dv">909</span>)</span>
+<span id="cb10-2"><a></a></span>
+<span id="cb10-3"><a></a>effects <span class="ot">&lt;-</span></span>
+<span id="cb10-4"><a></a>  <span class="fu">estimateEffect</span>(</span>
+<span id="cb10-5"><a></a>    <span class="dv">1</span><span class="sc">:</span><span class="dv">8</span> <span class="sc">~</span> album_name,</span>
+<span id="cb10-6"><a></a>    topic_model,</span>
+<span id="cb10-7"><a></a>    taylor_album_songs <span class="sc">|&gt;</span> <span class="fu">distinct</span>(track_name, album_name) <span class="sc">|&gt;</span> <span class="fu">arrange</span>(track_name)</span>
+<span id="cb10-8"><a></a>  )</span>
+<span id="cb10-9"><a></a></span>
+<span id="cb10-10"><a></a></span>
+<span id="cb10-11"><a></a><span class="fu">tidy</span>(effects) <span class="sc">|&gt;</span>  </span>
+<span id="cb10-12"><a></a>  <span class="fu">filter</span>(term <span class="sc">!=</span> <span class="st">"(Intercept)"</span>, p.value <span class="sc">&lt;</span> <span class="fl">0.1</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb10-13"><a></a>  <span class="fu">select</span>(topic, term, p.value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; # A tibble: 8 × 3
@@ -810,8 +810,8 @@ X_i = (x_{i1}, x_{i2}, \cdots, x_{in})
 <section id="topic-3" class="slide level2">
 <h2>Topic 3</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">tidy</span>(topic_model, <span class="at">matrix =</span> <span class="st">"lift"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">filter</span>(topic <span class="sc">==</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">tidy</span>(topic_model, <span class="at">matrix =</span> <span class="st">"lift"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb12-2"><a></a>  <span class="fu">filter</span>(topic <span class="sc">==</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; # A tibble: 909 × 2
 #&gt;    topic term     
@@ -980,8 +980,10 @@ X_i = (x_{i1}, x_{i2}, \cdots, x_{in})
 <li><a href="https://www.jmp.com/en_us/home.html">JMP</a></li>
 </ul>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 <div class="reveal-header">
 <div class="header-logo">
@@ -1328,6 +1330,24 @@ X_i = (x_{i1}, x_{i2}, \cdots, x_{in})
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("www\.inqs\.info\/m497_su24");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1364,7 +1384,11 @@ X_i = (x_{i1}, x_{i2}, \cdots, x_{in})
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
