@@ -504,6 +504,27 @@
     "text": "Resources\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nNot Available"
   },
   {
+    "objectID": "lectures/2.html#homework",
+    "href": "lectures/2.html#homework",
+    "title": "Functional Programming",
+    "section": "Homework",
+    "text": "Homework\nHomework 1 is assigned and can be found here: http://m497.inqs.info/hw.html"
+  },
+  {
+    "objectID": "lectures/2.html#quarto-documentation",
+    "href": "lectures/2.html#quarto-documentation",
+    "title": "Functional Programming",
+    "section": "Quarto Documentation",
+    "text": "Quarto Documentation\nquarto use template inqs909/qs_hw"
+  },
+  {
+    "objectID": "lectures/2.html#quarto-resources",
+    "href": "lectures/2.html#quarto-resources",
+    "title": "Functional Programming",
+    "section": "Quarto Resources",
+    "text": "Quarto Resources\n\nhttps://www.inqs.info/stat_comp/document.html\nhttps://quarto.org/docs/output-formats/html-basics.html"
+  },
+  {
     "objectID": "lectures/2.html#nested-for-loops-1",
     "href": "lectures/2.html#nested-for-loops-1",
     "title": "Functional Programming",
@@ -518,6 +539,13 @@
     "text": "Example\nWithout using the sd() function, compute the standard deviation for each column of the matrix:\n\nx &lt;- matrix(rnorm(1000), nrow = 10)\n\n\\[\ns^2 = \\frac{1}{n-1}\\sum^n_{i=1}(x_i-\\bar x)^2\n\\]"
   },
   {
+    "objectID": "lectures/2.html#example-1",
+    "href": "lectures/2.html#example-1",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
     "objectID": "lectures/2.html#while-loops-1",
     "href": "lectures/2.html#while-loops-1",
     "title": "Functional Programming",
@@ -525,43 +553,43 @@
     "text": "while Loops\nA while loop is a combination of a for loop and a break statement. The loop will continue indefinitely until a condition becomes false.\n\n# Initial Condition\ncondition &lt;- starting TRUE condition\n\nwhile (condition){\n  perform task\n  condition &lt;- update condition\n}"
   },
   {
-    "objectID": "lectures/2.html#example-1",
-    "href": "lectures/2.html#example-1",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nSimulate from a \\(N(0,1)\\) distribution until you have 50 positive numbers.\n\n\nCode\nn &lt;- 0\npos_num &lt;- c()\n\nwhile (n &lt; 51){\n  x &lt;- rnorm(1)\n  if (x &gt; 0) {\n    pos_num &lt;- c(pos_num, x)\n    n &lt;- n + 1\n  }\n}\n\npos_num"
-  },
-  {
     "objectID": "lectures/2.html#example-2",
     "href": "lectures/2.html#example-2",
     "title": "Functional Programming",
     "section": "Example",
-    "text": "Example\nFind the value of \\(x\\) where the function \\(y=1/x\\) relative converges (\\(\\frac{|y_{old}-y_{new}|}{y_{old}}\\)) at a level of \\(10^-6\\) as \\(x\\rightarrow \\infty\\).\n\n\nCode\ndiff &lt;- 10\nx &lt;- 2\ny_old &lt;- 1\nwhile (diff &gt; 1e-6){\n  y_new &lt;- 1 / x\n  diff &lt;- abs(y_old - y_new) / y_old\n  x &lt;- x + 1\n  y_old &lt;- y_new\n}"
+    "text": "Example\nSimulate from a \\(N(0,1)\\) distribution until you have 50 positive numbers.\n\n\nCode\nn &lt;- 0\npos_num &lt;- c()\n\nwhile (n &lt; 51){\n  x &lt;- rnorm(1)\n  if (x &gt; 0) {\n    pos_num &lt;- c(pos_num, x)\n    n &lt;- n + 1\n  }\n}\n\npos_num"
   },
   {
     "objectID": "lectures/2.html#example-3",
     "href": "lectures/2.html#example-3",
     "title": "Functional Programming",
     "section": "Example",
-    "text": "Example\nSimulate from a \\(Binom(1,.2)\\) distribution until the sum of the random variables generated is 50.\n\n\nCode\nsum_bin &lt;- 0\nx &lt;- c()\nwhile (sum_bin &lt;51) {\n  x &lt;- c(x, rbinom(1, 1, 0.2))\n  sum_bin &lt;- sum(x)\n}\nsum_bin\nlength(x)"
+    "text": "Example\nFind the value of \\(x\\) where the function \\(y=1/x\\) relative converges (\\(\\frac{|y_{old}-y_{new}|}{y_{old}}\\)) at a level of \\(10^-6\\) as \\(x\\rightarrow \\infty\\).\n\n\nCode\ndiff &lt;- 10\nx &lt;- 2\ny_old &lt;- 1\nwhile (diff &gt; 1e-6){\n  y_new &lt;- 1 / x\n  diff &lt;- abs(y_old - y_new) / y_old\n  x &lt;- x + 1\n  y_old &lt;- y_new\n}"
   },
   {
     "objectID": "lectures/2.html#example-4",
     "href": "lectures/2.html#example-4",
     "title": "Functional Programming",
     "section": "Example",
-    "text": "Example"
+    "text": "Example\nSimulate from a \\(Binom(1,.2)\\) distribution until the sum of the random variables generated is 50.\n\n\nCode\nsum_bin &lt;- 0\nx &lt;- c()\nwhile (sum_bin &lt;51) {\n  x &lt;- c(x, rbinom(1, 1, 0.2))\n  sum_bin &lt;- sum(x)\n}\nsum_bin\nlength(x)"
   },
   {
     "objectID": "lectures/2.html#example-5",
     "href": "lectures/2.html#example-5",
     "title": "Functional Programming",
     "section": "Example",
-    "text": "Example\nUsing the code below:\n\nx &lt;- rnorm(5000)\n\nCreate a new vector containing all the positive values of x. The new vector should be less than 5000.\nAnswer:\n\n\nCode\nnn &lt;- length(x)\npos &lt;- c()\nfor (i in 1:nn){\n  if (x[i] &gt; 0) {\n    pos &lt;- c(pos, x[i])\n  }\n}\npos"
+    "text": "Example"
   },
   {
     "objectID": "lectures/2.html#example-6",
     "href": "lectures/2.html#example-6",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nUsing the code below:\n\nx &lt;- rnorm(5000)\n\nCreate a new vector containing all the positive values of x. The new vector should be less than 5000.\nAnswer:\n\n\nCode\nnn &lt;- length(x)\npos &lt;- c()\nfor (i in 1:nn){\n  if (x[i] &gt; 0) {\n    pos &lt;- c(pos, x[i])\n  }\n}\npos"
+  },
+  {
+    "objectID": "lectures/2.html#example-7",
+    "href": "lectures/2.html#example-7",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\n\\[\nf(x,y) = x^2 + y^2 + \\ln(x+y)\n\\]\nFind all the values of \\(f(x,y)\\) for every combination of \\(x \\in \\{1, 8, 13, 25, 42, 67, 95\\}\\) and \\(y \\in \\{6, 12, 18, 52, 61, 79, 83\\}\\)\nStore values in a \\(7\\times 7\\) matrix.\nAnswer:\n\n\nCode\nx &lt;- c(1, 8, 13, 25, 42, 67, 95)\ny &lt;- c(6, 12, 18, 52, 61, 79, 83)\nres &lt;- matrix(nrow = 7, ncol = 7)\ncolnames(res) &lt;- as.character(x)\nrownames(res) &lt;- as.character(y)\n\nfor (i in 1:7){\n  for (ii in 1:7){\n    res[ii,i] &lt;- x[i]^2 + y[ii]^2 + log(x[i] + y[ii])\n  }\n}\nprint(res)"
@@ -581,15 +609,15 @@
     "text": "Vectorized Code\nMathematical Operations are conducted element-wise to 2 or more vectors\n\nElement 1 in vector x is applied to element 1 in vector y"
   },
   {
-    "objectID": "lectures/2.html#example-7",
-    "href": "lectures/2.html#example-7",
+    "objectID": "lectures/2.html#example-8",
+    "href": "lectures/2.html#example-8",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "lectures/2.html#example-8",
-    "href": "lectures/2.html#example-8",
+    "objectID": "lectures/2.html#example-9",
+    "href": "lectures/2.html#example-9",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
@@ -637,29 +665,29 @@
     "text": "Anatomy\n\nname_of_function &lt;- function(data_1, data_2 = NULL, \n                             argument_1, argument_2 = TRUE, argument_3 = NULL,\n                             ...){\n  # Conduct Task\n  # Conduct Task\n  output_object &lt;- Tasks\n  return(output_object)\n}\n\n\n\nfunction: used to construct the function\ndata1: first data argument that needs to supplied\ndata2: second data argument that does not need to be supplied\nargument1: first argument must be supplied to alter function\nargument2: second argument to alter function, set to TRUE\nargument3: third argument that does not need to be supplied\n…: additional arguments supplied to other functions"
   },
   {
-    "objectID": "lectures/2.html#example-9",
-    "href": "lectures/2.html#example-9",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nCreate a function for\n\\[\ny = \\ln(x^2)\n\\]"
-  },
-  {
     "objectID": "lectures/2.html#example-10",
     "href": "lectures/2.html#example-10",
     "title": "Functional Programming",
     "section": "Example",
-    "text": "Example\nCreate a function for\n\\[\nf(x) = \\left\\{\\begin{array}{cc}\nx^3 & x&lt;0\\\\\nx^2 + 5 & \\mathrm{otherwise}\n\\end{array} \\right.\n\\]"
+    "text": "Example\nCreate a function for\n\\[\ny = \\ln(x^2)\n\\]"
   },
   {
     "objectID": "lectures/2.html#example-11",
     "href": "lectures/2.html#example-11",
     "title": "Functional Programming",
     "section": "Example",
-    "text": "Example\nCreate a function for\n\\[\nf(x,y) = \\left\\{\\begin{array}{cc}\nx^3 e^y &  x&lt;0\\ \\\\\nx^2 + 5 + \\ln(y) & \\mathrm{otherwise}\n\\end{array} \\right.\n\\]"
+    "text": "Example\nCreate a function for\n\\[\nf(x) = \\left\\{\\begin{array}{cc}\nx^3 & x&lt;0\\\\\nx^2 + 5 & \\mathrm{otherwise}\n\\end{array} \\right.\n\\]"
   },
   {
     "objectID": "lectures/2.html#example-12",
     "href": "lectures/2.html#example-12",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nCreate a function for\n\\[\nf(x,y) = \\left\\{\\begin{array}{cc}\nx^3 e^y &  x&lt;0\\ \\\\\nx^2 + 5 + \\ln(y) & \\mathrm{otherwise}\n\\end{array} \\right.\n\\]"
+  },
+  {
+    "objectID": "lectures/2.html#example-13",
+    "href": "lectures/2.html#example-13",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nCreate the function that allows your to compute the z-score of a specific value x using the sampling distribution from a set of data (y vector):\n\\[\nz =  \\frac{x-\\bar y}{\\sqrt{s^2_{y}/n_y}}\n\\]"
@@ -672,15 +700,15 @@
     "text": "apply()\nThe apply function returns a vector, array, or list of values by applying a function to the margins of an array. You will need to specify the following arguments:\n\nX: an array to be indexed and applied\nMARGIN: specifyng which index(es) to subset by\nFUN: function to be applied\n…: further arguments to be applied to FUN, must be labeled\n\n\napply(X, MARGIN, FUN, ...)"
   },
   {
-    "objectID": "lectures/2.html#example-13",
-    "href": "lectures/2.html#example-13",
+    "objectID": "lectures/2.html#example-14",
+    "href": "lectures/2.html#example-14",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nFind the standard deviation of all the columns of the following matrix:\n\nx &lt;- matrix(rnorm(1000), nrow = 10)"
   },
   {
-    "objectID": "lectures/2.html#example-14",
-    "href": "lectures/2.html#example-14",
+    "objectID": "lectures/2.html#example-15",
+    "href": "lectures/2.html#example-15",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nFind the \\(25th\\), \\(50th\\), and \\(75th\\) quartiles for each row of the following matrix:\n\nx &lt;- matrix(rnorm(1000), nrow = 20)"
@@ -693,8 +721,8 @@
     "text": "lapply()\nThe lapply function applies a function to all the elements of a vector or matrix, and it will return a list. You will need to specify the following arguments:\n\nX: object to be iterated\nFUN: a function to be applied\n…: further arguments to be passed along to FUN\n\n\nlapply(X, FUN, ...)"
   },
   {
-    "objectID": "lectures/2.html#example-15",
-    "href": "lectures/2.html#example-15",
+    "objectID": "lectures/2.html#example-16",
+    "href": "lectures/2.html#example-16",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nCreate a function that returns a labeled list for with the following values: mean, standard deviation, median, max, and min."
@@ -707,22 +735,22 @@
     "text": "sapply()\nThe sapply() function will apply a function to each element of a list or vector, and it will return a simplified object, vector, matrix, or array. The sapply() function uses 4 main arguments:\n\nX: a vector or list to be iterated\nFUN: a function to be applied\n…: arguments passed along to FUN, must be labeled\nsimplify: indicates how to simplify the function, defaults to n-dimensional array based on output\n\n\nsapply(X, FUN, ..., simplify = TRUE)"
   },
   {
-    "objectID": "lectures/2.html#example-16",
-    "href": "lectures/2.html#example-16",
+    "objectID": "lectures/2.html#example-17",
+    "href": "lectures/2.html#example-17",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nUsing the vector below, compute the length of each string using sapply and str_length() from tidyverse\n\nfruits &lt;- c(\"apple\", \"banana\", \"cherry\", \"date\", \"elderberry\", \"fig\", \"grape\", \"honeydew\", \"kiwi\", \"lemon\")"
   },
   {
-    "objectID": "lectures/2.html#example-17",
-    "href": "lectures/2.html#example-17",
+    "objectID": "lectures/2.html#example-18",
+    "href": "lectures/2.html#example-18",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nUsing the list generated below, compute the mean of each element of the list using sapply.\n\n# Generate a list of 10 lists, each containing 5 random numbers\nlists &lt;- lapply(1:10, function(i) {\n  means &lt;- rpois(1, 3)\n  rnorm(5, means)\n})"
   },
   {
-    "objectID": "lectures/2.html#example-18",
-    "href": "lectures/2.html#example-18",
+    "objectID": "lectures/2.html#example-19",
+    "href": "lectures/2.html#example-19",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nUsing the vector below, use the sapply() to find \\(\\log(x)\\) for each value and return a matrix:\n\nnumbers &lt;- 4:400"

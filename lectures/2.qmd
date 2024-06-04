@@ -33,6 +33,22 @@ webr:
   show-startup-message: true
 ---
 
+## Homework
+
+Homework 1 is assigned and can be found here: http://m497.inqs.info/hw.html
+
+## Quarto Documentation
+
+``` default
+quarto use template inqs909/qs_hw
+```
+
+## Quarto Resources
+
+- <https://www.inqs.info/stat_comp/document.html>
+- <https://quarto.org/docs/output-formats/html-basics.html>
+
+
 # Nested `for` Loops
 
 ## Nested `for` Loops
@@ -60,6 +76,11 @@ $$
 s^2 = \frac{1}{n-1}\sum^n_{i=1}(x_i-\bar x)^2
 $$
 
+## Example
+
+```{webr-r}
+x <- matrix(rnorm(1000), nrow = 10)
+```
 
 # `while` Loops
 
@@ -136,11 +157,9 @@ sum_bin
 length(x)
 ```
 
-
 # More Examples
 
 ## Example
-
 
 ## Example
 
@@ -166,7 +185,6 @@ for (i in 1:nn){
 }
 pos
 ```
-
 
 ## Example
 
@@ -207,7 +225,6 @@ Vectorized code is programming where functions or processes are applied to vecto
 Indicating a loop is not necessary to apply a function to each individual element in a vector.
 :::
 
-
 ## Vectorized Code
 
 Mathematical Operations are conducted element-wise to 2 or more vectors
@@ -232,15 +249,12 @@ sinpi(x)
 
 ```
 
-
-
 ## Example
 
 ```{webr-r}
 x <- 1:5
 y <- 1:5
 ```
-
 
 # Built-in Functions
 
@@ -251,7 +265,7 @@ There are several available functions in R to conduct specific statistical metho
 ## Help Documentation
 
 | Section     | Description                                                 |
-|:-------------------|:---------------------------------------------------|
+|:---------------------|:-------------------------------------------------|
 | Description | Provides a brief introduction of the function               |
 | Usage       | Provides potential usage of the function                    |
 | Arguments   | Arguments that the function can take                        |
@@ -358,7 +372,6 @@ Create the function that allows your to compute the z-score of a specific value 
 $$
 z =  \frac{x-\bar y}{\sqrt{s^2_{y}/n_y}}
 $$
-
 
 # `apply()`
 

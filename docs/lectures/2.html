@@ -600,7 +600,7 @@
   };
 
   // Store cell data
-  globalThis.qwebrCellDetails = [{"id":1,"code":"x <- 1:20\npost <- vector(length = 20)\nfor (i in seq_along(x)){\n  post[i] <- sinpi(x[i])\n}\npost\n\n## OR\n\nsinpi(x)","options":{"fig-width":7,"classes":"","read-only":"false","editor-font-scale":1,"out-width":"700px","context":"interactive","results":"markup","fig-cap":"","warning":"true","label":"unnamed-chunk-1","dpi":72,"autorun":"false","editor-quick-suggestions":"false","editor-max-height":"","comment":"","fig-height":5,"out-height":"","message":"true","output":"true"}},{"id":2,"code":"x <- 1:5\ny <- 1:5","options":{"fig-width":7,"classes":"","read-only":"false","editor-font-scale":1,"out-width":"700px","context":"interactive","results":"markup","fig-cap":"","warning":"true","label":"unnamed-chunk-2","dpi":72,"autorun":"false","editor-quick-suggestions":"false","editor-max-height":"","comment":"","fig-height":5,"out-height":"","message":"true","output":"true"}}];
+  globalThis.qwebrCellDetails = [{"code":"x <- matrix(rnorm(1000), nrow = 10)","id":1,"options":{"output":"true","out-width":"700px","label":"unnamed-chunk-1","context":"interactive","message":"true","fig-cap":"","dpi":72,"editor-font-scale":1,"editor-quick-suggestions":"false","results":"markup","warning":"true","fig-height":5,"editor-max-height":"","comment":"","autorun":"false","read-only":"false","classes":"","out-height":"","fig-width":7}},{"code":"x <- 1:20\npost <- vector(length = 20)\nfor (i in seq_along(x)){\n  post[i] <- sinpi(x[i])\n}\npost\n\n## OR\n\nsinpi(x)","id":2,"options":{"output":"true","out-width":"700px","label":"unnamed-chunk-2","context":"interactive","message":"true","fig-cap":"","dpi":72,"editor-font-scale":1,"editor-quick-suggestions":"false","results":"markup","warning":"true","fig-height":5,"editor-max-height":"","comment":"","autorun":"false","read-only":"false","classes":"","out-height":"","fig-width":7}},{"code":"x <- 1:5\ny <- 1:5","id":3,"options":{"output":"true","out-width":"700px","label":"unnamed-chunk-3","context":"interactive","message":"true","fig-cap":"","dpi":72,"editor-font-scale":1,"editor-quick-suggestions":"false","results":"markup","warning":"true","fig-height":5,"editor-max-height":"","comment":"","autorun":"false","read-only":"false","classes":"","out-height":"","fig-width":7}}];
 
   </script>
   <script type="module">
@@ -1675,6 +1675,21 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </div>
 
 </section>
+<section id="homework" class="slide level2">
+<h2>Homework</h2>
+<p>Homework 1 is assigned and can be found here: http://m497.inqs.info/hw.html</p>
+</section>
+<section id="quarto-documentation" class="slide level2">
+<h2>Quarto Documentation</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a></a>quarto use template inqs909/qs_hw</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="quarto-resources" class="slide level2">
+<h2>Quarto Resources</h2>
+<ul>
+<li><a href="https://www.inqs.info/stat_comp/document.html" class="uri">https://www.inqs.info/stat_comp/document.html</a></li>
+<li><a href="https://quarto.org/docs/output-formats/html-basics.html" class="uri">https://quarto.org/docs/output-formats/html-basics.html</a></li>
+</ul>
+</section>
 <section>
 <section id="nested-for-loops" class="title-slide slide level1 agenda-slide center">
 <h1>Nested <code>for</code> Loops</h1>
@@ -1714,22 +1729,27 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <h2>Nested <code>for</code> Loops</h2>
 <p>Nested <code>for</code> loops are <code>for</code> loops within another <code>for</code> loop. You can stack these loops as much as needed. Just make sure the index is different for each loop. The general format for a loop goes as follow:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="cf">for</span> (i <span class="cf">in</span> vector_1){</span>
-<span id="cb1-2"><a></a>  <span class="cf">for</span> (ii <span class="cf">in</span> vector_2){</span>
-<span id="cb1-3"><a></a>    perform task</span>
-<span id="cb1-4"><a></a>  }</span>
-<span id="cb1-5"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="cf">for</span> (i <span class="cf">in</span> vector_1){</span>
+<span id="cb2-2"><a></a>  <span class="cf">for</span> (ii <span class="cf">in</span> vector_2){</span>
+<span id="cb2-3"><a></a>    perform task</span>
+<span id="cb2-4"><a></a>  }</span>
+<span id="cb2-5"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="example" class="slide level2">
 <h2>Example</h2>
 <p>Without using the <code>sd()</code> function, compute the standard deviation for each column of the matrix:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">1000</span>), <span class="at">nrow =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">1000</span>), <span class="at">nrow =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><span class="math display">\[
 s^2 = \frac{1}{n-1}\sum^n_{i=1}(x_i-\bar x)^2
 \]</span></p>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example</h2>
+<div id="qwebr-insertion-location-1"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section></section>
 <section>
 <section id="while-loops" class="title-slide slide level1 agenda-slide center">
@@ -1770,68 +1790,68 @@ s^2 = \frac{1}{n-1}\sum^n_{i=1}(x_i-\bar x)^2
 <h2><code>while</code> Loops</h2>
 <p>A while loop is a combination of a <code>for</code> loop and a <code>break</code> statement. The loop will continue indefinitely until a condition becomes false.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Initial Condition</span></span>
-<span id="cb3-2"><a></a>condition <span class="ot">&lt;-</span> starting <span class="cn">TRUE</span> condition</span>
-<span id="cb3-3"><a></a></span>
-<span id="cb3-4"><a></a><span class="cf">while</span> (condition){</span>
-<span id="cb3-5"><a></a>  perform task</span>
-<span id="cb3-6"><a></a>  condition <span class="ot">&lt;-</span> update condition</span>
-<span id="cb3-7"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># Initial Condition</span></span>
+<span id="cb4-2"><a></a>condition <span class="ot">&lt;-</span> starting <span class="cn">TRUE</span> condition</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a><span class="cf">while</span> (condition){</span>
+<span id="cb4-5"><a></a>  perform task</span>
+<span id="cb4-6"><a></a>  condition <span class="ot">&lt;-</span> update condition</span>
+<span id="cb4-7"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="example-1" class="slide level2">
+<section id="example-2" class="slide level2">
 <h2>Example</h2>
 <p>Simulate from a <span class="math inline">\(N(0,1)\)</span> distribution until you have 50 positive numbers.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>n <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb4-2"><a></a>pos_num <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
-<span id="cb4-3"><a></a></span>
-<span id="cb4-4"><a></a><span class="cf">while</span> (n <span class="sc">&lt;</span> <span class="dv">51</span>){</span>
-<span id="cb4-5"><a></a>  x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1</span>)</span>
-<span id="cb4-6"><a></a>  <span class="cf">if</span> (x <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb4-7"><a></a>    pos_num <span class="ot">&lt;-</span> <span class="fu">c</span>(pos_num, x)</span>
-<span id="cb4-8"><a></a>    n <span class="ot">&lt;-</span> n <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb4-9"><a></a>  }</span>
-<span id="cb4-10"><a></a>}</span>
-<span id="cb4-11"><a></a></span>
-<span id="cb4-12"><a></a>pos_num</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-</section>
-<section id="example-2" class="slide level2">
-<h2>Example</h2>
-<p>Find the value of <span class="math inline">\(x\)</span> where the function <span class="math inline">\(y=1/x\)</span> relative converges (<span class="math inline">\(\frac{|y_{old}-y_{new}|}{y_{old}}\)</span>) at a level of <span class="math inline">\(10^-6\)</span> as <span class="math inline">\(x\rightarrow \infty\)</span>.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>diff <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb5-2"><a></a>x <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb5-3"><a></a>y_old <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb5-4"><a></a><span class="cf">while</span> (diff <span class="sc">&gt;</span> <span class="fl">1e-6</span>){</span>
-<span id="cb5-5"><a></a>  y_new <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> x</span>
-<span id="cb5-6"><a></a>  diff <span class="ot">&lt;-</span> <span class="fu">abs</span>(y_old <span class="sc">-</span> y_new) <span class="sc">/</span> y_old</span>
-<span id="cb5-7"><a></a>  x <span class="ot">&lt;-</span> x <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb5-8"><a></a>  y_old <span class="ot">&lt;-</span> y_new</span>
-<span id="cb5-9"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>n <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb5-2"><a></a>pos_num <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb5-3"><a></a></span>
+<span id="cb5-4"><a></a><span class="cf">while</span> (n <span class="sc">&lt;</span> <span class="dv">51</span>){</span>
+<span id="cb5-5"><a></a>  x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1</span>)</span>
+<span id="cb5-6"><a></a>  <span class="cf">if</span> (x <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb5-7"><a></a>    pos_num <span class="ot">&lt;-</span> <span class="fu">c</span>(pos_num, x)</span>
+<span id="cb5-8"><a></a>    n <span class="ot">&lt;-</span> n <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb5-9"><a></a>  }</span>
+<span id="cb5-10"><a></a>}</span>
+<span id="cb5-11"><a></a></span>
+<span id="cb5-12"><a></a>pos_num</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
 <section id="example-3" class="slide level2">
 <h2>Example</h2>
+<p>Find the value of <span class="math inline">\(x\)</span> where the function <span class="math inline">\(y=1/x\)</span> relative converges (<span class="math inline">\(\frac{|y_{old}-y_{new}|}{y_{old}}\)</span>) at a level of <span class="math inline">\(10^-6\)</span> as <span class="math inline">\(x\rightarrow \infty\)</span>.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>diff <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb6-2"><a></a>x <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb6-3"><a></a>y_old <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb6-4"><a></a><span class="cf">while</span> (diff <span class="sc">&gt;</span> <span class="fl">1e-6</span>){</span>
+<span id="cb6-5"><a></a>  y_new <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> x</span>
+<span id="cb6-6"><a></a>  diff <span class="ot">&lt;-</span> <span class="fu">abs</span>(y_old <span class="sc">-</span> y_new) <span class="sc">/</span> y_old</span>
+<span id="cb6-7"><a></a>  x <span class="ot">&lt;-</span> x <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb6-8"><a></a>  y_old <span class="ot">&lt;-</span> y_new</span>
+<span id="cb6-9"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="example-4" class="slide level2">
+<h2>Example</h2>
 <p>Simulate from a <span class="math inline">\(Binom(1,.2)\)</span> distribution until the sum of the random variables generated is 50.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>sum_bin <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb6-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
-<span id="cb6-3"><a></a><span class="cf">while</span> (sum_bin <span class="sc">&lt;</span><span class="dv">51</span>) {</span>
-<span id="cb6-4"><a></a>  x <span class="ot">&lt;-</span> <span class="fu">c</span>(x, <span class="fu">rbinom</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="fl">0.2</span>))</span>
-<span id="cb6-5"><a></a>  sum_bin <span class="ot">&lt;-</span> <span class="fu">sum</span>(x)</span>
-<span id="cb6-6"><a></a>}</span>
-<span id="cb6-7"><a></a>sum_bin</span>
-<span id="cb6-8"><a></a><span class="fu">length</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>sum_bin <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb7-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb7-3"><a></a><span class="cf">while</span> (sum_bin <span class="sc">&lt;</span><span class="dv">51</span>) {</span>
+<span id="cb7-4"><a></a>  x <span class="ot">&lt;-</span> <span class="fu">c</span>(x, <span class="fu">rbinom</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="fl">0.2</span>))</span>
+<span id="cb7-5"><a></a>  sum_bin <span class="ot">&lt;-</span> <span class="fu">sum</span>(x)</span>
+<span id="cb7-6"><a></a>}</span>
+<span id="cb7-7"><a></a>sum_bin</span>
+<span id="cb7-8"><a></a><span class="fu">length</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section></section>
@@ -1870,32 +1890,32 @@ s^2 = \frac{1}{n-1}\sum^n_{i=1}(x_i-\bar x)^2
 </ul>
 </div>
 </section>
-<section id="example-4" class="slide level2">
+<section id="example-5" class="slide level2">
 <h2>Example</h2>
 </section>
-<section id="example-5" class="slide level2">
+<section id="example-6" class="slide level2">
 <h2>Example</h2>
 <p>Using the code below:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">5000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">5000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Create a new vector containing all the positive values of <code>x</code>. The new vector should be less than 5000.</p>
 <p>Answer:</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>nn <span class="ot">&lt;-</span> <span class="fu">length</span>(x)</span>
-<span id="cb8-2"><a></a>pos <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
-<span id="cb8-3"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>nn){</span>
-<span id="cb8-4"><a></a>  <span class="cf">if</span> (x[i] <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb8-5"><a></a>    pos <span class="ot">&lt;-</span> <span class="fu">c</span>(pos, x[i])</span>
-<span id="cb8-6"><a></a>  }</span>
-<span id="cb8-7"><a></a>}</span>
-<span id="cb8-8"><a></a>pos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>nn <span class="ot">&lt;-</span> <span class="fu">length</span>(x)</span>
+<span id="cb9-2"><a></a>pos <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb9-3"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>nn){</span>
+<span id="cb9-4"><a></a>  <span class="cf">if</span> (x[i] <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb9-5"><a></a>    pos <span class="ot">&lt;-</span> <span class="fu">c</span>(pos, x[i])</span>
+<span id="cb9-6"><a></a>  }</span>
+<span id="cb9-7"><a></a>}</span>
+<span id="cb9-8"><a></a>pos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
-<section id="example-6" class="slide level2">
+<section id="example-7" class="slide level2">
 <h2>Example</h2>
 <p><span class="math display">\[
 f(x,y) = x^2 + y^2 + \ln(x+y)
@@ -1906,18 +1926,18 @@ f(x,y) = x^2 + y^2 + \ln(x+y)
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">25</span>, <span class="dv">42</span>, <span class="dv">67</span>, <span class="dv">95</span>)</span>
-<span id="cb9-2"><a></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">12</span>, <span class="dv">18</span>, <span class="dv">52</span>, <span class="dv">61</span>, <span class="dv">79</span>, <span class="dv">83</span>)</span>
-<span id="cb9-3"><a></a>res <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">nrow =</span> <span class="dv">7</span>, <span class="at">ncol =</span> <span class="dv">7</span>)</span>
-<span id="cb9-4"><a></a><span class="fu">colnames</span>(res) <span class="ot">&lt;-</span> <span class="fu">as.character</span>(x)</span>
-<span id="cb9-5"><a></a><span class="fu">rownames</span>(res) <span class="ot">&lt;-</span> <span class="fu">as.character</span>(y)</span>
-<span id="cb9-6"><a></a></span>
-<span id="cb9-7"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>){</span>
-<span id="cb9-8"><a></a>  <span class="cf">for</span> (ii <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>){</span>
-<span id="cb9-9"><a></a>    res[ii,i] <span class="ot">&lt;-</span> x[i]<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> y[ii]<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fu">log</span>(x[i] <span class="sc">+</span> y[ii])</span>
-<span id="cb9-10"><a></a>  }</span>
-<span id="cb9-11"><a></a>}</span>
-<span id="cb9-12"><a></a><span class="fu">print</span>(res)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">25</span>, <span class="dv">42</span>, <span class="dv">67</span>, <span class="dv">95</span>)</span>
+<span id="cb10-2"><a></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">12</span>, <span class="dv">18</span>, <span class="dv">52</span>, <span class="dv">61</span>, <span class="dv">79</span>, <span class="dv">83</span>)</span>
+<span id="cb10-3"><a></a>res <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">nrow =</span> <span class="dv">7</span>, <span class="at">ncol =</span> <span class="dv">7</span>)</span>
+<span id="cb10-4"><a></a><span class="fu">colnames</span>(res) <span class="ot">&lt;-</span> <span class="fu">as.character</span>(x)</span>
+<span id="cb10-5"><a></a><span class="fu">rownames</span>(res) <span class="ot">&lt;-</span> <span class="fu">as.character</span>(y)</span>
+<span id="cb10-6"><a></a></span>
+<span id="cb10-7"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>){</span>
+<span id="cb10-8"><a></a>  <span class="cf">for</span> (ii <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>){</span>
+<span id="cb10-9"><a></a>    res[ii,i] <span class="ot">&lt;-</span> x[i]<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> y[ii]<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fu">log</span>(x[i] <span class="sc">+</span> y[ii])</span>
+<span id="cb10-10"><a></a>  }</span>
+<span id="cb10-11"><a></a>}</span>
+<span id="cb10-12"><a></a><span class="fu">print</span>(res)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section></section>
@@ -1970,14 +1990,14 @@ f(x,y) = x^2 + y^2 + \ln(x+y)
 <p>Element 1 in vector <code>x</code> is applied to element 1 in vector <code>y</code></p>
 </div>
 </section>
-<section id="example-7" class="slide level2">
-<h2>Example</h2>
-<div id="qwebr-insertion-location-1"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
 <section id="example-8" class="slide level2">
 <h2>Example</h2>
 <div id="qwebr-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="example-9" class="slide level2">
+<h2>Example</h2>
+<div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section></section>
 <section>
@@ -2023,8 +2043,8 @@ f(x,y) = x^2 + y^2 + \ln(x+y)
 <h2>Help Documentation</h2>
 <table>
 <colgroup>
-<col style="width: 27%">
-<col style="width: 72%">
+<col style="width: 30%">
+<col style="width: 69%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2156,14 +2176,14 @@ f(x,y) = x^2 + y^2 + \ln(x+y)
 <section id="anatomy" class="slide level2">
 <h2>Anatomy</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="|1-3|4-5|6|7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>name_of_function <span class="ot">&lt;-</span> <span class="cf">function</span>(data_1, <span class="at">data_2 =</span> <span class="cn">NULL</span>, </span>
-<span id="cb10-2"><a></a>                             argument_1, <span class="at">argument_2 =</span> <span class="cn">TRUE</span>, <span class="at">argument_3 =</span> <span class="cn">NULL</span>,</span>
-<span id="cb10-3"><a></a>                             ...){</span>
-<span id="cb10-4"><a></a>  <span class="co"># Conduct Task</span></span>
-<span id="cb10-5"><a></a>  <span class="co"># Conduct Task</span></span>
-<span id="cb10-6"><a></a>  output_object <span class="ot">&lt;-</span> Tasks</span>
-<span id="cb10-7"><a></a>  <span class="fu">return</span>(output_object)</span>
-<span id="cb10-8"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="|1-3|4-5|6|7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>name_of_function <span class="ot">&lt;-</span> <span class="cf">function</span>(data_1, <span class="at">data_2 =</span> <span class="cn">NULL</span>, </span>
+<span id="cb11-2"><a></a>                             argument_1, <span class="at">argument_2 =</span> <span class="cn">TRUE</span>, <span class="at">argument_3 =</span> <span class="cn">NULL</span>,</span>
+<span id="cb11-3"><a></a>                             ...){</span>
+<span id="cb11-4"><a></a>  <span class="co"># Conduct Task</span></span>
+<span id="cb11-5"><a></a>  <span class="co"># Conduct Task</span></span>
+<span id="cb11-6"><a></a>  output_object <span class="ot">&lt;-</span> Tasks</span>
+<span id="cb11-7"><a></a>  <span class="fu">return</span>(output_object)</span>
+<span id="cb11-8"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <ul>
@@ -2177,14 +2197,14 @@ f(x,y) = x^2 + y^2 + \ln(x+y)
 </ul>
 </div>
 </section>
-<section id="example-9" class="slide level2">
+<section id="example-10" class="slide level2">
 <h2>Example</h2>
 <p>Create a function for</p>
 <p><span class="math display">\[
 y = \ln(x^2)
 \]</span></p>
 </section>
-<section id="example-10" class="slide level2">
+<section id="example-11" class="slide level2">
 <h2>Example</h2>
 <p>Create a function for</p>
 <p><span class="math display">\[
@@ -2194,7 +2214,7 @@ x^2 + 5 &amp; \mathrm{otherwise}
 \end{array} \right.
 \]</span></p>
 </section>
-<section id="example-11" class="slide level2">
+<section id="example-12" class="slide level2">
 <h2>Example</h2>
 <p>Create a function for</p>
 <p><span class="math display">\[
@@ -2204,7 +2224,7 @@ x^2 + 5 + \ln(y) &amp; \mathrm{otherwise}
 \end{array} \right.
 \]</span></p>
 </section>
-<section id="example-12" class="slide level2">
+<section id="example-13" class="slide level2">
 <h2>Example</h2>
 <p>Create the function that allows your to compute the z-score of a specific value <code>x</code> using the sampling distribution from a set of data (<code>y</code> vector):</p>
 <p><span class="math display">\[
@@ -2256,21 +2276,21 @@ z =  \frac{x-\bar y}{\sqrt{s^2_{y}/n_y}}
 <li><p><code>…</code>: further arguments to be applied to <code>FUN</code>, must be labeled</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">apply</span>(X, MARGIN, FUN, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="example-13" class="slide level2">
-<h2>Example</h2>
-<p>Find the standard deviation of all the columns of the following matrix:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">1000</span>), <span class="at">nrow =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">apply</span>(X, MARGIN, FUN, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="example-14" class="slide level2">
 <h2>Example</h2>
+<p>Find the standard deviation of all the columns of the following matrix:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">1000</span>), <span class="at">nrow =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="example-15" class="slide level2">
+<h2>Example</h2>
 <p>Find the <span class="math inline">\(25th\)</span>, <span class="math inline">\(50th\)</span>, and <span class="math inline">\(75th\)</span> quartiles for each row of the following matrix:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">1000</span>), <span class="at">nrow =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">1000</span>), <span class="at">nrow =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
@@ -2317,10 +2337,10 @@ z =  \frac{x-\bar y}{\sqrt{s^2_{y}/n_y}}
 <li><p><code>…</code>: further arguments to be passed along to <code>FUN</code></p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">lapply</span>(X, FUN, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">lapply</span>(X, FUN, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="example-15" class="slide level2">
+<section id="example-16" class="slide level2">
 <h2>Example</h2>
 <p>Create a function that returns a labeled list for with the following values: mean, standard deviation, median, max, and min.</p>
 </section></section>
@@ -2369,32 +2389,32 @@ z =  \frac{x-\bar y}{\sqrt{s^2_{y}/n_y}}
 <li><p><code>simplify</code>: indicates how to simplify the function, defaults to n-dimensional array based on output</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">sapply</span>(X, FUN, ..., <span class="at">simplify =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="example-16" class="slide level2">
-<h2>Example</h2>
-<p>Using the vector below, compute the length of each string using <code>sapply</code> and <code>str_length()</code> from <code>tidyverse</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>fruits <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"cherry"</span>, <span class="st">"date"</span>, <span class="st">"elderberry"</span>, <span class="st">"fig"</span>, <span class="st">"grape"</span>, <span class="st">"honeydew"</span>, <span class="st">"kiwi"</span>, <span class="st">"lemon"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">sapply</span>(X, FUN, ..., <span class="at">simplify =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="example-17" class="slide level2">
 <h2>Example</h2>
-<p>Using the list generated below, compute the mean of each element of the list using <code>sapply</code>.</p>
+<p>Using the vector below, compute the length of each string using <code>sapply</code> and <code>str_length()</code> from <code>tidyverse</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="co"># Generate a list of 10 lists, each containing 5 random numbers</span></span>
-<span id="cb17-2"><a></a>lists <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="cf">function</span>(i) {</span>
-<span id="cb17-3"><a></a>  means <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="dv">1</span>, <span class="dv">3</span>)</span>
-<span id="cb17-4"><a></a>  <span class="fu">rnorm</span>(<span class="dv">5</span>, means)</span>
-<span id="cb17-5"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>fruits <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"cherry"</span>, <span class="st">"date"</span>, <span class="st">"elderberry"</span>, <span class="st">"fig"</span>, <span class="st">"grape"</span>, <span class="st">"honeydew"</span>, <span class="st">"kiwi"</span>, <span class="st">"lemon"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="example-18" class="slide level2">
 <h2>Example</h2>
+<p>Using the list generated below, compute the mean of each element of the list using <code>sapply</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="co"># Generate a list of 10 lists, each containing 5 random numbers</span></span>
+<span id="cb18-2"><a></a>lists <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="cf">function</span>(i) {</span>
+<span id="cb18-3"><a></a>  means <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="dv">1</span>, <span class="dv">3</span>)</span>
+<span id="cb18-4"><a></a>  <span class="fu">rnorm</span>(<span class="dv">5</span>, means)</span>
+<span id="cb18-5"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="example-19" class="slide level2">
+<h2>Example</h2>
 <p>Using the vector below, use the <code>sapply()</code> to find <span class="math inline">\(\log(x)\)</span> for each value and return a matrix:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>numbers <span class="ot">&lt;-</span> <span class="dv">4</span><span class="sc">:</span><span class="dv">400</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>numbers <span class="ot">&lt;-</span> <span class="dv">4</span><span class="sc">:</span><span class="dv">400</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 <div class="quarto-auto-generated-content">
