@@ -4,14 +4,14 @@
     "href": "syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "Term: Summer 2024\nInstructor: Isaac Quintanilla Salinas\nContact: isaac.qs@csuci.edu\nOffice Location: BTE 2840\nOffice Hours:\nBy By Appointment (schedule with me) or Zoom appointment: calendly.com/isaac-qs/office-hours\nLecture: Wednesday 5:00-7:00 PM in BTE 2810 and individual appointments for registered students to work on projects.\nCourse Website: m497.inqs.info AND Canvas\n\n\n\nStudents will learn an introductory level of Monte Carlo methods related to random experiments, random number generation, random variable generations, and integration. Topics include inverse-transformation method, accept-reject algorithm, importance sampling, Markov Chains Monte Carlo. This class is useful for students who want to learn the primary engines of Monte Carlo hypothesis testing, Monte Carlo integration and optimization, and Bayesian Statistics. All analysis will be conducted in R.\n\n\n\n\n\n\n\nStatistical Computing (SC)\n\nIsaac Quintanilla Salinas\nwww.inqs.info/stat_comp\nhypothes.is/groups/xMmDdj2A/m408\n\n\n\n\n\nFor this course, we will use R, Quarto, and RStudio. Please download and install on your computer.\n\nR is a free statistical software program that is available for download at: www.r-project.org.\nR Markdown is a scientific documentation known as an RMD file that can be used to provide reproducible code and documents.\nRStudio provides free and open source tools for your data analysis in R: posit.co/downloads\ncsucistats is a developmental R package that will contain RMD templates to submit assignments for class: csucistats\n\n\n\n\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n50%\n\n\nFinal Project\n50%\n\n\n\nAt the end of the quarter, course grades will be assigned according to the following scale:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA+\n98 – 100\nB+\n87 – &lt;90\nC+\n77 – &lt;80\nD+\n67 – &lt;70\n\n\n\n\nA\n93 – &lt;98\nB\n83 – &lt;87\nC\n73 – &lt;77\nD\n63 – &lt;67\nF\n&lt; 60\n\n\nA–\n90 - &lt;93\nB-\n80 – &lt;83\nC–\n70 – &lt;73\nD–\n60 – &lt;63\n\n\n\n\n\n\n\nHomework will be assigned on a regular basis and posted here and Canvas. The homework is to help you practice the concepts learned in lecture and to help you study. You must turn in your own individual homework and show your understanding of the material.\n\n\n\nImplement a Monte Carlo Method to answer a scientific question, study a statistical model, implement a numerical algorithm, or reporting of Monte Carlo Method not mentioned in class.\n\n\n\n\nThe following outline may be subject to change. Any changes will be announced in class.\n\n\n\n\n\n\n\n\n\nWk\nTopic\nReading\nAssignment\n\n\n\n\n1\nIntro to R and Control Flow\nSC: Ch 2-3\nHW # 1\n\n\n2\nControl Flow/Functional Programming\nSC: Ch 3-4\nHW # 2\n\n\n3\nRandom Number/Variable Generation\nSC:\nHW # 3\n\n\n4\nMonte Carlo Integration\nSC:\nHW # 4\n\n\n5\nMonte Carlo Hypothesis Testing\nSC:\nHW # 5\n\n\n6\nPermutation Methods\nSC:\nHW # 6\n\n\n7\nSimulation Study: Linear Regression\nSC:\n\n\n\n8\nSimulation Study: Generalized Linear Models\nSC:\n\n\n\n9\nSimulation Study: Zero-Inflated Models\nSC:\n\n\n\n10\nSimulation Study: Mixed-Effects Models\nSC:\n\n\n\n11\nFinal Presentation\n\n\n\n\n\n\n\n\n\nAcademic Honesty:\nPlease conduct yourself with honesty and integrity. Do not submit others’ work as your own. For assignments and quizzes that allow you to work with a group, only put your name on what the group submits if you genuinely contributed to the work. Work completely independently on exams, using only the materials that are indicated as allowed. Failure to observe academic honesty results in substantial penalties that can include failing the course.\nDisabilities:\nIf you are a student with a disability requesting reasonable accommodations in this course, you need to contact Disability Accommodations and Support Services (DASS) located on the second floor of Arroyo Hall, via email accommodations@csuci.edu or call 805-437-3331. All requests for reasonable accommodations require registration with DASS in advance of need: https://www.csuci.edu/dass/students/apply-for-services.htm. Faculty, students and DASS will work together regarding classroom accommodations. You are encouraged to discuss approved.\nEmergency Procedure Notice to Students:\nCSUCI is following guidelines and public orders from the California Department of Public Health and Ventura County Public Health for the COVID-19 pandemic as it pertains to CSUCI students, employees and visitors on the campus. Students are expected to adhere to all health and safety requirements as noted on the University’s Spring 2023 Semester website or they may be subject to removal from the classroom."
+    "text": "Term: Summer 2024\nInstructor: Isaac Quintanilla Salinas\nContact: isaac.qs@csuci.edu\nOffice Location: BTE 2840\nOffice Hours:\nBy By Appointment (schedule with me) or Zoom appointment: calendly.com/isaac-qs/office-hours\nLecture: Wednesday 5:00-7:00 PM in BTE 2810 and individual appointments for registered students to work on projects.\nCourse Website: m497.inqs.info AND Canvas\n\n\n\nStudents will learn an introductory level of Monte Carlo methods related to random experiments, random number generation, random variable generations, and integration. Topics include inverse-transformation method, accept-reject algorithm, importance sampling, Markov Chains Monte Carlo. This class is useful for students who want to learn the primary engines of Monte Carlo hypothesis testing, Monte Carlo integration and optimization, and Bayesian Statistics. All analysis will be conducted in R.\n\n\n\n\n\n\n\nStatistical Computing (SC)\n\nIsaac Quintanilla Salinas\nwww.inqs.info/stat_comp\nhypothes.is/groups/xMmDdj2A/m408\n\n\n\n\n\nFor this course, we will use R, Quarto, and RStudio. Please download and install on your computer.\n\nR is a free statistical software program that is available for download at: www.r-project.org.\nR Markdown is a scientific documentation known as an RMD file that can be used to provide reproducible code and documents.\nRStudio provides free and open source tools for your data analysis in R: posit.co/downloads\ncsucistats is a developmental R package that will contain RMD templates to submit assignments for class: csucistats\n\n\n\n\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n50%\n\n\nFinal Project\n50%\n\n\n\nAt the end of the quarter, course grades will be assigned according to the following scale:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA+\n98 – 100\nB+\n87 – &lt;90\nC+\n77 – &lt;80\nD+\n67 – &lt;70\n\n\n\n\nA\n93 – &lt;98\nB\n83 – &lt;87\nC\n73 – &lt;77\nD\n63 – &lt;67\nF\n&lt; 60\n\n\nA–\n90 - &lt;93\nB-\n80 – &lt;83\nC–\n70 – &lt;73\nD–\n60 – &lt;63\n\n\n\n\n\n\n\nHomework will be assigned on a regular basis and posted here and Canvas. The homework is to help you practice the concepts learned in lecture and to help you study. You must turn in your own individual homework and show your understanding of the material.\n\n\n\nImplement a Monte Carlo Method to answer a scientific question, study a statistical model, implement a numerical algorithm, or reporting of Monte Carlo Method not mentioned in class.\n\n\n\n\nThe following outline may be subject to change. Any changes will be announced in class.\n\n\n\n\n\n\n\n\n\nWk\nTopic\nReading\nAssignment\n\n\n\n\n1\nIntro to R and Control Flow\nSC: Ch 2-3\n\n\n\n2\nControl Flow/Functional Programming\nSC: Ch 3-4\nHW # 1\n\n\n3\nRandom Number/Variable Generation\nSC:\nHW # 2\n\n\n4\nMonte Carlo Integration\nSC:\nHW # 3\n\n\n5\nMonte Carlo Hypothesis Testing\nSC:\nHW # 4\n\n\n6\nPermutation Methods\nSC:\nHW # 5\n\n\n7\nSimulation Study: Linear Regression\nSC:\n\n\n\n8\nSimulation Study: Generalized Linear Models\nSC:\n\n\n\n9\nSimulation Study: Zero-Inflated Models\nSC:\n\n\n\n10\nSimulation Study: Mixed-Effects Models\nSC:\n\n\n\n11\nFinal Presentation\n\n\n\n\n\n\n\n\n\nAcademic Honesty:\nPlease conduct yourself with honesty and integrity. Do not submit others’ work as your own. For assignments and quizzes that allow you to work with a group, only put your name on what the group submits if you genuinely contributed to the work. Work completely independently on exams, using only the materials that are indicated as allowed. Failure to observe academic honesty results in substantial penalties that can include failing the course.\nDisabilities:\nIf you are a student with a disability requesting reasonable accommodations in this course, you need to contact Disability Accommodations and Support Services (DASS) located on the second floor of Arroyo Hall, via email accommodations@csuci.edu or call 805-437-3331. All requests for reasonable accommodations require registration with DASS in advance of need: https://www.csuci.edu/dass/students/apply-for-services.htm. Faculty, students and DASS will work together regarding classroom accommodations. You are encouraged to discuss approved.\nEmergency Procedure Notice to Students:\nCSUCI is following guidelines and public orders from the California Department of Public Health and Ventura County Public Health for the COVID-19 pandemic as it pertains to CSUCI students, employees and visitors on the campus. Students are expected to adhere to all health and safety requirements as noted on the University’s Spring 2023 Semester website or they may be subject to removal from the classroom."
   },
   {
     "objectID": "syllabus.html#math-497-intro-to-monte-carlo-methods",
     "href": "syllabus.html#math-497-intro-to-monte-carlo-methods",
     "title": "Syllabus",
     "section": "",
-    "text": "Term: Summer 2024\nInstructor: Isaac Quintanilla Salinas\nContact: isaac.qs@csuci.edu\nOffice Location: BTE 2840\nOffice Hours:\nBy By Appointment (schedule with me) or Zoom appointment: calendly.com/isaac-qs/office-hours\nLecture: Wednesday 5:00-7:00 PM in BTE 2810 and individual appointments for registered students to work on projects.\nCourse Website: m497.inqs.info AND Canvas\n\n\n\nStudents will learn an introductory level of Monte Carlo methods related to random experiments, random number generation, random variable generations, and integration. Topics include inverse-transformation method, accept-reject algorithm, importance sampling, Markov Chains Monte Carlo. This class is useful for students who want to learn the primary engines of Monte Carlo hypothesis testing, Monte Carlo integration and optimization, and Bayesian Statistics. All analysis will be conducted in R.\n\n\n\n\n\n\n\nStatistical Computing (SC)\n\nIsaac Quintanilla Salinas\nwww.inqs.info/stat_comp\nhypothes.is/groups/xMmDdj2A/m408\n\n\n\n\n\nFor this course, we will use R, Quarto, and RStudio. Please download and install on your computer.\n\nR is a free statistical software program that is available for download at: www.r-project.org.\nR Markdown is a scientific documentation known as an RMD file that can be used to provide reproducible code and documents.\nRStudio provides free and open source tools for your data analysis in R: posit.co/downloads\ncsucistats is a developmental R package that will contain RMD templates to submit assignments for class: csucistats\n\n\n\n\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n50%\n\n\nFinal Project\n50%\n\n\n\nAt the end of the quarter, course grades will be assigned according to the following scale:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA+\n98 – 100\nB+\n87 – &lt;90\nC+\n77 – &lt;80\nD+\n67 – &lt;70\n\n\n\n\nA\n93 – &lt;98\nB\n83 – &lt;87\nC\n73 – &lt;77\nD\n63 – &lt;67\nF\n&lt; 60\n\n\nA–\n90 - &lt;93\nB-\n80 – &lt;83\nC–\n70 – &lt;73\nD–\n60 – &lt;63\n\n\n\n\n\n\n\nHomework will be assigned on a regular basis and posted here and Canvas. The homework is to help you practice the concepts learned in lecture and to help you study. You must turn in your own individual homework and show your understanding of the material.\n\n\n\nImplement a Monte Carlo Method to answer a scientific question, study a statistical model, implement a numerical algorithm, or reporting of Monte Carlo Method not mentioned in class.\n\n\n\n\nThe following outline may be subject to change. Any changes will be announced in class.\n\n\n\n\n\n\n\n\n\nWk\nTopic\nReading\nAssignment\n\n\n\n\n1\nIntro to R and Control Flow\nSC: Ch 2-3\nHW # 1\n\n\n2\nControl Flow/Functional Programming\nSC: Ch 3-4\nHW # 2\n\n\n3\nRandom Number/Variable Generation\nSC:\nHW # 3\n\n\n4\nMonte Carlo Integration\nSC:\nHW # 4\n\n\n5\nMonte Carlo Hypothesis Testing\nSC:\nHW # 5\n\n\n6\nPermutation Methods\nSC:\nHW # 6\n\n\n7\nSimulation Study: Linear Regression\nSC:\n\n\n\n8\nSimulation Study: Generalized Linear Models\nSC:\n\n\n\n9\nSimulation Study: Zero-Inflated Models\nSC:\n\n\n\n10\nSimulation Study: Mixed-Effects Models\nSC:\n\n\n\n11\nFinal Presentation\n\n\n\n\n\n\n\n\n\nAcademic Honesty:\nPlease conduct yourself with honesty and integrity. Do not submit others’ work as your own. For assignments and quizzes that allow you to work with a group, only put your name on what the group submits if you genuinely contributed to the work. Work completely independently on exams, using only the materials that are indicated as allowed. Failure to observe academic honesty results in substantial penalties that can include failing the course.\nDisabilities:\nIf you are a student with a disability requesting reasonable accommodations in this course, you need to contact Disability Accommodations and Support Services (DASS) located on the second floor of Arroyo Hall, via email accommodations@csuci.edu or call 805-437-3331. All requests for reasonable accommodations require registration with DASS in advance of need: https://www.csuci.edu/dass/students/apply-for-services.htm. Faculty, students and DASS will work together regarding classroom accommodations. You are encouraged to discuss approved.\nEmergency Procedure Notice to Students:\nCSUCI is following guidelines and public orders from the California Department of Public Health and Ventura County Public Health for the COVID-19 pandemic as it pertains to CSUCI students, employees and visitors on the campus. Students are expected to adhere to all health and safety requirements as noted on the University’s Spring 2023 Semester website or they may be subject to removal from the classroom."
+    "text": "Term: Summer 2024\nInstructor: Isaac Quintanilla Salinas\nContact: isaac.qs@csuci.edu\nOffice Location: BTE 2840\nOffice Hours:\nBy By Appointment (schedule with me) or Zoom appointment: calendly.com/isaac-qs/office-hours\nLecture: Wednesday 5:00-7:00 PM in BTE 2810 and individual appointments for registered students to work on projects.\nCourse Website: m497.inqs.info AND Canvas\n\n\n\nStudents will learn an introductory level of Monte Carlo methods related to random experiments, random number generation, random variable generations, and integration. Topics include inverse-transformation method, accept-reject algorithm, importance sampling, Markov Chains Monte Carlo. This class is useful for students who want to learn the primary engines of Monte Carlo hypothesis testing, Monte Carlo integration and optimization, and Bayesian Statistics. All analysis will be conducted in R.\n\n\n\n\n\n\n\nStatistical Computing (SC)\n\nIsaac Quintanilla Salinas\nwww.inqs.info/stat_comp\nhypothes.is/groups/xMmDdj2A/m408\n\n\n\n\n\nFor this course, we will use R, Quarto, and RStudio. Please download and install on your computer.\n\nR is a free statistical software program that is available for download at: www.r-project.org.\nR Markdown is a scientific documentation known as an RMD file that can be used to provide reproducible code and documents.\nRStudio provides free and open source tools for your data analysis in R: posit.co/downloads\ncsucistats is a developmental R package that will contain RMD templates to submit assignments for class: csucistats\n\n\n\n\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n50%\n\n\nFinal Project\n50%\n\n\n\nAt the end of the quarter, course grades will be assigned according to the following scale:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA+\n98 – 100\nB+\n87 – &lt;90\nC+\n77 – &lt;80\nD+\n67 – &lt;70\n\n\n\n\nA\n93 – &lt;98\nB\n83 – &lt;87\nC\n73 – &lt;77\nD\n63 – &lt;67\nF\n&lt; 60\n\n\nA–\n90 - &lt;93\nB-\n80 – &lt;83\nC–\n70 – &lt;73\nD–\n60 – &lt;63\n\n\n\n\n\n\n\nHomework will be assigned on a regular basis and posted here and Canvas. The homework is to help you practice the concepts learned in lecture and to help you study. You must turn in your own individual homework and show your understanding of the material.\n\n\n\nImplement a Monte Carlo Method to answer a scientific question, study a statistical model, implement a numerical algorithm, or reporting of Monte Carlo Method not mentioned in class.\n\n\n\n\nThe following outline may be subject to change. Any changes will be announced in class.\n\n\n\n\n\n\n\n\n\nWk\nTopic\nReading\nAssignment\n\n\n\n\n1\nIntro to R and Control Flow\nSC: Ch 2-3\n\n\n\n2\nControl Flow/Functional Programming\nSC: Ch 3-4\nHW # 1\n\n\n3\nRandom Number/Variable Generation\nSC:\nHW # 2\n\n\n4\nMonte Carlo Integration\nSC:\nHW # 3\n\n\n5\nMonte Carlo Hypothesis Testing\nSC:\nHW # 4\n\n\n6\nPermutation Methods\nSC:\nHW # 5\n\n\n7\nSimulation Study: Linear Regression\nSC:\n\n\n\n8\nSimulation Study: Generalized Linear Models\nSC:\n\n\n\n9\nSimulation Study: Zero-Inflated Models\nSC:\n\n\n\n10\nSimulation Study: Mixed-Effects Models\nSC:\n\n\n\n11\nFinal Presentation\n\n\n\n\n\n\n\n\n\nAcademic Honesty:\nPlease conduct yourself with honesty and integrity. Do not submit others’ work as your own. For assignments and quizzes that allow you to work with a group, only put your name on what the group submits if you genuinely contributed to the work. Work completely independently on exams, using only the materials that are indicated as allowed. Failure to observe academic honesty results in substantial penalties that can include failing the course.\nDisabilities:\nIf you are a student with a disability requesting reasonable accommodations in this course, you need to contact Disability Accommodations and Support Services (DASS) located on the second floor of Arroyo Hall, via email accommodations@csuci.edu or call 805-437-3331. All requests for reasonable accommodations require registration with DASS in advance of need: https://www.csuci.edu/dass/students/apply-for-services.htm. Faculty, students and DASS will work together regarding classroom accommodations. You are encouraged to discuss approved.\nEmergency Procedure Notice to Students:\nCSUCI is following guidelines and public orders from the California Department of Public Health and Ventura County Public Health for the COVID-19 pandemic as it pertains to CSUCI students, employees and visitors on the campus. Students are expected to adhere to all health and safety requirements as noted on the University’s Spring 2023 Semester website or they may be subject to removal from the classroom."
   },
   {
     "objectID": "lectures/1.html#introductions",
@@ -322,25 +322,32 @@
     "text": "break Statements\nThe break statement is used to stop a loop if the condition is met. This is used along with an if statement.\n\nfor (i in vector){\n  perform task\n  if (condition){\n    break\n  } else {\n    perform task\n  }\n}"
   },
   {
-    "objectID": "posts/week_1.html",
-    "href": "posts/week_1.html",
-    "title": "Week 1",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Monte Carlo Methods!",
     "section": "",
-    "text": "Installing R and RStudio\nScripts\nR Calculator\nR Objects\nR Packages"
+    "text": "Brief Introduction\n\n\n\n\n\nWelcome to the course! This is the home page of the course where I will provide a recap on what was covered in the week. Here I will post any documents or videos for your reference. If you have any questions, please email me at isaac.qs@csuci.edu.\n\n\n\n\n\n\n\n\n\nQuarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Statistics Book\n\n\n\n\n\nhttps://openintro-ims.netlify.app/\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\nThis week we will dive into R and control flow programming.\n\n\n\n\n\nJun 1, 2024\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\nThis week we will dive into R and control flow programming.\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/week_1.html#learning-outcomes",
-    "href": "posts/week_1.html#learning-outcomes",
-    "title": "Week 1",
+    "objectID": "posts/2.html",
+    "href": "posts/2.html",
+    "title": "Week 2",
     "section": "",
-    "text": "Installing R and RStudio\nScripts\nR Calculator\nR Objects\nR Packages"
+    "text": "Nested Loops\nWhile Loops\nVectorized Code\nFunctions\n*apply functions"
   },
   {
-    "objectID": "posts/week_1.html#resources",
-    "href": "posts/week_1.html#resources",
-    "title": "Week 1",
+    "objectID": "posts/2.html#learning-outcomes",
+    "href": "posts/2.html#learning-outcomes",
+    "title": "Week 2",
+    "section": "",
+    "text": "Nested Loops\nWhile Loops\nVectorized Code\nFunctions\n*apply functions"
+  },
+  {
+    "objectID": "posts/2.html#resources",
+    "href": "posts/2.html#resources",
+    "title": "Week 2",
     "section": "Resources",
-    "text": "Resources\n\n\n\nLecture\nVideos\n\n\n\n\nSlide"
+    "text": "Resources\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nNot Available"
   },
   {
     "objectID": "books.html",
@@ -431,42 +438,273 @@
     "href": "hw/hw1.html",
     "title": "Homework 1",
     "section": "",
-    "text": "Using the following code:\n\nx &lt;- matrix(rnorm(1500), nrow = 10)\n\nWrite the code to produce the output if you use the rowMeans() on the R object x.\n\n\nAnswer\nxmeans &lt;- vector(length = nrow(x))\nfor(i in 1:nrow(x)){\n  xmeans[i] &lt;- mean(x[i,])\n}\n#xmeans"
+    "text": "Due 6/14/24 @ 11:59 PM\nYou must comment all your code to receive credit.\nSubmit the *.html file to canvas.\nFor all problems, you must use at least one for or while loop."
   },
   {
     "objectID": "hw/hw1.html#problem-1",
     "href": "hw/hw1.html#problem-1",
     "title": "Homework 1",
-    "section": "",
-    "text": "Using the following code:\n\nx &lt;- matrix(rnorm(1500), nrow = 10)\n\nWrite the code to produce the output if you use the rowMeans() on the R object x.\n\n\nAnswer\nxmeans &lt;- vector(length = nrow(x))\nfor(i in 1:nrow(x)){\n  xmeans[i] &lt;- mean(x[i,])\n}\n#xmeans"
+    "section": "Problem 1",
+    "text": "Problem 1\nUsing the following code:\n\nx &lt;- matrix(rnorm(1500), nrow = 10)\n\nWrite the code to produce the output if you use the rowMeans() on the R object x."
   },
   {
     "objectID": "hw/hw1.html#problem-2",
     "href": "hw/hw1.html#problem-2",
     "title": "Homework 1",
     "section": "Problem 2",
-    "text": "Problem 2\nUsing the following code:\n\ny &lt;- matrix(sample(1:400, 100, replace = T), nrow = 10)\n\nFind the median value for each column of the matrix y. You are not allowed to use the median() function.\n\n\nAnswer\nymedian &lt;- vector(length = ncol(x))\nfor(i in 1:nrow(x)){\n  ymedian[i] &lt;- sum(x[5:6,]) / 2\n}\n#ymedian"
+    "text": "Problem 2\nUsing the following code:\n\ny &lt;- matrix(sample(1:400, 100, replace = T), nrow = 10)\n\nFind the median value for each column of the matrix y."
   },
   {
     "objectID": "hw/hw1.html#problem-3",
     "href": "hw/hw1.html#problem-3",
     "title": "Homework 1",
     "section": "Problem 3",
-    "text": "Problem 3\nWrite the code that will generate the first 1000 numbers of the Fibonacci Sequence.\n\n\nAnswer\nfib &lt;- c(0,1)\nfor(i in 3:1000){\n  fib &lt;- c(fib, fib[i-2] + fib[i-1])\n}\n#fib"
+    "text": "Problem 3\nWrite the code that will generate the first 1000 numbers of the Fibonacci Sequence."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-4",
+    "href": "hw/hw1.html#problem-4",
+    "title": "Homework 1",
+    "section": "Problem 4",
+    "text": "Problem 4\nWrite a function for the following equation:\n\\[\nf(x, y, z) =\\left\\{\\begin{array}{cc}\nx^2+\\sqrt y & z  = 0 \\\\\nx^2+2x+3+ \\log(y) & z = 1\n\\end{array}\\right.\n\\]\nInclude any error messages if necessary."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-5",
+    "href": "hw/hw1.html#problem-5",
+    "title": "Homework 1",
+    "section": "Problem 5",
+    "text": "Problem 5\nCreate a function that will give you the first x Fibonacci numbers. You must use a for loop."
   },
   {
     "objectID": "hw.html",
     "href": "hw.html",
     "title": "Homework",
     "section": "",
-    "text": "Quarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\nBelow are the different homework assignments for the course. Make sure to upload your assignment as a single file on Canvas.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nMay 23, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Quarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\nBelow are the different homework assignments for the course. Make sure to upload your assignment as a single file on Canvas.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to Monte Carlo Methods!",
+    "objectID": "posts/week_1.html",
+    "href": "posts/week_1.html",
+    "title": "Week 1",
     "section": "",
-    "text": "Brief Introduction\n\n\n\n\n\nWelcome to the course! This is the home page of the course where I will provide a recap on what was covered in the week. Here I will post any documents or videos for your reference. If you have any questions, please email me at isaac.qs@csuci.edu.\n\n\n\n\n\n\n\n\n\nQuarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Statistics Book\n\n\n\n\n\nhttps://openintro-ims.netlify.app/\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\nThis week we will dive into R and control flow programming.\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Installing R and RStudio\nScripts\nR Calculator\nR Objects\nR Packages"
+  },
+  {
+    "objectID": "posts/week_1.html#learning-outcomes",
+    "href": "posts/week_1.html#learning-outcomes",
+    "title": "Week 1",
+    "section": "",
+    "text": "Installing R and RStudio\nScripts\nR Calculator\nR Objects\nR Packages"
+  },
+  {
+    "objectID": "posts/week_1.html#resources",
+    "href": "posts/week_1.html#resources",
+    "title": "Week 1",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nNot Available"
+  },
+  {
+    "objectID": "lectures/2.html#nested-for-loops-1",
+    "href": "lectures/2.html#nested-for-loops-1",
+    "title": "Functional Programming",
+    "section": "Nested for Loops",
+    "text": "Nested for Loops\nNested for loops are for loops within another for loop. You can stack these loops as much as needed. Just make sure the index is different for each loop. The general format for a loop goes as follow:\n\nfor (i in vector_1){\n  for (ii in vector_2){\n    perform task\n  }\n}"
+  },
+  {
+    "objectID": "lectures/2.html#example",
+    "href": "lectures/2.html#example",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nWithout using the sd() function, compute the standard deviation for each column of the matrix:\n\nx &lt;- matrix(rnorm(1000), nrow = 10)\n\n\\[\ns^2 = \\frac{1}{n-1}\\sum^n_{i=1}(x_i-\\bar x)^2\n\\]"
+  },
+  {
+    "objectID": "lectures/2.html#while-loops-1",
+    "href": "lectures/2.html#while-loops-1",
+    "title": "Functional Programming",
+    "section": "while Loops",
+    "text": "while Loops\nA while loop is a combination of a for loop and a break statement. The loop will continue indefinitely until a condition becomes false.\n\n# Initial Condition\ncondition &lt;- starting TRUE condition\n\nwhile (condition){\n  perform task\n  condition &lt;- update condition\n}"
+  },
+  {
+    "objectID": "lectures/2.html#example-1",
+    "href": "lectures/2.html#example-1",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nSimulate from a \\(N(0,1)\\) distribution until you have 50 positive numbers.\n\n\nCode\nn &lt;- 0\npos_num &lt;- c()\n\nwhile (n &lt; 51){\n  x &lt;- rnorm(1)\n  if (x &gt; 0) {\n    pos_num &lt;- c(pos_num, x)\n    n &lt;- n + 1\n  }\n}\n\npos_num"
+  },
+  {
+    "objectID": "lectures/2.html#example-2",
+    "href": "lectures/2.html#example-2",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nFind the value of \\(x\\) where the function \\(y=1/x\\) relative converges (\\(\\frac{|y_{old}-y_{new}|}{y_{old}}\\)) at a level of \\(10^-6\\) as \\(x\\rightarrow \\infty\\).\n\n\nCode\ndiff &lt;- 10\nx &lt;- 2\ny_old &lt;- 1\nwhile (diff &gt; 1e-6){\n  y_new &lt;- 1 / x\n  diff &lt;- abs(y_old - y_new) / y_old\n  x &lt;- x + 1\n  y_old &lt;- y_new\n}"
+  },
+  {
+    "objectID": "lectures/2.html#example-3",
+    "href": "lectures/2.html#example-3",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nSimulate from a \\(Binom(1,.2)\\) distribution until the sum of the random variables generated is 50.\n\n\nCode\nsum_bin &lt;- 0\nx &lt;- c()\nwhile (sum_bin &lt;51) {\n  x &lt;- c(x, rbinom(1, 1, 0.2))\n  sum_bin &lt;- sum(x)\n}\nsum_bin\nlength(x)"
+  },
+  {
+    "objectID": "lectures/2.html#example-4",
+    "href": "lectures/2.html#example-4",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example"
+  },
+  {
+    "objectID": "lectures/2.html#example-5",
+    "href": "lectures/2.html#example-5",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nUsing the code below:\n\nx &lt;- rnorm(5000)\n\nCreate a new vector containing all the positive values of x. The new vector should be less than 5000.\nAnswer:\n\n\nCode\nnn &lt;- length(x)\npos &lt;- c()\nfor (i in 1:nn){\n  if (x[i] &gt; 0) {\n    pos &lt;- c(pos, x[i])\n  }\n}\npos"
+  },
+  {
+    "objectID": "lectures/2.html#example-6",
+    "href": "lectures/2.html#example-6",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\n\\[\nf(x,y) = x^2 + y^2 + \\ln(x+y)\n\\]\nFind all the values of \\(f(x,y)\\) for every combination of \\(x \\in \\{1, 8, 13, 25, 42, 67, 95\\}\\) and \\(y \\in \\{6, 12, 18, 52, 61, 79, 83\\}\\)\nStore values in a \\(7\\times 7\\) matrix.\nAnswer:\n\n\nCode\nx &lt;- c(1, 8, 13, 25, 42, 67, 95)\ny &lt;- c(6, 12, 18, 52, 61, 79, 83)\nres &lt;- matrix(nrow = 7, ncol = 7)\ncolnames(res) &lt;- as.character(x)\nrownames(res) &lt;- as.character(y)\n\nfor (i in 1:7){\n  for (ii in 1:7){\n    res[ii,i] &lt;- x[i]^2 + y[ii]^2 + log(x[i] + y[ii])\n  }\n}\nprint(res)"
+  },
+  {
+    "objectID": "lectures/2.html#vectorized-code-1",
+    "href": "lectures/2.html#vectorized-code-1",
+    "title": "Functional Programming",
+    "section": "Vectorized code",
+    "text": "Vectorized code"
+  },
+  {
+    "objectID": "lectures/2.html#built-in-functions-1",
+    "href": "lectures/2.html#built-in-functions-1",
+    "title": "Functional Programming",
+    "section": "Built-in Functions",
+    "text": "Built-in Functions\nThere are several available functions in R to conduct specific statistical methods or tasks"
+  },
+  {
+    "objectID": "lectures/2.html#help-documentation",
+    "href": "lectures/2.html#help-documentation",
+    "title": "Functional Programming",
+    "section": "Help Documentation",
+    "text": "Help Documentation\n\n\n\n\n\n\n\nSection\nDescription\n\n\n\n\nDescription\nProvides a brief introduction of the function\n\n\nUsage\nProvides potential usage of the function\n\n\nArguments\nArguments that the function can take\n\n\nDetails\nAn in depth description of the function\n\n\nValue\nProvides information of the output produced by the function\n\n\nNotes\nAny need to know information about the function\n\n\nAuthors\nDevelopers of the function\n\n\nReferences\nReferences to the model and function\n\n\nSee Also\nProvide information of supporting functions\n\n\nExamples\nExamples of the function"
+  },
+  {
+    "objectID": "lectures/2.html#generic-functions",
+    "href": "lectures/2.html#generic-functions",
+    "title": "Functional Programming",
+    "section": "Generic Functions",
+    "text": "Generic Functions\nSeveral R objects have a known class attached to it. A specialized object designed to be read by generic functions, such as summary() and plot().\nFor example, the summary() is a generic for several types of functions: summary.aov(), summary.lm(), summary.glm(), and many more."
+  },
+  {
+    "objectID": "lectures/2.html#commonly-used-function",
+    "href": "lectures/2.html#commonly-used-function",
+    "title": "Functional Programming",
+    "section": "Commonly-used Function",
+    "text": "Commonly-used Function\n\n\n\nFunctions\nDescription\n\n\n\n\naov()\nFits an ANOVA Model\n\n\nlm()\nFits a linear model\n\n\nglm()\nFits a general linear model\n\n\nt.test()\nConducts a t-test"
+  },
+  {
+    "objectID": "lectures/2.html#user-built-functions-1",
+    "href": "lectures/2.html#user-built-functions-1",
+    "title": "Functional Programming",
+    "section": "User-built functions",
+    "text": "User-built functions\n\nFunctions created by the user for analysis\nNeeds to be ran once to the R environment\nWill be lost when R session is closed"
+  },
+  {
+    "objectID": "lectures/2.html#anatomy",
+    "href": "lectures/2.html#anatomy",
+    "title": "Functional Programming",
+    "section": "Anatomy",
+    "text": "Anatomy\n\nname_of_function &lt;- function(data_1, data_2 = NULL, \n                             argument_1, argument_2 = TRUE, argument_3 = NULL,\n                             ...){\n  # Conduct Task\n  # Conduct Task\n  output_object &lt;- Tasks\n  return(output_object)\n}\n\n\n\nfunction: used to construct the function\ndata1: first data argument that needs to supplied\ndata2: second data argument that does not need to be supplied\nargument1: first argument must be supplied to alter function\nargument2: second argument to alter function, set to TRUE\nargument3: third argument that does not need to be supplied\n…: additional arguments supplied to other functions"
+  },
+  {
+    "objectID": "lectures/2.html#example-7",
+    "href": "lectures/2.html#example-7",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nCreate a function for\n\\[\ny = \\ln(x^2)\n\\]"
+  },
+  {
+    "objectID": "lectures/2.html#example-8",
+    "href": "lectures/2.html#example-8",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nCreate a function for\n\\[\nf(x) = \\left\\{\\begin{array}{cc}\nx^3 & x&lt;0\\\\\nx^2 + 5 & \\mathrm{otherwise}\n\\end{array} \\right.\n\\]"
+  },
+  {
+    "objectID": "lectures/2.html#example-9",
+    "href": "lectures/2.html#example-9",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nCreate a function for\n\\[\nf(x,y) = \\left\\{\\begin{array}{cc}\nx^3 e^y &  x&lt;0\\ \\\\\nx^2 + 5 + \\ln(y) & \\mathrm{otherwise}\n\\end{array} \\right.\n\\]"
+  },
+  {
+    "objectID": "lectures/2.html#example-10",
+    "href": "lectures/2.html#example-10",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nCreate the function that allows your to compute the z-score of a specific value x using the sampling distribution from a set of data (y vector):\n\\[\nz =  \\frac{x-\\bar y}{\\sqrt{s^2_{y}/n_y}}\n\\]"
+  },
+  {
+    "objectID": "lectures/2.html#apply-1",
+    "href": "lectures/2.html#apply-1",
+    "title": "Functional Programming",
+    "section": "apply()",
+    "text": "apply()\nThe apply function returns a vector, array, or list of values by applying a function to the margins of an array. You will need to specify the following arguments:\n\nX: an array to be indexed and applied\nMARGIN: specifyng which index(es) to subset by\nFUN: function to be applied\n…: further arguments to be applied to FUN, must be labeled\n\n\napply(X, MARGIN, FUN, ...)"
+  },
+  {
+    "objectID": "lectures/2.html#example-11",
+    "href": "lectures/2.html#example-11",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nFind the standard deviation of all the columns of the following matrix:\n\nx &lt;- matrix(rnorm(1000), nrow = 10)"
+  },
+  {
+    "objectID": "lectures/2.html#example-12",
+    "href": "lectures/2.html#example-12",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nFind the \\(25th\\), \\(50th\\), and \\(75th\\) quartiles for each row of the following matrix:\n\nx &lt;- matrix(rnorm(1000), nrow = 20)"
+  },
+  {
+    "objectID": "lectures/2.html#lapply-1",
+    "href": "lectures/2.html#lapply-1",
+    "title": "Functional Programming",
+    "section": "lapply()",
+    "text": "lapply()\nThe lapply function applies a function to all the elements of a vector or matrix, and it will return a list. You will need to specify the following arguments:\n\nX: object to be iterated\nFUN: a function to be applied\n…: further arguments to be passed along to FUN\n\n\nlapply(X, FUN, ...)"
+  },
+  {
+    "objectID": "lectures/2.html#example-13",
+    "href": "lectures/2.html#example-13",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nCreate a function that returns a labeled list for with the following values: mean, standard deviation, median, max, and min."
+  },
+  {
+    "objectID": "lectures/2.html#sapply-1",
+    "href": "lectures/2.html#sapply-1",
+    "title": "Functional Programming",
+    "section": "sapply()",
+    "text": "sapply()\nThe sapply() function will apply a function to each element of a list or vector, and it will return a simplified object, vector, matrix, or array. The sapply() function uses 4 main arguments:\n\nX: a vector or list to be iterated\nFUN: a function to be applied\n…: arguments passed along to FUN, must be labeled\nsimplify: indicates how to simplify the function, defaults to n-dimensional array based on output\n\n\nsapply(X, FUN, ..., simplify = TRUE)"
+  },
+  {
+    "objectID": "lectures/2.html#example-14",
+    "href": "lectures/2.html#example-14",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nUsing the vector below, compute the length of each string using sapply and str_length() from tidyverse\n\nfruits &lt;- c(\"apple\", \"banana\", \"cherry\", \"date\", \"elderberry\", \"fig\", \"grape\", \"honeydew\", \"kiwi\", \"lemon\")"
+  },
+  {
+    "objectID": "lectures/2.html#example-15",
+    "href": "lectures/2.html#example-15",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nUsing the list generated below, compute the mean of each element of the list using sapply.\n\n# Generate a list of 10 lists, each containing 5 random numbers\nlists &lt;- lapply(1:10, function(i) {\n  means &lt;- rpois(1, 3)\n  rnorm(5, means)\n})"
+  },
+  {
+    "objectID": "lectures/2.html#example-16",
+    "href": "lectures/2.html#example-16",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nUsing the vector below, use the sapply() to find \\(\\log(x)\\) for each value and return a matrix:\n\nnumbers &lt;- 4:400"
   },
   {
     "objectID": "lectures/15b.html#supervised-machine-learning",

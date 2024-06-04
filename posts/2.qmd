@@ -1,6 +1,6 @@
 ---
-title: "Week 1"
-date: 05-22-24
+title: "Week 2"
+date: 06-01-24
 description: This week we will dive into R and control flow programming.
 editor: visual
 editor_options: 
@@ -9,18 +9,18 @@ editor_options:
 
 ## Learning Outcomes
 
--   Installing R and RStudio
+-   Nested Loops
 
--   Scripts
+-   While Loops
 
--   R Calculator
+-   Vectorized Code
 
--   R Objects
+-   Functions
 
--   R Packages
+-   \*apply functions
 
 ## Resources
 
 | Lecture                                                | Videos        |
 |:-------------------------------------------------------|:--------------|
-| [Slide](http://m497.inqs.info/lectures/1#/title-slide) | Not Available |
+| [Slide](http://m497.inqs.info/lectures/2#/title-slide) | Not Available |

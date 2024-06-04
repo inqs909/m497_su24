@@ -1,14 +1,15 @@
 [
   {
-    "listing": "/hw.html",
+    "listing": "/index.html",
     "items": [
-      "/hw/hw1.html"
+      "/posts/2.html",
+      "/posts/week_1.html"
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/hw.html",
     "items": [
-      "/posts/week_1.html"
+      "/hw/hw1.html"
     ]
   }
 ]

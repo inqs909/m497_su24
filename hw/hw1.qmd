@@ -1,9 +1,17 @@
 ---
 title: "Homework 1"
-date: 5/23/24
+date: 1/23/24
 editor: visual
 draft: false
 ---
+
+**Due 6/14/24 \@ 11:59 PM**
+
+You must comment all your code to receive credit.
+
+Submit the \*.html file to canvas.
+
+For all problems, you must use at least one `for` or `while` loop.
 
 ## Problem 1
 
@@ -15,17 +23,6 @@ x <- matrix(rnorm(1500), nrow = 10)
 
 Write the code to produce the output if you use the `rowMeans()` on the R object `x`.
 
-```{r}
-#| code-fold: true
-#| code-summary: Answer
-
-xmeans <- vector(length = nrow(x))
-for(i in 1:nrow(x)){
-  xmeans[i] <- mean(x[i,])
-}
-#xmeans
-```
-
 ## Problem 2
 
 Using the following code:
@@ -34,30 +31,27 @@ Using the following code:
 y <- matrix(sample(1:400, 100, replace = T), nrow = 10)
 ```
 
-Find the median value for each column of the matrix `y`. You are not allowed to use the `median()` function.
-
-```{r}
-#| code-fold: true
-#| code-summary: Answer
-
-ymedian <- vector(length = ncol(x))
-for(i in 1:nrow(x)){
-  ymedian[i] <- sum(x[5:6,]) / 2
-}
-#ymedian
-```
+Find the median value for each column of the matrix `y`.
 
 ## Problem 3
 
 Write the code that will generate the first 1000 numbers of the [Fibonacci Sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence).
 
-```{r}
-#| code-fold: true
-#| code-summary: Answer
 
-fib <- c(0,1)
-for(i in 3:1000){
-  fib <- c(fib, fib[i-2] + fib[i-1])
-}
-#fib
-```
+
+## Problem 4
+
+Write a function for the following equation:
+
+$$
+f(x, y, z) =\left\{\begin{array}{cc}
+x^2+\sqrt y & z  = 0 \\ 
+x^2+2x+3+ \log(y) & z = 1
+\end{array}\right.
+$$
+
+Include any error messages if necessary.
+
+## Problem 5
+
+Create a function that will give you the first `x` Fibonacci numbers. You must use a `for` loop.
