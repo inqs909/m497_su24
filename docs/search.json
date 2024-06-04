@@ -570,8 +570,29 @@
     "objectID": "lectures/2.html#vectorized-code-1",
     "href": "lectures/2.html#vectorized-code-1",
     "title": "Functional Programming",
-    "section": "Vectorized code",
-    "text": "Vectorized code"
+    "section": "Vectorized Code",
+    "text": "Vectorized Code\nVectorized code is programming where functions or processes are applied to vectors instead of individual values.\n\nIndicating a loop is not necessary to apply a function to each individual element in a vector."
+  },
+  {
+    "objectID": "lectures/2.html#vectorized-code-2",
+    "href": "lectures/2.html#vectorized-code-2",
+    "title": "Functional Programming",
+    "section": "Vectorized Code",
+    "text": "Vectorized Code\nMathematical Operations are conducted element-wise to 2 or more vectors\n\nElement 1 in vector x is applied to element 1 in vector y"
+  },
+  {
+    "objectID": "lectures/2.html#example-7",
+    "href": "lectures/2.html#example-7",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "lectures/2.html#example-8",
+    "href": "lectures/2.html#example-8",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "lectures/2.html#built-in-functions-1",
@@ -616,29 +637,29 @@
     "text": "Anatomy\n\nname_of_function &lt;- function(data_1, data_2 = NULL, \n                             argument_1, argument_2 = TRUE, argument_3 = NULL,\n                             ...){\n  # Conduct Task\n  # Conduct Task\n  output_object &lt;- Tasks\n  return(output_object)\n}\n\n\n\nfunction: used to construct the function\ndata1: first data argument that needs to supplied\ndata2: second data argument that does not need to be supplied\nargument1: first argument must be supplied to alter function\nargument2: second argument to alter function, set to TRUE\nargument3: third argument that does not need to be supplied\n…: additional arguments supplied to other functions"
   },
   {
-    "objectID": "lectures/2.html#example-7",
-    "href": "lectures/2.html#example-7",
+    "objectID": "lectures/2.html#example-9",
+    "href": "lectures/2.html#example-9",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nCreate a function for\n\\[\ny = \\ln(x^2)\n\\]"
   },
   {
-    "objectID": "lectures/2.html#example-8",
-    "href": "lectures/2.html#example-8",
+    "objectID": "lectures/2.html#example-10",
+    "href": "lectures/2.html#example-10",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nCreate a function for\n\\[\nf(x) = \\left\\{\\begin{array}{cc}\nx^3 & x&lt;0\\\\\nx^2 + 5 & \\mathrm{otherwise}\n\\end{array} \\right.\n\\]"
   },
   {
-    "objectID": "lectures/2.html#example-9",
-    "href": "lectures/2.html#example-9",
+    "objectID": "lectures/2.html#example-11",
+    "href": "lectures/2.html#example-11",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nCreate a function for\n\\[\nf(x,y) = \\left\\{\\begin{array}{cc}\nx^3 e^y &  x&lt;0\\ \\\\\nx^2 + 5 + \\ln(y) & \\mathrm{otherwise}\n\\end{array} \\right.\n\\]"
   },
   {
-    "objectID": "lectures/2.html#example-10",
-    "href": "lectures/2.html#example-10",
+    "objectID": "lectures/2.html#example-12",
+    "href": "lectures/2.html#example-12",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nCreate the function that allows your to compute the z-score of a specific value x using the sampling distribution from a set of data (y vector):\n\\[\nz =  \\frac{x-\\bar y}{\\sqrt{s^2_{y}/n_y}}\n\\]"
@@ -651,15 +672,15 @@
     "text": "apply()\nThe apply function returns a vector, array, or list of values by applying a function to the margins of an array. You will need to specify the following arguments:\n\nX: an array to be indexed and applied\nMARGIN: specifyng which index(es) to subset by\nFUN: function to be applied\n…: further arguments to be applied to FUN, must be labeled\n\n\napply(X, MARGIN, FUN, ...)"
   },
   {
-    "objectID": "lectures/2.html#example-11",
-    "href": "lectures/2.html#example-11",
+    "objectID": "lectures/2.html#example-13",
+    "href": "lectures/2.html#example-13",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nFind the standard deviation of all the columns of the following matrix:\n\nx &lt;- matrix(rnorm(1000), nrow = 10)"
   },
   {
-    "objectID": "lectures/2.html#example-12",
-    "href": "lectures/2.html#example-12",
+    "objectID": "lectures/2.html#example-14",
+    "href": "lectures/2.html#example-14",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nFind the \\(25th\\), \\(50th\\), and \\(75th\\) quartiles for each row of the following matrix:\n\nx &lt;- matrix(rnorm(1000), nrow = 20)"
@@ -672,8 +693,8 @@
     "text": "lapply()\nThe lapply function applies a function to all the elements of a vector or matrix, and it will return a list. You will need to specify the following arguments:\n\nX: object to be iterated\nFUN: a function to be applied\n…: further arguments to be passed along to FUN\n\n\nlapply(X, FUN, ...)"
   },
   {
-    "objectID": "lectures/2.html#example-13",
-    "href": "lectures/2.html#example-13",
+    "objectID": "lectures/2.html#example-15",
+    "href": "lectures/2.html#example-15",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nCreate a function that returns a labeled list for with the following values: mean, standard deviation, median, max, and min."
@@ -686,22 +707,22 @@
     "text": "sapply()\nThe sapply() function will apply a function to each element of a list or vector, and it will return a simplified object, vector, matrix, or array. The sapply() function uses 4 main arguments:\n\nX: a vector or list to be iterated\nFUN: a function to be applied\n…: arguments passed along to FUN, must be labeled\nsimplify: indicates how to simplify the function, defaults to n-dimensional array based on output\n\n\nsapply(X, FUN, ..., simplify = TRUE)"
   },
   {
-    "objectID": "lectures/2.html#example-14",
-    "href": "lectures/2.html#example-14",
+    "objectID": "lectures/2.html#example-16",
+    "href": "lectures/2.html#example-16",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nUsing the vector below, compute the length of each string using sapply and str_length() from tidyverse\n\nfruits &lt;- c(\"apple\", \"banana\", \"cherry\", \"date\", \"elderberry\", \"fig\", \"grape\", \"honeydew\", \"kiwi\", \"lemon\")"
   },
   {
-    "objectID": "lectures/2.html#example-15",
-    "href": "lectures/2.html#example-15",
+    "objectID": "lectures/2.html#example-17",
+    "href": "lectures/2.html#example-17",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nUsing the list generated below, compute the mean of each element of the list using sapply.\n\n# Generate a list of 10 lists, each containing 5 random numbers\nlists &lt;- lapply(1:10, function(i) {\n  means &lt;- rpois(1, 3)\n  rnorm(5, means)\n})"
   },
   {
-    "objectID": "lectures/2.html#example-16",
-    "href": "lectures/2.html#example-16",
+    "objectID": "lectures/2.html#example-18",
+    "href": "lectures/2.html#example-18",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nUsing the vector below, use the sapply() to find \\(\\log(x)\\) for each value and return a matrix:\n\nnumbers &lt;- 4:400"

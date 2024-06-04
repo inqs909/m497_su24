@@ -199,7 +199,48 @@ print(res)
 
 # Vectorized Code
 
-## Vectorized code
+## Vectorized Code
+
+Vectorized code is programming where functions or processes are applied to vectors instead of individual values.
+
+::: fragment
+Indicating a loop is not necessary to apply a function to each individual element in a vector.
+:::
+
+
+## Vectorized Code
+
+Mathematical Operations are conducted element-wise to 2 or more vectors
+
+::: fragment
+Element 1 in vector `x` is applied to element 1 in vector `y`
+:::
+
+## Example
+
+```{webr-r}
+x <- 1:20
+post <- vector(length = 20)
+for (i in seq_along(x)){
+  post[i] <- sinpi(x[i])
+}
+post
+
+## OR
+
+sinpi(x)
+
+```
+
+
+
+## Example
+
+```{webr-r}
+x <- 1:5
+y <- 1:5
+```
+
 
 # Built-in Functions
 
