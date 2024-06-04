@@ -578,7 +578,7 @@
     "href": "lectures/2.html#example-5",
     "title": "Functional Programming",
     "section": "Example",
-    "text": "Example"
+    "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "lectures/2.html#example-6",
@@ -693,6 +693,13 @@
     "text": "Example\nCreate the function that allows your to compute the z-score of a specific value x using the sampling distribution from a set of data (y vector):\n\\[\nz =  \\frac{x-\\bar y}{\\sqrt{s^2_{y}/n_y}}\n\\]"
   },
   {
+    "objectID": "lectures/2.html#example-14",
+    "href": "lectures/2.html#example-14",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
     "objectID": "lectures/2.html#apply-1",
     "href": "lectures/2.html#apply-1",
     "title": "Functional Programming",
@@ -700,18 +707,18 @@
     "text": "apply()\nThe apply function returns a vector, array, or list of values by applying a function to the margins of an array. You will need to specify the following arguments:\n\nX: an array to be indexed and applied\nMARGIN: specifyng which index(es) to subset by\nFUN: function to be applied\n…: further arguments to be applied to FUN, must be labeled\n\n\napply(X, MARGIN, FUN, ...)"
   },
   {
-    "objectID": "lectures/2.html#example-14",
-    "href": "lectures/2.html#example-14",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nFind the standard deviation of all the columns of the following matrix:\n\nx &lt;- matrix(rnorm(1000), nrow = 10)"
-  },
-  {
     "objectID": "lectures/2.html#example-15",
     "href": "lectures/2.html#example-15",
     "title": "Functional Programming",
     "section": "Example",
-    "text": "Example\nFind the \\(25th\\), \\(50th\\), and \\(75th\\) quartiles for each row of the following matrix:\n\nx &lt;- matrix(rnorm(1000), nrow = 20)"
+    "text": "Example\nFind the standard deviation of all the columns of the following matrix:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "lectures/2.html#example-16",
+    "href": "lectures/2.html#example-16",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nFind the \\(25th\\), \\(50th\\), and \\(75th\\) quartiles for each row of the following matrix:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "lectures/2.html#lapply-1",
@@ -721,8 +728,8 @@
     "text": "lapply()\nThe lapply function applies a function to all the elements of a vector or matrix, and it will return a list. You will need to specify the following arguments:\n\nX: object to be iterated\nFUN: a function to be applied\n…: further arguments to be passed along to FUN\n\n\nlapply(X, FUN, ...)"
   },
   {
-    "objectID": "lectures/2.html#example-16",
-    "href": "lectures/2.html#example-16",
+    "objectID": "lectures/2.html#example-17",
+    "href": "lectures/2.html#example-17",
     "title": "Functional Programming",
     "section": "Example",
     "text": "Example\nCreate a function that returns a labeled list for with the following values: mean, standard deviation, median, max, and min."
@@ -735,25 +742,25 @@
     "text": "sapply()\nThe sapply() function will apply a function to each element of a list or vector, and it will return a simplified object, vector, matrix, or array. The sapply() function uses 4 main arguments:\n\nX: a vector or list to be iterated\nFUN: a function to be applied\n…: arguments passed along to FUN, must be labeled\nsimplify: indicates how to simplify the function, defaults to n-dimensional array based on output\n\n\nsapply(X, FUN, ..., simplify = TRUE)"
   },
   {
-    "objectID": "lectures/2.html#example-17",
-    "href": "lectures/2.html#example-17",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nUsing the vector below, compute the length of each string using sapply and str_length() from tidyverse\n\nfruits &lt;- c(\"apple\", \"banana\", \"cherry\", \"date\", \"elderberry\", \"fig\", \"grape\", \"honeydew\", \"kiwi\", \"lemon\")"
-  },
-  {
     "objectID": "lectures/2.html#example-18",
     "href": "lectures/2.html#example-18",
     "title": "Functional Programming",
     "section": "Example",
-    "text": "Example\nUsing the list generated below, compute the mean of each element of the list using sapply.\n\n# Generate a list of 10 lists, each containing 5 random numbers\nlists &lt;- lapply(1:10, function(i) {\n  means &lt;- rpois(1, 3)\n  rnorm(5, means)\n})"
+    "text": "Example\nUsing the vector below, compute the length of each string using sapply and str_length() from stringr\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "lectures/2.html#example-19",
     "href": "lectures/2.html#example-19",
     "title": "Functional Programming",
     "section": "Example",
-    "text": "Example\nUsing the vector below, use the sapply() to find \\(\\log(x)\\) for each value and return a matrix:\n\nnumbers &lt;- 4:400"
+    "text": "Example\nUsing the list generated below, compute the mean of each element of the list using sapply.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "lectures/2.html#example-20",
+    "href": "lectures/2.html#example-20",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nUsing the vector below, use the sapply() to find \\(\\log(x)\\) for each value and return a matrix:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "lectures/15b.html#supervised-machine-learning",
