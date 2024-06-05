@@ -21,6 +21,6 @@ editor_options:
 
 ## Resources
 
-| Lecture                                                | Videos        |
-|:-------------------------------------------------------|:--------------|
-| [Slide](http://m497.inqs.info/lectures/2#/title-slide) | Not Available |
+| Lecture                                                | Videos                                |
+|:------------------------------------------------------|:----------------|
+| [Slide](http://m497.inqs.info/lectures/2#/title-slide) | [Video](https://youtu.be/3p1RMIhTgpA) |

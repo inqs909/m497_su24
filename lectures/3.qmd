@@ -1,0 +1,41 @@
+---
+title: "Random Variable Generation"
+format:
+  revealjs:
+    scrollable: true
+    navigation-mode: vertical
+    controls-layout: bottom-right
+    controls-tutorial: true
+    incremental: false 
+    chalkboard:
+      src: chalkboard.json
+      storage: chalkboard_pres
+      theme: whiteboard
+      chalk-width: 4
+engine: knitr
+knitr:
+  opts_chunk: 
+    echo: true
+    eval: false
+    comment: "#>" 
+
+
+revealjs-plugins:
+  - verticator
+  
+filters: 
+  - reveal-header
+  - reveal-auto-agenda
+  - code-fullscreen
+  - webr
+
+webr: 
+  show-startup-message: true
+  packages: ['ggplot2', 'dplyr', 'stringr']
+---
+
+# Random Variables
+
+# Random Number Generators
+
+# Random Variable Generations

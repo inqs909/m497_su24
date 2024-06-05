@@ -322,32 +322,74 @@
     "text": "break Statements\nThe break statement is used to stop a loop if the condition is met. This is used along with an if statement.\n\nfor (i in vector){\n  perform task\n  if (condition){\n    break\n  } else {\n    perform task\n  }\n}"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to Monte Carlo Methods!",
+    "objectID": "posts/week_1.html",
+    "href": "posts/week_1.html",
+    "title": "Week 1",
     "section": "",
-    "text": "Brief Introduction\n\n\n\n\n\nWelcome to the course! This is the home page of the course where I will provide a recap on what was covered in the week. Here I will post any documents or videos for your reference. If you have any questions, please email me at isaac.qs@csuci.edu.\n\n\n\n\n\n\n\n\n\nQuarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Statistics Book\n\n\n\n\n\nhttps://openintro-ims.netlify.app/\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\nMEET TUESDAY (6/4) INSTEAD OF WED.\n\n\n\n\n\nJun 1, 2024\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\nThis week we will dive into R and control flow programming.\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Installing R and RStudio\nScripts\nR Calculator\nR Objects\nR Packages"
   },
   {
-    "objectID": "posts/2.html",
-    "href": "posts/2.html",
-    "title": "Week 2",
+    "objectID": "posts/week_1.html#learning-outcomes",
+    "href": "posts/week_1.html#learning-outcomes",
+    "title": "Week 1",
     "section": "",
-    "text": "Nested Loops\nWhile Loops\nVectorized Code\nFunctions\n*apply functions"
+    "text": "Installing R and RStudio\nScripts\nR Calculator\nR Objects\nR Packages"
   },
   {
-    "objectID": "posts/2.html#learning-outcomes",
-    "href": "posts/2.html#learning-outcomes",
-    "title": "Week 2",
-    "section": "",
-    "text": "Nested Loops\nWhile Loops\nVectorized Code\nFunctions\n*apply functions"
-  },
-  {
-    "objectID": "posts/2.html#resources",
-    "href": "posts/2.html#resources",
-    "title": "Week 2",
+    "objectID": "posts/week_1.html#resources",
+    "href": "posts/week_1.html#resources",
+    "title": "Week 1",
     "section": "Resources",
     "text": "Resources\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nNot Available"
+  },
+  {
+    "objectID": "hw.html",
+    "href": "hw.html",
+    "title": "Homework",
+    "section": "",
+    "text": "Quarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\nBelow are the different homework assignments for the course. Make sure to upload your assignment as a single file on Canvas.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "hw/hw1.html",
+    "href": "hw/hw1.html",
+    "title": "Homework 1",
+    "section": "",
+    "text": "Due 6/14/24 @ 11:59 PM\nYou must comment all your code to receive credit.\nSubmit the *.html file to canvas.\nFor all problems, you must use at least one for or while loop."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-1",
+    "href": "hw/hw1.html#problem-1",
+    "title": "Homework 1",
+    "section": "Problem 1",
+    "text": "Problem 1\nUsing the following code:\n\nx &lt;- matrix(rnorm(1500), nrow = 10)\n\nWrite the code to produce the output if you use the rowMeans() on the R object x."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-2",
+    "href": "hw/hw1.html#problem-2",
+    "title": "Homework 1",
+    "section": "Problem 2",
+    "text": "Problem 2\nUsing the following code:\n\ny &lt;- matrix(sample(1:400, 100, replace = T), nrow = 10)\n\nFind the median value for each column of the matrix y."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-3",
+    "href": "hw/hw1.html#problem-3",
+    "title": "Homework 1",
+    "section": "Problem 3",
+    "text": "Problem 3\nWrite the code that will generate the first 1000 numbers of the Fibonacci Sequence."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-4",
+    "href": "hw/hw1.html#problem-4",
+    "title": "Homework 1",
+    "section": "Problem 4",
+    "text": "Problem 4\nWrite a function for the following equation:\n\\[\nf(x, y, z) =\\left\\{\\begin{array}{cc}\nx^2+\\sqrt y & z  = 0 \\\\\nx^2+2x+3+ \\log(y) & z = 1\n\\end{array}\\right.\n\\]\nInclude any error messages if necessary."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-5",
+    "href": "hw/hw1.html#problem-5",
+    "title": "Homework 1",
+    "section": "Problem 5",
+    "text": "Problem 5\nCreate a function that will give you the first x Fibonacci numbers. You must use a for loop."
   },
   {
     "objectID": "books.html",
@@ -434,74 +476,32 @@
     "text": "Study Desing and Causal Inference\n\nCausal Inference What IF\n\nHernán and Robins\n\nDesign of Observational Studies\n\nRosenbaum\n\n\nBolded Titles, I have read thoroughly."
   },
   {
-    "objectID": "hw/hw1.html",
-    "href": "hw/hw1.html",
-    "title": "Homework 1",
+    "objectID": "posts/2.html",
+    "href": "posts/2.html",
+    "title": "Week 2",
     "section": "",
-    "text": "Due 6/14/24 @ 11:59 PM\nYou must comment all your code to receive credit.\nSubmit the *.html file to canvas.\nFor all problems, you must use at least one for or while loop."
+    "text": "Nested Loops\nWhile Loops\nVectorized Code\nFunctions\n*apply functions"
   },
   {
-    "objectID": "hw/hw1.html#problem-1",
-    "href": "hw/hw1.html#problem-1",
-    "title": "Homework 1",
-    "section": "Problem 1",
-    "text": "Problem 1\nUsing the following code:\n\nx &lt;- matrix(rnorm(1500), nrow = 10)\n\nWrite the code to produce the output if you use the rowMeans() on the R object x."
-  },
-  {
-    "objectID": "hw/hw1.html#problem-2",
-    "href": "hw/hw1.html#problem-2",
-    "title": "Homework 1",
-    "section": "Problem 2",
-    "text": "Problem 2\nUsing the following code:\n\ny &lt;- matrix(sample(1:400, 100, replace = T), nrow = 10)\n\nFind the median value for each column of the matrix y."
-  },
-  {
-    "objectID": "hw/hw1.html#problem-3",
-    "href": "hw/hw1.html#problem-3",
-    "title": "Homework 1",
-    "section": "Problem 3",
-    "text": "Problem 3\nWrite the code that will generate the first 1000 numbers of the Fibonacci Sequence."
-  },
-  {
-    "objectID": "hw/hw1.html#problem-4",
-    "href": "hw/hw1.html#problem-4",
-    "title": "Homework 1",
-    "section": "Problem 4",
-    "text": "Problem 4\nWrite a function for the following equation:\n\\[\nf(x, y, z) =\\left\\{\\begin{array}{cc}\nx^2+\\sqrt y & z  = 0 \\\\\nx^2+2x+3+ \\log(y) & z = 1\n\\end{array}\\right.\n\\]\nInclude any error messages if necessary."
-  },
-  {
-    "objectID": "hw/hw1.html#problem-5",
-    "href": "hw/hw1.html#problem-5",
-    "title": "Homework 1",
-    "section": "Problem 5",
-    "text": "Problem 5\nCreate a function that will give you the first x Fibonacci numbers. You must use a for loop."
-  },
-  {
-    "objectID": "hw.html",
-    "href": "hw.html",
-    "title": "Homework",
+    "objectID": "posts/2.html#learning-outcomes",
+    "href": "posts/2.html#learning-outcomes",
+    "title": "Week 2",
     "section": "",
-    "text": "Quarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\nBelow are the different homework assignments for the course. Make sure to upload your assignment as a single file on Canvas.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Nested Loops\nWhile Loops\nVectorized Code\nFunctions\n*apply functions"
   },
   {
-    "objectID": "posts/week_1.html",
-    "href": "posts/week_1.html",
-    "title": "Week 1",
-    "section": "",
-    "text": "Installing R and RStudio\nScripts\nR Calculator\nR Objects\nR Packages"
-  },
-  {
-    "objectID": "posts/week_1.html#learning-outcomes",
-    "href": "posts/week_1.html#learning-outcomes",
-    "title": "Week 1",
-    "section": "",
-    "text": "Installing R and RStudio\nScripts\nR Calculator\nR Objects\nR Packages"
-  },
-  {
-    "objectID": "posts/week_1.html#resources",
-    "href": "posts/week_1.html#resources",
-    "title": "Week 1",
+    "objectID": "posts/2.html#resources",
+    "href": "posts/2.html#resources",
+    "title": "Week 2",
     "section": "Resources",
-    "text": "Resources\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nNot Available"
+    "text": "Resources\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nVideo"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Monte Carlo Methods!",
+    "section": "",
+    "text": "Brief Introduction\n\n\n\n\n\nWelcome to the course! This is the home page of the course where I will provide a recap on what was covered in the week. Here I will post any documents or videos for your reference. If you have any questions, please email me at isaac.qs@csuci.edu.\n\n\n\n\n\n\n\n\n\nQuarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Statistics Book\n\n\n\n\n\nhttps://openintro-ims.netlify.app/\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\nMEET TUESDAY (6/4) INSTEAD OF WED.\n\n\n\n\n\nJun 1, 2024\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\nThis week we will dive into R and control flow programming.\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "lectures/2.html#homework",
