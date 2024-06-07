@@ -1,0 +1,22 @@
+---
+title: "Week 3"
+date: 06-07-24
+description: MEET Wednesday (6/12)
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## Learning Outcomes
+
+-   Random Variables
+
+-   Random Number Generation
+
+-   Random Variable Generations
+
+## Resources
+
+| Lecture                                                | Videos |
+|:-------------------------------------------------------|:-------|
+| [Slide](http://m497.inqs.info/lectures/3#/title-slide) |        |

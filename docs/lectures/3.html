@@ -35,6 +35,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -42,7 +107,6 @@
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/verticator/verticator.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -342,6 +406,7 @@
 </div>
 
 </section>
+<section>
 <section id="random-variables" class="title-slide slide level1 agenda-slide center">
 <h1>Random Variables</h1>
 <div class="agenda">
@@ -350,7 +415,7 @@
 <p>Random Variables</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Random Number Generators</p>
+<p>Random Number Generator History</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
 <p>Random Variable Generations</p>
@@ -358,16 +423,725 @@
 </ul>
 </div>
 </section>
+<section id="random-process" class="slide level2">
+<h2>Random Process</h2>
+<p>A random process is act of observing an outcome of an event that is unpredictable.</p>
+<div class="fragment">
+<p>Examples: - Flipping a coin - Rolling a die</p>
+</div>
+</section>
+<section id="random-variable" class="slide level2">
+<h2>Random Variable</h2>
+<p>A random variable connects the outcomes observed from a random process to a probability space.</p>
+</section>
+<section id="flipping-a-coin" class="slide level2">
+<h2>Flipping a Coin</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Outcome</td>
+<td style="text-align: left;">Head</td>
+<td style="text-align: left;">Tails</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Probability</td>
+<td style="text-align: left;">0.5</td>
+<td style="text-align: left;">0.5</td>
+</tr>
+</tbody>
+</table>
+<div class="cell" data-layout-align="center">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb1-3"><a></a>x <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"H"</span>, <span class="st">"T"</span>), <span class="dv">5000</span>, <span class="at">replace =</span> T)</span>
+<span id="cb1-4"><a></a>x <span class="sc">|&gt;</span> <span class="fu">tibble</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb1-5"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb1-6"><a></a><span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> (..count..)<span class="sc">/</span><span class="fu">sum</span>(..count..))) <span class="sc">+</span> </span>
+<span id="cb1-7"><a></a><span class="fu">ylab</span>(<span class="st">"Probability"</span>) <span class="sc">+</span></span>
+<span id="cb1-8"><a></a><span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 
-<section id="random-number-generators" class="title-slide slide level1 agenda-slide center">
-<h1>Random Number Generators</h1>
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="rolling-a-die" class="slide level2">
+<h2>Rolling a Die</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Outcome</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Probability</td>
+<td style="text-align: left;">1/6</td>
+<td style="text-align: left;">1/6</td>
+<td style="text-align: left;">1/6</td>
+<td style="text-align: left;">1/6</td>
+<td style="text-align: left;">1/6</td>
+<td style="text-align: left;">1/6</td>
+</tr>
+</tbody>
+</table>
+<div class="cell" data-layout-align="center">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># library(tidyverse)</span></span>
+<span id="cb2-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">50000</span>, <span class="at">replace =</span> T)</span>
+<span id="cb2-3"><a></a>x <span class="sc">|&gt;</span> <span class="fu">tibble</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb2-4"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb2-5"><a></a><span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> (..count..)<span class="sc">/</span><span class="fu">sum</span>(..count..))) <span class="sc">+</span> </span>
+<span id="cb2-6"><a></a><span class="fu">ylab</span>(<span class="st">"Probability"</span>) <span class="sc">+</span></span>
+<span id="cb2-7"><a></a><span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="discrete-random-variables" class="slide level2">
+<h2>Discrete Random Variables</h2>
+<p>A random variable is considered to be discrete if the outcome are only whole numbers (integers).</p>
+</section>
+<section id="pmf" class="slide level2">
+<h2>PMF</h2>
+<p>The probability mass function of discrete variable can be represented by a formula, table, or a graph. The Probability of a random variable Y can be expressed as <span class="math inline">\(P(Y=y)\)</span> for all values of <span class="math inline">\(y\)</span>.</p>
+</section>
+<section id="rolling-a-die-1" class="slide level2">
+<h2>Rolling a Die</h2>
+<div class="cell" data-layout-align="center">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">50000</span>, <span class="at">replace =</span> T)</span>
+<span id="cb3-2"><a></a>x <span class="sc">|&gt;</span> <span class="fu">tibble</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb3-3"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb3-4"><a></a><span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> (..count..)<span class="sc">/</span><span class="fu">sum</span>(..count..))) <span class="sc">+</span> </span>
+<span id="cb3-5"><a></a><span class="fu">ylab</span>(<span class="st">"Probability"</span>) <span class="sc">+</span></span>
+<span id="cb3-6"><a></a><span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="cdf" class="slide level2">
+<h2>CDF</h2>
+<p>The cumulative distribution function provides the <span class="math inline">\(P(Y\leq y)\)</span> for a random variable <span class="math inline">\(Y\)</span>.</p>
+</section>
+<section id="expected-value" class="slide level2">
+<h2>Expected Value</h2>
+<p>The <em>expected value</em> is the value we expect when we randomly sample from population that follows a specific distribution. The expected value of Y is</p>
+<p><span class="math display">\[
+E(Y)=\sum_y yP(y)
+\]</span></p>
+</section>
+<section id="variance" class="slide level2">
+<h2>Variance</h2>
+<p>The <em>variance</em> is the expected squared difference between the random variable and expected value.</p>
+<p><span class="math display">\[
+Var(Y)=\sum_y\{y-E(Y)\}^2P(y)
+\]</span></p>
+<p><span class="math display">\[
+Var(Y) = E(X^2) - E(X)^2
+\]</span></p>
+</section>
+<section id="known-distributions" class="slide level2">
+<h2>Known Distributions</h2>
+<table>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Distribution</th>
+<th>Parameter(s)</th>
+<th>PMF <span class="math inline">\(P(Y=y)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bernoulli</td>
+<td><span class="math inline">\(p\)</span></td>
+<td><span class="math inline">\(p\)</span></td>
+</tr>
+<tr class="even">
+<td>Binomial</td>
+<td><span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span></td>
+<td><span class="math inline">\((^n_y)p^y(1-p)^{n-p}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Geometric</td>
+<td><span class="math inline">\(p\)</span></td>
+<td><span class="math inline">\((1-p)^{y-1}p\)</span></td>
+</tr>
+<tr class="even">
+<td>Negative Binomial</td>
+<td><span class="math inline">\(r\)</span> and <span class="math inline">\(p\)</span></td>
+<td><span class="math inline">\((^{y-1}_{r-1})p^{r-1}(1-p)^{y-r}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Hypergeometric</td>
+<td><span class="math inline">\(N\)</span>, <span class="math inline">\(n\)</span>, and <span class="math inline">\(r\)</span></td>
+<td><span class="math inline">\(\frac{(^r_y)(^{N-r}_{n-y})}{(^N_n)}\)</span></td>
+</tr>
+<tr class="even">
+<td>Poisson</td>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td><span class="math inline">\(\frac{\lambda^y}{y!} e^{-\lambda}\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="binomial-distribution" class="slide level2 scrollable">
+<h2>Binomial Distribution</h2>
+<p>An experiment is said to follow a binomial distribution if</p>
+<ol type="1">
+<li>Fixed <span class="math inline">\(n\)</span></li>
+<li>Each trial has 2 outcomes</li>
+<li>The probability of success is a constant <span class="math inline">\(p\)</span></li>
+<li>The trials are independent of each</li>
+</ol>
+<div class="fragment">
+<p><span class="math inline">\(P(X=x)=(^n_x)p^x(1-p)^{n-x}\)</span></p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(X\)</span> can be any value between 0 to n</p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(X \sim Bin(n,p)\)</span></p>
+</div>
+</section>
+<section id="bernoulli-distribution-n-1-p-0.1-biased-coin-flip" class="slide level2">
+<h2>Bernoulli Distribution (n = 1, p = 0.1; Biased Coin Flip)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>p <span class="ot">&lt;-</span> <span class="fl">0.1</span></span>
+<span id="cb4-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">50000</span>, <span class="dv">1</span>, p)</span>
+<span id="cb4-3"><a></a>p1 <span class="ot">&lt;-</span> x <span class="sc">|&gt;</span> <span class="fu">tibble</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb4-4"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb4-5"><a></a><span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> (..count..)<span class="sc">/</span><span class="fu">sum</span>(..count..))) <span class="sc">+</span> </span>
+<span id="cb4-6"><a></a><span class="fu">ylab</span>(<span class="st">"Probability"</span>) <span class="sc">+</span></span>
+<span id="cb4-7"><a></a><span class="fu">ggtitle</span>(<span class="st">"PMF"</span>) <span class="sc">+</span></span>
+<span id="cb4-8"><a></a><span class="fu">theme_bw</span>()</span>
+<span id="cb4-9"><a></a>p2 <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">1</span> <span class="sc">|&gt;</span> <span class="fu">pbinom</span>(<span class="dv">1</span>, p) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">1</span>, <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb4-10"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
+<span id="cb4-11"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb4-12"><a></a><span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb4-13"><a></a><span class="fu">ggtitle</span>(<span class="st">"CDF"</span>) <span class="sc">+</span></span>
+<span id="cb4-14"><a></a><span class="fu">ylab</span>(<span class="fu">paste0</span>(<span class="st">"P(X"</span>,<span class="st">"\u2264"</span>,<span class="st">" x)"</span>))</span>
+<span id="cb4-15"><a></a>p1 <span class="sc">+</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="distribution-n-30-p-0.1" class="slide level2">
+<h2>Distribution (n = 30, p = 0.1)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>p <span class="ot">&lt;-</span> <span class="fl">0.1</span></span>
+<span id="cb5-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">50000</span>, <span class="dv">30</span>, p)</span>
+<span id="cb5-3"><a></a>p1 <span class="ot">&lt;-</span> x <span class="sc">|&gt;</span> <span class="fu">tibble</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb5-4"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb5-5"><a></a><span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> (..count..)<span class="sc">/</span><span class="fu">sum</span>(..count..))) <span class="sc">+</span> </span>
+<span id="cb5-6"><a></a><span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">30</span>)) <span class="sc">+</span></span>
+<span id="cb5-7"><a></a><span class="fu">ylab</span>(<span class="st">"Probability"</span>) <span class="sc">+</span></span>
+<span id="cb5-8"><a></a><span class="fu">ggtitle</span>(<span class="st">"PMF"</span>) <span class="sc">+</span></span>
+<span id="cb5-9"><a></a><span class="fu">theme_bw</span>()</span>
+<span id="cb5-10"><a></a>p2 <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">30</span> <span class="sc">|&gt;</span> <span class="fu">pbinom</span>(<span class="dv">30</span>, p) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">30</span>, <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb5-11"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
+<span id="cb5-12"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb5-13"><a></a><span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb5-14"><a></a><span class="fu">ggtitle</span>(<span class="st">"CDF"</span>) <span class="sc">+</span></span>
+<span id="cb5-15"><a></a><span class="fu">ylab</span>(<span class="fu">paste0</span>(<span class="st">"P(X"</span>,<span class="st">"\u2264"</span>,<span class="st">" x)"</span>))</span>
+<span id="cb5-16"><a></a>p1 <span class="sc">+</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<section id="distribution-n-30-p-0.5" class="slide level2">
+<h2>Distribution (n = 30, p = 0.5)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>p <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
+<span id="cb6-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">50000</span>, <span class="dv">30</span>, p)</span>
+<span id="cb6-3"><a></a>p1 <span class="ot">&lt;-</span> x <span class="sc">|&gt;</span> <span class="fu">tibble</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb6-4"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb6-5"><a></a><span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> (..count..)<span class="sc">/</span><span class="fu">sum</span>(..count..))) <span class="sc">+</span> </span>
+<span id="cb6-6"><a></a><span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">30</span>)) <span class="sc">+</span></span>
+<span id="cb6-7"><a></a><span class="fu">ylab</span>(<span class="st">"Probability"</span>) <span class="sc">+</span></span>
+<span id="cb6-8"><a></a><span class="fu">ggtitle</span>(<span class="st">"PMF"</span>) <span class="sc">+</span></span>
+<span id="cb6-9"><a></a><span class="fu">theme_bw</span>()</span>
+<span id="cb6-10"><a></a>p2 <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">30</span> <span class="sc">|&gt;</span> <span class="fu">pbinom</span>(<span class="dv">30</span>, p) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">30</span>, <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb6-11"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
+<span id="cb6-12"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb6-13"><a></a><span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb6-14"><a></a><span class="fu">ggtitle</span>(<span class="st">"CDF"</span>) <span class="sc">+</span></span>
+<span id="cb6-15"><a></a><span class="fu">ylab</span>(<span class="fu">paste0</span>(<span class="st">"P(X"</span>,<span class="st">"\u2264"</span>,<span class="st">" x)"</span>))</span>
+<span id="cb6-16"><a></a>p1 <span class="sc">+</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="distribution-n-30-p-0.85" class="slide level2">
+<h2>Distribution (n = 30, p = 0.85)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>p <span class="ot">&lt;-</span> <span class="fl">0.85</span></span>
+<span id="cb7-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">50000</span>, <span class="dv">30</span>, p)</span>
+<span id="cb7-3"><a></a>p1 <span class="ot">&lt;-</span> x <span class="sc">|&gt;</span> <span class="fu">tibble</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb7-4"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb7-5"><a></a><span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> (..count..)<span class="sc">/</span><span class="fu">sum</span>(..count..))) <span class="sc">+</span> </span>
+<span id="cb7-6"><a></a><span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">30</span>)) <span class="sc">+</span></span>
+<span id="cb7-7"><a></a><span class="fu">ylab</span>(<span class="st">"Probability"</span>) <span class="sc">+</span></span>
+<span id="cb7-8"><a></a><span class="fu">ggtitle</span>(<span class="st">"PMF"</span>) <span class="sc">+</span></span>
+<span id="cb7-9"><a></a><span class="fu">theme_bw</span>()</span>
+<span id="cb7-10"><a></a>p2 <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">30</span> <span class="sc">|&gt;</span> <span class="fu">pbinom</span>(<span class="dv">30</span>, p) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">30</span>, <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb7-11"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
+<span id="cb7-12"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb7-13"><a></a><span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb7-14"><a></a><span class="fu">ggtitle</span>(<span class="st">"CDF"</span>) <span class="sc">+</span></span>
+<span id="cb7-15"><a></a><span class="fu">ylab</span>(<span class="fu">paste0</span>(<span class="st">"P(X"</span>,<span class="st">"\u2264"</span>,<span class="st">" x)"</span>))</span>
+<span id="cb7-16"><a></a>p1 <span class="sc">+</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="expectations" class="slide level2">
+<h2>Expectations</h2>
+<p><span class="math display">\[
+E(X) =  np
+\]</span></p>
+<p><span class="math display">\[
+Var(X) = np(1-p)
+\]</span></p>
+</section>
+<section id="poisson-distribution" class="slide level2">
+<h2>Poisson Distribution</h2>
+<p>The poisson distribution describes an experiment that measures that occurrence of an event at specific point and/or time period.</p>
+<div class="fragment">
+<p><span class="math inline">\(P(X=x)=\frac{\lambda^x}{x!}e^{-\lambda}\)</span></p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(X\)</span> can take any value from 0 to <span class="math inline">\(\infty\)</span></p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(X \sim Pois(\lambda)\)</span></p>
+</div>
+</section>
+<section id="distribution-lambda-3.5" class="slide level2">
+<h2>Distribution (<span class="math inline">\(\lambda\)</span> = 3.5)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>p <span class="ot">&lt;-</span> <span class="fl">3.5</span></span>
+<span id="cb8-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="dv">50000</span>, p)</span>
+<span id="cb8-3"><a></a>p1 <span class="ot">&lt;-</span> x <span class="sc">|&gt;</span> <span class="fu">tibble</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb8-4"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb8-5"><a></a><span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> (..count..)<span class="sc">/</span><span class="fu">sum</span>(..count..))) <span class="sc">+</span> </span>
+<span id="cb8-6"><a></a><span class="fu">ylab</span>(<span class="st">"Probability"</span>) <span class="sc">+</span></span>
+<span id="cb8-7"><a></a><span class="fu">ggtitle</span>(<span class="st">"PMF"</span>) <span class="sc">+</span></span>
+<span id="cb8-8"><a></a><span class="fu">theme_bw</span>()</span>
+<span id="cb8-9"><a></a>p2 <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="fu">max</span>(x) <span class="sc">|&gt;</span> <span class="fu">ppois</span>(p) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="fu">max</span>(x), <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb8-10"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
+<span id="cb8-11"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb8-12"><a></a><span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb8-13"><a></a><span class="fu">ggtitle</span>(<span class="st">"CDF"</span>) <span class="sc">+</span></span>
+<span id="cb8-14"><a></a><span class="fu">ylab</span>(<span class="fu">paste0</span>(<span class="st">"P(X"</span>,<span class="st">"\u2264"</span>,<span class="st">" x)"</span>))</span>
+<span id="cb8-15"><a></a>p1 <span class="sc">+</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="distribution-lambda-34.5" class="slide level2">
+<h2>Distribution (<span class="math inline">\(\lambda\)</span> = 34.5)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>p <span class="ot">&lt;-</span> <span class="fl">34.5</span></span>
+<span id="cb9-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="dv">50000</span>, p)</span>
+<span id="cb9-3"><a></a>p1 <span class="ot">&lt;-</span> x <span class="sc">|&gt;</span> <span class="fu">tibble</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb9-4"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb9-5"><a></a><span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> (..count..)<span class="sc">/</span><span class="fu">sum</span>(..count..))) <span class="sc">+</span> </span>
+<span id="cb9-6"><a></a><span class="fu">ylab</span>(<span class="st">"Probability"</span>) <span class="sc">+</span></span>
+<span id="cb9-7"><a></a><span class="fu">ggtitle</span>(<span class="st">"PMF"</span>) <span class="sc">+</span></span>
+<span id="cb9-8"><a></a><span class="fu">theme_bw</span>()</span>
+<span id="cb9-9"><a></a>p2 <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="fu">max</span>(x) <span class="sc">|&gt;</span> <span class="fu">ppois</span>(p) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="fu">max</span>(x), <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb9-10"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
+<span id="cb9-11"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb9-12"><a></a><span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb9-13"><a></a><span class="fu">ggtitle</span>(<span class="st">"CDF"</span>) <span class="sc">+</span></span>
+<span id="cb9-14"><a></a><span class="fu">ylab</span>(<span class="fu">paste0</span>(<span class="st">"P(X"</span>,<span class="st">"\u2264"</span>,<span class="st">" x)"</span>))</span>
+<span id="cb9-15"><a></a>p1 <span class="sc">+</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<section id="expectations-1" class="slide level2">
+<h2>Expectations</h2>
+<p><span class="math display">\[
+E(X) = \lambda
+\]</span></p>
+<p><span class="math display">\[
+Var(X) = \lambda
+\]</span></p>
+</section>
+<section id="negative-binomial" class="slide level2">
+<h2>Negative Binomial</h2>
+<p>The negative binomial distribution is a discrete probability distribution that models the number of trials required to achieve a specified number of successes in a sequence of independent and identically distributed Bernoulli trials.</p>
+<p><span class="math display">\[
+P(X = k) = \binom{k + r - 1}{r - 1} p^r (1 - p)^k
+\]</span></p>
+<div class="fragment">
+<p><span class="math inline">\(X\)</span> can take the values from 0 to <span class="math inline">\(\infty\)</span></p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(X\sim NB(p, r)\)</span></p>
+</div>
+</section>
+<section id="expectations-2" class="slide level2">
+<h2>Expectations</h2>
+<p><span class="math display">\[
+E(X) = \frac{r (1 - p)}{p}
+\]</span></p>
+<p><span class="math display">\[
+\text{Var}(X) = \frac{r (1 - p)}{p^2}
+\]</span></p>
+</section>
+<section id="distribution-r-11-p-0.1" class="slide level2">
+<h2>Distribution (r = 11, p = 0.1)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>p <span class="ot">&lt;-</span> <span class="fl">0.1</span></span>
+<span id="cb10-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnbinom</span>(<span class="dv">50000</span>, <span class="dv">11</span>, p)</span>
+<span id="cb10-3"><a></a>p1 <span class="ot">&lt;-</span> x <span class="sc">|&gt;</span> <span class="fu">tibble</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb10-4"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb10-5"><a></a><span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> (..count..)<span class="sc">/</span><span class="fu">sum</span>(..count..))) <span class="sc">+</span></span>
+<span id="cb10-6"><a></a><span class="fu">ylab</span>(<span class="st">"Probability"</span>) <span class="sc">+</span></span>
+<span id="cb10-7"><a></a><span class="fu">ggtitle</span>(<span class="st">"PMF"</span>) <span class="sc">+</span></span>
+<span id="cb10-8"><a></a><span class="fu">theme_bw</span>()</span>
+<span id="cb10-9"><a></a>p2 <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="fu">max</span>(x) <span class="sc">|&gt;</span> <span class="fu">pnbinom</span>(<span class="dv">11</span>, p) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="fu">max</span>(x), <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb10-10"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
+<span id="cb10-11"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb10-12"><a></a><span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb10-13"><a></a><span class="fu">ggtitle</span>(<span class="st">"CDF"</span>) <span class="sc">+</span></span>
+<span id="cb10-14"><a></a><span class="fu">ylab</span>(<span class="fu">paste0</span>(<span class="st">"P(X"</span>,<span class="st">"\u2264"</span>,<span class="st">" x)"</span>))</span>
+<span id="cb10-15"><a></a>p1 <span class="sc">+</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="distribution-r-11-p-0.45" class="slide level2">
+<h2>Distribution (r = 11, p = 0.45)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>p <span class="ot">&lt;-</span> <span class="fl">0.45</span></span>
+<span id="cb11-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnbinom</span>(<span class="dv">50000</span>, <span class="dv">11</span>, p)</span>
+<span id="cb11-3"><a></a>p1 <span class="ot">&lt;-</span> x <span class="sc">|&gt;</span> <span class="fu">tibble</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb11-4"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb11-5"><a></a><span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> (..count..)<span class="sc">/</span><span class="fu">sum</span>(..count..))) <span class="sc">+</span></span>
+<span id="cb11-6"><a></a><span class="fu">ylab</span>(<span class="st">"Probability"</span>) <span class="sc">+</span></span>
+<span id="cb11-7"><a></a><span class="fu">ggtitle</span>(<span class="st">"PMF"</span>) <span class="sc">+</span></span>
+<span id="cb11-8"><a></a><span class="fu">theme_bw</span>()</span>
+<span id="cb11-9"><a></a>p2 <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="fu">max</span>(x) <span class="sc">|&gt;</span> <span class="fu">pnbinom</span>(<span class="dv">11</span>, p) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="fu">max</span>(x), <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb11-10"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
+<span id="cb11-11"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb11-12"><a></a><span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb11-13"><a></a><span class="fu">ggtitle</span>(<span class="st">"CDF"</span>) <span class="sc">+</span></span>
+<span id="cb11-14"><a></a><span class="fu">ylab</span>(<span class="fu">paste0</span>(<span class="st">"P(X"</span>,<span class="st">"\u2264"</span>,<span class="st">" x)"</span>))</span>
+<span id="cb11-15"><a></a>p1 <span class="sc">+</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<section id="distribution-r-11-p-0.63" class="slide level2">
+<h2>Distribution (r = 11, p = 0.63)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>p <span class="ot">&lt;-</span> <span class="fl">0.63</span></span>
+<span id="cb12-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnbinom</span>(<span class="dv">50000</span>, <span class="dv">11</span>, p)</span>
+<span id="cb12-3"><a></a>p1 <span class="ot">&lt;-</span> x <span class="sc">|&gt;</span> <span class="fu">tibble</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb12-4"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb12-5"><a></a><span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> (..count..)<span class="sc">/</span><span class="fu">sum</span>(..count..))) <span class="sc">+</span></span>
+<span id="cb12-6"><a></a><span class="fu">ylab</span>(<span class="st">"Probability"</span>) <span class="sc">+</span></span>
+<span id="cb12-7"><a></a><span class="fu">ggtitle</span>(<span class="st">"PMF"</span>) <span class="sc">+</span></span>
+<span id="cb12-8"><a></a><span class="fu">theme_bw</span>()</span>
+<span id="cb12-9"><a></a>p2 <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="fu">max</span>(x) <span class="sc">|&gt;</span> <span class="fu">pnbinom</span>(<span class="dv">11</span>, p) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="fu">max</span>(x), <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb12-10"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
+<span id="cb12-11"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb12-12"><a></a><span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb12-13"><a></a><span class="fu">ggtitle</span>(<span class="st">"CDF"</span>) <span class="sc">+</span></span>
+<span id="cb12-14"><a></a><span class="fu">ylab</span>(<span class="fu">paste0</span>(<span class="st">"P(X"</span>,<span class="st">"\u2264"</span>,<span class="st">" x)"</span>))</span>
+<span id="cb12-15"><a></a>p1 <span class="sc">+</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
+<section id="continuous-random-variables" class="slide level2">
+<h2>Continuous Random Variables</h2>
+<p>A random variable <span class="math inline">\(X\)</span> is considered continuous if the <span class="math inline">\(P(X=x)\)</span> does not exist.</p>
+</section>
+<section id="cdf-1" class="slide level2 scrollable">
+<h2>CDF</h2>
+<p>The cumulative distribution function of <span class="math inline">\(X\)</span> provides the <span class="math inline">\(P(X\leq x)\)</span>, denoted by <span class="math inline">\(F(x)\)</span>, for the domain of <span class="math inline">\(X\)</span>.</p>
+<p>Properties of the CDF of <span class="math inline">\(X\)</span>:</p>
+<ol type="1">
+<li><span class="math inline">\(F(-\infty)\equiv \lim_{y\rightarrow -\infty}F(y)=0\)</span></li>
+<li><span class="math inline">\(F(\infty)\equiv \lim_{y\rightarrow \infty}F(y)=1\)</span></li>
+<li><span class="math inline">\(F(x)\)</span> is a nondecreaseing function</li>
+</ol>
+</section>
+<section id="pdf" class="slide level2 scrollable">
+<h2>PDF</h2>
+<p>The probability density function of the random variable <span class="math inline">\(X\)</span> is given by</p>
+<p><span class="math display">\[
+f(x)=\frac{dF(x)}{d(x)}=F^\prime(x)
+\]</span></p>
+<p>wherever the derivative exists.</p>
+<p>Properties of pdfs:</p>
+<ol type="1">
+<li><span class="math inline">\(f(x)\geq 0\)</span></li>
+<li><span class="math inline">\(\int^\infty_{-\infty}f(x)dx=1\)</span></li>
+<li><span class="math inline">\(P(a\leq X\leq b) = P(a&lt;X&lt;b)=\int^b_af(x)dx\)</span></li>
+</ol>
+</section>
+<section id="expected-value-1" class="slide level2">
+<h2>Expected Value</h2>
+<p>The expected value for a continuous distribution is defined as</p>
+<p><span class="math display">\[
+E(X)=\int x f(x)dx
+\]</span></p>
+<p>The expectation of a function <span class="math inline">\(g(X)\)</span> is defined as</p>
+<p><span class="math display">\[
+E\{g(X)\}=\int g(x)f(x)dx
+\]</span></p>
+</section>
+<section id="variance-1" class="slide level2">
+<h2>Variance</h2>
+<p>The variance of continuous variable is defined as</p>
+<p><span class="math display">\[
+Var(X) =  E[\{X-E(X)\}^2] = \int \{X-E(X)\}^2 f(x)dx
+\]</span></p>
+</section>
+<section id="uniform-distribution" class="slide level2">
+<h2>Uniform Distribution</h2>
+<p>A random variable is said to follow uniform distribution if the density function is constant between two parameters.</p>
+<div class="fragment">
+<p><span class="math display">\[
+f(x) = \left\{\begin{array}{cc}
+\frac{1}{b-a} &amp; a \leq x \leq b\\
+0 &amp; \mathrm{elsewhere}
+\end{array}\right.
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(X\)</span> can take any value between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span></p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(X \sim U(a,b)\)</span></p>
+</div>
+</section>
+<section id="distribution-a-4-b-25" class="slide level2">
+<h2>Distribution (a = 4, b = 25)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>a <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb13-2"><a></a>b <span class="ot">&lt;-</span> <span class="dv">25</span></span>
+<span id="cb13-3"><a></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(a, b, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
+<span id="cb13-4"><a></a>p1 <span class="ot">&lt;-</span> <span class="fu">dunif</span>(x, a, b) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> x, <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb13-5"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb13-6"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb13-7"><a></a><span class="fu">ylab</span>(<span class="st">"Density"</span>) <span class="sc">+</span></span>
+<span id="cb13-8"><a></a><span class="fu">ggtitle</span>(<span class="st">"PDF"</span>) <span class="sc">+</span></span>
+<span id="cb13-9"><a></a><span class="fu">theme_bw</span>()</span>
+<span id="cb13-10"><a></a>p2 <span class="ot">&lt;-</span> <span class="fu">punif</span>(x, a, b) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> x, <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb13-11"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
+<span id="cb13-12"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb13-13"><a></a><span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb13-14"><a></a><span class="fu">ggtitle</span>(<span class="st">"CDF"</span>) <span class="sc">+</span></span>
+<span id="cb13-15"><a></a><span class="fu">ylab</span>(<span class="fu">paste0</span>(<span class="st">"P(X"</span>,<span class="st">"\u2264"</span>,<span class="st">" x)"</span>))</span>
+<span id="cb13-16"><a></a>p1 <span class="sc">+</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
+<section id="distribution-a-0-b-1" class="slide level2">
+<h2>Distribution (a = 0, b = 1)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>a <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb14-2"><a></a>b <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb14-3"><a></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(a, b, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
+<span id="cb14-4"><a></a>p1 <span class="ot">&lt;-</span> <span class="fu">dunif</span>(x, a, b) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> x, <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb14-5"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb14-6"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb14-7"><a></a><span class="fu">ylab</span>(<span class="st">"Density"</span>) <span class="sc">+</span></span>
+<span id="cb14-8"><a></a><span class="fu">ggtitle</span>(<span class="st">"PDF"</span>) <span class="sc">+</span></span>
+<span id="cb14-9"><a></a><span class="fu">theme_bw</span>()</span>
+<span id="cb14-10"><a></a>p2 <span class="ot">&lt;-</span> <span class="fu">punif</span>(x, a, b) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> x, <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb14-11"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
+<span id="cb14-12"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb14-13"><a></a><span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb14-14"><a></a><span class="fu">ggtitle</span>(<span class="st">"CDF"</span>) <span class="sc">+</span></span>
+<span id="cb14-15"><a></a><span class="fu">ylab</span>(<span class="fu">paste0</span>(<span class="st">"P(X"</span>,<span class="st">"\u2264"</span>,<span class="st">" x)"</span>))</span>
+<span id="cb14-16"><a></a>p1 <span class="sc">+</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
+<section id="expectations-3" class="slide level2">
+<h2>Expectations</h2>
+<p><span class="math display">\[
+E(X) = \frac{a+b}{2}
+\]</span></p>
+<p><span class="math display">\[
+Var(X) = \frac{1}{12}(b-a)^2
+\]</span></p>
+</section>
+<section id="normal-distribution" class="slide level2">
+<h2>Normal Distribution</h2>
+<p>A random variable is said to follow a normal distribution if the the frequency of occurrence follow a Gaussian function.</p>
+<p><span class="math display">\[
+f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp\left\{-\frac{(x-\mu)^2}{2\sigma^2}\right\}
+\]</span></p>
+<div class="fragment">
+<p><span class="math inline">\(X\)</span> can take any value between <span class="math inline">\(-\infty\)</span> and <span class="math inline">\(\infty\)</span></p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(X\sim N(\mu, \sigma^2)\)</span></p>
+</div>
+</section>
+<section id="distribution-mu-34-sigma2-5" class="slide level2">
+<h2>Distribution (<span class="math inline">\(\mu\)</span> = 34, <span class="math inline">\(\sigma^2\)</span> = 5)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>a <span class="ot">&lt;-</span> <span class="dv">25</span></span>
+<span id="cb15-2"><a></a>b <span class="ot">&lt;-</span> <span class="dv">45</span></span>
+<span id="cb15-3"><a></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(a, b, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
+<span id="cb15-4"><a></a>p1 <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x, <span class="dv">34</span>, <span class="fu">sqrt</span>(<span class="dv">5</span>)) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> x, <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb15-5"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb15-6"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb15-7"><a></a><span class="fu">ylab</span>(<span class="st">"Density"</span>) <span class="sc">+</span></span>
+<span id="cb15-8"><a></a><span class="fu">ggtitle</span>(<span class="st">"PDF"</span>) <span class="sc">+</span></span>
+<span id="cb15-9"><a></a><span class="fu">theme_bw</span>()</span>
+<span id="cb15-10"><a></a>p2 <span class="ot">&lt;-</span> <span class="fu">pnorm</span>(x, <span class="dv">34</span>, <span class="fu">sqrt</span>(<span class="dv">5</span>)) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> x, <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb15-11"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
+<span id="cb15-12"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb15-13"><a></a><span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb15-14"><a></a><span class="fu">ggtitle</span>(<span class="st">"CDF"</span>) <span class="sc">+</span></span>
+<span id="cb15-15"><a></a><span class="fu">ylab</span>(<span class="fu">paste0</span>(<span class="st">"P(X"</span>,<span class="st">"\u2264"</span>,<span class="st">" x)"</span>))</span>
+<span id="cb15-16"><a></a>p1 <span class="sc">+</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
+<section id="distribution-mu--8-sigma2-10" class="slide level2">
+<h2>Distribution (<span class="math inline">\(\mu\)</span> = -8, <span class="math inline">\(\sigma^2\)</span> = 10)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>a <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">20</span></span>
+<span id="cb16-2"><a></a>b <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb16-3"><a></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(a, b, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
+<span id="cb16-4"><a></a>p1 <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x, <span class="sc">-</span><span class="dv">8</span>, <span class="fu">sqrt</span>(<span class="dv">10</span>)) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> x, <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb16-5"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb16-6"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb16-7"><a></a><span class="fu">ylab</span>(<span class="st">"Density"</span>) <span class="sc">+</span></span>
+<span id="cb16-8"><a></a><span class="fu">ggtitle</span>(<span class="st">"PDF"</span>) <span class="sc">+</span></span>
+<span id="cb16-9"><a></a><span class="fu">theme_bw</span>()</span>
+<span id="cb16-10"><a></a>p2 <span class="ot">&lt;-</span> <span class="fu">pnorm</span>(x, <span class="sc">-</span><span class="dv">8</span>, <span class="fu">sqrt</span>(<span class="dv">10</span>)) <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> x, <span class="at">y =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb16-11"><a></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
+<span id="cb16-12"><a></a><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb16-13"><a></a><span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb16-14"><a></a><span class="fu">ggtitle</span>(<span class="st">"CDF"</span>) <span class="sc">+</span></span>
+<span id="cb16-15"><a></a><span class="fu">ylab</span>(<span class="fu">paste0</span>(<span class="st">"P(X"</span>,<span class="st">"\u2264"</span>,<span class="st">" x)"</span>))</span>
+<span id="cb16-16"><a></a>p1 <span class="sc">+</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="3_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
+<section id="expectations-4" class="slide level2">
+<h2>Expectations</h2>
+<p><span class="math display">\[
+E(X) = \mu
+\]</span></p>
+<p><span class="math display">\[
+Var(X) = \sigma^2
+\]</span></p>
+</section>
+<section id="gamma-distribution" class="slide level2">
+<h2>Gamma Distribution</h2>
+<p>A gamma random variable is characterized by the gamma distribution, used to model waiting times or the time until an event occurs a certain number of times.</p>
+<p><span class="math display">\[
+f(x; \alpha, \beta) = \frac{x^{\alpha - 1} e^{-x/\beta}}{\beta^\alpha \Gamma(\alpha)}
+\]</span></p>
+<p><span class="math display">\[
+\Gamma(\alpha) = \int_0^\infty t^{\alpha - 1} e^{-t} \, dt
+\]</span></p>
+<div class="fragment">
+<p><span class="math inline">\(X\)</span> can take any value between 0 and <span class="math inline">\(\infty\)</span></p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(X\sim Gamma(\alpha,\beta)\)</span></p>
+</div>
+</section>
+<section id="expectations-5" class="slide level2">
+<h2>Expectations</h2>
+<p><span class="math display">\[
+E(X) = \alpha \beta
+\]</span></p>
+<p><span class="math display">\[
+\text{Var}(X) = \alpha \beta^2
+\]</span></p>
+</section>
+<section id="beta-distribution" class="slide level2">
+<h2>Beta Distribution</h2>
+<p>The beta distribution is often used to model random variables that represent proportions or probabilities.</p>
+<p><span class="math display">\[
+f(x; \alpha, \beta) = \frac{x^{\alpha - 1} (1 - x)^{\beta - 1}}{B(\alpha, \beta)}
+\]</span></p>
+<p><span class="math display">\[
+B(\alpha, \beta) = \int_0^1 t^{\alpha - 1} (1 - t)^{\beta - 1} \, dt
+\]</span></p>
+<div class="fragment">
+<p><span class="math inline">\(X\)</span> can take a value between 0 and 1</p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(X\sim Beta(\alpha,\beta)\)</span></p>
+</div>
+</section>
+<section id="expectations-6" class="slide level2">
+<h2>Expectations</h2>
+<p><span class="math display">\[
+E(X) = \frac{\alpha}{\alpha + \beta}
+\]</span></p>
+<p><span class="math display">\[
+\text{Var}(X) = \frac{\alpha \beta}{(\alpha + \beta)^2 (\alpha + \beta + 1)}
+\]</span></p>
+</section></section>
+<section>
+<section id="random-number-generator-history" class="title-slide slide level1 agenda-slide center">
+<h1>Random Number Generator History</h1>
 <div class="agenda">
 <ul>
 <li><div class="agenda-inactive agenda-pre-active">
 <p>Random Variables</p>
 </div></li>
 <li><div class="agenda-active">
-<p>Random Number Generators</p>
+<p>Random Number Generator History</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
 <p>Random Variable Generations</p>
@@ -375,7 +1149,35 @@
 </ul>
 </div>
 </section>
+<section id="generating-random-numbers" class="slide level2">
+<h2>Generating Random Numbers</h2>
 
+<img data-src="https://content.presentermedia.com/files/clipart/00002000/2605/pair_of_white_dice_rolled_800_wht.jpg" class="r-stretch"></section>
+<section id="generating-random-numbers-1" class="slide level2">
+<h2>Generating Random Numbers</h2>
+
+<img data-src="https://www.pbs.org/newshour/app/uploads/2015/03/159615168-1024x768.jpg" class="r-stretch"></section>
+<section id="generating-random-numbers-2" class="slide level2">
+<h2>Generating Random Numbers</h2>
+
+<img data-src="https://cdn.mos.cms.futurecdn.net/gGpxdnJ7x3dBMrgSgKybQU-1200-80.jpg" class="r-stretch"></section>
+<section id="generating-random-numbers-3" class="slide level2">
+<h2>Generating Random Numbers</h2>
+
+<img data-src="https://mathbitsnotebook.com/Algebra2/Statistics/random%20table.png" class="r-stretch"></section>
+<section id="generating-random-numbers-4" class="slide level2">
+<h2>Generating Random Numbers</h2>
+
+<img data-src="https://cdn.britannica.com/35/18435-050-C6ECB9CB/Monte-Carlo-casino.jpg" class="r-stretch"></section>
+<section id="psuedo-random-numbers" class="slide level2">
+<h2>Psuedo Random Numbers</h2>
+</section>
+<section id="modulo-2-linear-generators" class="slide level2">
+<h2>Modulo 2 Linear Generators</h2>
+</section>
+<section id="mersenne-twister" class="slide level2">
+<h2>Mersenne Twister</h2>
+</section></section>
 <section id="random-variable-generations" class="title-slide slide level1 agenda-slide center">
 <h1>Random Variable Generations</h1>
 <div class="agenda">
@@ -384,7 +1186,7 @@
 <p>Random Variables</p>
 </div></li>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>Random Number Generators</p>
+<p>Random Number Generator History</p>
 </div></li>
 <li><div class="agenda-active">
 <p>Random Variable Generations</p>
@@ -423,7 +1225,6 @@
   <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="../site_libs/revealjs/plugin/verticator/verticator.js"></script>
   <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -446,7 +1247,6 @@
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true,"src":"chalkboard.json","storage":"chalkboard_pres","theme":"whiteboard","chalkWidth":4},
-'verticator': {"themetag":"h1","color":"","inversecolor":"","skipuncounted":false,"clickable":true,"position":"auto","offset":"3vmin","autogenerate":true,"tooltip":false,"scale":1},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -617,7 +1417,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, Verticator, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
