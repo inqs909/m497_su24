@@ -1396,6 +1396,8 @@ E(X) = \frac{\alpha}{\alpha + \beta}
 </section>
 <section id="mersenne-twister" class="slide level2">
 <h2>Mersenne Twister</h2>
+<p>The Mersenne Twister is a widely used pseudorandom number generator (PRNG) known for its high quality and efficiency. It was developed by Makoto Matsumoto and Takuji Nishimura in 1997.</p>
+<p>The default random number generator in R.</p>
 </section>
 <section id="uniform-distribution-r" class="slide level2">
 <h2>Uniform Distribution R</h2>
@@ -1418,7 +1420,7 @@ E(X) = \frac{\alpha}{\alpha + \beta}
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">runif</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0.7372391</code></pre>
+<pre><code>#&gt; [1] 0.2110459</code></pre>
 </div>
 </div>
 </div>
@@ -1564,7 +1566,7 @@ X \sim Exp(2)
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">rexp</span>(<span class="dv">1</span>, <span class="at">rate =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0.8858118</code></pre>
+<pre><code>#&gt; [1] 1.312081</code></pre>
 </div>
 </div>
 </div>
@@ -1645,7 +1647,7 @@ U \leq F(k)
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">rpois</span>(<span class="dv">1</span>, <span class="at">lambda =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0</code></pre>
+<pre><code>#&gt; [1] 1</code></pre>
 </div>
 </div>
 </div>
@@ -1698,7 +1700,7 @@ y = \int^x_{-\infty}
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">rnorm</span>(<span class="dv">1</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] -1.415575</code></pre>
+<pre><code>#&gt; [1] 0.9016323</code></pre>
 </div>
 </div>
 </div>
@@ -1874,7 +1876,7 @@ y = \int^x_{-\infty}
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="fu">rgamma</span>(<span class="dv">1</span>, <span class="at">shape =</span> <span class="fl">1.2</span>, <span class="at">rate =</span> .<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0.5390978</code></pre>
+<pre><code>#&gt; [1] 4.64603</code></pre>
 </div>
 </div>
 </div>
@@ -1901,7 +1903,7 @@ y = \int^x_{-\infty}
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="fu">rbeta</span>(<span class="dv">1</span>, <span class="at">shape1 =</span> <span class="fl">1.2</span>, <span class="at">shape2 =</span> <span class="fl">6.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0.03232081</code></pre>
+<pre><code>#&gt; [1] 0.01991211</code></pre>
 </div>
 </div>
 </div>
@@ -1928,7 +1930,7 @@ y = \int^x_{-\infty}
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="fu">rbinom</span>(<span class="dv">1</span>, <span class="at">prob =</span> .<span class="dv">2</span>, <span class="at">size =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0</code></pre>
+<pre><code>#&gt; [1] 1</code></pre>
 </div>
 </div>
 </div>
@@ -1955,7 +1957,7 @@ y = \int^x_{-\infty}
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">rbinom</span>(<span class="dv">1</span>, <span class="at">prob =</span> .<span class="dv">5</span>, <span class="at">size =</span> <span class="dv">25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 9</code></pre>
+<pre><code>#&gt; [1] 17</code></pre>
 </div>
 </div>
 </div>
@@ -1982,7 +1984,7 @@ y = \int^x_{-\infty}
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a><span class="fu">rnbinom</span>(<span class="dv">1</span>, <span class="at">prob =</span> .<span class="dv">6</span>, <span class="at">size =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0</code></pre>
+<pre><code>#&gt; [1] 4</code></pre>
 </div>
 </div>
 </div>
@@ -2190,6 +2192,22 @@ X_i \sim N(4, 32)
 <span id="cb57-9"><a></a>    <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
 <span id="cb57-10"><a></a>    <span class="fu">geom_line</span>(<span class="at">data =</span> <span class="fu">tibble</span>(<span class="at">x =</span> xx, <span class="at">y =</span> <span class="fu">dnorm</span>(xx, <span class="dv">10</span>, <span class="fu">sqrt</span>(<span class="dv">20</span><span class="sc">/</span><span class="dv">10000</span>))),</span>
 <span id="cb57-11"><a></a>              <span class="fu">aes</span>(x, y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="cauchy-distribution" class="slide level2">
+<h2>Cauchy Distribution</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a>norm <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb58-2"><a></a>  <span class="fu">rcauchy</span>(<span class="dv">10000</span>, <span class="at">location =</span> <span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb58-3"><a></a>}</span>
+<span id="cb58-4"><a></a>X <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>, norm)</span>
+<span id="cb58-5"><a></a>Xbar <span class="ot">&lt;-</span> <span class="fu">apply</span>(X, <span class="dv">2</span>, mean)</span>
+<span id="cb58-6"><a></a>Xbar <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb58-7"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>x)) <span class="sc">+</span></span>
+<span id="cb58-8"><a></a>    <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 

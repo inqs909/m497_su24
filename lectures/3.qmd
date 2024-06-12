@@ -873,8 +873,9 @@ Supplying a seed to a random number generator will ensure that the same numbers 
 
 ## Mersenne Twister
 
+The Mersenne Twister is a widely used pseudorandom number generator (PRNG) known for its high quality and efficiency. It was developed by Makoto Matsumoto and Takuji Nishimura in 1997. 
 
-
+The default random number generator in R.
 
 
 ## Uniform Distribution R
@@ -1527,3 +1528,19 @@ Xbar |> tibble(x = _) |>
               aes(x, y))
 
 ```
+
+## Cauchy Distribution
+
+```{r}
+#| code-fold: true
+#| eval: false
+norm <- function(x){
+  rcauchy(10000, location = -1)
+}
+X <- sapply(1:1000, norm)
+Xbar <- apply(X, 2, mean)
+Xbar |> tibble(x = _) |> 
+  ggplot(aes(x=x)) +
+    geom_histogram(bins = 100)
+```
+

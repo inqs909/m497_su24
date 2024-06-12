@@ -718,14 +718,14 @@
     "href": "lectures/3.html#mersenne-twister",
     "title": "Monte Carlo Methods",
     "section": "Mersenne Twister",
-    "text": "Mersenne Twister"
+    "text": "Mersenne Twister\nThe Mersenne Twister is a widely used pseudorandom number generator (PRNG) known for its high quality and efficiency. It was developed by Makoto Matsumoto and Takuji Nishimura in 1997.\nThe default random number generator in R."
   },
   {
     "objectID": "lectures/3.html#uniform-distribution-r",
     "href": "lectures/3.html#uniform-distribution-r",
     "title": "Monte Carlo Methods",
     "section": "Uniform Distribution R",
-    "text": "Uniform Distribution R\n\nDescriptionCode\n\n\nThe runif function in R will generate a value the come from a uniform distribution.\nrunif arguments:\n\nn: number of values to generate\nmin: the smallest possible value to generate\nmax: the largest possible value to generate\n\n\n\n\n\nCode\nrunif(1, 0, 1)\n\n\n#&gt; [1] 0.7372391"
+    "text": "Uniform Distribution R\n\nDescriptionCode\n\n\nThe runif function in R will generate a value the come from a uniform distribution.\nrunif arguments:\n\nn: number of values to generate\nmin: the smallest possible value to generate\nmax: the largest possible value to generate\n\n\n\n\n\nCode\nrunif(1, 0, 1)\n\n\n#&gt; [1] 0.2110459"
   },
   {
     "objectID": "lectures/3.html#random-variable-generation",
@@ -788,7 +788,7 @@
     "href": "lectures/3.html#exponential-rv-in-r",
     "title": "Monte Carlo Methods",
     "section": "Exponential RV in R",
-    "text": "Exponential RV in R\n\nDescriptionCode\n\n\nThe exponential distribution can be simulated in R using the rexp function with the following arguments:\n\nn: number of values to generate\nrate: how fast would events occur\n\n\n\n\n\nCode\nrexp(1, rate = 1)\n\n\n#&gt; [1] 0.8858118"
+    "text": "Exponential RV in R\n\nDescriptionCode\n\n\nThe exponential distribution can be simulated in R using the rexp function with the following arguments:\n\nn: number of values to generate\nrate: how fast would events occur\n\n\n\n\n\nCode\nrexp(1, rate = 1)\n\n\n#&gt; [1] 1.312081"
   },
   {
     "objectID": "lectures/3.html#discrete-rv-inverse-transformations",
@@ -816,7 +816,7 @@
     "href": "lectures/3.html#exponential-rv-in-r-1",
     "title": "Monte Carlo Methods",
     "section": "Exponential RV in R",
-    "text": "Exponential RV in R\n\nDescriptionCode\n\n\nThe Poisson distribution can be simulated in R using the rpois function with the following arguments:\n\nn: number of values to generate\nlambda: the average expected event\n\n\n\n\n\nCode\nrpois(1, lambda = 1)\n\n\n#&gt; [1] 0"
+    "text": "Exponential RV in R\n\nDescriptionCode\n\n\nThe Poisson distribution can be simulated in R using the rpois function with the following arguments:\n\nn: number of values to generate\nlambda: the average expected event\n\n\n\n\n\nCode\nrpois(1, lambda = 1)\n\n\n#&gt; [1] 1"
   },
   {
     "objectID": "lectures/3.html#normal-distribution-1",
@@ -844,7 +844,7 @@
     "href": "lectures/3.html#normal-distribution-r",
     "title": "Monte Carlo Methods",
     "section": "Normal Distribution R",
-    "text": "Normal Distribution R\n\nDescriptionCode\n\n\nThe normal distribution can be simulated in R using the rnorm function with the following arguments:\n\nn: number of values to generate\nmean: the central tendency (peak)\nsd: the variation of the data (width)\n\n\n\n\n\nCode\nrnorm(1, mean = 0, sd = 1)\n\n\n#&gt; [1] -1.415575"
+    "text": "Normal Distribution R\n\nDescriptionCode\n\n\nThe normal distribution can be simulated in R using the rnorm function with the following arguments:\n\nn: number of values to generate\nmean: the central tendency (peak)\nsd: the variation of the data (width)\n\n\n\n\n\nCode\nrnorm(1, mean = 0, sd = 1)\n\n\n#&gt; [1] 0.9016323"
   },
   {
     "objectID": "lectures/3.html#accept-reject-algorithm",
@@ -921,35 +921,35 @@
     "href": "lectures/3.html#gamma-distribution-r",
     "title": "Monte Carlo Methods",
     "section": "Gamma Distribution R",
-    "text": "Gamma Distribution R\n\nDescriptionCode\n\n\nThe gamma distribution can be simulated in R using the rgamma function with the following arguments:\n\nn: number of values to generate\nshape: describes the shape of distribution (\\(\\alpha\\))\nscale: the spread of the data (\\(\\beta\\))\n\n\n\n\n\nCode\nrgamma(1, shape = 1.2, rate = .5)\n\n\n#&gt; [1] 0.5390978"
+    "text": "Gamma Distribution R\n\nDescriptionCode\n\n\nThe gamma distribution can be simulated in R using the rgamma function with the following arguments:\n\nn: number of values to generate\nshape: describes the shape of distribution (\\(\\alpha\\))\nscale: the spread of the data (\\(\\beta\\))\n\n\n\n\n\nCode\nrgamma(1, shape = 1.2, rate = .5)\n\n\n#&gt; [1] 4.64603"
   },
   {
     "objectID": "lectures/3.html#beta-rv-in-r",
     "href": "lectures/3.html#beta-rv-in-r",
     "title": "Monte Carlo Methods",
     "section": "Beta RV in R",
-    "text": "Beta RV in R\n\nDescriptionCode\n\n\nThe beta distribution can be simulated in R using the rbeta function with the following arguments:\n\nn: number of values to generate\nshape1: controls the shape of distribution\nshape2: controls the shape of distribution\n\n\n\n\n\nCode\nrbeta(1, shape1 = 1.2, shape2 = 6.5)\n\n\n#&gt; [1] 0.03232081"
+    "text": "Beta RV in R\n\nDescriptionCode\n\n\nThe beta distribution can be simulated in R using the rbeta function with the following arguments:\n\nn: number of values to generate\nshape1: controls the shape of distribution\nshape2: controls the shape of distribution\n\n\n\n\n\nCode\nrbeta(1, shape1 = 1.2, shape2 = 6.5)\n\n\n#&gt; [1] 0.01991211"
   },
   {
     "objectID": "lectures/3.html#bernoulli-rv-in-r",
     "href": "lectures/3.html#bernoulli-rv-in-r",
     "title": "Monte Carlo Methods",
     "section": "Bernoulli RV in R",
-    "text": "Bernoulli RV in R\n\nDescriptionCode\n\n\nThe bernoulli distribution can be simulated in R using the rbinom function with the following arguments:\n\nn: number of values to generate\nsize = 1: will give a bernoulli distribution\nprob: probability of observing 1 (success)\n\n\n\n\n\nCode\nrbinom(1, prob = .2, size = 1)\n\n\n#&gt; [1] 0"
+    "text": "Bernoulli RV in R\n\nDescriptionCode\n\n\nThe bernoulli distribution can be simulated in R using the rbinom function with the following arguments:\n\nn: number of values to generate\nsize = 1: will give a bernoulli distribution\nprob: probability of observing 1 (success)\n\n\n\n\n\nCode\nrbinom(1, prob = .2, size = 1)\n\n\n#&gt; [1] 1"
   },
   {
     "objectID": "lectures/3.html#binomial-rv-in-r",
     "href": "lectures/3.html#binomial-rv-in-r",
     "title": "Monte Carlo Methods",
     "section": "Binomial RV in R",
-    "text": "Binomial RV in R\n\nDescriptionCode\n\n\nThe binomial distribution can be simulated in R using the rbinom function with the following arguments:\n\nn: number of values to generate\nsize: how many bernoulli trials to conduct\nprob: probability of observing 1 (success)\n\n\n\n\n\nCode\nrbinom(1, prob = .5, size = 25)\n\n\n#&gt; [1] 9"
+    "text": "Binomial RV in R\n\nDescriptionCode\n\n\nThe binomial distribution can be simulated in R using the rbinom function with the following arguments:\n\nn: number of values to generate\nsize: how many bernoulli trials to conduct\nprob: probability of observing 1 (success)\n\n\n\n\n\nCode\nrbinom(1, prob = .5, size = 25)\n\n\n#&gt; [1] 17"
   },
   {
     "objectID": "lectures/3.html#negative-binomial-rv-in-r",
     "href": "lectures/3.html#negative-binomial-rv-in-r",
     "title": "Monte Carlo Methods",
     "section": "Negative Binomial RV in R",
-    "text": "Negative Binomial RV in R\n\nDescriptionCode\n\n\nThe negative binomial distribution can be simulated in R using the rnbinom function with the following arguments:\n\nn: number of values to generate\nsize: number of successful trials\nprob: probability of observing 1 (success)\n\n\n\n\n\nCode\nrnbinom(1, prob = .6, size = 5)\n\n\n#&gt; [1] 0"
+    "text": "Negative Binomial RV in R\n\nDescriptionCode\n\n\nThe negative binomial distribution can be simulated in R using the rnbinom function with the following arguments:\n\nn: number of values to generate\nsize: number of successful trials\nprob: probability of observing 1 (success)\n\n\n\n\n\nCode\nrnbinom(1, prob = .6, size = 5)\n\n\n#&gt; [1] 4"
   },
   {
     "objectID": "lectures/3.html#n01",
@@ -1034,6 +1034,13 @@
     "title": "Monte Carlo Methods",
     "section": "Gamma Distribution",
     "text": "Gamma Distribution\n\n\nCode\nnorm &lt;- function(x){\n  rgamma(10000, shape = 5, scale = 2)\n}\nX &lt;- sapply(1:1000, norm)\nXbar &lt;- apply(X, 2, mean)\nxx &lt;- seq(min(Xbar)-.1, max(Xbar)+.1, length.out = 100)\nXbar |&gt; tibble(x = _) |&gt; \n  ggplot(aes(x=x, y = ..density..)) +\n    geom_histogram() +\n    geom_line(data = tibble(x = xx, y = dnorm(xx, 10, sqrt(20/10000))),\n              aes(x, y))"
+  },
+  {
+    "objectID": "lectures/3.html#cauchy-distribution",
+    "href": "lectures/3.html#cauchy-distribution",
+    "title": "Monte Carlo Methods",
+    "section": "Cauchy Distribution",
+    "text": "Cauchy Distribution\n\n\nCode\nnorm &lt;- function(x){\n  rcauchy(10000, location = -1)\n}\nX &lt;- sapply(1:1000, norm)\nXbar &lt;- apply(X, 2, mean)\nXbar |&gt; tibble(x = _) |&gt; \n  ggplot(aes(x=x)) +\n    geom_histogram(bins = 100)"
   },
   {
     "objectID": "posts/week_1.html",
