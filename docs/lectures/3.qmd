@@ -1,5 +1,6 @@
 ---
-title: "Random Variable Generation"
+title: "Monte Carlo Methods"
+subtitle: "Random Variable Generation"
 format:
   revealjs:
     scrollable: true
@@ -19,17 +20,16 @@ knitr:
     echo: true
     eval: true
     comment: "#>" 
-
-
 filters: 
   - reveal-header
   - reveal-auto-agenda
   - code-fullscreen
   - webr
-
 webr: 
   show-startup-message: true
   packages: ['ggplot2', 'dplyr', 'stringr']
+editor_options: 
+  chunk_output_type: console
 ---
 
 # Random Variables
@@ -40,8 +40,11 @@ A random process is act of observing an outcome of an event that is unpredictabl
 
 ::: fragment
 Examples:
+
 -   Flipping a coin
+
 -   Rolling a die
+
 :::
 
 
@@ -180,7 +183,7 @@ ggtitle("PMF") +
 theme_bw()
 p2 <- 0:1 |> pbinom(1, p) |> tibble(x = 0:1, y = _) |> 
 ggplot(aes(x,y)) +
-geom_line() +
+geom_step() +
 theme_bw() +
 ggtitle("CDF") +
 ylab(paste0("P(X","\u2264"," x)"))
@@ -202,7 +205,7 @@ ggtitle("PMF") +
 theme_bw()
 p2 <- 0:30 |> pbinom(30, p) |> tibble(x = 0:30, y = _) |> 
 ggplot(aes(x,y)) +
-geom_line() +
+geom_step() +
 theme_bw() +
 ggtitle("CDF") +
 ylab(paste0("P(X","\u2264"," x)"))
@@ -223,7 +226,7 @@ ggtitle("PMF") +
 theme_bw()
 p2 <- 0:30 |> pbinom(30, p) |> tibble(x = 0:30, y = _) |> 
 ggplot(aes(x,y)) +
-geom_line() +
+geom_step() +
 theme_bw() +
 ggtitle("CDF") +
 ylab(paste0("P(X","\u2264"," x)"))
@@ -244,7 +247,7 @@ ggtitle("PMF") +
 theme_bw()
 p2 <- 0:30 |> pbinom(30, p) |> tibble(x = 0:30, y = _) |> 
 ggplot(aes(x,y)) +
-geom_line() +
+geom_step() +
 theme_bw() +
 ggtitle("CDF") +
 ylab(paste0("P(X","\u2264"," x)"))
@@ -291,7 +294,7 @@ ggtitle("PMF") +
 theme_bw()
 p2 <- 0:max(x) |> ppois(p) |> tibble(x = 0:max(x), y = _) |> 
 ggplot(aes(x,y)) +
-geom_line() +
+geom_step() +
 theme_bw() +
 ggtitle("CDF") +
 ylab(paste0("P(X","\u2264"," x)"))
@@ -311,7 +314,7 @@ ggtitle("PMF") +
 theme_bw()
 p2 <- 0:max(x) |> ppois(p) |> tibble(x = 0:max(x), y = _) |> 
 ggplot(aes(x,y)) +
-geom_line() +
+geom_step() +
 theme_bw() +
 ggtitle("CDF") +
 ylab(paste0("P(X","\u2264"," x)"))
@@ -328,10 +331,9 @@ $$
 Var(X) = \lambda
 $$
 
-
 ## Negative Binomial
 
-The negative binomial distribution is a discrete probability distribution that models the number of trials required to achieve a specified number of successes in a sequence of independent and identically distributed Bernoulli trials. 
+The negative binomial distribution is a discrete probability distribution that models the number of failures required to achieve a specified number of successes in a sequence of independent and identically distributed Bernoulli trials. 
 
 $$
 P(X = k) = \binom{k + r - 1}{r - 1} p^r (1 - p)^k
@@ -359,7 +361,7 @@ $$
 
 ```{r}
 p <- 0.1
-x <- rnbinom(50000, 11, p)
+x <- rnbinom(50000,11, p)
 p1 <- x |> tibble() |> 
 ggplot(aes(x)) +
 geom_bar(aes(y = (..count..)/sum(..count..))) +
@@ -368,7 +370,7 @@ ggtitle("PMF") +
 theme_bw()
 p2 <- 0:max(x) |> pnbinom(11, p) |> tibble(x = 0:max(x), y = _) |> 
 ggplot(aes(x,y)) +
-geom_line() +
+geom_step() +
 theme_bw() +
 ggtitle("CDF") +
 ylab(paste0("P(X","\u2264"," x)"))
@@ -388,7 +390,7 @@ ggtitle("PMF") +
 theme_bw()
 p2 <- 0:max(x) |> pnbinom(11, p) |> tibble(x = 0:max(x), y = _) |> 
 ggplot(aes(x,y)) +
-geom_line() +
+geom_step() +
 theme_bw() +
 ggtitle("CDF") +
 ylab(paste0("P(X","\u2264"," x)"))
@@ -408,7 +410,7 @@ ggtitle("PMF") +
 theme_bw()
 p2 <- 0:max(x) |> pnbinom(11, p) |> tibble(x = 0:max(x), y = _) |> 
 ggplot(aes(x,y)) +
-geom_line() +
+geom_step() +
 theme_bw() +
 ggtitle("CDF") +
 ylab(paste0("P(X","\u2264"," x)"))
@@ -645,6 +647,73 @@ $$
 \text{Var}(X) = \alpha \beta^2
 $$
 
+## Distribution ($\alpha$ = 1.5, $\beta$ = 2.6)
+
+```{r}
+y <- rgamma(1000, 1.5, 2.6)
+a <- 0
+b <- 10
+x <- seq(a, b, length.out = 1000)
+p1 <- dgamma(x, 1.5, 2.6) |> tibble(x = x, y = _) |> 
+ggplot(aes(x, y)) +
+geom_line() +
+ylab("Density") +
+ggtitle("PDF") +
+theme_bw()
+p2 <- pgamma(x, 1.5, 2.6) |> tibble(x = x, y = _) |> 
+ggplot(aes(x,y)) +
+geom_line() +
+theme_bw() +
+ggtitle("CDF") +
+ylab(paste0("P(X","\u2264"," x)"))
+p1 + p2
+```
+
+## Distribution ($\alpha$ = 3.5, $\beta$ = 1.6)
+
+```{r}
+y <- rgamma(1000, 3.5, 1.6)
+a <- 0
+b <- 10
+x <- seq(a, b, length.out = 1000)
+p1 <- dgamma(x, 3.5, 1.6) |> tibble(x = x, y = _) |> 
+ggplot(aes(x, y)) +
+geom_line() +
+ylab("Density") +
+ggtitle("PDF") +
+theme_bw()
+p2 <- pgamma(x, 3.5, 1.6) |> tibble(x = x, y = _) |> 
+ggplot(aes(x,y)) +
+geom_line() +
+theme_bw() +
+ggtitle("CDF") +
+ylab(paste0("P(X","\u2264"," x)"))
+p1 + p2
+```
+
+
+## Distribution ($\alpha$ = 5.2, $\beta$ = 1.6)
+
+```{r}
+y <- rgamma(1000, 5.2, 1.6)
+a <- 0
+b <- 10
+x <- seq(a, b, length.out = 1000)
+p1 <- dgamma(x, 5.2, 1.6) |> tibble(x = x, y = _) |> 
+ggplot(aes(x, y)) +
+geom_line() +
+ylab("Density") +
+ggtitle("PDF") +
+theme_bw()
+p2 <- pgamma(x, 5.2, 1.6) |> tibble(x = x, y = _) |> 
+ggplot(aes(x,y)) +
+geom_line() +
+theme_bw() +
+ggtitle("CDF") +
+ylab(paste0("P(X","\u2264"," x)"))
+p1 + p2
+```
+
 ## Beta Distribution
 
 The beta distribution is often used to model random variables that represent proportions or probabilities.
@@ -675,7 +744,100 @@ $$
 \text{Var}(X) = \frac{\alpha \beta}{(\alpha + \beta)^2 (\alpha + \beta + 1)}
 $$
 
-# Random Number Generator History
+## Distribution ($\alpha$ = 5.2, $\beta$ = 1.6)
+
+```{r}
+y <- rbeta(1000, 5.2, 1.6)
+a <- 0
+b <- 1
+x <- seq(a, b, length.out = 1000)
+p1 <- dbeta(x, 5.2, 1.6) |> tibble(x = x, y = _) |> 
+ggplot(aes(x, y)) +
+geom_line() +
+ylab("Density") +
+ggtitle("PDF") +
+theme_bw()
+p2 <- pbeta(x, 5.2, 1.6) |> tibble(x = x, y = _) |> 
+ggplot(aes(x,y)) +
+geom_line() +
+theme_bw() +
+ggtitle("CDF") +
+ylab(paste0("P(X","\u2264"," x)"))
+p1 + p2
+```
+
+## Distribution ($\alpha$ = 1.3, $\beta$ = 1.6)
+
+```{r}
+y <- rbeta(1000, 1.3, 1.6)
+a <- 0
+b <- 1
+x <- seq(a, b, length.out = 1000)
+p1 <- dbeta(x, 1.3, 1.6) |> tibble(x = x, y = _) |> 
+ggplot(aes(x, y)) +
+geom_line() +
+ylab("Density") +
+ggtitle("PDF") +
+theme_bw()
+p2 <- pbeta(x, 1.3, 1.6) |> tibble(x = x, y = _) |> 
+ggplot(aes(x,y)) +
+geom_line() +
+theme_bw() +
+ggtitle("CDF") +
+ylab(paste0("P(X","\u2264"," x)"))
+p1 + p2
+```
+
+
+## Distribution ($\alpha$ = .72, $\beta$ = .76)
+
+```{r}
+a <- .72
+b <- .76
+x <- seq(0, 1, length.out = 1000)
+p1 <- dbeta(x, a, b) |> tibble(x = x, y = _) |> 
+ggplot(aes(x, y)) +
+geom_line() +
+ylab("Density") +
+ggtitle("PDF") +
+theme_bw()
+p2 <- pbeta(x, a, b) |> tibble(x = x, y = _) |> 
+ggplot(aes(x,y)) +
+geom_line() +
+theme_bw() +
+ggtitle("CDF") +
+ylab(paste0("P(X","\u2264"," x)"))
+p1 + p2
+```
+
+
+
+## Distributions in R
+
+Several common distributions can be utilized in R with the 4 common functions:
+
+| Letter | Functionality                                                 |
+|:-------|:--------------------------------------------------------------|
+| `d`    | returns the height of the probability density/mass function   |
+| `p`    | returns the cumulative density function value                 |
+| `q`    | returns the inverse cumulative density function (percentiles) |
+| `r`    | returns a randomly generated number                           |
+
+
+# Random Number Generator
+
+
+## Generating Random Numbers
+
+A number is an outcome from a random experiment.
+
+::: fragment
+Random experiment is an experiment where the outcome is not predicted.
+:::
+
+::: fragment
+The outcomes have a probability of being observed, whether equal or not.
+:::
 
 ## Generating Random Numbers
 
@@ -693,14 +855,675 @@ $$
 
 ![](https://mathbitsnotebook.com/Algebra2/Statistics/random%20table.png)
 
-## Generating Random Numbers
-
-![](https://cdn.britannica.com/35/18435-050-C6ECB9CB/Monte-Carlo-casino.jpg)
-
 ## Psuedo Random Numbers
 
-## Modulo 2 Linear Generators
+These methods are considered time-consuming when a large number values are necessary.
+
+::: fragment
+With the advent of computers, random number can be generated with the use deterministic algorithms, where a mechanism is used to make it random, such as time.
+:::
+
+::: fragment
+Computer-generated random numbers are considered psuedo random numbers because an algorithm is used to generate them given an initial single value, known as a seed.
+:::
+
+::: fragment
+Supplying a seed to a random number generator will ensure that the same numbers are produced every time.
+:::
 
 ## Mersenne Twister
 
+
+
+
+
+## Uniform Distribution R
+
+::: {.panel-tabset}
+
+## Description
+
+The `runif` function in R will generate a value the come from a uniform distribution.
+
+`runif` arguments:
+
+-   `n`: number of values to generate
+-   `min`: the smallest possible value to generate
+-   `max`: the largest possible value to generate
+
+## Code
+
+```{r}
+#| code-fold: show
+runif(1, 0, 1)
+```
+
+:::
+
+
 # Random Variable Generations
+
+## Random Variable Generation
+
+Several distribution, common and uncommon, can be generated using a uniform random variables.
+
+::: fragment
+More complex distributions may require the use of common distributions.
+:::
+
+## Inverse-Transform Method
+
+```{r}
+a <- -20
+b <- 4
+x <- seq(a, b, length.out = 1000)
+pnorm(x, -8, sqrt(10)) |> tibble(x = x, y = _) |> 
+ggplot(aes(x,y)) +
+geom_line() +
+theme_bw() +
+ggtitle("CDF") +
+ylab(paste0("P(X","\u2264"," x)"))
+```
+
+## Inverse-Transformation Algorithm 
+
+1.    Generate a random value $U$ that follows a $U(0,1)$
+2.    Using the CDF ($F(X)$) for random variable $X$, compute:
+
+$$
+X = F^{-1}(U)
+$$
+
+
+## Exponential Distribution
+
+An exponential random variable is characterized by the exponential distribution, used to model waiting times or the time until an event occurs a certain number of times.
+
+The exponential distribution is a gamma random variable with $\alpha = 1$.
+
+## Exponential Distribution
+
+$$
+f(x) = \frac{1}{\lambda} \exp\left\{-\frac{x}{\lambda}\right\}
+$$
+
+$$
+F(x) = 1-\exp\left\{-\frac{x}{\lambda}\right\}
+$$
+
+$$
+F^{-1}(x) = -\lambda \log(1-x)
+$$
+
+## Simulating an Exponential RV
+
+$$
+X \sim Exp(2)
+$$
+
+```{r}
+xe <- seq(0, 4, length.out = 1000)
+u <- runif(100000)
+u |> tibble(x = _) |> 
+ggplot(aes(x=u, y = ..density..)) +
+geom_histogram() +
+geom_line(data = tibble(x = xe, y = dexp(xe, rate = 1/2)),
+          mapping = aes(x,y)) +
+theme_bw()
+```
+
+## Simulating an Exponential RV
+
+```{r}
+#| code-fold: show
+u <- runif(100000)
+x <- -2 * log(1-u)
+```
+
+## Simulating an Exponential RV
+
+```{r}
+x |> tibble(x = _) |> 
+ggplot(aes(x=x, y = ..density..)) +
+geom_histogram() +
+geom_line(data = tibble(x = xe, y = dexp(xe, rate = 1/2)),
+          mapping = aes(x,y)) +
+theme_bw()
+```
+
+
+## Exponential RV in R
+
+::: {.panel-tabset}
+## Description
+
+The exponential distribution can be simulated in R using the `rexp` function with the following arguments:
+
+-   `n`: number of values to generate
+-   `rate`: how fast would events occur
+
+## Code
+
+```{r}
+#| code-fold: show
+rexp(1, rate = 1)
+```
+
+:::
+
+## Discrete RV Inverse-Transformations
+
+1.    Generate a random value $U$ that follows a $U(0,1)$
+2.    Using the CDF ($F(X)$), find the smallest integer value $k$ such that:
+
+$$
+U \leq F(k)
+$$
+3.    $X \leftarrow k$
+
+## Poisson Distribution
+
+```{r}
+xe <- 0:20
+u <- runif(100000)
+u |> tibble(x = _) |> 
+ggplot(aes(x=x, y = ..density..)) +
+geom_histogram(bins = 20) +
+geom_step(data = tibble(x = xe, y = dpois(xe, lambda = 6)),
+          mapping = aes(x,y)) +
+theme_bw()
+```
+
+## Poisson Distribution
+
+```{r}
+#| code-fold: show
+
+finder <- function(u){
+  x <- 0
+  condition <- TRUE
+  while (condition) {
+    uu <- ppois(x, lambda = 6)
+    condition <- uu <= u
+    if(condition){
+      x <- x + 1
+    }
+  }
+  return(x)
+}
+xx <- sapply(u, finder)  
+xx |> tibble(x = _) |> 
+ggplot(aes(x=x, y = ..density..)) +
+geom_histogram(bins = 21) +
+geom_step(data = tibble(x = xe, y = dpois(xe, lambda = 6)),
+          mapping = aes(x,y)) +
+theme_bw()
+```
+
+## Exponential RV in R
+
+::: {.panel-tabset}
+## Description
+
+The Poisson distribution can be simulated in R using the `rpois` function with the following arguments:
+
+-   `n`: number of values to generate
+-   `lambda`: the average expected event
+
+## Code
+
+```{r}
+#| code-fold: show
+rpois(1, lambda = 1)
+```
+
+:::
+
+## Normal Distribution
+
+Obtaining the inverse distribution function of a normal distribution requires the use of numeric algorithms.
+
+::: fragment
+Therefore it is computationally inefficient to use the inverse-transformation algorithm to generate normal random variables.
+:::
+
+::: fragment
+The Box-Muller algorithm was developed to generate 2 standard normal ($N(0,1)$) random variables from uniform random variables.
+:::
+
+## Normal Distribution
+
+$$
+y = \int^x_{-\infty} 
+\frac{1}{\sqrt{2\pi}} \exp\left\{-\frac{z^2}{2}\right\}dz
+$$
+
+## Box-Muller Algorithm
+
+1. Generate 2 independent random variables from $U(0,1)$, $U_1$ and $U_2$
+2. $X_1 = (-2 \log(U_1))^{1/2}\cos(2\pi U_2)$
+3. $X_2 = (-2 \log(U_1))^{1/2}\sin(2\pi U_2)$
+
+Both $X_1$ and $X_2$ are independent $N(0,1)$
+
+## Normal Distribution R
+
+::: {.panel-tabset}
+
+## Description
+
+The normal distribution can be simulated in R using the `rnorm` function with the following arguments:
+
+-   `n`: number of values to generate
+-   `mean`: the central tendency (peak)
+-   `sd`: the variation of the data (width)
+
+## Code
+
+```{r}
+#| code-fold: show
+rnorm(1, mean = 0, sd = 1)
+```
+
+:::
+
+
+## Accept-Reject Algorithm
+
+The Accept-Reject algorithm allows you to generate noncommon random variable by simulating from a common random variable.
+
+## Algorithm Set Up
+
+Let $X$ be the random variable, that is difficult to generate, you want to generate with a pdf $f(x)$. 
+
+Let $Y$ be an easily generated random variable with a pdf $g(y)$. That follows the same support as $f(x)$ 
+
+Lastly, multiply $g(y)$ with a constant $c$ such that $f(y)\leq cf(y)$.
+
+## Algorithm
+
+1. Generate $Y$ with a pdf of $g(y)$
+2. Generate $U$ from $U(0, cg(y))$
+3. Accept-Reject
+  1. Accept: $U\leq f(y)$; $Y \rightarrow X$
+  2. Reject: $U>f(y)$; repeat the algorithm
+
+
+## Gamma Random Variable
+
+```{r}
+xe <- seq(0, 20, length.out = 1000)
+xe |> tibble(x = _) |> 
+ggplot(aes(x=x, y = dgamma(x, shape = 2.3, scale = 1.2))) + 
+geom_line() +
+ylab("Density") +
+theme_bw()
+```
+
+## Gamma RV
+
+```{r}
+xe <- seq(0, 20, length.out = 1000)
+x <- rexp(100000)
+x |> tibble(x = _) |> 
+ggplot(aes(x=x, y = ..density..)) + 
+geom_histogram(aes(color = "Exponential")) +
+geom_line(data = tibble(x = xe, 
+                        y = dgamma(x, shape = 2.3, scale = 1.2)), 
+          aes(x,y, color = "Gamma")) +
+ylab("Density") +
+theme_bw() +
+theme(legend.position = "bottom",
+      legend.title = element_blank())
+```
+
+## Gamma RV
+
+```{r}
+xe <- seq(0, 20, length.out = 1000)
+xe |> tibble(x = _) |> 
+ggplot(aes(x=x, y = dgamma(x, shape = 2.3, scale = 1.2))) + 
+geom_line(aes(color = "Gamma")) +
+geom_line(data = tibble(x = xe, y = dexp(xe, 1/3)), aes(x,y, color = "Exponential")) +
+ylab("Density") +
+theme_bw() +
+theme(legend.position = "bottom",
+      legend.title = element_blank())
+```
+
+## Accept-Reject Gamma RV
+
+```{r}
+xe <- seq(0, 20, length.out = 1000)
+xe |> tibble(x = _) |> 
+ggplot(aes(x=x, y = dgamma(x, shape = 2.3, scale = 1.2))) + 
+geom_line(aes(color = "Gamma")) +
+geom_line(data = tibble(x = xe, y = 1.5*dexp(xe, 1/3)), aes(x,y, color = "Exponential")) +
+ylab("Density") +
+theme_bw() +
+theme(legend.position = "bottom",
+      legend.title = element_blank())
+```
+
+## Accept-Reject Gamma RV
+
+```{r}
+xe <- seq(0, 20, length.out = 1000)
+xe |> tibble(x = _) |> 
+ggplot(aes(x=x, y = dgamma(x, shape = 2.3, scale = 1.2))) + 
+geom_line(aes(color = "Gamma")) +
+geom_line(data = tibble(x = xe, y = 3*dexp(xe, 1/3)), aes(x,y, color = "Exponential")) +
+ylab("Density") +
+theme_bw() +
+theme(legend.position = "bottom",
+      legend.title = element_blank())
+```
+
+## Accept-Reject Gamma RV
+
+```{r}
+#| code-fold: show
+x <- c()
+n <- 0
+while(n < 10000){
+  e <- rexp(1, 1/2.3)
+  u <- runif(1)
+  f <- dgamma(e, 2.3, 1/1.2)
+  g <- dexp(e, 1/2.3) * 3
+  if (u < (f/g)){
+    x <- c(x, e)
+    n <- length(x)
+  }
+}
+
+```
+
+## Gamma RV
+
+```{r}
+x |> tibble(x = _) |> 
+ggplot(aes(x=x, y = ..density..)) + 
+geom_histogram(aes(color = "Exponential")) +
+geom_line(data = tibble(x = xe, 
+                        y = dgamma(x, shape = 2.3, scale = 1.2)), 
+          aes(x,y, color = "Gamma")) +
+ylab("Density") +
+theme_bw() +
+theme(legend.position = "bottom",
+      legend.title = element_blank())
+
+```
+
+## Gamma Distribution R
+
+::: {.panel-tabset}
+## Description
+
+The gamma distribution can be simulated in R using the `rgamma` function with the following arguments:
+
+-   `n`: number of values to generate
+-   `shape`: describes the shape of distribution ($\alpha$)
+-   `scale`: the spread of the data ($\beta$)
+
+## Code
+
+```{r}
+#| code-fold: show
+rgamma(1, shape = 1.2, rate = .5)
+```
+
+:::
+
+## Beta RV in R
+
+::: {.panel-tabset}
+## Description
+
+The beta distribution can be simulated in R using the `rbeta` function with the following arguments:
+
+-   `n`: number of values to generate
+-   `shape1`: controls the shape of distribution
+-   `shape2`: controls the shape of distribution
+
+## Code
+
+```{r}
+#| code-fold: show
+rbeta(1, shape1 = 1.2, shape2 = 6.5)
+```
+
+:::
+
+
+## Bernoulli RV in R
+
+::: {.panel-tabset}
+## Description
+
+The bernoulli distribution can be simulated in R using the `rbinom` function with the following arguments:
+
+-   `n`: number of values to generate
+-   `size = 1`: will give a bernoulli distribution
+-   `prob`: probability of observing 1 (success)
+
+## Code
+
+```{r}
+#| code-fold: show
+rbinom(1, prob = .2, size = 1)
+```
+
+:::
+
+## Binomial RV in R
+
+::: {.panel-tabset}
+## Description
+
+The binomial distribution can be simulated in R using the `rbinom` function with the following arguments:
+
+-   `n`: number of values to generate
+-   `size`: how many bernoulli trials to conduct
+-   `prob`: probability of observing 1 (success)
+
+## Code
+
+```{r}
+#| code-fold: show
+rbinom(1, prob = .5, size = 25)
+```
+
+:::
+
+## Negative Binomial RV in R
+
+::: {.panel-tabset}
+## Description
+
+The negative binomial distribution can be simulated in R using the `rnbinom` function with the following arguments:
+
+-   `n`: number of values to generate
+-   `size`: number of successful trials
+-   `prob`: probability of observing 1 (success)
+
+## Code
+
+```{r}
+#| code-fold: show
+rnbinom(1, prob = .6, size = 5)
+```
+
+:::
+
+# Transformation Methods
+
+## $N(0,1)$
+
+$$
+X \sim N(\mu, \sigma^2)
+$$
+
+
+$$
+Z = \frac{X-\mu}{\sigma} \sim N(0,1)
+$$
+
+## $N(\mu, \sigma^2)$
+
+$$
+Z \sim N(0,1)
+$$
+
+$$
+X = Z\sigma + \mu \sim N(\mu, \sigma^2)
+$$
+
+## $\chi^2(1)$
+
+$$
+Z \sim N(0,1)
+$$
+
+$$
+Z^2 \sim \chi^2(1)
+$$
+
+## $F(m,n)$
+
+$$
+U \sim \chi^2(m)
+$$
+
+$$
+V \sim \chi^2(n)
+$$
+
+$$
+F = \frac{U/m}{V/n} \sim F(m,n)
+$$
+
+## $t(n)$
+
+$$
+Z \sim N(0,1)
+$$
+
+
+$$
+U \sim \chi^2(m)
+$$
+
+$$
+T = \frac{Z}{\sqrt{U/m}} \sim t(n)
+$$
+
+## $Beta(\alpha, \beta)$
+
+$$
+U \sim Gamma(\alpha,\lambda)
+$$
+
+$$
+V \sim Gamma(\beta,\lambda)
+$$
+
+$$
+X = \frac{U}{U+V} \sim Beta(\alpha,\beta)
+$$
+
+# Central Limit Theorem
+
+## Central Limit Theorem
+
+If random variables $X_1, X_2, \cdots, X_n$ are independent come from the same distribution ($iid$), $E(X_i) = \mu <\infty$ (finite), $Var(X_i) = \sigma^2<\infty$ (finite), then
+
+$$
+\bar X \sim N(\mu, \sigma^2/n)
+$$
+
+## Normal Distribution
+
+For $n$ random variables:
+
+$$
+X_i \sim N(4, 32)
+$$
+By CLT
+
+$$
+\bar X \sim N(4, 32 / n)
+$$
+
+## Normal Distribution
+
+```{r}
+#| code-fold: show
+#| eval: false
+norm <- function(x){
+  rnorm(10000, 4, sqrt(32))
+}
+X <- sapply(1:1000, norm)
+Xbar <- apply(X, 2, mean)
+xx <- seq(min(Xbar)-.1, max(Xbar)+.1, length.out = 100)
+Xbar |> tibble(x = _) |> 
+  ggplot(aes(x=x, y = ..density..)) +
+    geom_histogram() +
+    geom_line(data = tibble(x = xx, y = dnorm(xx, 4, sqrt(32/10000))),
+              aes(x, y))
+
+```
+
+## Normal Distribution
+
+```{r}
+norm <- function(x){
+  rnorm(10000, 4, sqrt(32))
+}
+X <- sapply(1:1000, norm)
+Xbar <- apply(X, 2, mean)
+xx <- seq(min(Xbar)-.1, max(Xbar)+.1, length.out = 100)
+Xbar |> tibble(x = _) |> 
+  ggplot(aes(x=x, y = ..density..)) +
+    geom_histogram() +
+    geom_line(data = tibble(x = xx, y = dnorm(xx, 4, sqrt(32/10000))),
+              aes(x, y)) +
+    theme_bw()
+```
+
+## Poisson Distribution
+
+```{r}
+#| code-fold: true
+#| eval: false
+norm <- function(x){
+  rpois(10000, 8.5)
+}
+X <- sapply(1:1000, norm)
+Xbar <- apply(X, 2, mean)
+xx <- seq(min(Xbar)-.1, max(Xbar)+.1, length.out = 100)
+Xbar |> tibble(x = _) |> 
+  ggplot(aes(x=x, y = ..density..)) +
+    geom_histogram() +
+    geom_line(data = tibble(x = xx, y = dnorm(xx, 8.5, sqrt(8.5/10000))),
+              aes(x, y))
+
+```
+
+## Gamma Distribution
+
+```{r}
+#| code-fold: true
+#| eval: false
+norm <- function(x){
+  rgamma(10000, shape = 5, scale = 2)
+}
+X <- sapply(1:1000, norm)
+Xbar <- apply(X, 2, mean)
+xx <- seq(min(Xbar)-.1, max(Xbar)+.1, length.out = 100)
+Xbar |> tibble(x = _) |> 
+  ggplot(aes(x=x, y = ..density..)) +
+    geom_histogram() +
+    geom_line(data = tibble(x = xx, y = dnorm(xx, 10, sqrt(20/10000))),
+              aes(x, y))
+
+```

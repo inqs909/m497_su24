@@ -19,19 +19,17 @@ knitr:
     echo: true
     eval: false
     comment: "#>" 
-
-
 revealjs-plugins:
   - verticator
-  
 filters: 
   - reveal-header
   - reveal-auto-agenda
   - code-fullscreen
   - webr
-
 webr: 
   show-startup-message: true
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Introductions

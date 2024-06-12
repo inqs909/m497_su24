@@ -157,7 +157,7 @@ sum_bin
 length(x)
 ```
 
-## Example 
+## Example
 
 ```{webr-r}
 
@@ -269,7 +269,7 @@ There are several available functions in R to conduct specific statistical metho
 ## Help Documentation
 
 | Section     | Description                                                 |
-|:----------------------|:------------------------------------------------|
+|:------------|:------------------------------------------------------------|
 | Description | Provides a brief introduction of the function               |
 | Usage       | Provides potential usage of the function                    |
 | Arguments   | Arguments that the function can take                        |
