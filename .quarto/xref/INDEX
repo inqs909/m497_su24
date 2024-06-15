@@ -34,5 +34,14 @@
   },
   "posts/3.qmd": {
     "3.html": "d82e0edb"
+  },
+  "posts/4.qmd": {
+    "4.html": "6f269fdf"
+  },
+  "lectures/4.qmd": {
+    "4.html": "f6c89e4a"
+  },
+  "hw/hw2.qmd": {
+    "hw2.html": "e1450046"
   }
 }

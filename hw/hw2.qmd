@@ -1,0 +1,28 @@
+---
+title: "Homework 1"
+date: 1/23/24
+editor: visual
+draft: false
+---
+
+**Due 6/28/24 \@ 11:59 PM**
+
+You must comment all your code to receive credit.
+
+Email me the \*.html file to isaac.qs\@csuci.edu.
+
+## Problem 1
+
+Use the Discrete Inverse Technique to simulate a $NB(0.2, 4)$.
+
+## Problem 2
+
+Use the Accept-Reject algorithm to generate a $Beta(4,6)$.
+
+## Problem 3
+
+Use the Accept-Reject algorithm to generate a [$Weibull(2,3)$](https://en.wikipedia.org/wiki/Weibull_distribution).
+
+## Problem 3
+
+Use the Accept-Reject algorithm to generate a [$Pareto(1,4)$](https://en.wikipedia.org/wiki/Pareto_distribution). The pdf of the pareto distribution can be obtained from the [EnvStats Package](https://alexkowa.github.io/EnvStats/reference/Pareto.html)

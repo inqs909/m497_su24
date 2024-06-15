@@ -1,0 +1,77 @@
+---
+title: "Monte Carlo Methods"
+subtitle: "Integration and Optimization"
+format:
+  revealjs:
+    scrollable: true
+    navigation-mode: vertical
+    controls-layout: bottom-right
+    controls-tutorial: true
+    incremental: false 
+    chalkboard:
+      src: chalkboard.json
+      storage: chalkboard_pres
+      theme: whiteboard
+      chalk-width: 4
+engine: knitr
+knitr:
+  opts_chunk: 
+    code-fold: true
+    echo: true
+    eval: true
+    comment: "#>" 
+filters: 
+  - reveal-header
+  - reveal-auto-agenda
+  - code-fullscreen
+  - webr
+webr: 
+  show-startup-message: true
+  packages: ['ggplot2', 'dplyr', 'stringr']
+editor_options: 
+  chunk_output_type: console
+---
+
+## R Packages
+
+```{r}
+#| code-fold: show
+library(tidyverse)
+```
+ 
+
+# Monte Carlo Integration
+
+## Integration
+
+Integration is commonly used to determine the propbability of observing a certain range of values for a continuous random variable.
+
+$$
+P(a < X < b)
+$$
+
+## Graphical Setting
+
+```{r}
+x <- seq(-4, 4, length.out = 1000)
+x |> (\(.) tibble(x = ., y = dnorm(.)))() |> 
+  ggplot(aes(x, y)) +
+    geom_line() +
+    
+    theme_bw()
+```
+
+
+
+
+# Importance Sampling
+
+## Importance Sampling
+
+# Monte Carlo Optimization
+
+## Monte Carlo Optimization
+
+# Stochastic Gradient Methods
+
+## Stochastic Gradient Methods

@@ -1,0 +1,22 @@
+---
+title: Week 4"
+date: 6-13-24
+description: MEET Tuesday (6/18)
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## Learning Outcomes
+
+-   Monte Carlo Integration
+
+-   Importance Sampling
+
+-   Monte Carlo Optimization
+
+-   Stochastic Gradient Methods
+
+| Lecture                                                | Videos |
+|:-------------------------------------------------------|:-------|
+| [Slide](http://m497.inqs.info/lectures/4#/title-slide) |        |

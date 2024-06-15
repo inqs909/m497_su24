@@ -79,19 +79,19 @@ Implement a Monte Carlo Method to answer a scientific question, study a statisti
 
 The following outline may be subject to change. Any changes will be announced in class.
 
-| Wk  | Topic                                       | Reading    | Assignment |
-|:----|:--------------------------------------------|:-----------|:-----------|
-| 1   | Intro to R and Control Flow                 | SC: Ch 2-3 |            |
-| 2   | Control Flow/Functional Programming         | SC: Ch 3-4 | HW \# 1    |
-| 3   | Random Number/Variable Generation           | SC:        | HW \# 2    |
-| 4   | Monte Carlo Integration                     | SC:        | HW \# 3    |
-| 5   | Monte Carlo Hypothesis Testing              | SC:        | HW \# 4    |
-| 6   | Permutation Methods                         | SC:        | HW \# 5    |
-| 7   | Simulation Study: Linear Regression         | SC:        |            |
-| 8   | Simulation Study: Generalized Linear Models | SC:        |            |
-| 9   | Simulation Study: Zero-Inflated Models      | SC:        |            |
-| 10  | Simulation Study: Mixed-Effects Models      | SC:        |            |
-| 11  | Final Presentation                          |            |            |
+| Wk  | Topic                                                | Reading    | Assignment |
+|:----|:-----------------------------------------------------|:-----------|:-----------|
+| 1   | Intro to R and Control Flow                          | SC: Ch 2-3 |            |
+| 2   | Control Flow/Functional Programming                  | SC: Ch 3-4 | HW \# 1    |
+| 3   | Random Number/Variable Generation                    | SC:        |            |
+| 4   | Integration & Optimization                           | SC:        | HW \# 2    |
+| 5   | Hypothesis Testing                                   | SC:        | HW \# 3    |
+| 6   | Permutation Methods                                  | SC:        | HW \# 4    |
+| 7   | Bootstrapping Techniques                             | SC:        | HW \#5     |
+| 8   | Simulation Study: Linear & Generalized Linear Models | SC:        |            |
+| 9   | Simulation Study: Zero-Inflated Models               | SC:        |            |
+| 10  | Simulation Study: Mixed-Effects Models               | SC:        |            |
+| 11  | Final Presentation                                   |            |            |
 
 ### University Policies
 

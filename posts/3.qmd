@@ -15,8 +15,10 @@ editor_options:
 
 -   Random Variable Generations
 
+-   Central Limit Theorem
+
 ## Resources
 
-| Lecture                                                | Videos |
-|:-------------------------------------------------------|:-------|
-| [Slide](http://m497.inqs.info/lectures/3#/title-slide) |        |
+| Lecture                                                | Videos                                |
+|:-------------------------------------------------------|:--------------------------------------|
+| [Slide](http://m497.inqs.info/lectures/3#/title-slide) | [Video](https://youtu.be/ENI-GWgcXqM) |
