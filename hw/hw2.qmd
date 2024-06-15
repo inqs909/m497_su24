@@ -1,6 +1,6 @@
 ---
-title: "Homework 1"
-date: 1/23/24
+title: "Homework 2"
+date: 6/13/24
 editor: visual
 draft: false
 ---
@@ -23,6 +23,6 @@ Use the Accept-Reject algorithm to generate a $Beta(4,6)$.
 
 Use the Accept-Reject algorithm to generate a [$Weibull(2,3)$](https://en.wikipedia.org/wiki/Weibull_distribution).
 
-## Problem 3
+## Problem 4
 
-Use the Accept-Reject algorithm to generate a [$Pareto(1,4)$](https://en.wikipedia.org/wiki/Pareto_distribution). The pdf of the pareto distribution can be obtained from the [EnvStats Package](https://alexkowa.github.io/EnvStats/reference/Pareto.html)
+Use the Accept-Reject algorithm to generate a [$Pareto(1,4)$](https://en.wikipedia.org/wiki/Pareto_distribution). The pdf of the Pareto distribution can be obtained from the [EnvStats Package](https://alexkowa.github.io/EnvStats/reference/Pareto.html)
