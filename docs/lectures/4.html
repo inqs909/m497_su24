@@ -414,18 +414,6 @@
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stderr">
-<pre><code>#&gt; ── Attaching core tidyverse packages ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
-#&gt; ✔ dplyr     1.1.4     ✔ readr     2.1.5
-#&gt; ✔ forcats   1.0.0     ✔ stringr   1.5.1
-#&gt; ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-#&gt; ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-#&gt; ✔ purrr     1.0.2     
-#&gt; ── Conflicts ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-#&gt; ✖ dplyr::filter() masks stats::filter()
-#&gt; ✖ dplyr::lag()    masks stats::lag()
-#&gt; ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
 </div>
 </section>
 <section>
@@ -442,15 +430,109 @@
 <li><div class="agenda-inactive agenda-post-active">
 <p>Monte Carlo Optimization</p>
 </div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>Stochastic Gradient Methods</p>
-</div></li>
 </ul>
 </div>
 </section>
+<section id="monte-carlo-integration-1" class="slide level2">
+<h2>Monte Carlo Integration</h2>
+<p>Monte Carlo Integration is a numerical technique to compute a numerical of an integral.</p>
+<p>It relies on simulating from a know distribution to obtain the expected value of a desired function.</p>
+</section>
 <section id="integration" class="slide level2">
 <h2>Integration</h2>
-<p>Integration is commonly used to determine the propbability of observing a certain range of values for a continuous random variable.</p>
+<p>Integration is commonly used to find the area under a curve.</p>
+</section>
+<section id="expectation" class="slide level2">
+<h2>Expectation</h2>
+<p>Let <span class="math inline">\(X\)</span> be a continuous random variable:</p>
+<p><span class="math display">\[
+E(X) = \int_{X}xf(x)dx
+\]</span></p>
+<p><span class="math display">\[
+E\{g(X)\} = \int_Xg(x)f(x)dx
+\]</span></p>
+</section>
+<section id="strong-law-of-large-numbers" class="slide level2">
+<h2>Strong Law of Large Numbers</h2>
+<p>As <span class="math inline">\(n\rightarrow \infty\)</span> (ie simulate a large number of random variables):</p>
+<p><span class="math display">\[
+\bar X_n \rightarrow E_f(X)
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+\bar X_n \rightarrow = \frac{1}{n}\sum^n_{i=1}X_i
+\]</span> ## Strong Law of Large Numbers</p>
+<p><span class="math display">\[
+\bar X_n^{(g)} \rightarrow E_f\{g(X)\}
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+\bar X_n^{(g)} \rightarrow = \frac{1}{n}\sum^n_{i=1}g(X_i)
+\]</span></p>
+</section>
+<section id="the-expected-value-of-a-normal-distribution" class="slide level2">
+<h2>The Expected Value of a Normal Distribution</h2>
+<p><span class="math display">\[
+E(X) = \int^{\infty}_{-\infty}\frac{x}{\sqrt{2\pi\sigma^2}} \exp\left\{-\frac{(x-\mu)^2}{\sigma^2}\right\} dx = \mu
+\]</span></p>
+</section>
+<section id="variance-of-a-normal-distribution" class="slide level2">
+<h2>Variance of a Normal Distribution</h2>
+<p><span class="math display">\[
+Var(X) = E[\{X-E(X)\}^2] \\= \int^{\infty}_{-\infty}\frac{\{x-E(X)\}^2}{\sqrt{2\pi\sigma^2}} \exp\left\{-\frac{(x-\mu)^2}{\sigma^2}\right\} dx = \sigma^2
+\]</span></p>
+</section>
+<section id="using-monte-carlo-integration-to-obtain-expectations" class="slide level2 scrollable">
+<h2>Using Monte Carlo Integration to obtain expectations</h2>
+<ol type="1">
+<li>Simulate from a target distribution <span class="math inline">\(f\)</span></li>
+<li>Calculate the mean for the expected value</li>
+</ol>
+</section>
+<section id="using-monte-carlo-integration" class="slide level2">
+<h2>Using Monte Carlo Integration</h2>
+<p><span class="math display">\[
+X \sim N(\mu, \sigma^2)
+\]</span></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100000</span>, <span class="at">mean =</span> <span class="sc">-</span><span class="dv">2</span>, <span class="at">sd =</span> <span class="dv">3</span>)</span>
+<span id="cb2-2"><a></a><span class="fu">mean</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] -1.982628</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">var</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 8.960177</code></pre>
+</div>
+</div>
+</section>
+<section id="gamma-distrbution" class="slide level2">
+<h2>Gamma Distrbution</h2>
+<p><span class="math display">\[
+X \sim Gamma(3,4)
+\]</span></p>
+</section>
+<section id="beta-distribution" class="slide level2">
+<h2>Beta Distribution</h2>
+<p><span class="math display">\[
+X \sim Beta(2,3)
+\]</span></p>
+</section>
+<section id="chi2p" class="slide level2">
+<h2><span class="math inline">\(\chi^2(p)\)</span></h2>
+<p><span class="math display">\[
+X \sim \chi^2(39)
+\]</span></p>
+</section>
+<section id="finding-the-probability" class="slide level2">
+<h2>Finding the Probability</h2>
+<p>Integration is commonly used to determine the probability of observing a certain range of values for a continuous random variable.</p>
 <p><span class="math display">\[
 P(a &lt; X &lt; b)
 \]</span></p>
@@ -460,16 +542,208 @@ P(a &lt; X &lt; b)
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
-<span id="cb3-2"><a></a>x <span class="sc">|&gt;</span> (\(.) <span class="fu">tibble</span>(<span class="at">x =</span> ., <span class="at">y =</span> <span class="fu">dnorm</span>(.)))() <span class="sc">|&gt;</span> </span>
-<span id="cb3-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
-<span id="cb3-4"><a></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb3-5"><a></a>    </span>
-<span id="cb3-6"><a></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
+<span id="cb6-2"><a></a>dt_two<span class="ot">&lt;-</span><span class="cf">function</span>(x){</span>
+<span id="cb6-3"><a></a>            y <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x)</span>
+<span id="cb6-4"><a></a>            y[x<span class="sc">&lt;</span> <span class="sc">-</span><span class="dv">1</span> <span class="sc">|</span> x<span class="sc">&gt;</span><span class="dv">2</span>] <span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb6-5"><a></a>            <span class="fu">return</span>(y)</span>
+<span id="cb6-6"><a></a>        }</span>
+<span id="cb6-7"><a></a>x <span class="sc">|&gt;</span> (\(.) <span class="fu">tibble</span>(<span class="at">x =</span> ., <span class="at">y =</span> <span class="fu">dnorm</span>(.)))() <span class="sc">|&gt;</span> </span>
+<span id="cb6-8"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb6-9"><a></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb6-10"><a></a>    <span class="fu">stat_function</span>(<span class="at">fun =</span> dt_two, <span class="at">geom =</span> <span class="st">"area"</span>, <span class="at">fill =</span> <span class="st">"green"</span>) <span class="sc">+</span> </span>
+<span id="cb6-11"><a></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
-<img data-src="4_files/figure-html/unnamed-chunk-2-1.png" width="672" class="r-stretch"></section></section>
+<img data-src="4_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+<section id="finding-the-propbabilities-of-a-random-variable" class="slide level2">
+<h2>Finding the Propbabilities of a Random Variable</h2>
+<p>For a given random variable <span class="math inline">\(X\)</span>, finding the probability is the same as</p>
+<p><span class="math display">\[
+E\{I(a&lt;X&lt;b)\} = \int_X I(a&lt;X&lt;b) f(x) dx
+\]</span></p>
+<p>where <span class="math inline">\(I(a&lt;X&lt;b)\)</span> is the indicator function.</p>
+</section>
+<section id="indicator-function" class="slide level2">
+<h2>Indicator Function</h2>
+<p><span class="math display">\[
+I(a&lt;X&lt;b) = \left\{\begin{array}{cc}
+1 &amp; a&lt;X&lt;b\\
+0 &amp; \mathrm{otherwise}
+\end{array}
+\right.
+\]</span></p>
+</section>
+<section id="finding-the-probability-1" class="slide level2">
+<h2>Finding the Probability</h2>
+<p><span class="math display">\[
+\begin{align}
+E\{I(a&lt;X&lt;b)\} &amp;  = \int_X I(a&lt;X&lt;b) f(x) dx\\
+&amp; = \int_a^b f(x) dx\\
+&amp; = P(a &lt; X &lt; b)
+\end{align}
+\]</span></p>
+</section>
+<section id="monte-carlo-probability" class="slide level2 scrollable">
+<h2>Monte Carlo Probability</h2>
+<ol type="1">
+<li>Simulate from a target distribution <span class="math inline">\(f\)</span></li>
+<li>Calculate the mean for <span class="math inline">\(I(a&lt;X&lt;b)\)</span></li>
+</ol>
+</section>
+<section id="normal-rv-example" class="slide level2">
+<h2>Normal RV Example</h2>
+<p>Let <span class="math inline">\(X\sim N(4, 2)\)</span>, find <span class="math inline">\(P(3 &lt; X &lt; 6)\)</span></p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">pnorm</span>(<span class="dv">6</span>, <span class="dv">4</span>, <span class="fu">sqrt</span>(<span class="dv">2</span>)) <span class="sc">-</span>  <span class="fu">pnorm</span>(<span class="dv">3</span>, <span class="dv">4</span>, <span class="fu">sqrt</span>(<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 0.6816003</code></pre>
+</div>
+</div>
+</section>
+<section id="using-monte-carlo-methods" class="slide level2">
+<h2>Using Monte Carlo Methods</h2>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000000</span>, <span class="dv">4</span>, <span class="fu">sqrt</span>(<span class="dv">2</span>))</span>
+<span id="cb9-2"><a></a><span class="fu">mean</span>((x <span class="sc">&gt;</span> <span class="dv">3</span> <span class="sc">&amp;</span> x <span class="sc">&lt;</span> <span class="dv">6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 0.681814</code></pre>
+</div>
+</div>
+</section>
+<section id="logistic-rv-example" class="slide level2">
+<h2>Logistic RV Example</h2>
+<p>Let <span class="math inline">\(X\sim Logistic(3, 5)\)</span>, find <span class="math inline">\(P(-1 &lt; X &lt; 5)\)</span></p>
+</section>
+<section id="weibull-rv-example" class="slide level2">
+<h2>Weibull RV Example</h2>
+<p>Let <span class="math inline">\(X\sim Weibull(1, 1)\)</span>, find <span class="math inline">\(P(2 &lt; X &lt; 5.5)\)</span></p>
+</section>
+<section id="f-rv-example" class="slide level2">
+<h2>F RV Example</h2>
+<p>Let <span class="math inline">\(X\sim F(2, 45)\)</span>, find <span class="math inline">\(P(1 &lt; X &lt; 3)\)</span></p>
+</section>
+<section id="monte-carlo-integration-2" class="slide level2">
+<h2>Monte Carlo Integration</h2>
+<p>Monte Carlo Integration can be used to evaluate finite-bounded integrals of the following form:</p>
+<p><span class="math display">\[
+\int^b_a g(x) dx
+\]</span> such that <span class="math inline">\(-\infty &lt;a,b&lt;\infty\)</span>.</p>
+</section>
+<section id="monte-carlo-example-integration" class="slide level2">
+<h2>Monte Carlo Example Integration</h2>
+<p><span class="math display">\[
+\int^1_{0} \{\cos(50x) - sin(20x)\}^2dx
+\]</span></p>
+</section>
+<section id="monte-carlo-example-integration-1" class="slide level2">
+<h2>Monte Carlo Example Integration</h2>
+<p>Let <span class="math inline">\(X \sim U(0,1)\)</span> with <span class="math inline">\(f(x) = 1\)</span>, then</p>
+<p><span class="math display">\[
+E[\{\cos(50x) - sin(20x)\}^2] =\int^1_{0} \{\cos(50x) - sin(20x)\}^2dx
+\]</span></p>
+</section>
+<section id="using-numerical-integration" class="slide level2">
+<h2>Using Numerical Integration</h2>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>ff <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb11-2"><a></a>  (<span class="fu">cos</span>(<span class="dv">50</span><span class="sc">*</span>x)<span class="sc">-</span><span class="fu">sin</span>(<span class="dv">50</span><span class="sc">*</span>x))<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb11-3"><a></a>}</span>
+<span id="cb11-4"><a></a><span class="fu">integrate</span>(ff,<span class="dv">0</span>,<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; 0.9986232 with absolute error &lt; 9.5e-11</code></pre>
+</div>
+</div>
+</section>
+<section id="monte-carlo-example-integration-2" class="slide level2">
+<h2>Monte Carlo Example Integration</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">10000000</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb13-2"><a></a><span class="fu">mean</span>((<span class="fu">cos</span>(<span class="dv">50</span><span class="sc">*</span>x)<span class="sc">-</span><span class="fu">sin</span>(<span class="dv">50</span><span class="sc">*</span>x))<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 0.9984644</code></pre>
+</div>
+</div>
+</section>
+<section id="monte-carlo-example-integration-3" class="slide level2">
+<h2>Monte Carlo Example Integration</h2>
+<p><span class="math display">\[
+\int^{15}_{10} \{\cos(50x) - sin(20x)\}^2dx
+\]</span></p>
+</section>
+<section id="monte-carlo-integration-3" class="slide level2">
+<h2>Monte Carlo Integration</h2>
+<p>Let <span class="math inline">\(X \sim U(10,15)\)</span> with <span class="math inline">\(f(x) = 1\)</span>, then</p>
+<p><span class="math display">\[
+E[\{\cos(50x) - sin(20x)\}^2] = \\
+\int^{15}_{10} \frac{1}{5} \{\cos(50x) - sin(20x)\}^2dx
+\]</span></p>
+</section>
+<section id="monte-carlo-example-integration-4" class="slide level2">
+<h2>Monte Carlo Example Integration</h2>
+<p><span class="math display">\[
+\int^{15}_{10} \{\cos(50x) - sin(20x)\}^2dx = \\
+5 * E[\{\cos(50x) - sin(20x)\}^2]
+\]</span></p>
+</section>
+<section id="monte-carlo-example-integration-5" class="slide level2">
+<h2>Monte Carlo Example Integration</h2>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>ff <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb15-2"><a></a>  (<span class="fu">cos</span>(<span class="dv">50</span><span class="sc">*</span>x)<span class="sc">-</span><span class="fu">sin</span>(<span class="dv">50</span><span class="sc">*</span>x))<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb15-3"><a></a>}</span>
+<span id="cb15-4"><a></a><span class="fu">integrate</span>(ff,<span class="dv">10</span>,<span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; 4.993274 with absolute error &lt; 1.1e-06</code></pre>
+</div>
+</div>
+</section>
+<section id="monte-carlo-example-integration-6" class="slide level2">
+<h2>Monte Carlo Example Integration</h2>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">10000000</span>, <span class="dv">10</span>, <span class="dv">15</span>)</span>
+<span id="cb17-2"><a></a><span class="fu">mean</span>(<span class="fu">ff</span>(x)) <span class="sc">*</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 4.994546</code></pre>
+</div>
+</div>
+</section>
+<section id="monte-carlo-integration-algorithm" class="slide level2 scrollable">
+<h2>Monte Carlo Integration Algorithm</h2>
+<p>Given: <span class="math display">\[
+\int_a^b g(x) dx
+\]</span></p>
+<ol type="1">
+<li>Simulate <span class="math inline">\(n\)</span> value from <span class="math inline">\(X \sim U(a,b)\)</span></li>
+<li>Take the average, <span class="math inline">\(\frac{1}{n}\sum^{n}_{i=1}g(x_i)\)</span></li>
+<li>Multiply the average by <span class="math inline">\(b-a\)</span>: <span class="math inline">\(\frac{b-a}{n}\sum^{n}_{i=1}g(x_i)\)</span></li>
+</ol>
+</section>
+<section id="mc-examples" class="slide level2">
+<h2>MC Examples</h2>
+<p><span class="math display">\[
+\int_0^{2}  e^{-x^2/2} dx
+\]</span></p>
+</section></section>
 <section>
 <section id="importance-sampling" class="title-slide slide level1 agenda-slide center">
 <h1>Importance Sampling</h1>
@@ -484,14 +758,74 @@ P(a &lt; X &lt; b)
 <li><div class="agenda-inactive agenda-post-active">
 <p>Monte Carlo Optimization</p>
 </div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>Stochastic Gradient Methods</p>
-</div></li>
 </ul>
 </div>
 </section>
 <section id="importance-sampling-1" class="slide level2">
 <h2>Importance Sampling</h2>
+<p>Importance sampling is an extension of Monte Carlo integration where it addresses the limitations of large variance of the expected value and the bounds required in integrals.</p>
+<p>This is done by simulating from a random variable that has an infinite support system.</p>
+</section>
+<section id="importance-sampling-2" class="slide level2">
+<h2>Importance Sampling</h2>
+<p>Let’s say we are interested in finding the numerical value of the following integral:</p>
+<p><span class="math display">\[
+\int_{-\infty}^\infty g(x) dx
+\]</span></p>
+</section>
+<section id="importance-sampling-3" class="slide level2">
+<h2>Importance Sampling</h2>
+<p>If we view the integral as an expectation of an easily simulated random variable, we can compute the numerical value.</p>
+<p>Let <span class="math inline">\(X\)</span> be a random variable <span class="math inline">\(f\)</span>, then</p>
+<p><span class="math display">\[
+\int_{-\infty}^\infty g(x) dx = \int_{-\infty}^\infty \frac{g(x)}{f(x)} f(x) dx = E\left\{\frac{g(x)}{f(x)}\right\}
+\]</span></p>
+</section>
+<section id="importance-sampling-4" class="slide level2">
+<h2>Importance Sampling</h2>
+<p>Since the integral is the expectation of <span class="math inline">\(X\)</span>, it can be obtained by taking the mean of the simulated values applied to <span class="math inline">\(g(x)/f(x)\)</span>.</p>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<p><span class="math display">\[
+\int_{-\infty}^{\infty}  e^{-x^2/2} dx
+\]</span></p>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rt</span>(<span class="dv">1000000</span>, <span class="at">df =</span> <span class="dv">1</span>)</span>
+<span id="cb19-2"><a></a>f2 <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb19-3"><a></a>  <span class="fu">exp</span>(<span class="sc">-</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">/</span> <span class="fu">dt</span>(x, <span class="dv">1</span>)</span>
+<span id="cb19-4"><a></a>}</span>
+<span id="cb19-5"><a></a><span class="fu">mean</span>(<span class="fu">f2</span>(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 2.506316</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">sqrt</span>(<span class="dv">2</span><span class="sc">*</span>pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 2.506628</code></pre>
+</div>
+</div>
+</section>
+<section id="choosing-fx" class="slide level2">
+<h2>Choosing <span class="math inline">\(f(x)\)</span></h2>
+<p>Choose a value <span class="math inline">\(f(x)\)</span> that follows a shape close enough to <span class="math inline">\(g(x)\)</span> that has the same bounds as the integral.</p>
+</section>
+<section id="example-2" class="slide level2">
+<h2>Example</h2>
+<p><span class="math display">\[
+\int_{-\infty}^{\infty}  e^{-(x-4)^2/10} dx
+\]</span> ## Example</p>
+<p><span class="math display">\[
+\int_{0}^{\infty} x^3 e^{x/2} dx
+\]</span></p>
 </section></section>
 <section>
 <section id="monte-carlo-optimization" class="title-slide slide level1 agenda-slide center">
@@ -507,37 +841,141 @@ P(a &lt; X &lt; b)
 <li><div class="agenda-active">
 <p>Monte Carlo Optimization</p>
 </div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>Stochastic Gradient Methods</p>
-</div></li>
+</ul>
+</div>
+</section>
+<section id="optimization" class="slide level2">
+<h2>Optimization</h2>
+<p><span class="math display">\[
+h(x) = -3x^4+4x^3
+\]</span></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>ff <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb23-2"><a></a>  <span class="sc">-</span><span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">4</span><span class="sc">+</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">3</span></span>
+<span id="cb23-3"><a></a>}</span>
+<span id="cb23-4"><a></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">1000</span>) </span>
+<span id="cb23-5"><a></a>y <span class="ot">&lt;-</span> <span class="fu">ff</span>(x)</span>
+<span id="cb23-6"><a></a><span class="fu">tibble</span>(x, y) <span class="sc">|&gt;</span> </span>
+<span id="cb23-7"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb23-8"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="4_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<section id="optimization-1" class="slide level2">
+<h2>Optimization</h2>
+<p>Optimization is the method to find the values of a variable that will maximize a function of interest (<span class="math inline">\(h\)</span>).</p>
+</section>
+<section id="numerical-optimization-techniques" class="slide level2">
+<h2>Numerical Optimization Techniques</h2>
+<div>
+<ul>
+<li class="fragment">Newton-Raphson Method</li>
+<li class="fragment">Gradient Descent</li>
+<li class="fragment">Quasi Newton-Raphson Method</li>
 </ul>
 </div>
 </section>
 <section id="monte-carlo-optimization-1" class="slide level2">
 <h2>Monte Carlo Optimization</h2>
-</section></section>
-<section>
-<section id="stochastic-gradient-methods" class="title-slide slide level1 agenda-slide center">
-<h1>Stochastic Gradient Methods</h1>
-<div class="agenda">
-<ul>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Monte Carlo Integration</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Importance Sampling</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Monte Carlo Optimization</p>
-</div></li>
-<li><div class="agenda-active">
-<p>Stochastic Gradient Methods</p>
-</div></li>
-</ul>
+<p>Monte Carlo Optimization technique a brute force method that will simulate a high number of random values, evaluate them with <span class="math inline">\(h(x)\)</span>, and identify which value provides a the maximum value.</p>
+</section>
+<section id="optimization-2" class="slide level2">
+<h2>Optimization</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>ff <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb24-2"><a></a>  y <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">4</span><span class="sc">+</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">3</span></span>
+<span id="cb24-3"><a></a>  <span class="fu">return</span>(y)</span>
+<span id="cb24-4"><a></a>}</span>
+<span id="cb24-5"><a></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">1000</span>) </span>
+<span id="cb24-6"><a></a>y <span class="ot">&lt;-</span> <span class="fu">ff</span>(x)</span>
+<span id="cb24-7"><a></a><span class="fu">tibble</span>(x, y) <span class="sc">|&gt;</span> </span>
+<span id="cb24-8"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb24-9"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="4_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
+<section id="numerical-optimization" class="slide level2">
+<h2>Numerical Optimization</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>ff <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb25-2"><a></a>  y <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">4</span><span class="sc">+</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">3</span></span>
+<span id="cb25-3"><a></a>  <span class="fu">return</span>(<span class="sc">-</span>y)</span>
+<span id="cb25-4"><a></a>}</span>
+<span id="cb25-5"><a></a></span>
+<span id="cb25-6"><a></a><span class="fu">optimize</span>(ff, <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>,<span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; $minimum
+#&gt; [1] 1
+#&gt; 
+#&gt; $objective
+#&gt; [1] -1</code></pre>
+</div>
 </div>
 </section>
-<section id="stochastic-gradient-methods-1" class="slide level2">
-<h2>Stochastic Gradient Methods</h2>
+<section id="monte-carlo-methods" class="slide level2">
+<h2>Monte Carlo Methods</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">1000000</span>, <span class="sc">-</span><span class="dv">5</span>,<span class="dv">5</span>)</span>
+<span id="cb27-2"><a></a>y <span class="ot">&lt;-</span> <span class="fu">ff</span>(x)</span>
+<span id="cb27-3"><a></a><span class="fu">which.min</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 249139</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>x[<span class="fu">which.min</span>(y)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 1.000004</code></pre>
+</div>
+</div>
+</section>
+<section id="monte-carlo-optimization-2" class="slide level2">
+<h2>Monte Carlo Optimization</h2>
+<p><span class="math display">\[
+f(x) =  e^{-(x-4)^2/10}
+\]</span></p>
+</section>
+<section id="monte-carlo-optimization-3" class="slide level2">
+<h2>Monte Carlo Optimization</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>)</span>
+<span id="cb31-2"><a></a>y <span class="ot">&lt;-</span> <span class="dv">8</span> <span class="sc">-</span><span class="dv">4</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">sd =</span> <span class="fl">0.5</span>)</span>
+<span id="cb31-3"><a></a>sse <span class="ot">&lt;-</span> <span class="cf">function</span>(beta, x, y){</span>
+<span id="cb31-4"><a></a>  <span class="fu">sum</span>((y <span class="sc">-</span> (beta[<span class="dv">1</span>] <span class="sc">+</span> beta[<span class="dv">2</span>] <span class="sc">*</span> x))<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb31-5"><a></a>}</span>
+<span id="cb31-6"><a></a>beta0 <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>, <span class="dv">20</span>, <span class="at">length.out =</span> <span class="dv">50</span>)</span>
+<span id="cb31-7"><a></a>beta1 <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>, <span class="dv">20</span>, <span class="at">length.out =</span> <span class="dv">50</span>)</span>
+<span id="cb31-8"><a></a>zz <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">nrow =</span> <span class="dv">50</span>, <span class="at">ncol =</span> <span class="dv">50</span>)</span>
+<span id="cb31-9"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(beta0)){</span>
+<span id="cb31-10"><a></a>  <span class="cf">for</span>(ii <span class="cf">in</span> <span class="fu">seq_along</span>(beta1)){</span>
+<span id="cb31-11"><a></a>    zz[i, ii] <span class="ot">&lt;-</span> <span class="fu">sse</span>(<span class="fu">c</span>(beta0[i], beta1[ii]), x, y) </span>
+<span id="cb31-12"><a></a>  }</span>
+<span id="cb31-13"><a></a>}</span>
+<span id="cb31-14"><a></a><span class="fu">persp</span>(beta0, beta1, zz)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="4_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -771,6 +1209,44 @@ P(a &lt; X &lt; b)
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

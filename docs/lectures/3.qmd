@@ -1139,7 +1139,7 @@ Let $X$ be the random variable, that is difficult to generate, you want to gener
 
 Let $Y$ be an easily generated random variable with a pdf $g(y)$. That follows the same support as $f(x)$ 
 
-Lastly, multiply $g(y)$ with a constant $c$ such that $f(y)\leq cf(y)$.
+Lastly, multiply $g(y)$ with a constant $c$ such that $f(y)\leq cg(y)$.
 
 ## Algorithm
 
@@ -1148,6 +1148,15 @@ Lastly, multiply $g(y)$ with a constant $c$ such that $f(y)\leq cf(y)$.
 3. Accept-Reject
   1. Accept: $U\leq f(y)$; $Y \rightarrow X$
   2. Reject: $U>f(y)$; repeat the algorithm
+
+## Modified Algorithm
+
+1. Generate $Y$ with a pdf of $g(y)$
+2. Generate $U$ from $U(0,1)$
+3. Accept-Reject
+  1. Accept: $U\leq f(y)/(cg(y))$; $Y \rightarrow X$
+  2. Reject: $U>f(y)/(cg(y))$; repeat the algorithm
+
 
 
 ## Gamma Random Variable

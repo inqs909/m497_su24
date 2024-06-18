@@ -1,5 +1,5 @@
 ---
-title: Week 4"
+title: Week 4
 date: 6-13-24
 description: MEET Tuesday (6/18)
 editor: visual

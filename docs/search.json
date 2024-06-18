@@ -494,19 +494,19 @@
     "href": "index.html",
     "title": "Welcome to Monte Carlo Methods!",
     "section": "",
-    "text": "Brief Introduction\n\n\n\n\n\nWelcome to the course! This is the home page of the course where I will provide a recap on what was covered in the week. Here I will post any documents or videos for your reference. If you have any questions, please email me at isaac.qs@csuci.edu.\n\n\n\n\n\n\n\n\n\nQuarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Statistics Book\n\n\n\n\n\nhttps://openintro-ims.netlify.app/\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4”\n\n\n\n\n\nMEET Tuesday (6/18)\n\n\n\n\n\nJan 24, 2027\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\nMEET Wednesday (6/12)\n\n\n\n\n\nJun 7, 2024\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\nMEET TUESDAY (6/4) INSTEAD OF WED.\n\n\n\n\n\nJun 1, 2024\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\nThis week we will dive into R and control flow programming.\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Brief Introduction\n\n\n\n\n\nWelcome to the course! This is the home page of the course where I will provide a recap on what was covered in the week. Here I will post any documents or videos for your reference. If you have any questions, please email me at isaac.qs@csuci.edu.\n\n\n\n\n\n\n\n\n\nQuarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Statistics Book\n\n\n\n\n\nhttps://openintro-ims.netlify.app/\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\n\n\n\nMEET Tuesday (6/18)\n\n\n\n\n\nJan 24, 2027\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\nMEET Wednesday (6/12)\n\n\n\n\n\nJun 7, 2024\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\nMEET TUESDAY (6/4) INSTEAD OF WED.\n\n\n\n\n\nJun 1, 2024\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\nThis week we will dive into R and control flow programming.\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/4.html",
     "href": "posts/4.html",
-    "title": "Week 4”",
+    "title": "Week 4",
     "section": "",
     "text": "Monte Carlo Integration\nImportance Sampling\nMonte Carlo Optimization\nStochastic Gradient Methods\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide"
   },
   {
     "objectID": "posts/4.html#learning-outcomes",
     "href": "posts/4.html#learning-outcomes",
-    "title": "Week 4”",
+    "title": "Week 4",
     "section": "",
     "text": "Monte Carlo Integration\nImportance Sampling\nMonte Carlo Optimization\nStochastic Gradient Methods\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide"
   },
@@ -1145,7 +1145,7 @@
     "href": "lectures/3.html#uniform-distribution-r",
     "title": "Monte Carlo Methods",
     "section": "Uniform Distribution R",
-    "text": "Uniform Distribution R\n\nDescriptionCode\n\n\nThe runif function in R will generate a value the come from a uniform distribution.\nrunif arguments:\n\nn: number of values to generate\nmin: the smallest possible value to generate\nmax: the largest possible value to generate\n\n\n\n\n\nCode\nrunif(1, 0, 1)\n\n\n#&gt; [1] 0.2110459"
+    "text": "Uniform Distribution R\n\nDescriptionCode\n\n\nThe runif function in R will generate a value the come from a uniform distribution.\nrunif arguments:\n\nn: number of values to generate\nmin: the smallest possible value to generate\nmax: the largest possible value to generate\n\n\n\n\n\nCode\nrunif(1, 0, 1)\n\n\n#&gt; [1] 0.4641163"
   },
   {
     "objectID": "lectures/3.html#random-variable-generation",
@@ -1208,7 +1208,7 @@
     "href": "lectures/3.html#exponential-rv-in-r",
     "title": "Monte Carlo Methods",
     "section": "Exponential RV in R",
-    "text": "Exponential RV in R\n\nDescriptionCode\n\n\nThe exponential distribution can be simulated in R using the rexp function with the following arguments:\n\nn: number of values to generate\nrate: how fast would events occur\n\n\n\n\n\nCode\nrexp(1, rate = 1)\n\n\n#&gt; [1] 1.312081"
+    "text": "Exponential RV in R\n\nDescriptionCode\n\n\nThe exponential distribution can be simulated in R using the rexp function with the following arguments:\n\nn: number of values to generate\nrate: how fast would events occur\n\n\n\n\n\nCode\nrexp(1, rate = 1)\n\n\n#&gt; [1] 0.2819719"
   },
   {
     "objectID": "lectures/3.html#discrete-rv-inverse-transformations",
@@ -1236,7 +1236,7 @@
     "href": "lectures/3.html#exponential-rv-in-r-1",
     "title": "Monte Carlo Methods",
     "section": "Exponential RV in R",
-    "text": "Exponential RV in R\n\nDescriptionCode\n\n\nThe Poisson distribution can be simulated in R using the rpois function with the following arguments:\n\nn: number of values to generate\nlambda: the average expected event\n\n\n\n\n\nCode\nrpois(1, lambda = 1)\n\n\n#&gt; [1] 1"
+    "text": "Exponential RV in R\n\nDescriptionCode\n\n\nThe Poisson distribution can be simulated in R using the rpois function with the following arguments:\n\nn: number of values to generate\nlambda: the average expected event\n\n\n\n\n\nCode\nrpois(1, lambda = 1)\n\n\n#&gt; [1] 0"
   },
   {
     "objectID": "lectures/3.html#normal-distribution-1",
@@ -1264,7 +1264,7 @@
     "href": "lectures/3.html#normal-distribution-r",
     "title": "Monte Carlo Methods",
     "section": "Normal Distribution R",
-    "text": "Normal Distribution R\n\nDescriptionCode\n\n\nThe normal distribution can be simulated in R using the rnorm function with the following arguments:\n\nn: number of values to generate\nmean: the central tendency (peak)\nsd: the variation of the data (width)\n\n\n\n\n\nCode\nrnorm(1, mean = 0, sd = 1)\n\n\n#&gt; [1] 0.9016323"
+    "text": "Normal Distribution R\n\nDescriptionCode\n\n\nThe normal distribution can be simulated in R using the rnorm function with the following arguments:\n\nn: number of values to generate\nmean: the central tendency (peak)\nsd: the variation of the data (width)\n\n\n\n\n\nCode\nrnorm(1, mean = 0, sd = 1)\n\n\n#&gt; [1] -0.4939713"
   },
   {
     "objectID": "lectures/3.html#accept-reject-algorithm",
@@ -1278,7 +1278,7 @@
     "href": "lectures/3.html#algorithm-set-up",
     "title": "Monte Carlo Methods",
     "section": "Algorithm Set Up",
-    "text": "Algorithm Set Up\nLet \\(X\\) be the random variable, that is difficult to generate, you want to generate with a pdf \\(f(x)\\).\nLet \\(Y\\) be an easily generated random variable with a pdf \\(g(y)\\). That follows the same support as \\(f(x)\\)\nLastly, multiply \\(g(y)\\) with a constant \\(c\\) such that \\(f(y)\\leq cf(y)\\)."
+    "text": "Algorithm Set Up\nLet \\(X\\) be the random variable, that is difficult to generate, you want to generate with a pdf \\(f(x)\\).\nLet \\(Y\\) be an easily generated random variable with a pdf \\(g(y)\\). That follows the same support as \\(f(x)\\)\nLastly, multiply \\(g(y)\\) with a constant \\(c\\) such that \\(f(y)\\leq cg(y)\\)."
   },
   {
     "objectID": "lectures/3.html#algorithm",
@@ -1286,6 +1286,13 @@
     "title": "Monte Carlo Methods",
     "section": "Algorithm",
     "text": "Algorithm\n\nGenerate \\(Y\\) with a pdf of \\(g(y)\\)\nGenerate \\(U\\) from \\(U(0, cg(y))\\)\nAccept-Reject\nAccept: \\(U\\leq f(y)\\); \\(Y \\rightarrow X\\)\nReject: \\(U&gt;f(y)\\); repeat the algorithm"
+  },
+  {
+    "objectID": "lectures/3.html#modified-algorithm",
+    "href": "lectures/3.html#modified-algorithm",
+    "title": "Monte Carlo Methods",
+    "section": "Modified Algorithm",
+    "text": "Modified Algorithm\n\nGenerate \\(Y\\) with a pdf of \\(g(y)\\)\nGenerate \\(U\\) from \\(U(0,1)\\)\nAccept-Reject\nAccept: \\(U\\leq f(y)/(cg(y))\\); \\(Y \\rightarrow X\\)\nReject: \\(U&gt;f(y)/(cg(y))\\); repeat the algorithm"
   },
   {
     "objectID": "lectures/3.html#gamma-random-variable",
@@ -1341,35 +1348,35 @@
     "href": "lectures/3.html#gamma-distribution-r",
     "title": "Monte Carlo Methods",
     "section": "Gamma Distribution R",
-    "text": "Gamma Distribution R\n\nDescriptionCode\n\n\nThe gamma distribution can be simulated in R using the rgamma function with the following arguments:\n\nn: number of values to generate\nshape: describes the shape of distribution (\\(\\alpha\\))\nscale: the spread of the data (\\(\\beta\\))\n\n\n\n\n\nCode\nrgamma(1, shape = 1.2, rate = .5)\n\n\n#&gt; [1] 4.64603"
+    "text": "Gamma Distribution R\n\nDescriptionCode\n\n\nThe gamma distribution can be simulated in R using the rgamma function with the following arguments:\n\nn: number of values to generate\nshape: describes the shape of distribution (\\(\\alpha\\))\nscale: the spread of the data (\\(\\beta\\))\n\n\n\n\n\nCode\nrgamma(1, shape = 1.2, rate = .5)\n\n\n#&gt; [1] 3.404348"
   },
   {
     "objectID": "lectures/3.html#beta-rv-in-r",
     "href": "lectures/3.html#beta-rv-in-r",
     "title": "Monte Carlo Methods",
     "section": "Beta RV in R",
-    "text": "Beta RV in R\n\nDescriptionCode\n\n\nThe beta distribution can be simulated in R using the rbeta function with the following arguments:\n\nn: number of values to generate\nshape1: controls the shape of distribution\nshape2: controls the shape of distribution\n\n\n\n\n\nCode\nrbeta(1, shape1 = 1.2, shape2 = 6.5)\n\n\n#&gt; [1] 0.01991211"
+    "text": "Beta RV in R\n\nDescriptionCode\n\n\nThe beta distribution can be simulated in R using the rbeta function with the following arguments:\n\nn: number of values to generate\nshape1: controls the shape of distribution\nshape2: controls the shape of distribution\n\n\n\n\n\nCode\nrbeta(1, shape1 = 1.2, shape2 = 6.5)\n\n\n#&gt; [1] 0.1582012"
   },
   {
     "objectID": "lectures/3.html#bernoulli-rv-in-r",
     "href": "lectures/3.html#bernoulli-rv-in-r",
     "title": "Monte Carlo Methods",
     "section": "Bernoulli RV in R",
-    "text": "Bernoulli RV in R\n\nDescriptionCode\n\n\nThe bernoulli distribution can be simulated in R using the rbinom function with the following arguments:\n\nn: number of values to generate\nsize = 1: will give a bernoulli distribution\nprob: probability of observing 1 (success)\n\n\n\n\n\nCode\nrbinom(1, prob = .2, size = 1)\n\n\n#&gt; [1] 1"
+    "text": "Bernoulli RV in R\n\nDescriptionCode\n\n\nThe bernoulli distribution can be simulated in R using the rbinom function with the following arguments:\n\nn: number of values to generate\nsize = 1: will give a bernoulli distribution\nprob: probability of observing 1 (success)\n\n\n\n\n\nCode\nrbinom(1, prob = .2, size = 1)\n\n\n#&gt; [1] 0"
   },
   {
     "objectID": "lectures/3.html#binomial-rv-in-r",
     "href": "lectures/3.html#binomial-rv-in-r",
     "title": "Monte Carlo Methods",
     "section": "Binomial RV in R",
-    "text": "Binomial RV in R\n\nDescriptionCode\n\n\nThe binomial distribution can be simulated in R using the rbinom function with the following arguments:\n\nn: number of values to generate\nsize: how many bernoulli trials to conduct\nprob: probability of observing 1 (success)\n\n\n\n\n\nCode\nrbinom(1, prob = .5, size = 25)\n\n\n#&gt; [1] 17"
+    "text": "Binomial RV in R\n\nDescriptionCode\n\n\nThe binomial distribution can be simulated in R using the rbinom function with the following arguments:\n\nn: number of values to generate\nsize: how many bernoulli trials to conduct\nprob: probability of observing 1 (success)\n\n\n\n\n\nCode\nrbinom(1, prob = .5, size = 25)\n\n\n#&gt; [1] 13"
   },
   {
     "objectID": "lectures/3.html#negative-binomial-rv-in-r",
     "href": "lectures/3.html#negative-binomial-rv-in-r",
     "title": "Monte Carlo Methods",
     "section": "Negative Binomial RV in R",
-    "text": "Negative Binomial RV in R\n\nDescriptionCode\n\n\nThe negative binomial distribution can be simulated in R using the rnbinom function with the following arguments:\n\nn: number of values to generate\nsize: number of successful trials\nprob: probability of observing 1 (success)\n\n\n\n\n\nCode\nrnbinom(1, prob = .6, size = 5)\n\n\n#&gt; [1] 4"
+    "text": "Negative Binomial RV in R\n\nDescriptionCode\n\n\nThe negative binomial distribution can be simulated in R using the rnbinom function with the following arguments:\n\nn: number of values to generate\nsize: number of successful trials\nprob: probability of observing 1 (success)\n\n\n\n\n\nCode\nrnbinom(1, prob = .6, size = 5)\n\n\n#&gt; [1] 0"
   },
   {
     "objectID": "lectures/3.html#n01",
@@ -1775,41 +1782,363 @@
     "href": "lectures/4.html#r-packages",
     "title": "Monte Carlo Methods",
     "section": "R Packages",
-    "text": "R Packages\n\n\nCode\nlibrary(tidyverse)\n\n\n#&gt; ── Attaching core tidyverse packages ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──\n#&gt; ✔ dplyr     1.1.4     ✔ readr     2.1.5\n#&gt; ✔ forcats   1.0.0     ✔ stringr   1.5.1\n#&gt; ✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n#&gt; ✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n#&gt; ✔ purrr     1.0.2     \n#&gt; ── Conflicts ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──\n#&gt; ✖ dplyr::filter() masks stats::filter()\n#&gt; ✖ dplyr::lag()    masks stats::lag()\n#&gt; ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
+    "text": "R Packages\n\n\nCode\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "lectures/4.html#monte-carlo-integration-1",
+    "href": "lectures/4.html#monte-carlo-integration-1",
+    "title": "Monte Carlo Methods",
+    "section": "Monte Carlo Integration",
+    "text": "Monte Carlo Integration\nMonte Carlo Integration is a numerical technique to compute a numerical of an integral.\nIt relies on simulating from a know distribution to obtain the expected value of a desired function."
   },
   {
     "objectID": "lectures/4.html#integration",
     "href": "lectures/4.html#integration",
     "title": "Monte Carlo Methods",
     "section": "Integration",
-    "text": "Integration\nIntegration is commonly used to determine the propbability of observing a certain range of values for a continuous random variable.\n\\[\nP(a &lt; X &lt; b)\n\\]"
+    "text": "Integration\nIntegration is commonly used to find the area under a curve."
+  },
+  {
+    "objectID": "lectures/4.html#expectation",
+    "href": "lectures/4.html#expectation",
+    "title": "Monte Carlo Methods",
+    "section": "Expectation",
+    "text": "Expectation\nLet \\(X\\) be a continuous random variable:\n\\[\nE(X) = \\int_{X}xf(x)dx\n\\]\n\\[\nE\\{g(X)\\} = \\int_Xg(x)f(x)dx\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#strong-law-of-large-numbers",
+    "href": "lectures/4.html#strong-law-of-large-numbers",
+    "title": "Monte Carlo Methods",
+    "section": "Strong Law of Large Numbers",
+    "text": "Strong Law of Large Numbers\nAs \\(n\\rightarrow \\infty\\) (ie simulate a large number of random variables):\n\\[\n\\bar X_n \\rightarrow E_f(X)\n\\]\nwhere\n\\[\n\\bar X_n \\rightarrow = \\frac{1}{n}\\sum^n_{i=1}X_i\n\\] ## Strong Law of Large Numbers\n\\[\n\\bar X_n^{(g)} \\rightarrow E_f\\{g(X)\\}\n\\]\nwhere\n\\[\n\\bar X_n^{(g)} \\rightarrow = \\frac{1}{n}\\sum^n_{i=1}g(X_i)\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#the-expected-value-of-a-normal-distribution",
+    "href": "lectures/4.html#the-expected-value-of-a-normal-distribution",
+    "title": "Monte Carlo Methods",
+    "section": "The Expected Value of a Normal Distribution",
+    "text": "The Expected Value of a Normal Distribution\n\\[\nE(X) = \\int^{\\infty}_{-\\infty}\\frac{x}{\\sqrt{2\\pi\\sigma^2}} \\exp\\left\\{-\\frac{(x-\\mu)^2}{\\sigma^2}\\right\\} dx = \\mu\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#variance-of-a-normal-distribution",
+    "href": "lectures/4.html#variance-of-a-normal-distribution",
+    "title": "Monte Carlo Methods",
+    "section": "Variance of a Normal Distribution",
+    "text": "Variance of a Normal Distribution\n\\[\nVar(X) = E[\\{X-E(X)\\}^2] \\\\= \\int^{\\infty}_{-\\infty}\\frac{\\{x-E(X)\\}^2}{\\sqrt{2\\pi\\sigma^2}} \\exp\\left\\{-\\frac{(x-\\mu)^2}{\\sigma^2}\\right\\} dx = \\sigma^2\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#using-monte-carlo-integration-to-obtain-expectations",
+    "href": "lectures/4.html#using-monte-carlo-integration-to-obtain-expectations",
+    "title": "Monte Carlo Methods",
+    "section": "Using Monte Carlo Integration to obtain expectations",
+    "text": "Using Monte Carlo Integration to obtain expectations\n\nSimulate from a target distribution \\(f\\)\nCalculate the mean for the expected value"
+  },
+  {
+    "objectID": "lectures/4.html#using-monte-carlo-integration",
+    "href": "lectures/4.html#using-monte-carlo-integration",
+    "title": "Monte Carlo Methods",
+    "section": "Using Monte Carlo Integration",
+    "text": "Using Monte Carlo Integration\n\\[\nX \\sim N(\\mu, \\sigma^2)\n\\]\n\n\nCode\nx &lt;- rnorm(100000, mean = -2, sd = 3)\nmean(x)\n\n\n#&gt; [1] -1.982628\n\n\nCode\nvar(x)\n\n\n#&gt; [1] 8.960177"
+  },
+  {
+    "objectID": "lectures/4.html#gamma-distrbution",
+    "href": "lectures/4.html#gamma-distrbution",
+    "title": "Monte Carlo Methods",
+    "section": "Gamma Distrbution",
+    "text": "Gamma Distrbution\n\\[\nX \\sim Gamma(3,4)\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#beta-distribution",
+    "href": "lectures/4.html#beta-distribution",
+    "title": "Monte Carlo Methods",
+    "section": "Beta Distribution",
+    "text": "Beta Distribution\n\\[\nX \\sim Beta(2,3)\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#chi2p",
+    "href": "lectures/4.html#chi2p",
+    "title": "Monte Carlo Methods",
+    "section": "\\(\\chi^2(p)\\)",
+    "text": "\\(\\chi^2(p)\\)\n\\[\nX \\sim \\chi^2(39)\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#finding-the-probability",
+    "href": "lectures/4.html#finding-the-probability",
+    "title": "Monte Carlo Methods",
+    "section": "Finding the Probability",
+    "text": "Finding the Probability\nIntegration is commonly used to determine the probability of observing a certain range of values for a continuous random variable.\n\\[\nP(a &lt; X &lt; b)\n\\]"
   },
   {
     "objectID": "lectures/4.html#graphical-setting",
     "href": "lectures/4.html#graphical-setting",
     "title": "Monte Carlo Methods",
     "section": "Graphical Setting",
-    "text": "Graphical Setting\n\n\nCode\nx &lt;- seq(-4, 4, length.out = 1000)\nx |&gt; (\\(.) tibble(x = ., y = dnorm(.)))() |&gt; \n  ggplot(aes(x, y)) +\n    geom_line() +\n    \n    theme_bw()"
+    "text": "Graphical Setting\n\n\nCode\nx &lt;- seq(-4, 4, length.out = 1000)\ndt_two&lt;-function(x){\n            y &lt;- dnorm(x)\n            y[x&lt; -1 | x&gt;2] &lt;-NA\n            return(y)\n        }\nx |&gt; (\\(.) tibble(x = ., y = dnorm(.)))() |&gt; \n  ggplot(aes(x, y)) +\n    geom_line() +\n    stat_function(fun = dt_two, geom = \"area\", fill = \"green\") + \n    theme_bw()"
+  },
+  {
+    "objectID": "lectures/4.html#finding-the-propbabilities-of-a-random-variable",
+    "href": "lectures/4.html#finding-the-propbabilities-of-a-random-variable",
+    "title": "Monte Carlo Methods",
+    "section": "Finding the Propbabilities of a Random Variable",
+    "text": "Finding the Propbabilities of a Random Variable\nFor a given random variable \\(X\\), finding the probability is the same as\n\\[\nE\\{I(a&lt;X&lt;b)\\} = \\int_X I(a&lt;X&lt;b) f(x) dx\n\\]\nwhere \\(I(a&lt;X&lt;b)\\) is the indicator function."
+  },
+  {
+    "objectID": "lectures/4.html#indicator-function",
+    "href": "lectures/4.html#indicator-function",
+    "title": "Monte Carlo Methods",
+    "section": "Indicator Function",
+    "text": "Indicator Function\n\\[\nI(a&lt;X&lt;b) = \\left\\{\\begin{array}{cc}\n1 & a&lt;X&lt;b\\\\\n0 & \\mathrm{otherwise}\n\\end{array}\n\\right.\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#finding-the-probability-1",
+    "href": "lectures/4.html#finding-the-probability-1",
+    "title": "Monte Carlo Methods",
+    "section": "Finding the Probability",
+    "text": "Finding the Probability\n\\[\n\\begin{align}\nE\\{I(a&lt;X&lt;b)\\} &  = \\int_X I(a&lt;X&lt;b) f(x) dx\\\\\n& = \\int_a^b f(x) dx\\\\\n& = P(a &lt; X &lt; b)\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#monte-carlo-probability",
+    "href": "lectures/4.html#monte-carlo-probability",
+    "title": "Monte Carlo Methods",
+    "section": "Monte Carlo Probability",
+    "text": "Monte Carlo Probability\n\nSimulate from a target distribution \\(f\\)\nCalculate the mean for \\(I(a&lt;X&lt;b)\\)"
+  },
+  {
+    "objectID": "lectures/4.html#normal-rv-example",
+    "href": "lectures/4.html#normal-rv-example",
+    "title": "Monte Carlo Methods",
+    "section": "Normal RV Example",
+    "text": "Normal RV Example\nLet \\(X\\sim N(4, 2)\\), find \\(P(3 &lt; X &lt; 6)\\)\n\n\nCode\npnorm(6, 4, sqrt(2)) -  pnorm(3, 4, sqrt(2))\n\n\n#&gt; [1] 0.6816003"
+  },
+  {
+    "objectID": "lectures/4.html#using-monte-carlo-methods",
+    "href": "lectures/4.html#using-monte-carlo-methods",
+    "title": "Monte Carlo Methods",
+    "section": "Using Monte Carlo Methods",
+    "text": "Using Monte Carlo Methods\n\n\nCode\nx &lt;- rnorm(1000000, 4, sqrt(2))\nmean((x &gt; 3 & x &lt; 6))\n\n\n#&gt; [1] 0.681814"
+  },
+  {
+    "objectID": "lectures/4.html#logistic-rv-example",
+    "href": "lectures/4.html#logistic-rv-example",
+    "title": "Monte Carlo Methods",
+    "section": "Logistic RV Example",
+    "text": "Logistic RV Example\nLet \\(X\\sim Logistic(3, 5)\\), find \\(P(-1 &lt; X &lt; 5)\\)"
+  },
+  {
+    "objectID": "lectures/4.html#weibull-rv-example",
+    "href": "lectures/4.html#weibull-rv-example",
+    "title": "Monte Carlo Methods",
+    "section": "Weibull RV Example",
+    "text": "Weibull RV Example\nLet \\(X\\sim Weibull(1, 1)\\), find \\(P(2 &lt; X &lt; 5.5)\\)"
+  },
+  {
+    "objectID": "lectures/4.html#f-rv-example",
+    "href": "lectures/4.html#f-rv-example",
+    "title": "Monte Carlo Methods",
+    "section": "F RV Example",
+    "text": "F RV Example\nLet \\(X\\sim F(2, 45)\\), find \\(P(1 &lt; X &lt; 3)\\)"
+  },
+  {
+    "objectID": "lectures/4.html#monte-carlo-integration-2",
+    "href": "lectures/4.html#monte-carlo-integration-2",
+    "title": "Monte Carlo Methods",
+    "section": "Monte Carlo Integration",
+    "text": "Monte Carlo Integration\nMonte Carlo Integration can be used to evaluate finite-bounded integrals of the following form:\n\\[\n\\int^b_a g(x) dx\n\\] such that \\(-\\infty &lt;a,b&lt;\\infty\\)."
+  },
+  {
+    "objectID": "lectures/4.html#monte-carlo-example-integration",
+    "href": "lectures/4.html#monte-carlo-example-integration",
+    "title": "Monte Carlo Methods",
+    "section": "Monte Carlo Example Integration",
+    "text": "Monte Carlo Example Integration\n\\[\n\\int^1_{0} \\{\\cos(50x) - sin(20x)\\}^2dx\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#monte-carlo-example-integration-1",
+    "href": "lectures/4.html#monte-carlo-example-integration-1",
+    "title": "Monte Carlo Methods",
+    "section": "Monte Carlo Example Integration",
+    "text": "Monte Carlo Example Integration\nLet \\(X \\sim U(0,1)\\) with \\(f(x) = 1\\), then\n\\[\nE[\\{\\cos(50x) - sin(20x)\\}^2] =\\int^1_{0} \\{\\cos(50x) - sin(20x)\\}^2dx\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#using-numerical-integration",
+    "href": "lectures/4.html#using-numerical-integration",
+    "title": "Monte Carlo Methods",
+    "section": "Using Numerical Integration",
+    "text": "Using Numerical Integration\n\n\nCode\nff &lt;- function(x){\n  (cos(50*x)-sin(50*x))^2\n}\nintegrate(ff,0,1)\n\n\n#&gt; 0.9986232 with absolute error &lt; 9.5e-11"
+  },
+  {
+    "objectID": "lectures/4.html#monte-carlo-example-integration-2",
+    "href": "lectures/4.html#monte-carlo-example-integration-2",
+    "title": "Monte Carlo Methods",
+    "section": "Monte Carlo Example Integration",
+    "text": "Monte Carlo Example Integration\n\n\nCode\nx &lt;- runif(10000000, 0, 1)\nmean((cos(50*x)-sin(50*x))^2)\n\n\n#&gt; [1] 0.9984644"
+  },
+  {
+    "objectID": "lectures/4.html#monte-carlo-example-integration-3",
+    "href": "lectures/4.html#monte-carlo-example-integration-3",
+    "title": "Monte Carlo Methods",
+    "section": "Monte Carlo Example Integration",
+    "text": "Monte Carlo Example Integration\n\\[\n\\int^{15}_{10} \\{\\cos(50x) - sin(20x)\\}^2dx\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#monte-carlo-integration-3",
+    "href": "lectures/4.html#monte-carlo-integration-3",
+    "title": "Monte Carlo Methods",
+    "section": "Monte Carlo Integration",
+    "text": "Monte Carlo Integration\nLet \\(X \\sim U(10,15)\\) with \\(f(x) = 1\\), then\n\\[\nE[\\{\\cos(50x) - sin(20x)\\}^2] = \\\\\n\\int^{15}_{10} \\frac{1}{5} \\{\\cos(50x) - sin(20x)\\}^2dx\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#monte-carlo-example-integration-4",
+    "href": "lectures/4.html#monte-carlo-example-integration-4",
+    "title": "Monte Carlo Methods",
+    "section": "Monte Carlo Example Integration",
+    "text": "Monte Carlo Example Integration\n\\[\n\\int^{15}_{10} \\{\\cos(50x) - sin(20x)\\}^2dx = \\\\\n5 * E[\\{\\cos(50x) - sin(20x)\\}^2]\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#monte-carlo-example-integration-5",
+    "href": "lectures/4.html#monte-carlo-example-integration-5",
+    "title": "Monte Carlo Methods",
+    "section": "Monte Carlo Example Integration",
+    "text": "Monte Carlo Example Integration\n\n\nCode\nff &lt;- function(x){\n  (cos(50*x)-sin(50*x))^2\n}\nintegrate(ff,10,15)\n\n\n#&gt; 4.993274 with absolute error &lt; 1.1e-06"
+  },
+  {
+    "objectID": "lectures/4.html#monte-carlo-example-integration-6",
+    "href": "lectures/4.html#monte-carlo-example-integration-6",
+    "title": "Monte Carlo Methods",
+    "section": "Monte Carlo Example Integration",
+    "text": "Monte Carlo Example Integration\n\n\nCode\nx &lt;- runif(10000000, 10, 15)\nmean(ff(x)) * 5\n\n\n#&gt; [1] 4.994546"
+  },
+  {
+    "objectID": "lectures/4.html#monte-carlo-integration-algorithm",
+    "href": "lectures/4.html#monte-carlo-integration-algorithm",
+    "title": "Monte Carlo Methods",
+    "section": "Monte Carlo Integration Algorithm",
+    "text": "Monte Carlo Integration Algorithm\nGiven: \\[\n\\int_a^b g(x) dx\n\\]\n\nSimulate \\(n\\) value from \\(X \\sim U(a,b)\\)\nTake the average, \\(\\frac{1}{n}\\sum^{n}_{i=1}g(x_i)\\)\nMultiply the average by \\(b-a\\): \\(\\frac{b-a}{n}\\sum^{n}_{i=1}g(x_i)\\)"
+  },
+  {
+    "objectID": "lectures/4.html#mc-examples",
+    "href": "lectures/4.html#mc-examples",
+    "title": "Monte Carlo Methods",
+    "section": "MC Examples",
+    "text": "MC Examples\n\\[\n\\int_0^{2}  e^{-x^2/2} dx\n\\]"
   },
   {
     "objectID": "lectures/4.html#importance-sampling-1",
     "href": "lectures/4.html#importance-sampling-1",
     "title": "Monte Carlo Methods",
     "section": "Importance Sampling",
-    "text": "Importance Sampling"
+    "text": "Importance Sampling\nImportance sampling is an extension of Monte Carlo integration where it addresses the limitations of large variance of the expected value and the bounds required in integrals.\nThis is done by simulating from a random variable that has an infinite support system."
+  },
+  {
+    "objectID": "lectures/4.html#importance-sampling-2",
+    "href": "lectures/4.html#importance-sampling-2",
+    "title": "Monte Carlo Methods",
+    "section": "Importance Sampling",
+    "text": "Importance Sampling\nLet’s say we are interested in finding the numerical value of the following integral:\n\\[\n\\int_{-\\infty}^\\infty g(x) dx\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#importance-sampling-3",
+    "href": "lectures/4.html#importance-sampling-3",
+    "title": "Monte Carlo Methods",
+    "section": "Importance Sampling",
+    "text": "Importance Sampling\nIf we view the integral as an expectation of an easily simulated random variable, we can compute the numerical value.\nLet \\(X\\) be a random variable \\(f\\), then\n\\[\n\\int_{-\\infty}^\\infty g(x) dx = \\int_{-\\infty}^\\infty \\frac{g(x)}{f(x)} f(x) dx = E\\left\\{\\frac{g(x)}{f(x)}\\right\\}\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#importance-sampling-4",
+    "href": "lectures/4.html#importance-sampling-4",
+    "title": "Monte Carlo Methods",
+    "section": "Importance Sampling",
+    "text": "Importance Sampling\nSince the integral is the expectation of \\(X\\), it can be obtained by taking the mean of the simulated values applied to \\(g(x)/f(x)\\)."
+  },
+  {
+    "objectID": "lectures/4.html#example",
+    "href": "lectures/4.html#example",
+    "title": "Monte Carlo Methods",
+    "section": "Example",
+    "text": "Example\n\\[\n\\int_{-\\infty}^{\\infty}  e^{-x^2/2} dx\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#example-1",
+    "href": "lectures/4.html#example-1",
+    "title": "Monte Carlo Methods",
+    "section": "Example",
+    "text": "Example\n\n\nCode\nx &lt;- rt(1000000, df = 1)\nf2 &lt;- function(x){\n  exp(-x^2/2) / dt(x, 1)\n}\nmean(f2(x))\n\n\n#&gt; [1] 2.506316\n\n\nCode\nsqrt(2*pi)\n\n\n#&gt; [1] 2.506628"
+  },
+  {
+    "objectID": "lectures/4.html#choosing-fx",
+    "href": "lectures/4.html#choosing-fx",
+    "title": "Monte Carlo Methods",
+    "section": "Choosing \\(f(x)\\)",
+    "text": "Choosing \\(f(x)\\)\nChoose a value \\(f(x)\\) that follows a shape close enough to \\(g(x)\\) that has the same bounds as the integral."
+  },
+  {
+    "objectID": "lectures/4.html#example-2",
+    "href": "lectures/4.html#example-2",
+    "title": "Monte Carlo Methods",
+    "section": "Example",
+    "text": "Example\n\\[\n\\int_{-\\infty}^{\\infty}  e^{-(x-4)^2/10} dx\n\\] ## Example\n\\[\n\\int_{0}^{\\infty} x^3 e^{x/2} dx\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#optimization",
+    "href": "lectures/4.html#optimization",
+    "title": "Monte Carlo Methods",
+    "section": "Optimization",
+    "text": "Optimization\n\\[\nh(x) = -3x^4+4x^3\n\\]\n\n\nCode\nff &lt;- function(x){\n  -3*x^4+4*x^3\n}\nx &lt;- seq(-1, 2, length.out = 1000) \ny &lt;- ff(x)\ntibble(x, y) |&gt; \n  ggplot(aes(x, y)) +\n  geom_line() + theme_bw()"
+  },
+  {
+    "objectID": "lectures/4.html#optimization-1",
+    "href": "lectures/4.html#optimization-1",
+    "title": "Monte Carlo Methods",
+    "section": "Optimization",
+    "text": "Optimization\nOptimization is the method to find the values of a variable that will maximize a function of interest (\\(h\\))."
+  },
+  {
+    "objectID": "lectures/4.html#numerical-optimization-techniques",
+    "href": "lectures/4.html#numerical-optimization-techniques",
+    "title": "Monte Carlo Methods",
+    "section": "Numerical Optimization Techniques",
+    "text": "Numerical Optimization Techniques\n\n\nNewton-Raphson Method\nGradient Descent\nQuasi Newton-Raphson Method"
   },
   {
     "objectID": "lectures/4.html#monte-carlo-optimization-1",
     "href": "lectures/4.html#monte-carlo-optimization-1",
     "title": "Monte Carlo Methods",
     "section": "Monte Carlo Optimization",
-    "text": "Monte Carlo Optimization"
+    "text": "Monte Carlo Optimization\nMonte Carlo Optimization technique a brute force method that will simulate a high number of random values, evaluate them with \\(h(x)\\), and identify which value provides a the maximum value."
   },
   {
-    "objectID": "lectures/4.html#stochastic-gradient-methods-1",
-    "href": "lectures/4.html#stochastic-gradient-methods-1",
+    "objectID": "lectures/4.html#optimization-2",
+    "href": "lectures/4.html#optimization-2",
     "title": "Monte Carlo Methods",
-    "section": "Stochastic Gradient Methods",
-    "text": "Stochastic Gradient Methods"
+    "section": "Optimization",
+    "text": "Optimization\n\n\nCode\nff &lt;- function(x){\n  y &lt;- -3*x^4+4*x^3\n  return(y)\n}\nx &lt;- seq(-1, 2, length.out = 1000) \ny &lt;- ff(x)\ntibble(x, y) |&gt; \n  ggplot(aes(x, y)) +\n  geom_line() + theme_bw()"
+  },
+  {
+    "objectID": "lectures/4.html#numerical-optimization",
+    "href": "lectures/4.html#numerical-optimization",
+    "title": "Monte Carlo Methods",
+    "section": "Numerical Optimization",
+    "text": "Numerical Optimization\n\n\nCode\nff &lt;- function(x){\n  y &lt;- -3*x^4+4*x^3\n  return(-y)\n}\n\noptimize(ff, c(-5,5))\n\n\n#&gt; $minimum\n#&gt; [1] 1\n#&gt; \n#&gt; $objective\n#&gt; [1] -1"
+  },
+  {
+    "objectID": "lectures/4.html#monte-carlo-methods",
+    "href": "lectures/4.html#monte-carlo-methods",
+    "title": "Monte Carlo Methods",
+    "section": "Monte Carlo Methods",
+    "text": "Monte Carlo Methods\n\n\nCode\nx &lt;- runif(1000000, -5,5)\ny &lt;- ff(x)\nwhich.min(y)\n\n\n#&gt; [1] 249139\n\n\nCode\nx[which.min(y)]\n\n\n#&gt; [1] 1.000004"
+  },
+  {
+    "objectID": "lectures/4.html#monte-carlo-optimization-2",
+    "href": "lectures/4.html#monte-carlo-optimization-2",
+    "title": "Monte Carlo Methods",
+    "section": "Monte Carlo Optimization",
+    "text": "Monte Carlo Optimization\n\\[\nf(x) =  e^{-(x-4)^2/10}\n\\]"
+  },
+  {
+    "objectID": "lectures/4.html#monte-carlo-optimization-3",
+    "href": "lectures/4.html#monte-carlo-optimization-3",
+    "title": "Monte Carlo Methods",
+    "section": "Monte Carlo Optimization",
+    "text": "Monte Carlo Optimization\n\n\nCode\nx &lt;- rnorm(1000)\ny &lt;- 8 -4 * x + rnorm(1000, sd = 0.5)\nsse &lt;- function(beta, x, y){\n  sum((y - (beta[1] + beta[2] * x))^2)\n}\nbeta0 &lt;- seq(-20, 20, length.out = 50)\nbeta1 &lt;- seq(-20, 20, length.out = 50)\nzz &lt;- matrix(nrow = 50, ncol = 50)\nfor (i in seq_along(beta0)){\n  for(ii in seq_along(beta1)){\n    zz[i, ii] &lt;- sse(c(beta0[i], beta1[ii]), x, y) \n  }\n}\npersp(beta0, beta1, zz)"
   }
 ]

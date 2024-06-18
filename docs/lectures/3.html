@@ -1420,7 +1420,7 @@ E(X) = \frac{\alpha}{\alpha + \beta}
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">runif</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0.2110459</code></pre>
+<pre><code>#&gt; [1] 0.4641163</code></pre>
 </div>
 </div>
 </div>
@@ -1566,7 +1566,7 @@ X \sim Exp(2)
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">rexp</span>(<span class="dv">1</span>, <span class="at">rate =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 1.312081</code></pre>
+<pre><code>#&gt; [1] 0.2819719</code></pre>
 </div>
 </div>
 </div>
@@ -1647,7 +1647,7 @@ U \leq F(k)
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">rpois</span>(<span class="dv">1</span>, <span class="at">lambda =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 1</code></pre>
+<pre><code>#&gt; [1] 0</code></pre>
 </div>
 </div>
 </div>
@@ -1700,7 +1700,7 @@ y = \int^x_{-\infty}
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">rnorm</span>(<span class="dv">1</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0.9016323</code></pre>
+<pre><code>#&gt; [1] -0.4939713</code></pre>
 </div>
 </div>
 </div>
@@ -1715,7 +1715,7 @@ y = \int^x_{-\infty}
 <h2>Algorithm Set Up</h2>
 <p>Let <span class="math inline">\(X\)</span> be the random variable, that is difficult to generate, you want to generate with a pdf <span class="math inline">\(f(x)\)</span>.</p>
 <p>Let <span class="math inline">\(Y\)</span> be an easily generated random variable with a pdf <span class="math inline">\(g(y)\)</span>. That follows the same support as <span class="math inline">\(f(x)\)</span></p>
-<p>Lastly, multiply <span class="math inline">\(g(y)\)</span> with a constant <span class="math inline">\(c\)</span> such that <span class="math inline">\(f(y)\leq cf(y)\)</span>.</p>
+<p>Lastly, multiply <span class="math inline">\(g(y)\)</span> with a constant <span class="math inline">\(c\)</span> such that <span class="math inline">\(f(y)\leq cg(y)\)</span>.</p>
 </section>
 <section id="algorithm" class="slide level2 scrollable">
 <h2>Algorithm</h2>
@@ -1725,6 +1725,16 @@ y = \int^x_{-\infty}
 <li>Accept-Reject</li>
 <li>Accept: <span class="math inline">\(U\leq f(y)\)</span>; <span class="math inline">\(Y \rightarrow X\)</span></li>
 <li>Reject: <span class="math inline">\(U&gt;f(y)\)</span>; repeat the algorithm</li>
+</ol>
+</section>
+<section id="modified-algorithm" class="slide level2 scrollable">
+<h2>Modified Algorithm</h2>
+<ol type="1">
+<li>Generate <span class="math inline">\(Y\)</span> with a pdf of <span class="math inline">\(g(y)\)</span></li>
+<li>Generate <span class="math inline">\(U\)</span> from <span class="math inline">\(U(0,1)\)</span></li>
+<li>Accept-Reject</li>
+<li>Accept: <span class="math inline">\(U\leq f(y)/(cg(y))\)</span>; <span class="math inline">\(Y \rightarrow X\)</span></li>
+<li>Reject: <span class="math inline">\(U&gt;f(y)/(cg(y))\)</span>; repeat the algorithm</li>
 </ol>
 </section>
 <section id="gamma-random-variable" class="slide level2">
@@ -1876,7 +1886,7 @@ y = \int^x_{-\infty}
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="fu">rgamma</span>(<span class="dv">1</span>, <span class="at">shape =</span> <span class="fl">1.2</span>, <span class="at">rate =</span> .<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 4.64603</code></pre>
+<pre><code>#&gt; [1] 3.404348</code></pre>
 </div>
 </div>
 </div>
@@ -1903,7 +1913,7 @@ y = \int^x_{-\infty}
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="fu">rbeta</span>(<span class="dv">1</span>, <span class="at">shape1 =</span> <span class="fl">1.2</span>, <span class="at">shape2 =</span> <span class="fl">6.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0.01991211</code></pre>
+<pre><code>#&gt; [1] 0.1582012</code></pre>
 </div>
 </div>
 </div>
@@ -1930,7 +1940,7 @@ y = \int^x_{-\infty}
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="fu">rbinom</span>(<span class="dv">1</span>, <span class="at">prob =</span> .<span class="dv">2</span>, <span class="at">size =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 1</code></pre>
+<pre><code>#&gt; [1] 0</code></pre>
 </div>
 </div>
 </div>
@@ -1957,7 +1967,7 @@ y = \int^x_{-\infty}
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">rbinom</span>(<span class="dv">1</span>, <span class="at">prob =</span> .<span class="dv">5</span>, <span class="at">size =</span> <span class="dv">25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 17</code></pre>
+<pre><code>#&gt; [1] 13</code></pre>
 </div>
 </div>
 </div>
@@ -1984,7 +1994,7 @@ y = \int^x_{-\infty}
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a><span class="fu">rnbinom</span>(<span class="dv">1</span>, <span class="at">prob =</span> .<span class="dv">6</span>, <span class="at">size =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 4</code></pre>
+<pre><code>#&gt; [1] 0</code></pre>
 </div>
 </div>
 </div>

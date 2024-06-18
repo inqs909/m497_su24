@@ -42,9 +42,107 @@ library(tidyverse)
 
 # Monte Carlo Integration
 
+## Monte Carlo Integration
+
+Monte Carlo Integration is a numerical technique to compute a numerical of an integral.
+
+It relies on simulating from a know distribution to obtain the expected value of a desired function.
+
 ## Integration
 
-Integration is commonly used to determine the propbability of observing a certain range of values for a continuous random variable.
+Integration is commonly used to find the area under a curve.
+
+## Expectation
+
+Let $X$ be a continuous random variable:
+
+$$
+E(X) = \int_{X}xf(x)dx 
+$$
+
+$$
+E\{g(X)\} = \int_Xg(x)f(x)dx
+$$
+
+
+## Strong Law of Large Numbers
+
+As $n\rightarrow \infty$ (ie simulate a large number of random variables):
+
+$$
+\bar X_n \rightarrow E_f(X)
+$$
+
+where
+
+$$
+\bar X_n \rightarrow = \frac{1}{n}\sum^n_{i=1}X_i
+$$
+## Strong Law of Large Numbers
+
+$$
+\bar X_n^{(g)} \rightarrow E_f\{g(X)\}
+$$
+
+where
+
+$$
+\bar X_n^{(g)} \rightarrow = \frac{1}{n}\sum^n_{i=1}g(X_i)
+$$
+
+## The Expected Value of a Normal Distribution
+
+$$
+E(X) = \int^{\infty}_{-\infty}\frac{x}{\sqrt{2\pi\sigma^2}} \exp\left\{-\frac{(x-\mu)^2}{\sigma^2}\right\} dx = \mu
+$$
+
+## Variance of a Normal Distribution
+
+$$
+Var(X) = E[\{X-E(X)\}^2] \\= \int^{\infty}_{-\infty}\frac{\{x-E(X)\}^2}{\sqrt{2\pi\sigma^2}} \exp\left\{-\frac{(x-\mu)^2}{\sigma^2}\right\} dx = \sigma^2
+$$
+
+## Using Monte Carlo Integration to obtain expectations
+
+1. Simulate from a target distribution $f$
+2. Calculate the mean for the expected value
+
+
+## Using Monte Carlo Integration
+
+$$
+X \sim N(\mu, \sigma^2)
+$$
+
+
+```{r}
+x <- rnorm(100000, mean = -2, sd = 3)
+mean(x)
+var(x)
+```
+
+
+## Gamma Distrbution
+
+$$
+X \sim Gamma(3,4)
+$$
+
+## Beta Distribution
+
+$$
+X \sim Beta(2,3)
+$$
+
+## $\chi^2(p)$
+
+$$
+X \sim \chi^2(39)
+$$ 
+
+## Finding the Probability
+
+Integration is commonly used to determine the probability of observing a certain range of values for a continuous random variable.
 
 $$
 P(a < X < b)
@@ -54,24 +152,352 @@ $$
 
 ```{r}
 x <- seq(-4, 4, length.out = 1000)
+dt_two<-function(x){
+            y <- dnorm(x)
+            y[x< -1 | x>2] <-NA
+            return(y)
+        }
 x |> (\(.) tibble(x = ., y = dnorm(.)))() |> 
   ggplot(aes(x, y)) +
     geom_line() +
-    
+    stat_function(fun = dt_two, geom = "area", fill = "green") + 
     theme_bw()
 ```
 
+## Finding the Propbabilities of a Random Variable
+
+For a given random variable $X$, finding the probability is the same as
+
+$$
+E\{I(a<X<b)\} = \int_X I(a<X<b) f(x) dx
+$$
+
+where $I(a<X<b)$ is the indicator function.
+
+## Indicator Function
+
+$$
+I(a<X<b) = \left\{\begin{array}{cc}
+1 & a<X<b\\
+0 & \mathrm{otherwise}
+\end{array}
+\right.
+$$
+
+## Finding the Probability
+
+$$
+\begin{align}
+E\{I(a<X<b)\} &  = \int_X I(a<X<b) f(x) dx\\ 
+ & = \int_a^b f(x) dx\\
+ & = P(a < X < b)
+\end{align}
+$$
+
+## Monte Carlo Probability
+
+1. Simulate from a target distribution $f$
+2. Calculate the mean for $I(a<X<b)$
+
+## Normal RV Example
+
+Let $X\sim N(4, 2)$, find $P(3 < X < 6)$
+
+```{r}
+#| code-fold: show
+
+pnorm(6, 4, sqrt(2)) -  pnorm(3, 4, sqrt(2))
+```
+
+## Using Monte Carlo Methods
+
+```{r}
+#| code-fold: show
+
+x <- rnorm(1000000, 4, sqrt(2))
+mean((x > 3 & x < 6))
+
+```
 
 
+## Logistic RV Example
+
+Let $X\sim Logistic(3, 5)$, find $P(-1 < X < 5)$
+
+
+## Weibull RV Example
+
+Let $X\sim Weibull(1, 1)$, find $P(2 < X < 5.5)$
+
+
+## F RV Example
+
+Let $X\sim F(2, 45)$, find $P(1 < X < 3)$
+
+
+## Monte Carlo Integration
+
+Monte Carlo Integration can be used to evaluate finite-bounded integrals of the following form:
+
+$$
+\int^b_a g(x) dx
+$$
+such that $-\infty <a,b<\infty$.
+
+## Monte Carlo Example Integration
+
+$$
+\int^1_{0} \{\cos(50x) - sin(20x)\}^2dx
+$$
+
+## Monte Carlo Example Integration
+
+Let $X \sim U(0,1)$ with $f(x) = 1$, then
+
+$$
+E[\{\cos(50x) - sin(20x)\}^2] =\int^1_{0} \{\cos(50x) - sin(20x)\}^2dx
+$$
+
+## Using Numerical Integration
+
+```{r}
+#| code-fold: show
+
+ff <- function(x){
+  (cos(50*x)-sin(50*x))^2
+}
+integrate(ff,0,1)
+
+```
+
+
+## Monte Carlo Example Integration
+
+```{r}
+#| code-fold: true
+
+x <- runif(10000000, 0, 1)
+mean((cos(50*x)-sin(50*x))^2)
+```
+
+
+## Monte Carlo Example Integration
+
+$$
+\int^{15}_{10} \{\cos(50x) - sin(20x)\}^2dx
+$$
+
+## Monte Carlo Integration
+
+Let $X \sim U(10,15)$ with $f(x) = 1$, then
+
+$$
+E[\{\cos(50x) - sin(20x)\}^2] = \\
+\int^{15}_{10} \frac{1}{5} \{\cos(50x) - sin(20x)\}^2dx
+$$
+
+## Monte Carlo Example Integration
+
+$$
+\int^{15}_{10} \{\cos(50x) - sin(20x)\}^2dx = \\
+5 * E[\{\cos(50x) - sin(20x)\}^2]
+$$
+
+## Monte Carlo Example Integration
+
+```{r}
+#| code-fold: show
+
+ff <- function(x){
+  (cos(50*x)-sin(50*x))^2
+}
+integrate(ff,10,15)
+
+```
+
+## Monte Carlo Example Integration
+
+```{r}
+#| code-fold: show
+
+x <- runif(10000000, 10, 15)
+mean(ff(x)) * 5
+```
+
+## Monte Carlo Integration Algorithm
+
+Given: 
+$$
+\int_a^b g(x) dx
+$$
+
+1.    Simulate $n$ value from $X \sim U(a,b)$
+2.    Take the average, $\frac{1}{n}\sum^{n}_{i=1}g(x_i)$
+3.    Multiply the average by $b-a$: $\frac{b-a}{n}\sum^{n}_{i=1}g(x_i)$
+
+## MC Examples
+
+$$
+\int_0^{2}  e^{-x^2/2} dx
+$$
 
 # Importance Sampling
 
 ## Importance Sampling
 
+Importance sampling is an extension of Monte Carlo integration where it addresses the limitations of large variance of the expected value and the bounds required in integrals.
+
+This is done by simulating from a random variable that has an infinite support system.
+
+## Importance Sampling
+
+Let's say we are interested in finding the numerical value of the following integral:
+
+$$
+\int_{-\infty}^\infty g(x) dx
+$$
+
+## Importance Sampling
+
+If we view the integral as an expectation of an easily simulated random variable, we can compute the numerical value.
+
+Let $X$ be a random variable $f$, then
+
+$$
+\int_{-\infty}^\infty g(x) dx = \int_{-\infty}^\infty \frac{g(x)}{f(x)} f(x) dx = E\left\{\frac{g(x)}{f(x)}\right\}
+$$
+
+## Importance Sampling
+
+Since the integral is the expectation of $X$, it can be obtained by taking the mean of the simulated values applied to $g(x)/f(x)$.
+
+## Example
+
+$$
+\int_{-\infty}^{\infty}  e^{-x^2/2} dx
+$$
+
+## Example
+
+```{r}
+x <- rt(1000000, df = 1)
+f2 <- function(x){
+  exp(-x^2/2) / dt(x, 1)
+}
+mean(f2(x))
+sqrt(2*pi)
+```
+
+
+## Choosing $f(x)$
+
+Choose a value $f(x)$ that follows a shape close enough to $g(x)$ that has the same bounds as the integral.
+
+
+## Example
+
+$$
+\int_{-\infty}^{\infty}  e^{-(x-4)^2/10} dx
+$$
+## Example
+
+$$
+\int_{0}^{\infty} x^3 e^{x/2} dx
+$$
+
 # Monte Carlo Optimization
+
+## Optimization
+
+$$
+h(x) = -3x^4+4x^3
+$$
+
+```{r}
+ff <- function(x){
+  -3*x^4+4*x^3
+}
+x <- seq(-1, 2, length.out = 1000) 
+y <- ff(x)
+tibble(x, y) |> 
+  ggplot(aes(x, y)) +
+  geom_line() + theme_bw()
+```
+
+## Optimization
+
+Optimization is the method to find the values of a variable that will maximize a function of interest ($h$).
+
+## Numerical Optimization Techniques
+
+::: incremental
+- Newton-Raphson Method
+- Gradient Descent
+- Quasi Newton-Raphson Method
+:::
 
 ## Monte Carlo Optimization
 
-# Stochastic Gradient Methods
+Monte Carlo Optimization technique a brute force method that will simulate a high number of random values, evaluate them with $h(x)$, and identify which value provides a the maximum value.
 
-## Stochastic Gradient Methods
+## Optimization
+
+```{r}
+ff <- function(x){
+  y <- -3*x^4+4*x^3
+  return(y)
+}
+x <- seq(-1, 2, length.out = 1000) 
+y <- ff(x)
+tibble(x, y) |> 
+  ggplot(aes(x, y)) +
+  geom_line() + theme_bw()
+```
+
+## Numerical Optimization
+
+```{r}
+ff <- function(x){
+  y <- -3*x^4+4*x^3
+  return(-y)
+}
+
+optimize(ff, c(-5,5))
+```
+ 
+## Monte Carlo Methods
+
+```{r}
+x <- runif(1000000, -5,5)
+y <- ff(x)
+which.min(y)
+x[which.min(y)]
+```
+
+## Monte Carlo Optimization
+
+$$
+f(x) =  e^{-(x-4)^2/10} 
+$$
+
+## Monte Carlo Optimization
+
+```{r}
+
+x <- rnorm(1000)
+y <- 8 -4 * x + rnorm(1000, sd = 0.5)
+sse <- function(beta, x, y){
+  sum((y - (beta[1] + beta[2] * x))^2)
+}
+beta0 <- seq(-20, 20, length.out = 50)
+beta1 <- seq(-20, 20, length.out = 50)
+zz <- matrix(nrow = 50, ncol = 50)
+for (i in seq_along(beta0)){
+  for(ii in seq_along(beta1)){
+    zz[i, ii] <- sse(c(beta0[i], beta1[ii]), x, y) 
+  }
+}
+persp(beta0, beta1, zz)
+
+```
+
