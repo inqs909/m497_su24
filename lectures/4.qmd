@@ -78,6 +78,7 @@ where
 $$
 \bar X_n \rightarrow = \frac{1}{n}\sum^n_{i=1}X_i
 $$
+
 ## Strong Law of Large Numbers
 
 $$
@@ -399,6 +400,7 @@ Choose a value $f(x)$ that follows a shape close enough to $g(x)$ that has the s
 $$
 \int_{-\infty}^{\infty}  e^{-(x-4)^2/10} dx
 $$
+
 ## Example
 
 $$
@@ -474,18 +476,34 @@ which.min(y)
 x[which.min(y)]
 ```
 
-## Monte Carlo Optimization
+## Finding the maximum the Gaussian function.
 
 $$
 f(x) =  e^{-(x-4)^2/10} 
 $$
 
-## Monte Carlo Optimization
+## Minimizing SSE
+
+Given a data set $(X_i, Y_i)$ for $i = 1, \ldots, n$:
+
+```{r}
+#| code-fold: show
+x <- rnorm(1000)
+y <- 8 -4 * x + rnorm(1000, sd = 0.5)
+```
+
+## Minimizing SSE
+
+Find the values $\beta_0$ and $\beta_1$ that minimizes the following formula:
+
+$$
+SSE =  \sum^n_{i=1}\{Y_i - (\beta_0 + \beta_1 X_i)\}^2
+$$
+
+## Minimizing SSE
 
 ```{r}
 
-x <- rnorm(1000)
-y <- 8 -4 * x + rnorm(1000, sd = 0.5)
 sse <- function(beta, x, y){
   sum((y - (beta[1] + beta[2] * x))^2)
 }
@@ -500,4 +518,106 @@ for (i in seq_along(beta0)){
 persp(beta0, beta1, zz)
 
 ```
+
+## Minimizing SSE
+
+```{r}
+
+sse <- function(beta, x, y){
+  sum((y - (beta[1] + beta[2] * x))^2)
+}
+
+uu <- sapply(1:1000000, \(x) runif(2, -10, 10))
+val <- apply(uu, 2, sse, x = x, y = y)
+which.min(val)
+uu[,which.min(val)]
+```
+
+# Toy Collector's Problem
+
+## Toy Collector's Problem
+
+There is a cereal company that is planning to give away 15 toys in their cereal boxes where the the probability of getting a certain toy from a box is 1/15. Assuming that you only get one toy from each cereal box, what is the number of cereal boxes you will need to buy to obtain all 15 toys?
+
+
+## Geometric Distribution
+
+The geometric distribution is used to determine the number of failures needed to get the first success. 
+
+A success is getting a new toy.
+
+## Collecting Toys
+
+The probability of getting a new toy given we have i toys goes as follows: $$P(New Toy|i)= \frac{15-i}{15}.$$ 
+
+
+If we have 0 toys $(i=0)$ the probability of getting a new toy after opening 1 box is 1 $$P(New Toy|0)=\frac{15-0}{15}=1.$$ 
+
+## Getting 8th Toy
+
+Now if we have 7 toys, the probability of getting a new toy goes as follows: $$P(New Toy|7)=\frac{15-7}{15}=\frac{8}{15}=0.533.$$ 
+
+To get a new toy, we would have to open at least $\frac{1}{0.533}=1.875$ boxes.
+
+## Getting 15th Toy
+
+Now if we had 14 toys already, we would need to open at least 15 boxes to get that.
+
+$$P(New Toy|14)=\frac{15-14}{15}=\frac{1}{15}=0.067$$ So the number of boxes to open to get the last toy is $\frac{1}{0.067}=\frac{15}{1}=15$ 
+
+## Average number of boxes
+
+$$\frac{15}{15}+\frac{15}{14}+\frac{15}{13}+...+\frac{15}{2}+\frac{15}{1} \approx 49.77.$$
+
+## Monte Carlo Methods
+
+Monte Carlo can be used to estimate the expected number of boxes you will need to buy to obtain all 15 toys. 
+
+Think about having $n$ shoppers going out an buying as many boxes needed to buy to obtain all 15 toys. Then you compute the mean and standard error for your sample.
+
+## Monte Carlo Methods
+
+```{r}
+#| code-fold: true
+mc_shopper<-function(n, x, p){
+  k <- vector(mode = "numeric", length = n)
+  for (i in 1:n){
+    j <- 1
+    a <- sample(x, 1, prob = p)
+    while(length(unique(a)) < 15){
+      b <- sample(x, 1, prob = p)
+      a <- c(a, b)
+      j <- j + 1
+    }
+    k[i] <- j
+  }
+  m <- mean(k)
+  se <- sd(k)/sqrt(n)
+  ci <- m + c(-1, 1) * 1.96 * se
+  return(list(mean = m, se = se, ci_95 = ci))
+}
+```
+
+## Monte Carlo Methods
+
+```{r}
+x <- 1:15
+p <- rep(1/15, times = 15)
+mc_shopper(10000, x, p)
+```
+
+
+## Toy Collector Problem 2
+
+There is a cereal company that is planning to give away 15 toys in their cereal boxes. The probability for each toy is no longer equal, the probability for each toy goes as follows:
+
+| Figure      | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   |
+|-------------|-----|-----|-----|-----|-----|-----|-----|-----|
+| Probability | .2  | .1  | .1  | .1  | .1  | .1  | .05 | .05 |
+
+| Figure     | 9   | 10  | 11  | 12  | 13  | 14  | 15  |
+|------------|-----|-----|-----|-----|-----|-----|-----|
+| Probability| .05 | .05 | .03 | .02 | .02 | .02 | .01 |
+
+Assuming that you only get one toy from each cereal box, what is the number of cereal boxes you will need to get to obtain all 15 toys?
 

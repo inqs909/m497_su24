@@ -430,6 +430,9 @@
 <li><div class="agenda-inactive agenda-post-active">
 <p>Monte Carlo Optimization</p>
 </div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Toy Collector’s Problem</p>
+</div></li>
 </ul>
 </div>
 </section>
@@ -461,7 +464,10 @@ E\{g(X)\} = \int_Xg(x)f(x)dx
 <p>where</p>
 <p><span class="math display">\[
 \bar X_n \rightarrow = \frac{1}{n}\sum^n_{i=1}X_i
-\]</span> ## Strong Law of Large Numbers</p>
+\]</span></p>
+</section>
+<section id="strong-law-of-large-numbers-1" class="slide level2">
+<h2>Strong Law of Large Numbers</h2>
 <p><span class="math display">\[
 \bar X_n^{(g)} \rightarrow E_f\{g(X)\}
 \]</span></p>
@@ -501,14 +507,14 @@ X \sim N(\mu, \sigma^2)
 <span id="cb2-2"><a></a><span class="fu">mean</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] -1.982628</code></pre>
+<pre><code>#&gt; [1] -2.001199</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">var</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 8.960177</code></pre>
+<pre><code>#&gt; [1] 9.030126</code></pre>
 </div>
 </div>
 </section>
@@ -614,7 +620,7 @@ E\{I(a&lt;X&lt;b)\} &amp;  = \int_X I(a&lt;X&lt;b) f(x) dx\\
 <span id="cb9-2"><a></a><span class="fu">mean</span>((x <span class="sc">&gt;</span> <span class="dv">3</span> <span class="sc">&amp;</span> x <span class="sc">&lt;</span> <span class="dv">6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0.681814</code></pre>
+<pre><code>#&gt; [1] 0.68179</code></pre>
 </div>
 </div>
 </section>
@@ -674,7 +680,7 @@ E[\{\cos(50x) - sin(20x)\}^2] =\int^1_{0} \{\cos(50x) - sin(20x)\}^2dx
 <span id="cb13-2"><a></a><span class="fu">mean</span>((<span class="fu">cos</span>(<span class="dv">50</span><span class="sc">*</span>x)<span class="sc">-</span><span class="fu">sin</span>(<span class="dv">50</span><span class="sc">*</span>x))<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0.9984644</code></pre>
+<pre><code>#&gt; [1] 0.9993568</code></pre>
 </div>
 </div>
 </section>
@@ -723,7 +729,7 @@ E[\{\cos(50x) - sin(20x)\}^2] = \\
 <span id="cb17-2"><a></a><span class="fu">mean</span>(<span class="fu">ff</span>(x)) <span class="sc">*</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 4.994546</code></pre>
+<pre><code>#&gt; [1] 4.994512</code></pre>
 </div>
 </div>
 </section>
@@ -757,6 +763,9 @@ E[\{\cos(50x) - sin(20x)\}^2] = \\
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
 <p>Monte Carlo Optimization</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Toy Collector’s Problem</p>
 </div></li>
 </ul>
 </div>
@@ -803,7 +812,7 @@ E[\{\cos(50x) - sin(20x)\}^2] = \\
 <span id="cb19-5"><a></a><span class="fu">mean</span>(<span class="fu">f2</span>(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 2.506316</code></pre>
+<pre><code>#&gt; [1] 2.505336</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -822,7 +831,10 @@ E[\{\cos(50x) - sin(20x)\}^2] = \\
 <h2>Example</h2>
 <p><span class="math display">\[
 \int_{-\infty}^{\infty}  e^{-(x-4)^2/10} dx
-\]</span> ## Example</p>
+\]</span></p>
+</section>
+<section id="example-3" class="slide level2">
+<h2>Example</h2>
 <p><span class="math display">\[
 \int_{0}^{\infty} x^3 e^{x/2} dx
 \]</span></p>
@@ -840,6 +852,9 @@ E[\{\cos(50x) - sin(20x)\}^2] = \\
 </div></li>
 <li><div class="agenda-active">
 <p>Monte Carlo Optimization</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Toy Collector’s Problem</p>
 </div></li>
 </ul>
 </div>
@@ -931,51 +946,244 @@ h(x) = -3x^4+4x^3
 <span id="cb27-3"><a></a><span class="fu">which.min</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 249139</code></pre>
+<pre><code>#&gt; [1] 361836</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>x[<span class="fu">which.min</span>(y)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 1.000004</code></pre>
+<pre><code>#&gt; [1] 0.9999983</code></pre>
 </div>
 </div>
 </section>
-<section id="monte-carlo-optimization-2" class="slide level2">
-<h2>Monte Carlo Optimization</h2>
+<section id="finding-the-maximum-the-gaussian-function." class="slide level2">
+<h2>Finding the maximum the Gaussian function.</h2>
 <p><span class="math display">\[
 f(x) =  e^{-(x-4)^2/10}
 \]</span></p>
 </section>
-<section id="monte-carlo-optimization-3" class="slide level2">
-<h2>Monte Carlo Optimization</h2>
+<section id="minimizing-sse" class="slide level2">
+<h2>Minimizing SSE</h2>
+<p>Given a data set <span class="math inline">\((X_i, Y_i)\)</span> for <span class="math inline">\(i = 1, \ldots, n\)</span>:</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>)</span>
+<span id="cb31-2"><a></a>y <span class="ot">&lt;-</span> <span class="dv">8</span> <span class="sc">-</span><span class="dv">4</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">sd =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="minimizing-sse-1" class="slide level2">
+<h2>Minimizing SSE</h2>
+<p>Find the values <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> that minimizes the following formula:</p>
+<p><span class="math display">\[
+SSE =  \sum^n_{i=1}\{Y_i - (\beta_0 + \beta_1 X_i)\}^2
+\]</span></p>
+</section>
+<section id="minimizing-sse-2" class="slide level2">
+<h2>Minimizing SSE</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>)</span>
-<span id="cb31-2"><a></a>y <span class="ot">&lt;-</span> <span class="dv">8</span> <span class="sc">-</span><span class="dv">4</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">sd =</span> <span class="fl">0.5</span>)</span>
-<span id="cb31-3"><a></a>sse <span class="ot">&lt;-</span> <span class="cf">function</span>(beta, x, y){</span>
-<span id="cb31-4"><a></a>  <span class="fu">sum</span>((y <span class="sc">-</span> (beta[<span class="dv">1</span>] <span class="sc">+</span> beta[<span class="dv">2</span>] <span class="sc">*</span> x))<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb31-5"><a></a>}</span>
-<span id="cb31-6"><a></a>beta0 <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>, <span class="dv">20</span>, <span class="at">length.out =</span> <span class="dv">50</span>)</span>
-<span id="cb31-7"><a></a>beta1 <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>, <span class="dv">20</span>, <span class="at">length.out =</span> <span class="dv">50</span>)</span>
-<span id="cb31-8"><a></a>zz <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">nrow =</span> <span class="dv">50</span>, <span class="at">ncol =</span> <span class="dv">50</span>)</span>
-<span id="cb31-9"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(beta0)){</span>
-<span id="cb31-10"><a></a>  <span class="cf">for</span>(ii <span class="cf">in</span> <span class="fu">seq_along</span>(beta1)){</span>
-<span id="cb31-11"><a></a>    zz[i, ii] <span class="ot">&lt;-</span> <span class="fu">sse</span>(<span class="fu">c</span>(beta0[i], beta1[ii]), x, y) </span>
-<span id="cb31-12"><a></a>  }</span>
-<span id="cb31-13"><a></a>}</span>
-<span id="cb31-14"><a></a><span class="fu">persp</span>(beta0, beta1, zz)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>sse <span class="ot">&lt;-</span> <span class="cf">function</span>(beta, x, y){</span>
+<span id="cb32-2"><a></a>  <span class="fu">sum</span>((y <span class="sc">-</span> (beta[<span class="dv">1</span>] <span class="sc">+</span> beta[<span class="dv">2</span>] <span class="sc">*</span> x))<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb32-3"><a></a>}</span>
+<span id="cb32-4"><a></a>beta0 <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>, <span class="dv">20</span>, <span class="at">length.out =</span> <span class="dv">50</span>)</span>
+<span id="cb32-5"><a></a>beta1 <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>, <span class="dv">20</span>, <span class="at">length.out =</span> <span class="dv">50</span>)</span>
+<span id="cb32-6"><a></a>zz <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">nrow =</span> <span class="dv">50</span>, <span class="at">ncol =</span> <span class="dv">50</span>)</span>
+<span id="cb32-7"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(beta0)){</span>
+<span id="cb32-8"><a></a>  <span class="cf">for</span>(ii <span class="cf">in</span> <span class="fu">seq_along</span>(beta1)){</span>
+<span id="cb32-9"><a></a>    zz[i, ii] <span class="ot">&lt;-</span> <span class="fu">sse</span>(<span class="fu">c</span>(beta0[i], beta1[ii]), x, y) </span>
+<span id="cb32-10"><a></a>  }</span>
+<span id="cb32-11"><a></a>}</span>
+<span id="cb32-12"><a></a><span class="fu">persp</span>(beta0, beta1, zz)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="4_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
-</figure>
+
+</div>
+<img data-src="4_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
+<section id="minimizing-sse-3" class="slide level2">
+<h2>Minimizing SSE</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>sse <span class="ot">&lt;-</span> <span class="cf">function</span>(beta, x, y){</span>
+<span id="cb33-2"><a></a>  <span class="fu">sum</span>((y <span class="sc">-</span> (beta[<span class="dv">1</span>] <span class="sc">+</span> beta[<span class="dv">2</span>] <span class="sc">*</span> x))<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb33-3"><a></a>}</span>
+<span id="cb33-4"><a></a></span>
+<span id="cb33-5"><a></a>uu <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">1000000</span>, \(x) <span class="fu">runif</span>(<span class="dv">2</span>, <span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>))</span>
+<span id="cb33-6"><a></a>val <span class="ot">&lt;-</span> <span class="fu">apply</span>(uu, <span class="dv">2</span>, sse, <span class="at">x =</span> x, <span class="at">y =</span> y)</span>
+<span id="cb33-7"><a></a><span class="fu">which.min</span>(val)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 629279</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>uu[,<span class="fu">which.min</span>(val)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1]  8.016216 -4.003703</code></pre>
 </div>
 </div>
+</section></section>
+<section>
+<section id="toy-collectors-problem" class="title-slide slide level1 agenda-slide center">
+<h1>Toy Collector’s Problem</h1>
+<div class="agenda">
+<ul>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Monte Carlo Integration</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Importance Sampling</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Monte Carlo Optimization</p>
+</div></li>
+<li><div class="agenda-active">
+<p>Toy Collector’s Problem</p>
+</div></li>
+</ul>
 </div>
+</section>
+<section id="toy-collectors-problem-1" class="slide level2">
+<h2>Toy Collector’s Problem</h2>
+<p>There is a cereal company that is planning to give away 15 toys in their cereal boxes where the the probability of getting a certain toy from a box is 1/15. Assuming that you only get one toy from each cereal box, what is the number of cereal boxes you will need to buy to obtain all 15 toys?</p>
+</section>
+<section id="geometric-distribution" class="slide level2">
+<h2>Geometric Distribution</h2>
+<p>The geometric distribution is used to determine the number of failures needed to get the first success.</p>
+<p>A success is getting a new toy.</p>
+</section>
+<section id="collecting-toys" class="slide level2">
+<h2>Collecting Toys</h2>
+<p>The probability of getting a new toy given we have i toys goes as follows: <span class="math display">\[P(New Toy|i)= \frac{15-i}{15}.\]</span></p>
+<p>If we have 0 toys <span class="math inline">\((i=0)\)</span> the probability of getting a new toy after opening 1 box is 1 <span class="math display">\[P(New Toy|0)=\frac{15-0}{15}=1.\]</span></p>
+</section>
+<section id="getting-8th-toy" class="slide level2">
+<h2>Getting 8th Toy</h2>
+<p>Now if we have 7 toys, the probability of getting a new toy goes as follows: <span class="math display">\[P(New Toy|7)=\frac{15-7}{15}=\frac{8}{15}=0.533.\]</span></p>
+<p>To get a new toy, we would have to open at least <span class="math inline">\(\frac{1}{0.533}=1.875\)</span> boxes.</p>
+</section>
+<section id="getting-15th-toy" class="slide level2">
+<h2>Getting 15th Toy</h2>
+<p>Now if we had 14 toys already, we would need to open at least 15 boxes to get that.</p>
+<p><span class="math display">\[P(New Toy|14)=\frac{15-14}{15}=\frac{1}{15}=0.067\]</span> So the number of boxes to open to get the last toy is <span class="math inline">\(\frac{1}{0.067}=\frac{15}{1}=15\)</span></p>
+</section>
+<section id="average-number-of-boxes" class="slide level2">
+<h2>Average number of boxes</h2>
+<p><span class="math display">\[\frac{15}{15}+\frac{15}{14}+\frac{15}{13}+...+\frac{15}{2}+\frac{15}{1} \approx 49.77.\]</span></p>
+</section>
+<section id="monte-carlo-methods-1" class="slide level2">
+<h2>Monte Carlo Methods</h2>
+<p>Monte Carlo can be used to estimate the expected number of boxes you will need to buy to obtain all 15 toys.</p>
+<p>Think about having <span class="math inline">\(n\)</span> shoppers going out an buying as many boxes needed to buy to obtain all 15 toys. Then you compute the mean and standard error for your sample.</p>
+</section>
+<section id="monte-carlo-methods-2" class="slide level2">
+<h2>Monte Carlo Methods</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a>mc_shopper<span class="ot">&lt;-</span><span class="cf">function</span>(n, x, p){</span>
+<span id="cb37-2"><a></a>  k <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">mode =</span> <span class="st">"numeric"</span>, <span class="at">length =</span> n)</span>
+<span id="cb37-3"><a></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n){</span>
+<span id="cb37-4"><a></a>    j <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb37-5"><a></a>    a <span class="ot">&lt;-</span> <span class="fu">sample</span>(x, <span class="dv">1</span>, <span class="at">prob =</span> p)</span>
+<span id="cb37-6"><a></a>    <span class="cf">while</span>(<span class="fu">length</span>(<span class="fu">unique</span>(a)) <span class="sc">&lt;</span> <span class="dv">15</span>){</span>
+<span id="cb37-7"><a></a>      b <span class="ot">&lt;-</span> <span class="fu">sample</span>(x, <span class="dv">1</span>, <span class="at">prob =</span> p)</span>
+<span id="cb37-8"><a></a>      a <span class="ot">&lt;-</span> <span class="fu">c</span>(a, b)</span>
+<span id="cb37-9"><a></a>      j <span class="ot">&lt;-</span> j <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb37-10"><a></a>    }</span>
+<span id="cb37-11"><a></a>    k[i] <span class="ot">&lt;-</span> j</span>
+<span id="cb37-12"><a></a>  }</span>
+<span id="cb37-13"><a></a>  m <span class="ot">&lt;-</span> <span class="fu">mean</span>(k)</span>
+<span id="cb37-14"><a></a>  se <span class="ot">&lt;-</span> <span class="fu">sd</span>(k)<span class="sc">/</span><span class="fu">sqrt</span>(n)</span>
+<span id="cb37-15"><a></a>  ci <span class="ot">&lt;-</span> m <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">*</span> se</span>
+<span id="cb37-16"><a></a>  <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">mean =</span> m, <span class="at">se =</span> se, <span class="at">ci_95 =</span> ci))</span>
+<span id="cb37-17"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="monte-carlo-methods-3" class="slide level2">
+<h2>Monte Carlo Methods</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">15</span></span>
+<span id="cb38-2"><a></a>p <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">15</span>, <span class="at">times =</span> <span class="dv">15</span>)</span>
+<span id="cb38-3"><a></a><span class="fu">mc_shopper</span>(<span class="dv">10000</span>, x, p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; $mean
+#&gt; [1] 49.9947
+#&gt; 
+#&gt; $se
+#&gt; [1] 0.173234
+#&gt; 
+#&gt; $ci_95
+#&gt; [1] 49.65516 50.33424</code></pre>
+</div>
+</div>
+</section>
+<section id="toy-collector-problem-2" class="slide level2">
+<h2>Toy Collector Problem 2</h2>
+<p>There is a cereal company that is planning to give away 15 toys in their cereal boxes. The probability for each toy is no longer equal, the probability for each toy goes as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Figure</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Probability</td>
+<td>.2</td>
+<td>.1</td>
+<td>.1</td>
+<td>.1</td>
+<td>.1</td>
+<td>.1</td>
+<td>.05</td>
+<td>.05</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Figure</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Probability</td>
+<td>.05</td>
+<td>.05</td>
+<td>.03</td>
+<td>.02</td>
+<td>.02</td>
+<td>.02</td>
+<td>.01</td>
+</tr>
+</tbody>
+</table>
+<p>Assuming that you only get one toy from each cereal box, what is the number of cereal boxes you will need to get to obtain all 15 toys?</p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
