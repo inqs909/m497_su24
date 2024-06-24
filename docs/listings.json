@@ -1,18 +1,19 @@
 [
   {
-    "listing": "/index.html",
-    "items": [
-      "/posts/4.html",
-      "/posts/3.html",
-      "/posts/2.html",
-      "/posts/week_1.html"
-    ]
-  },
-  {
     "listing": "/hw.html",
     "items": [
       "/hw/hw2.html",
       "/hw/hw1.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/5.html",
+      "/posts/4.html",
+      "/posts/3.html",
+      "/posts/2.html",
+      "/posts/week_1.html"
     ]
   }
 ]

@@ -1,0 +1,32 @@
+---
+title:  Week 5
+date: 6-18-24
+description: MEET Wednesday (6/26)
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## Learning Outcomes
+
+-   Hypothesis Testing
+
+-   Monte Carlo P-Value
+
+| Lecture                                                | Videos |
+|:-------------------------------------------------------|:-------|
+| [Slide](http://m497.inqs.info/lectures/5#/title-slide) |        |
+
+## Further Reading
+
+### Available from Broome Library
+
+[Computational Statistics](https://link-springer-com.ezproxy.csuci.edu/book/10.1007/978-0-387-98144-4): Chapter 11
+
+### Great Books (Don't Buy)
+
+[Statistical Computing in R](https://www.routledge.com/Statistical-Computing-with-R-Second-Edition/Rizzo/p/book/9781466553323): Chapter 7
+
+### Websites
+
+[Data Science and Statistical Computing](https://www.louisaslett.com/Courses/DSSC/notes/monte-carlo-testing.html)

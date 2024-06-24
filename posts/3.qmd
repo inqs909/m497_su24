@@ -20,5 +20,25 @@ editor_options:
 ## Resources
 
 | Lecture                                                | Videos                                |
-|:-------------------------------------------------------|:--------------------------------------|
+|:-----------------------------------------|:-----------------------------|
 | [Slide](http://m497.inqs.info/lectures/3#/title-slide) | [Video](https://youtu.be/ENI-GWgcXqM) |
+
+## Further Reading
+
+### Available from Broome Library
+
+[Introducing Monte Carlo Methods in R](https://link-springer-com.ezproxy.csuci.edu/book/10.1007/978-1-4419-1576-4): Chapter 2
+
+[Explorations in Monte Carlo Methods](https://link-springer-com.ezproxy.csuci.edu/book/10.1007/978-3-031-55964-8): Chapter 2
+
+[Computational Statistics](https://link-springer-com.ezproxy.csuci.edu/book/10.1007/978-0-387-98144-4): Chapter 7
+
+### Great Books (Don't Buy)
+
+[Simulation and the Monte Carlo Method](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118631980): Chapter 2
+
+[Statistical Computing in R](https://www.routledge.com/Statistical-Computing-with-R-Second-Edition/Rizzo/p/book/9781466553323): Chapter 3
+
+### Websites
+
+[StatLect](https://www.statlect.com/asymptotic-theory/Monte-Carlo-method)
