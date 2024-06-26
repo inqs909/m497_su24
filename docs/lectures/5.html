@@ -394,6 +394,148 @@
       margin-right: 0; 
     }
   </style>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        Macros: {
+          //Bold Lowecase Greek Letters
+          'balpha': '\\boldsymbol \\alpha',
+          'bbeta': '\\boldsymbol \\beta',
+          'bgamma': '\\boldsymbol \\gamma', 
+          'bdelta': '\\boldsymbol \\delta',
+          'bepsilon': '\\boldsymbol \\epsilon',
+          'bzeta': '\\boldsymbol \\zeta',
+          'boeta': '\\boldsymbol \\eta',
+          'btheta': '\\boldsymbol \\theta',
+          'biota': '\\boldsymbol \\iota',
+          'bkappa': '\\boldsymbol \\kappa',
+          'blambda': '\\boldsymbol \\lambda',
+          'bmu': '\\boldsymbol \\mu',
+          'bnu': '\\boldsymbol \\nu',
+          'bxi': '\\boldsymbol \\xi',
+          'bomicron': '\\boldsymbol \\omicron',
+          'bpi': '\\boldsymbol \\pi',
+          'brho': '\\boldsymbol \\rho',
+          'bsigma': '\\boldsymbol \\sigma',
+          'btau': '\\boldsymbol \\tau',
+          'bupsilon': '\\boldsymbol \\upsilon',
+          'bphi': '\\boldsymbol \\phi',
+          'bchi': '\\boldsymbol \\chi',
+          'bpsi': '\\boldsymbol \\psi',
+          'bomega': '\\boldsymbol \\omega',
+          //Bold Uppercase Greek Letters
+          'bGamma': '\\boldsymbol \\Gamma', 
+          'bDelta': '\\boldsymbol \\Delta',
+          'bTheta': '\\boldsymbol \\Theta',
+          'bLambda': '\\boldsymbol \\Lambda',
+          'bXi': '\\boldsymbol \\Xi',
+          'bPi': '\\boldsymbol \\Pi',
+          'bSigma': '\\boldsymbol \\Sigma',
+          'bPhi': '\\boldsymbol \\Phi',
+          'bPsi': '\\boldsymbol \\Psi',
+          'bOmega': '\\boldsymbol \\Omega',
+          // Bold Vars
+          'bvarphi': '\\boldsymbol \\varphi',
+          'bvarrho': '\\boldsymbol \\varrho',
+          'bvartheta': '\\boldsymbol \\vartheta',
+          // Math Remove
+          'mrT': '\\mathrm T',
+          'mrth': '\\mathrm{th}',
+          'inv': '\^{-1}',
+          'tr': '\\mathrm{tr}',
+          'Cov': '\\mathrm{Cov}',
+          'Cor': '\\mathrm{Cor}',
+          'Var': '\\mathrm{Var}',
+          'E': '\\mathrm{E}',
+          'mrTr': '\^\\mathrm T',
+          // Bold Letters
+          'bX': '\\boldsymbol X',
+          'bx': '\\boldsymbol x',
+          'bF': '\\boldsymbol F',
+          'bY': '\\boldsymbol Y',
+          'by': '\\boldsymbol y',
+          'bK': '\\boldsymbol K',
+          'bZ': '\\boldsymbol Z',
+          'bT': '\\boldsymbol T',
+          'bz': '\\boldsymbol z',
+          'bB': '\\boldsymbol B',
+          'ba': '\\boldsymbol a',
+          'bb': '\\boldsymbol b',
+          'bI': '\\boldsymbol I',
+          'bR': '\\boldsymbol R',
+          'bc': '\\boldsymbol c',
+          'bW': '\\boldsymbol W',
+          'bt': '\\boldsymbol t',
+          'bd': '\\boldsymbol d',
+          'bD': '\\boldsymbol D',
+          'bG': '\\boldsymbol G',
+          'bJ': '\\boldsymbol J',
+          'bS': '\\boldsymbol S',
+          'bV': '\\boldsymbol V',
+          'bH': '\\boldsymbol H',
+          'bA': '\\boldsymbol A',
+          'bU': '\\boldsymbol U',
+          'bu': '\\boldsymbol u',
+          'bv': '\\boldsymbol v',
+          'bP': '\\boldsymbol P',
+          'bw': '\\boldsymbol w',
+          'br': '\\boldsymbol r',
+          // MathCal
+          // Regular
+          'mcA': '\\mathcal{A}',
+          'mcB': '\\mathcal{B}',
+          'mcC': '\\mathcal{C}',
+          'mcD': '\\mathcal{D}',
+          'mcJ': '\\mathcal{J}',
+          'mcL': '\\mathcal{L}',
+          'mcM': '\\mathcal{M}',
+          'mcR': '\\mathcal{R}',
+          'mcP': '\\mathcal{P}',
+          'mcX': '\\mathcal{X}',
+          'mcZ': '\\mathcal{Z}',
+          'mcb': '\\mathcal{b}',
+          'mcp': '\\mathcal{p}',
+          // bold
+          'bmcH': '\\boldsymbol{\\mathcal{H}}',
+          'bmcS': '\\boldsymbol{\\mathcal{S}}',
+          'bmcV': '\\boldsymbol{\\mathcal{V}}',
+          'bmcX': '\\boldsymbol{\\mathcal{X}}',
+          'bmcD': '\\boldsymbol{\\mathcal{D}}',
+          'bmcU': '\\boldsymbol{\\mathcal{U}}',
+          'bmcG': '\\boldsymbol{\\mathcal{G}}',
+          'bmcI': '\\boldsymbol{\\mathcal{I}}',
+          'bmcZ': '\\boldsymbol{\\mathcal{Z}}',
+          'bmcb': '\\mathbcal{\\boldsymbol{b}}',
+          'bmcp': '\\mathbcal{\\boldsymbol{p}}',
+          
+          // Script Fonts
+          'msL': '\\mathscr{L}',
+          'msF': '\\mathscr{F}',
+          'msG': '\\mathscr{G}',
+          'msP': '\\mathscr{P}',
+          'msV': '\\mathscr{V}',
+          'msX': '\\mathscr{X}',
+          'msY': '\\mathscr{Y}',
+          'msZ': '\\mathscr{Z}',
+          
+          // Fraktur Fonts
+          'mfL': '\\mathfrak{L}',
+          'mfF': '\\mathfrak{F}',
+          'mfG': '\\mathfrak{G}',
+          'mfP': '\\mathfrak{P}',
+          'mfV': '\\mathfrak{V}',
+          'mfX': '\\mathfrak{X}',
+          'mfY': '\\mathfrak{Y}',
+          'mfZ': '\\mathfrak{Z}',
+          
+          //Bold Numbers
+          'bzero': '\\boldsymbol{0}',
+          'bone': '\\boldsymbol{1}',
+
+        }
+      }
+    });
+  </script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -410,7 +552,8 @@
 <section id="r-packages" class="slide level2">
 <h2>R Packages</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section>
@@ -428,7 +571,7 @@
 <p>Sampling Distribution</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Monte Carlo P-Values</p>
+<p>Monte Carlo Hypothesis Testing</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
 <p>Power Analysis</p>
@@ -519,7 +662,7 @@
 <p>Sampling Distribution</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Monte Carlo P-Values</p>
+<p>Monte Carlo Hypothesis Testing</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
 <p>Power Analysis</p>
@@ -596,6 +739,7 @@ t = \frac{N(0,1)}{\sqrt{\chi^2(n-1)/(n-1)}} \sim t(n-1)
 
 </div>
 <img data-src="5_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section></section>
+<section>
 <section id="sampling-distribution" class="title-slide slide level1 agenda-slide center">
 <h1>Sampling Distribution</h1>
 <div class="agenda">
@@ -610,7 +754,7 @@ t = \frac{N(0,1)}{\sqrt{\chi^2(n-1)/(n-1)}} \sim t(n-1)
 <p>Sampling Distribution</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Monte Carlo P-Values</p>
+<p>Monte Carlo Hypothesis Testing</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
 <p>Power Analysis</p>
@@ -618,9 +762,218 @@ t = \frac{N(0,1)}{\sqrt{\chi^2(n-1)/(n-1)}} \sim t(n-1)
 </ul>
 </div>
 </section>
+<section id="sample" class="slide level2">
+<h2>Sample</h2>
+<p>A sample is a collection of random variables (data) that is believed to be independent and identically distributed (come from the same distribution).</p>
+<p><span class="math display">\[
+\bX = (X_1, X_2, \cdots, X_n)^{\mrT}
+\]</span></p>
+</section>
+<section id="statistic" class="slide level2">
+<h2>Statistic</h2>
+<p>A statistic is a transformation of data by a function.</p>
+<p><span class="math display">\[
+T(\bX)
+\]</span></p>
+</section>
+<section id="common-statistics" class="slide level2">
+<h2>Common Statistics</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Statistic</th>
+<th style="text-align: left;">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Min</td>
+<td style="text-align: left;"><span class="math inline">\(\mathrm{min}(\bX)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Max</td>
+<td style="text-align: left;"><span class="math inline">\(\mathrm{max}(\bX)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mean</td>
+<td style="text-align: left;"><span class="math inline">\(\frac{1}{n}X_i\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Median</td>
+<td style="text-align: left;"><span class="math inline">\(P(X_0 &lt; \bX) = 0.5\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SD</td>
+<td style="text-align: left;"><span class="math inline">\(\frac{1}{n-1}\sum^n_{i=1}(X_i-\bar X)^2\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sampling-distributions" class="slide level2">
+<h2>Sampling Distributions</h2>
+<p>A sampling distribution is the distribution of a statistic.</p>
+<div class="fragment">
+<p><span class="math display">\[
+X_i \stackrel{iid}{\sim} N(\mu, \sigma^2)
+\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Statistic</th>
+<th style="text-align: left;">Distribution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\bar X\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(N(\mu, \sigma^2)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\((n-1)s^2/\sigma^2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\chi^2(n-1)\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="central-limit-theorem" class="slide level2">
+<h2>Central Limit Theorem</h2>
+<p>Let <span class="math inline">\(X_1, X_2, \ldots, X_n\)</span> be identical and independent distributed random variables with <span class="math inline">\(E(X_i)=\mu\)</span> and <span class="math inline">\(Var(X_i) = \sigma²\)</span>. We define</p>
+<p><span class="math display">\[
+Y_n = \sqrt n \left(\frac{\bar X-\mu}{\sigma}\right) \mathrm{ where }\ \bar X = \frac{1}{n}\sum^n_{i=1}X_i.
+\]</span></p>
+<p>Then, the distribution of the function <span class="math inline">\(Y_n\)</span> converges to a standard normal distribution function as <span class="math inline">\(n\rightarrow \infty\)</span>.</p>
+</section>
+<section id="obtaining-sampling-distributions" class="slide level2">
+<h2>Obtaining Sampling Distributions</h2>
+<p>Several statistics have distributions that we can conduct inference on such as <span class="math inline">\(t\)</span>, <span class="math inline">\(\chi^2\)</span>, and <span class="math inline">\(F\)</span>.</p>
+<div class="fragment">
+<p>How do we obtain sampling distributions for other types of statistics?</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Distribution Functions</li>
+<li>Density Functions</li>
+<li>Moment-Generating Functions</li>
+</ul>
+</div>
+</section>
+<section id="using-monte-carlo-methods" class="slide level2">
+<h2>Using Monte Carlo Methods</h2>
+<ul>
+<li>The sample generated by simulating random variables is said to follow a distribution function.</li>
+<li>The sample itself are the empirical cumulative density function (ECDF) of the true CDF.</li>
+<li>Transforming the simulated random variables of the sample are said to construct the ECDF of the statistic’s sampling distribution.</li>
+</ul>
+</section>
+<section id="sampling-distribution-bar-x" class="slide level2">
+<h2>Sampling Distribution: <span class="math inline">\(\bar X\)</span></h2>
+<p><span class="math display">\[
+X_i \stackrel{iid}{\sim} N(5, 2)
+\]</span></p>
+<p><span class="math display">\[
+\bar X \sim N(5, 2/n)
+\]</span></p>
+</section>
+<section id="mc-sampling-distribution-bar-x" class="slide level2">
+<h2>MC Sampling Distribution: <span class="math inline">\(\bar X\)</span></h2>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>sim1 <span class="ot">&lt;-</span> <span class="cf">function</span>(i){</span>
+<span id="cb4-2"><a></a>  x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="dv">2</span>))</span>
+<span id="cb4-3"><a></a>  <span class="fu">return</span>(<span class="fu">mean</span>(x))</span>
+<span id="cb4-4"><a></a>}</span>
+<span id="cb4-5"><a></a>results <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">10000</span>, <span class="fu">sim1</span>(<span class="dv">1</span>))</span>
+<span id="cb4-6"><a></a></span>
+<span id="cb4-7"><a></a>xe <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">4.8</span>, <span class="fl">5.2</span>, <span class="at">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb4-8"><a></a><span class="fu">tibble</span>(<span class="at">x =</span> results) <span class="sc">|&gt;</span> </span>
+<span id="cb4-9"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, <span class="at">y =</span> ..density..)) <span class="sc">+</span></span>
+<span id="cb4-10"><a></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb4-11"><a></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> <span class="fu">tibble</span>(<span class="at">x =</span> xe, <span class="at">y =</span> <span class="fu">dnorm</span>(xe, <span class="dv">5</span>, <span class="fu">sqrt</span>(<span class="dv">2</span><span class="sc">/</span><span class="dv">1000</span>))),</span>
+<span id="cb4-12"><a></a>            <span class="at">mapping =</span> <span class="fu">aes</span>(x,y),</span>
+<span id="cb4-13"><a></a>            <span class="at">col =</span>  <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 
-<section id="monte-carlo-p-values" class="title-slide slide level1 agenda-slide center">
-<h1>Monte Carlo P-Values</h1>
+</div>
+<img data-src="5_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="mc-sampling-distribution-hat-s2" class="slide level2">
+<h2>MC Sampling Distribution: <span class="math inline">\(\hat s^2\)</span></h2>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>sim2 <span class="ot">&lt;-</span> <span class="cf">function</span>(i){</span>
+<span id="cb5-2"><a></a>  x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="dv">2</span>))</span>
+<span id="cb5-3"><a></a>  <span class="fu">return</span>(<span class="fu">var</span>(x))</span>
+<span id="cb5-4"><a></a>}</span>
+<span id="cb5-5"><a></a>results <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">10000</span>, <span class="fu">sim2</span>(<span class="dv">1</span>))</span>
+<span id="cb5-6"><a></a></span>
+<span id="cb5-7"><a></a>xe <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">850</span>, <span class="dv">1150</span>, <span class="at">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb5-8"><a></a><span class="fu">tibble</span>(<span class="at">x =</span> <span class="dv">999</span> <span class="sc">*</span> results <span class="sc">/</span> <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb5-9"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, <span class="at">y =</span> ..density..)) <span class="sc">+</span></span>
+<span id="cb5-10"><a></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb5-11"><a></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> <span class="fu">tibble</span>(<span class="at">x =</span> xe, <span class="at">y =</span> <span class="fu">dchisq</span>(xe, <span class="dv">999</span>)),</span>
+<span id="cb5-12"><a></a>            <span class="at">mapping =</span> <span class="fu">aes</span>(x,y),</span>
+<span id="cb5-13"><a></a>            <span class="at">col =</span>  <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="5_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<section id="maximum" class="slide level2">
+<h2>Maximum</h2>
+<p><span class="math display">\[
+f_{max} (x) = n f(x) F(x)^{n-1}
+\]</span></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>sim3 <span class="ot">&lt;-</span> <span class="cf">function</span>(i){</span>
+<span id="cb6-2"><a></a>  x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="dv">2</span>))</span>
+<span id="cb6-3"><a></a>  <span class="fu">return</span>(<span class="fu">max</span>(x))</span>
+<span id="cb6-4"><a></a>}</span>
+<span id="cb6-5"><a></a>results <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">10000</span>, <span class="fu">sim3</span>(<span class="dv">1</span>))</span>
+<span id="cb6-6"><a></a></span>
+<span id="cb6-7"><a></a>xe <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">8</span>, <span class="dv">12</span>, <span class="at">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb6-8"><a></a><span class="fu">tibble</span>(<span class="at">x =</span> results) <span class="sc">|&gt;</span> </span>
+<span id="cb6-9"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, <span class="at">y =</span> ..density..)) <span class="sc">+</span></span>
+<span id="cb6-10"><a></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb6-11"><a></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> <span class="fu">tibble</span>(<span class="at">x =</span> xe, </span>
+<span id="cb6-12"><a></a>                          <span class="at">y =</span> <span class="dv">1000</span> <span class="sc">*</span> <span class="fu">dnorm</span>(xe, <span class="dv">5</span>, <span class="fu">sqrt</span>(<span class="dv">2</span>)) <span class="sc">*</span> <span class="fu">pnorm</span>(xe, <span class="dv">5</span>, <span class="fu">sqrt</span>(<span class="dv">2</span>))<span class="sc">^</span><span class="dv">999</span>),</span>
+<span id="cb6-13"><a></a>            <span class="at">mapping =</span> <span class="fu">aes</span>(x,y),</span>
+<span id="cb6-14"><a></a>            <span class="at">col =</span>  <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="5_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="minimum" class="slide level2">
+<h2>Minimum</h2>
+<p><span class="math display">\[
+f_{min}(x) = n\{1-F(x)\}^{n-1}f(x)
+\]</span></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>sim4 <span class="ot">&lt;-</span> <span class="cf">function</span>(i){</span>
+<span id="cb7-2"><a></a>  x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="dv">2</span>))</span>
+<span id="cb7-3"><a></a>  <span class="fu">return</span>(<span class="fu">min</span>(x))</span>
+<span id="cb7-4"><a></a>}</span>
+<span id="cb7-5"><a></a>results <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">10000</span>, <span class="fu">sim4</span>(<span class="dv">1</span>))</span>
+<span id="cb7-6"><a></a></span>
+<span id="cb7-7"><a></a>xe <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="fl">2.5</span>, <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb7-8"><a></a><span class="fu">tibble</span>(<span class="at">x =</span> results) <span class="sc">|&gt;</span> </span>
+<span id="cb7-9"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, <span class="at">y =</span> ..density..)) <span class="sc">+</span></span>
+<span id="cb7-10"><a></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb7-11"><a></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> <span class="fu">tibble</span>(<span class="at">x =</span> xe, </span>
+<span id="cb7-12"><a></a>                          <span class="at">y =</span> <span class="dv">1000</span> <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">pnorm</span>(xe, <span class="dv">5</span>, <span class="fu">sqrt</span>(<span class="dv">2</span>)))<span class="sc">^</span><span class="dv">999</span> <span class="sc">*</span> <span class="fu">dnorm</span>(xe, <span class="dv">5</span>, <span class="fu">sqrt</span>(<span class="dv">2</span>))),</span>
+<span id="cb7-13"><a></a>            <span class="at">mapping =</span> <span class="fu">aes</span>(x,y),</span>
+<span id="cb7-14"><a></a>            <span class="at">col =</span>  <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="5_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section></section>
+<section>
+<section id="monte-carlo-hypothesis-testing" class="title-slide slide level1 agenda-slide center">
+<h1>Monte Carlo Hypothesis Testing</h1>
 <div class="agenda">
 <ul>
 <li><div class="agenda-inactive agenda-pre-active">
@@ -633,7 +986,7 @@ t = \frac{N(0,1)}{\sqrt{\chi^2(n-1)/(n-1)}} \sim t(n-1)
 <p>Sampling Distribution</p>
 </div></li>
 <li><div class="agenda-active">
-<p>Monte Carlo P-Values</p>
+<p>Monte Carlo Hypothesis Testing</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
 <p>Power Analysis</p>
@@ -641,7 +994,200 @@ t = \frac{N(0,1)}{\sqrt{\chi^2(n-1)/(n-1)}} \sim t(n-1)
 </ul>
 </div>
 </section>
+<section id="monte-carlo-hypothesis-testing-1" class="slide level2">
+<h2>Monte Carlo Hypothesis Testing</h2>
+<p>Monte Carlo hypothesis testing is the process of constructing a sampling distribution of the test statistic given a null distribution.</p>
+<p>Using the test statistic constructed from the sample, identify its the location compared to the emperical cdf.</p>
+<p>Conduct a hypothesis test based on the location with a Monte Carlo p-value.</p>
+</section>
+<section id="monte-carlo-algorithm" class="slide level2 scrollable">
+<h2>Monte Carlo Algorithm</h2>
+<ol type="1">
+<li><p>Simulate data from the null distribution (<span class="math inline">\(H_0\)</span>)</p></li>
+<li><p>Construct the test statistic from the simulated data.</p></li>
+<li><p>Repeat steps 1 and 2 to construct an empirical distribution of the null hypothesis.</p></li>
+<li><p>Construct the test statistic from the sample data.</p></li>
+<li><p>Count the number of simulated test statistics that are more extreme than the sample test statistic.</p></li>
+<li><p>Compute:</p></li>
+</ol>
+<p><span class="math display">\[
+p = \frac{m +1}{n + 1}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(m\)</span>: number of extreme values</li>
+<li><span class="math inline">\(n\)</span>: number of simulated test statistics</li>
+</ul>
+</section>
+<section id="extreme-values" class="slide level2">
+<h2>Extreme values</h2>
+<p>Extreme values are values that satisfy these condition:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Hypothesis</th>
+<th style="text-align: left;">Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(H_a: \mu\ne\mu_0\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(|t_{data}| \leq |t_{sim}|\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(H_a: \mu&gt;\mu_0\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(t_{data} \leq t_{sim}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(H_0: \mu&lt;\mu_0\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(t_{data} \geq t_{sim}\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="specifying-the-null-distribution" class="slide level2">
+<h2>Specifying the Null Distribution</h2>
+<p>The null distribution follows the theorized data distribution with parameters related to the null hypothesis and sample size!</p>
+<div class="fragment">
+<p><span class="math display">\[
+H_0: \mu =\mu_0
+\]</span> <span class="math display">\[
+X\sim N(\mu, \sigma^2)
+\]</span></p>
+</div>
+</section>
+<section id="t-test-example" class="slide level2">
+<h2>t-test Example</h2>
+<p>Use a Monte Carlo Hypothesis Test for <span class="math inline">\(H_0: \mu = 3\)</span> and <span class="math inline">\(H_a: \mu \neq 3\)</span>. Simulate fake data from 24 RV’s from <span class="math inline">\(N(3, 9)\)</span>. Testing how the distribution will look like assuming that the null hypothesis is true.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">24</span>, <span class="dv">3</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Answer:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>tstat <span class="ot">&lt;-</span> (<span class="fu">mean</span>(x) <span class="sc">-</span> <span class="dv">3</span>)<span class="sc">/</span>(<span class="fu">sd</span>(x)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">24</span>))</span>
+<span id="cb9-2"><a></a></span>
+<span id="cb9-3"><a></a></span>
+<span id="cb9-4"><a></a>t_stat_sim <span class="ot">&lt;-</span> <span class="cf">function</span>(i){</span>
+<span id="cb9-5"><a></a>  x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">24</span>, <span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb9-6"><a></a>  tt <span class="ot">&lt;-</span> (<span class="fu">mean</span>(x) <span class="sc">-</span> <span class="dv">3</span>)<span class="sc">/</span>(<span class="fu">sd</span>(x)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">24</span>))</span>
+<span id="cb9-7"><a></a>  <span class="fu">return</span>(tt)</span>
+<span id="cb9-8"><a></a>}</span>
+<span id="cb9-9"><a></a>t_dist <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100000</span>, t_stat_sim)</span>
+<span id="cb9-10"><a></a></span>
+<span id="cb9-11"><a></a>t_dist <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb9-12"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, <span class="at">y =</span> ..density..)) <span class="sc">+</span></span>
+<span id="cb9-13"><a></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb9-14"><a></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> tstat), <span class="at">col =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">sum</span>(<span class="fu">abs</span>(tstat) <span class="sc">&lt;</span> <span class="fu">abs</span>(t_dist))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 67160</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>(<span class="fu">sum</span>(<span class="fu">abs</span>(tstat) <span class="sc">&lt;</span> <span class="fu">abs</span>(t_dist)) <span class="sc">+</span> <span class="dv">1</span>) <span class="sc">/</span> (<span class="fu">length</span>(t_dist) <span class="sc">+</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 0.6716033</code></pre>
+</div>
+</div>
+<img data-src="5_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<section id="t-test-example-1" class="slide level2">
+<h2>t-test Example</h2>
+<p>Use a Monte Carlo Hypothesis Test for <span class="math inline">\(H_0: \mu = 6\)</span> and <span class="math inline">\(H_a: \mu \neq 6\)</span>. Simulate fake data from 24 RV’s from <span class="math inline">\(N(3, 9)\)</span>. Testing how the distribution will look like assuming that the null hypothesis is true.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">24</span>, <span class="dv">6</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Answer:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>tstat <span class="ot">&lt;-</span> (<span class="fu">mean</span>(x) <span class="sc">-</span> <span class="dv">3</span>)<span class="sc">/</span>(<span class="fu">sd</span>(x)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">24</span>))</span>
+<span id="cb15-2"><a></a></span>
+<span id="cb15-3"><a></a></span>
+<span id="cb15-4"><a></a>t_stat_sim <span class="ot">&lt;-</span> <span class="cf">function</span>(i){</span>
+<span id="cb15-5"><a></a>  x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">24</span>, <span class="dv">6</span>, <span class="dv">3</span>)</span>
+<span id="cb15-6"><a></a>  tt <span class="ot">&lt;-</span> (<span class="fu">mean</span>(x) <span class="sc">-</span> <span class="dv">6</span>)<span class="sc">/</span>(<span class="fu">sd</span>(x)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">24</span>))</span>
+<span id="cb15-7"><a></a>  <span class="fu">return</span>(tt)</span>
+<span id="cb15-8"><a></a>}</span>
+<span id="cb15-9"><a></a>t_dist <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100000</span>, t_stat_sim)</span>
+<span id="cb15-10"><a></a></span>
+<span id="cb15-11"><a></a>t_dist <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb15-12"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, <span class="at">y =</span> ..density..)) <span class="sc">+</span></span>
+<span id="cb15-13"><a></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb15-14"><a></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> tstat), <span class="at">col =</span> <span class="st">"red"</span>)</span>
+<span id="cb15-15"><a></a></span>
+<span id="cb15-16"><a></a><span class="fu">sum</span>(<span class="fu">abs</span>(tstat) <span class="sc">&lt;</span> <span class="fu">abs</span>(t_dist))</span>
+<span id="cb15-17"><a></a>(<span class="fu">sum</span>(<span class="fu">abs</span>(tstat) <span class="sc">&lt;</span> <span class="fu">abs</span>(t_dist)) <span class="sc">+</span> <span class="dv">1</span>) <span class="sc">/</span> (<span class="fu">length</span>(t_dist) <span class="sc">+</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="uniform-example" class="slide level2">
+<h2>Uniform Example</h2>
+<p>Using the sample data, test whether <span class="math inline">\(H_0: \theta = 10\)</span> vs <span class="math inline">\(H_a: \theta &lt; 10\)</span> for a sample of 35. You believe that the data came from the a <span class="math inline">\(U(0, \thetat)\)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>y <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">35</span>, <span class="dv">0</span>, <span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Answer:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>tstat <span class="ot">&lt;-</span> <span class="fu">max</span>(y)</span>
+<span id="cb17-2"><a></a></span>
+<span id="cb17-3"><a></a>t_stat_sim <span class="ot">&lt;-</span> <span class="cf">function</span>(i){</span>
+<span id="cb17-4"><a></a>  x <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">35</span>, <span class="dv">0</span>, <span class="dv">10</span>)</span>
+<span id="cb17-5"><a></a>  tt <span class="ot">&lt;-</span> <span class="fu">max</span>(x)</span>
+<span id="cb17-6"><a></a>  <span class="fu">return</span>(tt)</span>
+<span id="cb17-7"><a></a>}</span>
+<span id="cb17-8"><a></a>t_dist <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100000</span>, t_stat_sim)</span>
+<span id="cb17-9"><a></a></span>
+<span id="cb17-10"><a></a>t_dist <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb17-11"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, <span class="at">y =</span> ..density..)) <span class="sc">+</span></span>
+<span id="cb17-12"><a></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb17-13"><a></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> tstat), <span class="at">col =</span> <span class="st">"red"</span>)</span>
+<span id="cb17-14"><a></a></span>
+<span id="cb17-15"><a></a><span class="fu">sum</span>(tstat <span class="sc">&gt;</span> t_dist)</span>
+<span id="cb17-16"><a></a>(<span class="fu">sum</span>(tstat <span class="sc">&gt;</span> t_dist) <span class="sc">+</span> <span class="dv">1</span>) <span class="sc">/</span> (<span class="fu">length</span>(t_dist) <span class="sc">+</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<p>The <code>fdeaths</code> data set in R contains the monthly death count from specific lung diseases in the UK from 1974 to 1979. Test whether the monthly average (<span class="math inline">\(theta\)</span>) death count is fdeaths is greater than 550?</p>
+<p>Answer:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>tstat <span class="ot">&lt;-</span> <span class="fu">mean</span>(fdeaths)</span>
+<span id="cb18-2"><a></a></span>
+<span id="cb18-3"><a></a>t_stat_sim <span class="ot">&lt;-</span> <span class="cf">function</span>(i){</span>
+<span id="cb18-4"><a></a>  x <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="dv">72</span>, <span class="dv">550</span>)</span>
+<span id="cb18-5"><a></a>  tt <span class="ot">&lt;-</span> <span class="fu">mean</span>(x)</span>
+<span id="cb18-6"><a></a>  <span class="fu">return</span>(tt)</span>
+<span id="cb18-7"><a></a>}</span>
+<span id="cb18-8"><a></a>t_dist <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100000</span>, t_stat_sim)</span>
+<span id="cb18-9"><a></a></span>
+<span id="cb18-10"><a></a>t_dist <span class="sc">|&gt;</span> <span class="fu">tibble</span>(<span class="at">x =</span> _) <span class="sc">|&gt;</span> </span>
+<span id="cb18-11"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, <span class="at">y =</span> ..density..)) <span class="sc">+</span></span>
+<span id="cb18-12"><a></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb18-13"><a></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> tstat), <span class="at">col =</span> <span class="st">"red"</span>)</span>
+<span id="cb18-14"><a></a></span>
+<span id="cb18-15"><a></a><span class="fu">sum</span>(tstat <span class="sc">&gt;</span> t_dist)</span>
+<span id="cb18-16"><a></a>(<span class="fu">sum</span>(tstat <span class="sc">&gt;</span> t_dist) <span class="sc">+</span> <span class="dv">1</span>) <span class="sc">/</span> (<span class="fu">length</span>(t_dist) <span class="sc">+</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section></section>
 <section>
 <section id="power-analysis" class="title-slide slide level1 agenda-slide center">
 <h1>Power Analysis</h1>
@@ -657,7 +1203,7 @@ t = \frac{N(0,1)}{\sqrt{\chi^2(n-1)/(n-1)}} \sim t(n-1)
 <p>Sampling Distribution</p>
 </div></li>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>Monte Carlo P-Values</p>
+<p>Monte Carlo Hypothesis Testing</p>
 </div></li>
 <li><div class="agenda-active">
 <p>Power Analysis</p>
@@ -670,105 +1216,105 @@ t = \frac{N(0,1)}{\sqrt{\chi^2(n-1)/(n-1)}} \sim t(n-1)
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>a1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb4-2"><a></a>   <span class="at">x =</span> <span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">3.5</span>),</span>
-<span id="cb4-3"><a></a>   <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">41</span>, <span class="dv">41</span>),</span>
-<span id="cb4-4"><a></a>   <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>)</span>
-<span id="cb4-5"><a></a>)</span>
-<span id="cb4-6"><a></a></span>
-<span id="cb4-7"><a></a>a2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb4-8"><a></a>   <span class="at">x =</span> <span class="fu">c</span>(<span class="fl">1.9</span>),</span>
-<span id="cb4-9"><a></a>   <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">35</span>),</span>
-<span id="cb4-10"><a></a>   <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"False"</span>, <span class="st">"True"</span>)</span>
-<span id="cb4-11"><a></a>)</span>
-<span id="cb4-12"><a></a>a3 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fl">1.7</span>,<span class="dv">3</span>), </span>
-<span id="cb4-13"><a></a>             <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">43</span>), </span>
-<span id="cb4-14"><a></a>             <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"H0"</span>, <span class="st">"Reject H0"</span>))</span>
-<span id="cb4-15"><a></a></span>
-<span id="cb4-16"><a></a>yay <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fl">2.5</span>, <span class="fl">3.5</span>), </span>
-<span id="cb4-17"><a></a>              <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">35</span>), </span>
-<span id="cb4-18"><a></a>              <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"Yay!"</span>, <span class="st">"Yay!"</span>))</span>
-<span id="cb4-19"><a></a></span>
-<span id="cb4-20"><a></a>type1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fl">2.5</span>, <span class="fl">3.5</span>),</span>
-<span id="cb4-21"><a></a>                <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">36.5</span>, <span class="fl">26.5</span>),</span>
-<span id="cb4-22"><a></a>                <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"Type I Error"</span>, <span class="st">"Type II Error"</span>))</span>
-<span id="cb4-23"><a></a></span>
-<span id="cb4-24"><a></a>type2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fl">3.5</span>, <span class="fl">2.5</span>),</span>
-<span id="cb4-25"><a></a>                <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">24.5</span>, <span class="fl">34.5</span>),</span>
-<span id="cb4-26"><a></a>                <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"beta"</span>, <span class="st">"alpha"</span>))</span>
-<span id="cb4-27"><a></a></span>
-<span id="cb4-28"><a></a></span>
-<span id="cb4-29"><a></a><span class="co"># basic graph</span></span>
-<span id="cb4-30"><a></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">theme_void</span>()</span>
-<span id="cb4-31"><a></a></span>
-<span id="cb4-32"><a></a><span class="co"># Add rectangles</span></span>
-<span id="cb4-33"><a></a>p <span class="sc">+</span> <span class="fu">annotate</span>(<span class="st">"rect"</span>, </span>
-<span id="cb4-34"><a></a>             <span class="at">xmin=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">xmax=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>), </span>
-<span id="cb4-35"><a></a>             <span class="at">ymin=</span><span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">20</span>), <span class="at">ymax=</span><span class="fu">c</span>(<span class="dv">30</span>,<span class="dv">30</span>), </span>
-<span id="cb4-36"><a></a>             <span class="at">alpha=</span><span class="fl">0.2</span>, <span class="at">color=</span><span class="st">"green"</span>, <span class="at">fill=</span><span class="st">"green"</span>) <span class="sc">+</span> </span>
-<span id="cb4-37"><a></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, </span>
-<span id="cb4-38"><a></a>             <span class="at">xmin=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">xmax=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>), </span>
-<span id="cb4-39"><a></a>             <span class="at">ymin=</span><span class="fu">c</span>(<span class="dv">30</span>,<span class="dv">30</span>), <span class="at">ymax=</span><span class="fu">c</span>(<span class="dv">40</span>,<span class="dv">40</span>), </span>
-<span id="cb4-40"><a></a>             <span class="at">alpha=</span><span class="fl">0.2</span>, <span class="at">color=</span><span class="st">"red"</span>, <span class="at">fill=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb4-41"><a></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>,</span>
-<span id="cb4-42"><a></a>             <span class="at">xmin=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>), <span class="at">xmax=</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">3</span>),</span>
-<span id="cb4-43"><a></a>             <span class="at">ymin=</span><span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">20</span>), <span class="at">ymax=</span><span class="fu">c</span>(<span class="dv">40</span>, <span class="dv">30</span>),</span>
-<span id="cb4-44"><a></a>             <span class="at">alpha=</span><span class="fl">0.8</span>, <span class="at">color=</span><span class="st">"royalblue"</span>, <span class="at">fill=</span><span class="st">"royalblue"</span>) <span class="sc">+</span></span>
-<span id="cb4-45"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>a1, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y, <span class="at">label=</span>label),</span>
-<span id="cb4-46"><a></a>             <span class="at">size=</span><span class="dv">10</span> , <span class="at">fontface=</span><span class="st">"bold"</span> ) <span class="sc">+</span></span>
-<span id="cb4-47"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>a3, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y, <span class="at">label=</span>label),</span>
-<span id="cb4-48"><a></a>             <span class="at">size=</span><span class="dv">10</span> , <span class="at">fontface=</span><span class="st">"bold.italic"</span> ) <span class="sc">+</span></span>
-<span id="cb4-49"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>a2, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y, <span class="at">label=</span>label),</span>
-<span id="cb4-50"><a></a>             <span class="at">size=</span><span class="dv">10</span>, <span class="at">angle =</span> <span class="dv">90</span>, <span class="at">fontface=</span><span class="st">"bold"</span> ) <span class="sc">+</span></span>
-<span id="cb4-51"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>yay, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y, <span class="at">label=</span>label),</span>
-<span id="cb4-52"><a></a>             <span class="at">size=</span><span class="dv">10</span>, <span class="at">fontface=</span><span class="st">"bold.italic"</span> ) <span class="sc">+</span></span>
-<span id="cb4-53"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>type1, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y, <span class="at">label=</span>label),</span>
-<span id="cb4-54"><a></a>             <span class="at">size=</span><span class="dv">10</span>, <span class="at">fontface=</span><span class="st">"bold"</span>) <span class="sc">+</span></span>
-<span id="cb4-55"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>type2, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y, <span class="at">label=</span>label),</span>
-<span id="cb4-56"><a></a>             <span class="at">size=</span><span class="dv">10</span>, <span class="at">fontface=</span><span class="st">"bold"</span>, <span class="at">parse =</span> T ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>a1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb19-2"><a></a>   <span class="at">x =</span> <span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">3.5</span>),</span>
+<span id="cb19-3"><a></a>   <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">41</span>, <span class="dv">41</span>),</span>
+<span id="cb19-4"><a></a>   <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>)</span>
+<span id="cb19-5"><a></a>)</span>
+<span id="cb19-6"><a></a></span>
+<span id="cb19-7"><a></a>a2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb19-8"><a></a>   <span class="at">x =</span> <span class="fu">c</span>(<span class="fl">1.9</span>),</span>
+<span id="cb19-9"><a></a>   <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">35</span>),</span>
+<span id="cb19-10"><a></a>   <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"False"</span>, <span class="st">"True"</span>)</span>
+<span id="cb19-11"><a></a>)</span>
+<span id="cb19-12"><a></a>a3 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fl">1.7</span>,<span class="dv">3</span>), </span>
+<span id="cb19-13"><a></a>             <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">43</span>), </span>
+<span id="cb19-14"><a></a>             <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"H0"</span>, <span class="st">"Reject H0"</span>))</span>
+<span id="cb19-15"><a></a></span>
+<span id="cb19-16"><a></a>yay <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fl">2.5</span>, <span class="fl">3.5</span>), </span>
+<span id="cb19-17"><a></a>              <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">35</span>), </span>
+<span id="cb19-18"><a></a>              <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"Yay!"</span>, <span class="st">"Yay!"</span>))</span>
+<span id="cb19-19"><a></a></span>
+<span id="cb19-20"><a></a>type1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fl">2.5</span>, <span class="fl">3.5</span>),</span>
+<span id="cb19-21"><a></a>                <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">36.5</span>, <span class="fl">26.5</span>),</span>
+<span id="cb19-22"><a></a>                <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"Type I Error"</span>, <span class="st">"Type II Error"</span>))</span>
+<span id="cb19-23"><a></a></span>
+<span id="cb19-24"><a></a>type2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fl">3.5</span>, <span class="fl">2.5</span>),</span>
+<span id="cb19-25"><a></a>                <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">24.5</span>, <span class="fl">34.5</span>),</span>
+<span id="cb19-26"><a></a>                <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"beta"</span>, <span class="st">"alpha"</span>))</span>
+<span id="cb19-27"><a></a></span>
+<span id="cb19-28"><a></a></span>
+<span id="cb19-29"><a></a><span class="co"># basic graph</span></span>
+<span id="cb19-30"><a></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">theme_void</span>()</span>
+<span id="cb19-31"><a></a></span>
+<span id="cb19-32"><a></a><span class="co"># Add rectangles</span></span>
+<span id="cb19-33"><a></a>p <span class="sc">+</span> <span class="fu">annotate</span>(<span class="st">"rect"</span>, </span>
+<span id="cb19-34"><a></a>             <span class="at">xmin=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">xmax=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>), </span>
+<span id="cb19-35"><a></a>             <span class="at">ymin=</span><span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">20</span>), <span class="at">ymax=</span><span class="fu">c</span>(<span class="dv">30</span>,<span class="dv">30</span>), </span>
+<span id="cb19-36"><a></a>             <span class="at">alpha=</span><span class="fl">0.2</span>, <span class="at">color=</span><span class="st">"green"</span>, <span class="at">fill=</span><span class="st">"green"</span>) <span class="sc">+</span> </span>
+<span id="cb19-37"><a></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, </span>
+<span id="cb19-38"><a></a>             <span class="at">xmin=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">xmax=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>), </span>
+<span id="cb19-39"><a></a>             <span class="at">ymin=</span><span class="fu">c</span>(<span class="dv">30</span>,<span class="dv">30</span>), <span class="at">ymax=</span><span class="fu">c</span>(<span class="dv">40</span>,<span class="dv">40</span>), </span>
+<span id="cb19-40"><a></a>             <span class="at">alpha=</span><span class="fl">0.2</span>, <span class="at">color=</span><span class="st">"red"</span>, <span class="at">fill=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb19-41"><a></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>,</span>
+<span id="cb19-42"><a></a>             <span class="at">xmin=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>), <span class="at">xmax=</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">3</span>),</span>
+<span id="cb19-43"><a></a>             <span class="at">ymin=</span><span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">20</span>), <span class="at">ymax=</span><span class="fu">c</span>(<span class="dv">40</span>, <span class="dv">30</span>),</span>
+<span id="cb19-44"><a></a>             <span class="at">alpha=</span><span class="fl">0.8</span>, <span class="at">color=</span><span class="st">"royalblue"</span>, <span class="at">fill=</span><span class="st">"royalblue"</span>) <span class="sc">+</span></span>
+<span id="cb19-45"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>a1, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y, <span class="at">label=</span>label),</span>
+<span id="cb19-46"><a></a>             <span class="at">size=</span><span class="dv">10</span> , <span class="at">fontface=</span><span class="st">"bold"</span> ) <span class="sc">+</span></span>
+<span id="cb19-47"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>a3, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y, <span class="at">label=</span>label),</span>
+<span id="cb19-48"><a></a>             <span class="at">size=</span><span class="dv">10</span> , <span class="at">fontface=</span><span class="st">"bold.italic"</span> ) <span class="sc">+</span></span>
+<span id="cb19-49"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>a2, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y, <span class="at">label=</span>label),</span>
+<span id="cb19-50"><a></a>             <span class="at">size=</span><span class="dv">10</span>, <span class="at">angle =</span> <span class="dv">90</span>, <span class="at">fontface=</span><span class="st">"bold"</span> ) <span class="sc">+</span></span>
+<span id="cb19-51"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>yay, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y, <span class="at">label=</span>label),</span>
+<span id="cb19-52"><a></a>             <span class="at">size=</span><span class="dv">10</span>, <span class="at">fontface=</span><span class="st">"bold.italic"</span> ) <span class="sc">+</span></span>
+<span id="cb19-53"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>type1, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y, <span class="at">label=</span>label),</span>
+<span id="cb19-54"><a></a>             <span class="at">size=</span><span class="dv">10</span>, <span class="at">fontface=</span><span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb19-55"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>type2, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y, <span class="at">label=</span>label),</span>
+<span id="cb19-56"><a></a>             <span class="at">size=</span><span class="dv">10</span>, <span class="at">fontface=</span><span class="st">"bold"</span>, <span class="at">parse =</span> T ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
-<img data-src="5_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<img data-src="5_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
 <section id="type-1-and-2-error-1" class="slide level2">
 <h2>Type 1 and 2 Error</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
-<span id="cb5-2"><a></a>xx <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">7</span>, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
-<span id="cb5-3"><a></a>dt_one<span class="ot">&lt;-</span><span class="cf">function</span>(x){</span>
-<span id="cb5-4"><a></a>            y <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x)</span>
-<span id="cb5-5"><a></a>            y[x <span class="sc">&lt;</span> <span class="fu">qnorm</span>(.<span class="dv">94</span>)] <span class="ot">&lt;-</span><span class="cn">NA</span></span>
-<span id="cb5-6"><a></a>            <span class="fu">return</span>(y)</span>
-<span id="cb5-7"><a></a>}</span>
-<span id="cb5-8"><a></a>dt_two<span class="ot">&lt;-</span><span class="cf">function</span>(x){</span>
-<span id="cb5-9"><a></a>            y <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="dv">3</span>)</span>
-<span id="cb5-10"><a></a>            y[x <span class="sc">&gt;</span> <span class="fl">1.645</span>] <span class="ot">&lt;-</span><span class="cn">NA</span></span>
-<span id="cb5-11"><a></a>            <span class="fu">return</span>(y)</span>
-<span id="cb5-12"><a></a>}</span>
-<span id="cb5-13"><a></a>df1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> x, <span class="at">y =</span> <span class="fu">dnorm</span>(x))</span>
-<span id="cb5-14"><a></a>df2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> xx, <span class="at">y =</span> <span class="fu">dnorm</span>(xx, <span class="at">mean =</span> <span class="dv">3</span>))</span>
-<span id="cb5-15"><a></a></span>
-<span id="cb5-16"><a></a>a1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">0.43</span>, <span class="fl">0.43</span>), <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"H0"</span>, <span class="st">"H1"</span>))</span>
-<span id="cb5-17"><a></a>a2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fl">2.05</span>,<span class="fl">1.25</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">0.02</span>, <span class="fl">0.02</span>), <span class="at">label =</span> <span class="fu">c</span>(<span class="fu">paste</span>(<span class="st">"alpha"</span>), <span class="st">"beta"</span>))</span>
-<span id="cb5-18"><a></a></span>
-<span id="cb5-19"><a></a>df1 <span class="sc">|&gt;</span> </span>
-<span id="cb5-20"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
-<span id="cb5-21"><a></a>    <span class="fu">stat_function</span>(<span class="at">fun =</span> dt_one, <span class="at">geom =</span> <span class="st">"area"</span>, <span class="at">fill =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb5-22"><a></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb5-23"><a></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(x, y), df2) <span class="sc">+</span></span>
-<span id="cb5-24"><a></a>    <span class="fu">stat_function</span>(<span class="at">fun =</span> dt_two, <span class="at">geom =</span> <span class="st">"area"</span>, <span class="at">fill =</span> <span class="st">"green"</span>) <span class="sc">+</span></span>
-<span id="cb5-25"><a></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fl">1.645</span>), <span class="at">lwd =</span> <span class="fl">1.5</span>) <span class="sc">+</span></span>
-<span id="cb5-26"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>a1, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y, <span class="at">label=</span>label),</span>
-<span id="cb5-27"><a></a>              <span class="at">size=</span><span class="dv">14</span> , <span class="at">fontface=</span><span class="st">"bold.italic"</span> ) <span class="sc">+</span></span>
-<span id="cb5-28"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>a2, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y, <span class="at">label=</span>label),</span>
-<span id="cb5-29"><a></a>              <span class="at">size=</span><span class="dv">10</span> , <span class="at">fontface=</span><span class="st">"bold.italic"</span>, <span class="at">parse =</span> T) <span class="sc">+</span></span>
-<span id="cb5-30"><a></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
+<span id="cb20-2"><a></a>xx <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">7</span>, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
+<span id="cb20-3"><a></a>dt_one<span class="ot">&lt;-</span><span class="cf">function</span>(x){</span>
+<span id="cb20-4"><a></a>            y <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x)</span>
+<span id="cb20-5"><a></a>            y[x <span class="sc">&lt;</span> <span class="fu">qnorm</span>(.<span class="dv">94</span>)] <span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb20-6"><a></a>            <span class="fu">return</span>(y)</span>
+<span id="cb20-7"><a></a>}</span>
+<span id="cb20-8"><a></a>dt_two<span class="ot">&lt;-</span><span class="cf">function</span>(x){</span>
+<span id="cb20-9"><a></a>            y <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="dv">3</span>)</span>
+<span id="cb20-10"><a></a>            y[x <span class="sc">&gt;</span> <span class="fl">1.645</span>] <span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb20-11"><a></a>            <span class="fu">return</span>(y)</span>
+<span id="cb20-12"><a></a>}</span>
+<span id="cb20-13"><a></a>df1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> x, <span class="at">y =</span> <span class="fu">dnorm</span>(x))</span>
+<span id="cb20-14"><a></a>df2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> xx, <span class="at">y =</span> <span class="fu">dnorm</span>(xx, <span class="at">mean =</span> <span class="dv">3</span>))</span>
+<span id="cb20-15"><a></a></span>
+<span id="cb20-16"><a></a>a1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">0.43</span>, <span class="fl">0.43</span>), <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"H0"</span>, <span class="st">"H1"</span>))</span>
+<span id="cb20-17"><a></a>a2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fl">2.05</span>,<span class="fl">1.25</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">0.02</span>, <span class="fl">0.02</span>), <span class="at">label =</span> <span class="fu">c</span>(<span class="fu">paste</span>(<span class="st">"alpha"</span>), <span class="st">"beta"</span>))</span>
+<span id="cb20-18"><a></a></span>
+<span id="cb20-19"><a></a>df1 <span class="sc">|&gt;</span> </span>
+<span id="cb20-20"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb20-21"><a></a>    <span class="fu">stat_function</span>(<span class="at">fun =</span> dt_one, <span class="at">geom =</span> <span class="st">"area"</span>, <span class="at">fill =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb20-22"><a></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb20-23"><a></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(x, y), df2) <span class="sc">+</span></span>
+<span id="cb20-24"><a></a>    <span class="fu">stat_function</span>(<span class="at">fun =</span> dt_two, <span class="at">geom =</span> <span class="st">"area"</span>, <span class="at">fill =</span> <span class="st">"green"</span>) <span class="sc">+</span></span>
+<span id="cb20-25"><a></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fl">1.645</span>), <span class="at">lwd =</span> <span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb20-26"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>a1, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y, <span class="at">label=</span>label),</span>
+<span id="cb20-27"><a></a>              <span class="at">size=</span><span class="dv">14</span> , <span class="at">fontface=</span><span class="st">"bold.italic"</span> ) <span class="sc">+</span></span>
+<span id="cb20-28"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>a2, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y, <span class="at">label=</span>label),</span>
+<span id="cb20-29"><a></a>              <span class="at">size=</span><span class="dv">10</span> , <span class="at">fontface=</span><span class="st">"bold.italic"</span>, <span class="at">parse =</span> T) <span class="sc">+</span></span>
+<span id="cb20-30"><a></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
-<img data-src="5_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<img data-src="5_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
 <section id="power" class="slide level2">
 <h2>Power</h2>
 <p>Power is the probability of rejecting <span class="math inline">\(H_0\)</span> given that <span class="math inline">\(H_1\)</span>.</p>
@@ -797,49 +1343,46 @@ Power  = 1-\beta
 <h2>Power Analysis in R</h2>
 <p>The <code>pwr</code> package in R will conduct power and sample size for several common statistical tests. For more information, you can check this <a href="https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html">vignette</a> and their <a href="https://github.com/heliosdrm/pwr">github</a>.</p>
 </section>
-<section id="monte-carlo-power-analysis" class="slide level2">
-<h2>Monte Carlo Power Analysis</h2>
-</section>
 <section id="conceptial" class="slide level2">
 <h2>Conceptial</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
-<span id="cb6-2"><a></a>xx <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">7</span>, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
-<span id="cb6-3"><a></a>dt_one<span class="ot">&lt;-</span><span class="cf">function</span>(x){</span>
-<span id="cb6-4"><a></a>            y <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x)</span>
-<span id="cb6-5"><a></a>            y[x <span class="sc">&lt;</span> <span class="fu">qnorm</span>(.<span class="dv">94</span>)] <span class="ot">&lt;-</span><span class="cn">NA</span></span>
-<span id="cb6-6"><a></a>            <span class="fu">return</span>(y)</span>
-<span id="cb6-7"><a></a>}</span>
-<span id="cb6-8"><a></a>dt_two<span class="ot">&lt;-</span><span class="cf">function</span>(x){</span>
-<span id="cb6-9"><a></a>            y <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="dv">3</span>)</span>
-<span id="cb6-10"><a></a>            y[x <span class="sc">&gt;</span> <span class="fl">1.645</span>] <span class="ot">&lt;-</span><span class="cn">NA</span></span>
-<span id="cb6-11"><a></a>            <span class="fu">return</span>(y)</span>
-<span id="cb6-12"><a></a>}</span>
-<span id="cb6-13"><a></a>df1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> x, <span class="at">y =</span> <span class="fu">dnorm</span>(x))</span>
-<span id="cb6-14"><a></a>df2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> xx, <span class="at">y =</span> <span class="fu">dnorm</span>(xx, <span class="at">mean =</span> <span class="dv">3</span>))</span>
-<span id="cb6-15"><a></a></span>
-<span id="cb6-16"><a></a>a1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">0.43</span>, <span class="fl">0.43</span>), <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"H0"</span>, <span class="st">"H1"</span>))</span>
-<span id="cb6-17"><a></a>a2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fl">2.05</span>,<span class="fl">1.25</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">0.02</span>, <span class="fl">0.02</span>), <span class="at">label =</span> <span class="fu">c</span>(<span class="fu">paste</span>(<span class="st">"alpha"</span>), <span class="st">"beta"</span>))</span>
-<span id="cb6-18"><a></a></span>
-<span id="cb6-19"><a></a>df1 <span class="sc">|&gt;</span> </span>
-<span id="cb6-20"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
-<span id="cb6-21"><a></a>    <span class="fu">stat_function</span>(<span class="at">fun =</span> dt_one, <span class="at">geom =</span> <span class="st">"area"</span>, <span class="at">fill =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb6-22"><a></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb6-23"><a></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(x, y), df2) <span class="sc">+</span></span>
-<span id="cb6-24"><a></a>    <span class="fu">stat_function</span>(<span class="at">fun =</span> dt_two, <span class="at">geom =</span> <span class="st">"area"</span>, <span class="at">fill =</span> <span class="st">"green"</span>) <span class="sc">+</span></span>
-<span id="cb6-25"><a></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fl">1.645</span>), <span class="at">lwd =</span> <span class="fl">1.5</span>) <span class="sc">+</span></span>
-<span id="cb6-26"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>a1, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y, <span class="at">label=</span>label),</span>
-<span id="cb6-27"><a></a>              <span class="at">size=</span><span class="dv">14</span> , <span class="at">fontface=</span><span class="st">"bold.italic"</span> ) <span class="sc">+</span></span>
-<span id="cb6-28"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>a2, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y, <span class="at">label=</span>label),</span>
-<span id="cb6-29"><a></a>              <span class="at">size=</span><span class="dv">10</span> , <span class="at">fontface=</span><span class="st">"bold.italic"</span>, <span class="at">parse =</span> T) <span class="sc">+</span></span>
-<span id="cb6-30"><a></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
+<span id="cb21-2"><a></a>xx <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">7</span>, <span class="at">length.out =</span> <span class="dv">1000</span>)</span>
+<span id="cb21-3"><a></a>dt_one<span class="ot">&lt;-</span><span class="cf">function</span>(x){</span>
+<span id="cb21-4"><a></a>            y <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x)</span>
+<span id="cb21-5"><a></a>            y[x <span class="sc">&lt;</span> <span class="fu">qnorm</span>(.<span class="dv">94</span>)] <span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb21-6"><a></a>            <span class="fu">return</span>(y)</span>
+<span id="cb21-7"><a></a>}</span>
+<span id="cb21-8"><a></a>dt_two<span class="ot">&lt;-</span><span class="cf">function</span>(x){</span>
+<span id="cb21-9"><a></a>            y <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="dv">3</span>)</span>
+<span id="cb21-10"><a></a>            y[x <span class="sc">&gt;</span> <span class="fl">1.645</span>] <span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb21-11"><a></a>            <span class="fu">return</span>(y)</span>
+<span id="cb21-12"><a></a>}</span>
+<span id="cb21-13"><a></a>df1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> x, <span class="at">y =</span> <span class="fu">dnorm</span>(x))</span>
+<span id="cb21-14"><a></a>df2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> xx, <span class="at">y =</span> <span class="fu">dnorm</span>(xx, <span class="at">mean =</span> <span class="dv">3</span>))</span>
+<span id="cb21-15"><a></a></span>
+<span id="cb21-16"><a></a>a1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">0.43</span>, <span class="fl">0.43</span>), <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"H0"</span>, <span class="st">"H1"</span>))</span>
+<span id="cb21-17"><a></a>a2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fl">2.05</span>,<span class="fl">1.25</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="fl">0.02</span>, <span class="fl">0.02</span>), <span class="at">label =</span> <span class="fu">c</span>(<span class="fu">paste</span>(<span class="st">"alpha"</span>), <span class="st">"beta"</span>))</span>
+<span id="cb21-18"><a></a></span>
+<span id="cb21-19"><a></a>df1 <span class="sc">|&gt;</span> </span>
+<span id="cb21-20"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb21-21"><a></a>    <span class="fu">stat_function</span>(<span class="at">fun =</span> dt_one, <span class="at">geom =</span> <span class="st">"area"</span>, <span class="at">fill =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb21-22"><a></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb21-23"><a></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(x, y), df2) <span class="sc">+</span></span>
+<span id="cb21-24"><a></a>    <span class="fu">stat_function</span>(<span class="at">fun =</span> dt_two, <span class="at">geom =</span> <span class="st">"area"</span>, <span class="at">fill =</span> <span class="st">"green"</span>) <span class="sc">+</span></span>
+<span id="cb21-25"><a></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fl">1.645</span>), <span class="at">lwd =</span> <span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb21-26"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>a1, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y, <span class="at">label=</span>label),</span>
+<span id="cb21-27"><a></a>              <span class="at">size=</span><span class="dv">14</span> , <span class="at">fontface=</span><span class="st">"bold.italic"</span> ) <span class="sc">+</span></span>
+<span id="cb21-28"><a></a>    <span class="fu">geom_text</span>(<span class="at">data=</span>a2, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y, <span class="at">label=</span>label),</span>
+<span id="cb21-29"><a></a>              <span class="at">size=</span><span class="dv">10</span> , <span class="at">fontface=</span><span class="st">"bold.italic"</span>, <span class="at">parse =</span> T) <span class="sc">+</span></span>
+<span id="cb21-30"><a></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="5_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+<p><img data-src="5_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
 </figure>
 </div>
 </div>
