@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2028-04-24">
+<meta name="description" content="MEET Wednesday (7/3)">
 
-<title>MATH 497 - Welcome to Monte Carlo Methods!</title>
+<title>MATH 497 - Week 6</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,67 +68,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -138,7 +80,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">MATH 497</span>
     </a>
   </div>
@@ -149,15 +91,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html"> 
+    <a class="nav-link" href="../syllabus.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./hw.html"> 
+    <a class="nav-link" href="../hw.html"> 
 <span class="menu-text">Homework</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./books.html"> 
+    <a class="nav-link" href="../books.html"> 
 <span class="menu-text">Books</span></a>
   </li>  
 </ul>
@@ -172,21 +114,44 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning Outcomes</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further Reading</a>
+  <ul class="collapse">
+  <li><a href="#available-from-broome-library" id="toc-available-from-broome-library" class="nav-link" data-scroll-target="#available-from-broome-library">Available from Broome Library</a></li>
+  <li><a href="#great-books-dont-buy" id="toc-great-books-dont-buy" class="nav-link" data-scroll-target="#great-books-dont-buy">Great Books (Don’t Buy)</a></li>
+  <li><a href="#websites" id="toc-websites" class="nav-link" data-scroll-target="#websites">Websites</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Welcome to Monte Carlo Methods!</h1>
+<h1 class="title">Week 6</h1>
 </div>
 
+<div>
+  <div class="description">
+    MEET Wednesday (7/3)
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 24, 2028</p>
+    </div>
+  </div>
   
     
   </div>
@@ -196,220 +161,45 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<strong>Brief Introduction</strong>
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Welcome to the course! This is the home page of the course where I will provide a recap on what was covered in the week. Here I will post any documents or videos for your reference. If you have any questions, please email me at isaac.qs@csuci.edu.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Quarto Template for HW
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Download it here: <a href="https://github.com/inqs909/m408_s24/blob/main/files/template.qmd">Github Repo</a></p>
-<p><strong>OR</strong> Type this in the RStudio terminal:</p>
-<pre><code>quarto use template inqs909/m408_hw</code></pre>
-<p>Type <code>Y</code> for the trust author. Type a name of a new directory in where to save the file. For example, type <code>hw1</code>.</p>
-<p><strong>OR</strong> Save this in an empty source quarto document:</p>
-<pre class="{default}"><code>---
-title: "Title"
-author: "Name Here"
-date: "`r format(Sys.time(),'%m-%d-%Y')`"
-format: 
-  html:
-    toc: true
-    toc-depth: 2
-    code-fold: true
-    code-tools: true
-    code-line-numbers: true
-    embed-resources: true
-knitr:
-  opts_chunk:
-    echo: true
-    message: false
-    warning: false
-    error: true
-    tidy: styler
-    R.options:
-      digits: 3
-      max.print: 100
----
-
-## Problem 1
-
-## Problem 2
-
-## Problem 3
-
-</code></pre>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<strong>Introduction to Statistics Book</strong>
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><a href="https://openintro-ims.netlify.app/" class="uri">https://openintro-ims.netlify.app/</a></p>
-</div>
-</div>
-</div>
+<section id="learning-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes</h2>
+<ul>
+<li><p>Power Analysis</p></li>
+<li><p>Permutation Tests</p></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Lecture</th>
+<th style="text-align: left;">Videos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://m497.inqs.info/lectures/6#/title-slide">Slide</a></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further Reading</h2>
+<section id="available-from-broome-library" class="level3">
+<h3 class="anchored" data-anchor-id="available-from-broome-library">Available from Broome Library</h3>
+<p><a href="https://link-springer-com.ezproxy.csuci.edu/book/10.1007/978-0-387-98144-4">Computational Statistics</a>: Chapter 12</p>
+</section>
+<section id="great-books-dont-buy" class="level3">
+<h3 class="anchored" data-anchor-id="great-books-dont-buy">Great Books (Don’t Buy)</h3>
+<p><a href="https://www.routledge.com/Statistical-Computing-with-R-Second-Edition/Rizzo/p/book/9781466553323">Statistical Computing in R</a>: Chapter 10</p>
+</section>
+<section id="websites" class="level3">
+<h3 class="anchored" data-anchor-id="websites">Websites</h3>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1840172400000" data-listing-file-modified-sort="1719936764675" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="93">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/6.html" class="no-external">Week 6</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/6.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/6.html" class="no-external">MEET Wednesday (7/3)</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/6.html" class="no-external">
-<div class="listing-date">
-Apr 24, 2028
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1813820400000" data-listing-file-modified-sort="1719518129315" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="168">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/5.html" class="no-external">Week 5</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/5.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/5.html" class="no-external">MEET Wednesday (6/26)</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/5.html" class="no-external">
-<div class="listing-date">
-Jun 24, 2027
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1800777600000" data-listing-file-modified-sort="1718782906663" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="244">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/4.html" class="no-external">Week 4</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/4.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/4.html" class="no-external">MEET Tuesday (6/18)</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/4.html" class="no-external">
-<div class="listing-date">
-Jan 24, 2027
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1717743600000" data-listing-file-modified-sort="1718782511968" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="146">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/3.html" class="no-external">Week 3</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/3.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/3.html" class="no-external">MEET Wednesday (6/12)</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/3.html" class="no-external">
-<div class="listing-date">
-Jun 7, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1717225200000" data-listing-file-modified-sort="1717609480447" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2.html" class="no-external">Week 2</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2.html" class="no-external">MEET TUESDAY (6/4) INSTEAD OF WED.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2.html" class="no-external">
-<div class="listing-date">
-Jun 1, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1716361200000" data-listing-file-modified-sort="1717477123678" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="86">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/week_1.html" class="no-external">Week 1</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/week_1.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/week_1.html" class="no-external">This week we will dive into R and control flow programming.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/week_1.html" class="no-external">
-<div class="listing-date">
-May 22, 2024
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

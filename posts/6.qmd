@@ -1,0 +1,32 @@
+---
+title:  Week 6
+date: 6-28-24
+description: MEET Wednesday (7/3)
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## Learning Outcomes
+
+-   Power Analysis
+
+-   Permutation Tests
+
+| Lecture                                                | Videos |
+|:-------------------------------------------------------|:-------|
+| [Slide](http://m497.inqs.info/lectures/6#/title-slide) |        |
+
+## Further Reading
+
+### Available from Broome Library
+
+[Computational Statistics](https://link-springer-com.ezproxy.csuci.edu/book/10.1007/978-0-387-98144-4): Chapter 12
+
+[Permutation Statistical Methods with R](https://link-springer-com.ezproxy.csuci.edu/book/10.1007/978-3-030-74361-1)
+
+### Great Books (Don't Buy)
+
+[Statistical Computing in R](https://www.routledge.com/Statistical-Computing-with-R-Second-Edition/Rizzo/p/book/9781466553323): Chapter 10
+
+### Websites

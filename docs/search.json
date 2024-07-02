@@ -1561,32 +1561,109 @@
     "text": "Further Reading\n\nAvailable from Broome Library\nIntroducing Monte Carlo Methods in R: Chapter 3 and 5\nExplorations in Monte Carlo Methods: Chapter 5 and 6\nComputational Statistics: Chapter 4\n\n\nGreat Books (Don’t Buy)\nSimulation and the Monte Carlo Method: Chapter 5\nStatistical Computing in R: Chapter 6\n\n\nWebsites\nDartmouth"
   },
   {
-    "objectID": "posts/3.html",
-    "href": "posts/3.html",
-    "title": "Week 3",
+    "objectID": "posts/2.html",
+    "href": "posts/2.html",
+    "title": "Week 2",
     "section": "",
-    "text": "Random Variables\nRandom Number Generation\nRandom Variable Generations\nCentral Limit Theorem"
+    "text": "Nested Loops\nWhile Loops\nVectorized Code\nFunctions\n*apply functions"
   },
   {
-    "objectID": "posts/3.html#learning-outcomes",
-    "href": "posts/3.html#learning-outcomes",
-    "title": "Week 3",
+    "objectID": "posts/2.html#learning-outcomes",
+    "href": "posts/2.html#learning-outcomes",
+    "title": "Week 2",
     "section": "",
-    "text": "Random Variables\nRandom Number Generation\nRandom Variable Generations\nCentral Limit Theorem"
+    "text": "Nested Loops\nWhile Loops\nVectorized Code\nFunctions\n*apply functions"
   },
   {
-    "objectID": "posts/3.html#resources",
-    "href": "posts/3.html#resources",
-    "title": "Week 3",
+    "objectID": "posts/2.html#resources",
+    "href": "posts/2.html#resources",
+    "title": "Week 2",
     "section": "Resources",
     "text": "Resources\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nVideo"
   },
   {
-    "objectID": "posts/3.html#further-reading",
-    "href": "posts/3.html#further-reading",
-    "title": "Week 3",
-    "section": "Further Reading",
-    "text": "Further Reading\n\nAvailable from Broome Library\nIntroducing Monte Carlo Methods in R: Chapter 2\nExplorations in Monte Carlo Methods: Chapter 2\nComputational Statistics: Chapter 7\n\n\nGreat Books (Don’t Buy)\nSimulation and the Monte Carlo Method: Chapter 2\nStatistical Computing in R: Chapter 3\n\n\nWebsites\nStatLect"
+    "objectID": "hw.html",
+    "href": "hw.html",
+    "title": "Homework",
+    "section": "",
+    "text": "Quarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\nBelow are the different homework assignments for the course. Make sure to upload your assignment as a single file on Canvas.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\n\nJun 13, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "hw/hw2.html",
+    "href": "hw/hw2.html",
+    "title": "Homework 2",
+    "section": "",
+    "text": "Due 6/28/24 @ 11:59 PM\nYou must comment all your code to receive credit.\nEmail me the *.html file to isaac.qs@csuci.edu."
+  },
+  {
+    "objectID": "hw/hw2.html#problem-1",
+    "href": "hw/hw2.html#problem-1",
+    "title": "Homework 2",
+    "section": "Problem 1",
+    "text": "Problem 1\nUse the Discrete Inverse Technique to simulate a \\(NB(0.2, 4)\\)."
+  },
+  {
+    "objectID": "hw/hw2.html#problem-2",
+    "href": "hw/hw2.html#problem-2",
+    "title": "Homework 2",
+    "section": "Problem 2",
+    "text": "Problem 2\nUse the Accept-Reject algorithm to generate a \\(Beta(4,6)\\)."
+  },
+  {
+    "objectID": "hw/hw2.html#problem-3",
+    "href": "hw/hw2.html#problem-3",
+    "title": "Homework 2",
+    "section": "Problem 3",
+    "text": "Problem 3\nUse the Accept-Reject algorithm to generate a \\(Weibull(2,3)\\)."
+  },
+  {
+    "objectID": "hw/hw2.html#problem-4",
+    "href": "hw/hw2.html#problem-4",
+    "title": "Homework 2",
+    "section": "Problem 4",
+    "text": "Problem 4\nUse the Accept-Reject algorithm to generate a \\(Pareto(1,4)\\). The pdf of the Pareto distribution can be obtained from the EnvStats Package"
+  },
+  {
+    "objectID": "hw/hw1.html",
+    "href": "hw/hw1.html",
+    "title": "Homework 1",
+    "section": "",
+    "text": "Due 6/14/24 @ 11:59 PM\nYou must comment all your code to receive credit.\nSubmit the *.html file to canvas.\nFor all problems, you must use at least one for or while loop."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-1",
+    "href": "hw/hw1.html#problem-1",
+    "title": "Homework 1",
+    "section": "Problem 1",
+    "text": "Problem 1\nUsing the following code:\n\nx &lt;- matrix(rnorm(1500), nrow = 10)\n\nWrite the code to produce the output if you use the rowMeans() on the R object x."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-2",
+    "href": "hw/hw1.html#problem-2",
+    "title": "Homework 1",
+    "section": "Problem 2",
+    "text": "Problem 2\nUsing the following code:\n\ny &lt;- matrix(sample(1:400, 100, replace = T), nrow = 10)\n\nFind the median value for each column of the matrix y."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-3",
+    "href": "hw/hw1.html#problem-3",
+    "title": "Homework 1",
+    "section": "Problem 3",
+    "text": "Problem 3\nWrite the code that will generate the first 1000 numbers of the Fibonacci Sequence."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-4",
+    "href": "hw/hw1.html#problem-4",
+    "title": "Homework 1",
+    "section": "Problem 4",
+    "text": "Problem 4\nWrite a function for the following equation:\n\\[\nf(x, y, z) =\\left\\{\\begin{array}{cc}\nx^2+\\sqrt y & z  = 0 \\\\\nx^2+2x+3+ \\log(y) & z = 1\n\\end{array}\\right.\n\\]\nInclude any error messages if necessary."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-5",
+    "href": "hw/hw1.html#problem-5",
+    "title": "Homework 1",
+    "section": "Problem 5",
+    "text": "Problem 5\nCreate a function that will give you the first x Fibonacci numbers. You must use a for loop."
   },
   {
     "objectID": "books.html",
@@ -1673,109 +1750,53 @@
     "text": "Study Desing and Causal Inference\n\nCausal Inference What IF\n\nHernán and Robins\n\nDesign of Observational Studies\n\nRosenbaum\n\n\nBolded Titles, I have read thoroughly."
   },
   {
-    "objectID": "hw/hw1.html",
-    "href": "hw/hw1.html",
-    "title": "Homework 1",
+    "objectID": "posts/3.html",
+    "href": "posts/3.html",
+    "title": "Week 3",
     "section": "",
-    "text": "Due 6/14/24 @ 11:59 PM\nYou must comment all your code to receive credit.\nSubmit the *.html file to canvas.\nFor all problems, you must use at least one for or while loop."
+    "text": "Random Variables\nRandom Number Generation\nRandom Variable Generations\nCentral Limit Theorem"
   },
   {
-    "objectID": "hw/hw1.html#problem-1",
-    "href": "hw/hw1.html#problem-1",
-    "title": "Homework 1",
-    "section": "Problem 1",
-    "text": "Problem 1\nUsing the following code:\n\nx &lt;- matrix(rnorm(1500), nrow = 10)\n\nWrite the code to produce the output if you use the rowMeans() on the R object x."
-  },
-  {
-    "objectID": "hw/hw1.html#problem-2",
-    "href": "hw/hw1.html#problem-2",
-    "title": "Homework 1",
-    "section": "Problem 2",
-    "text": "Problem 2\nUsing the following code:\n\ny &lt;- matrix(sample(1:400, 100, replace = T), nrow = 10)\n\nFind the median value for each column of the matrix y."
-  },
-  {
-    "objectID": "hw/hw1.html#problem-3",
-    "href": "hw/hw1.html#problem-3",
-    "title": "Homework 1",
-    "section": "Problem 3",
-    "text": "Problem 3\nWrite the code that will generate the first 1000 numbers of the Fibonacci Sequence."
-  },
-  {
-    "objectID": "hw/hw1.html#problem-4",
-    "href": "hw/hw1.html#problem-4",
-    "title": "Homework 1",
-    "section": "Problem 4",
-    "text": "Problem 4\nWrite a function for the following equation:\n\\[\nf(x, y, z) =\\left\\{\\begin{array}{cc}\nx^2+\\sqrt y & z  = 0 \\\\\nx^2+2x+3+ \\log(y) & z = 1\n\\end{array}\\right.\n\\]\nInclude any error messages if necessary."
-  },
-  {
-    "objectID": "hw/hw1.html#problem-5",
-    "href": "hw/hw1.html#problem-5",
-    "title": "Homework 1",
-    "section": "Problem 5",
-    "text": "Problem 5\nCreate a function that will give you the first x Fibonacci numbers. You must use a for loop."
-  },
-  {
-    "objectID": "hw/hw2.html",
-    "href": "hw/hw2.html",
-    "title": "Homework 2",
+    "objectID": "posts/3.html#learning-outcomes",
+    "href": "posts/3.html#learning-outcomes",
+    "title": "Week 3",
     "section": "",
-    "text": "Due 6/28/24 @ 11:59 PM\nYou must comment all your code to receive credit.\nEmail me the *.html file to isaac.qs@csuci.edu."
+    "text": "Random Variables\nRandom Number Generation\nRandom Variable Generations\nCentral Limit Theorem"
   },
   {
-    "objectID": "hw/hw2.html#problem-1",
-    "href": "hw/hw2.html#problem-1",
-    "title": "Homework 2",
-    "section": "Problem 1",
-    "text": "Problem 1\nUse the Discrete Inverse Technique to simulate a \\(NB(0.2, 4)\\)."
-  },
-  {
-    "objectID": "hw/hw2.html#problem-2",
-    "href": "hw/hw2.html#problem-2",
-    "title": "Homework 2",
-    "section": "Problem 2",
-    "text": "Problem 2\nUse the Accept-Reject algorithm to generate a \\(Beta(4,6)\\)."
-  },
-  {
-    "objectID": "hw/hw2.html#problem-3",
-    "href": "hw/hw2.html#problem-3",
-    "title": "Homework 2",
-    "section": "Problem 3",
-    "text": "Problem 3\nUse the Accept-Reject algorithm to generate a \\(Weibull(2,3)\\)."
-  },
-  {
-    "objectID": "hw/hw2.html#problem-4",
-    "href": "hw/hw2.html#problem-4",
-    "title": "Homework 2",
-    "section": "Problem 4",
-    "text": "Problem 4\nUse the Accept-Reject algorithm to generate a \\(Pareto(1,4)\\). The pdf of the Pareto distribution can be obtained from the EnvStats Package"
-  },
-  {
-    "objectID": "hw.html",
-    "href": "hw.html",
-    "title": "Homework",
-    "section": "",
-    "text": "Quarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\nBelow are the different homework assignments for the course. Make sure to upload your assignment as a single file on Canvas.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\n\nJun 13, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2024\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/2.html",
-    "href": "posts/2.html",
-    "title": "Week 2",
-    "section": "",
-    "text": "Nested Loops\nWhile Loops\nVectorized Code\nFunctions\n*apply functions"
-  },
-  {
-    "objectID": "posts/2.html#learning-outcomes",
-    "href": "posts/2.html#learning-outcomes",
-    "title": "Week 2",
-    "section": "",
-    "text": "Nested Loops\nWhile Loops\nVectorized Code\nFunctions\n*apply functions"
-  },
-  {
-    "objectID": "posts/2.html#resources",
-    "href": "posts/2.html#resources",
-    "title": "Week 2",
+    "objectID": "posts/3.html#resources",
+    "href": "posts/3.html#resources",
+    "title": "Week 3",
     "section": "Resources",
     "text": "Resources\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nVideo"
+  },
+  {
+    "objectID": "posts/3.html#further-reading",
+    "href": "posts/3.html#further-reading",
+    "title": "Week 3",
+    "section": "Further Reading",
+    "text": "Further Reading\n\nAvailable from Broome Library\nIntroducing Monte Carlo Methods in R: Chapter 2\nExplorations in Monte Carlo Methods: Chapter 2\nComputational Statistics: Chapter 7\n\n\nGreat Books (Don’t Buy)\nSimulation and the Monte Carlo Method: Chapter 2\nStatistical Computing in R: Chapter 3\n\n\nWebsites\nStatLect"
+  },
+  {
+    "objectID": "posts/6.html",
+    "href": "posts/6.html",
+    "title": "Week 6",
+    "section": "",
+    "text": "Power Analysis\nPermutation Tests\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide"
+  },
+  {
+    "objectID": "posts/6.html#learning-outcomes",
+    "href": "posts/6.html#learning-outcomes",
+    "title": "Week 6",
+    "section": "",
+    "text": "Power Analysis\nPermutation Tests\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide"
+  },
+  {
+    "objectID": "posts/6.html#further-reading",
+    "href": "posts/6.html#further-reading",
+    "title": "Week 6",
+    "section": "Further Reading",
+    "text": "Further Reading\n\nAvailable from Broome Library\nComputational Statistics: Chapter 12\n\n\nGreat Books (Don’t Buy)\nStatistical Computing in R: Chapter 10\n\n\nWebsites"
   },
   {
     "objectID": "posts/5.html",
@@ -1803,7 +1824,7 @@
     "href": "index.html",
     "title": "Welcome to Monte Carlo Methods!",
     "section": "",
-    "text": "Brief Introduction\n\n\n\n\n\nWelcome to the course! This is the home page of the course where I will provide a recap on what was covered in the week. Here I will post any documents or videos for your reference. If you have any questions, please email me at isaac.qs@csuci.edu.\n\n\n\n\n\n\n\n\n\nQuarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Statistics Book\n\n\n\n\n\nhttps://openintro-ims.netlify.app/\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\n\n\n\n\n\nMEET Wednesday (6/26)\n\n\n\n\n\nJun 24, 2027\n\n\n\n\n\n\n\nWeek 4\n\n\n\n\n\nMEET Tuesday (6/18)\n\n\n\n\n\nJan 24, 2027\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\nMEET Wednesday (6/12)\n\n\n\n\n\nJun 7, 2024\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\nMEET TUESDAY (6/4) INSTEAD OF WED.\n\n\n\n\n\nJun 1, 2024\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\nThis week we will dive into R and control flow programming.\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Brief Introduction\n\n\n\n\n\nWelcome to the course! This is the home page of the course where I will provide a recap on what was covered in the week. Here I will post any documents or videos for your reference. If you have any questions, please email me at isaac.qs@csuci.edu.\n\n\n\n\n\n\n\n\n\nQuarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Statistics Book\n\n\n\n\n\nhttps://openintro-ims.netlify.app/\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\n\n\n\nMEET Wednesday (7/3)\n\n\n\n\n\nApr 24, 2028\n\n\n\n\n\n\n\nWeek 5\n\n\n\n\n\nMEET Wednesday (6/26)\n\n\n\n\n\nJun 24, 2027\n\n\n\n\n\n\n\nWeek 4\n\n\n\n\n\nMEET Tuesday (6/18)\n\n\n\n\n\nJan 24, 2027\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\nMEET Wednesday (6/12)\n\n\n\n\n\nJun 7, 2024\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\nMEET TUESDAY (6/4) INSTEAD OF WED.\n\n\n\n\n\nJun 1, 2024\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\nThis week we will dive into R and control flow programming.\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "lectures/2.html#homework",
