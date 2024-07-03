@@ -1,0 +1,16 @@
+---
+title: "Homework 4"
+date: 7/3/24
+editor: visual
+draft: false
+---
+
+**Due 7/26/24 \@ 11:59 PM**
+
+You must comment all your code to receive credit.
+
+Email me the \*.html file to isaac.qs\@csuci.edu.
+
+Use Monte Carlo Methods to evaluate the following integrals:
+
+## 

@@ -52,5 +52,14 @@
   },
   "posts/6.qmd": {
     "6.html": "12ba1347"
+  },
+  "lectures/6.qmd": {
+    "6.html": "000e9daf"
+  },
+  "hw/hw3.qmd": {
+    "hw3.html": "ef2cee68"
+  },
+  "hw/hw4.qmd": {
+    "hw4.html": "31d9404e"
   }
 }

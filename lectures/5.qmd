@@ -420,13 +420,13 @@ Use a Monte Carlo Hypothesis Test for $H_0: \mu = 6$ and $H_a: \mu \neq 6$. Simu
 
 ```{r}
 #| code-fold: show
-x <- rnorm(24, 6, 3)
+x <- rnorm(24, 3, 3)
 ```
 
 Answer:
 ```{r}
 #| eval: false
-tstat <- (mean(x) - 3)/(sd(x)/sqrt(24))
+tstat <- (mean(x) - 6)/(sd(x)/sqrt(24))
 
 
 t_stat_sim <- function(i){
@@ -446,6 +446,7 @@ sum(abs(tstat) < abs(t_dist))
 
 
 ```
+
 
 
 ## Uniform Example

@@ -1,0 +1,32 @@
+---
+title: "Homework 3"
+date: 7/2/24
+editor: visual
+draft: false
+---
+
+**Due 7/12/24 \@ 11:59 PM**
+
+You must comment all your code to receive credit.
+
+Email me the \*.html file to isaac.qs\@csuci.edu.
+
+Use Monte Carlo Methods to evaluate the following integrals:
+
+## Problem 1
+
+$$
+\int^\infty_0 e^{-\frac{x^2 - 4x +4}{8}}dx
+$$
+
+## Problem 2
+
+$$
+\int^3_1 x^3dx
+$$
+
+## Problem 3
+
+$$
+\int^\infty_{-\infty}\frac{\ln(x)}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}dx
+$$
