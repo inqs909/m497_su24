@@ -700,606 +700,11 @@
     "text": "Other Programming\n\nCpp\nCpp Armadillo\nJulia Data Science\nArcGIS\nSAS\nStata\nSPSS\nVBA\nJMP"
   },
   {
-    "objectID": "lectures/2.html#homework",
-    "href": "lectures/2.html#homework",
-    "title": "Functional Programming",
-    "section": "Homework",
-    "text": "Homework\nHomework 1 is assigned and can be found here: http://m497.inqs.info/hw.html"
-  },
-  {
-    "objectID": "lectures/2.html#quarto-documentation",
-    "href": "lectures/2.html#quarto-documentation",
-    "title": "Functional Programming",
-    "section": "Quarto Documentation",
-    "text": "Quarto Documentation\nquarto use template inqs909/qs_hw"
-  },
-  {
-    "objectID": "lectures/2.html#quarto-resources",
-    "href": "lectures/2.html#quarto-resources",
-    "title": "Functional Programming",
-    "section": "Quarto Resources",
-    "text": "Quarto Resources\n\nhttps://www.inqs.info/stat_comp/document.html\nhttps://quarto.org/docs/output-formats/html-basics.html"
-  },
-  {
-    "objectID": "lectures/2.html#nested-for-loops-1",
-    "href": "lectures/2.html#nested-for-loops-1",
-    "title": "Functional Programming",
-    "section": "Nested for Loops",
-    "text": "Nested for Loops\nNested for loops are for loops within another for loop. You can stack these loops as much as needed. Just make sure the index is different for each loop. The general format for a loop goes as follow:\n\nfor (i in vector_1){\n  for (ii in vector_2){\n    perform task\n  }\n}"
-  },
-  {
-    "objectID": "lectures/2.html#example",
-    "href": "lectures/2.html#example",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nWithout using the sd() function, compute the standard deviation for each column of the matrix:\n\nx &lt;- matrix(rnorm(1000), nrow = 10)\n\n\\[\ns^2 = \\frac{1}{n-1}\\sum^n_{i=1}(x_i-\\bar x)^2\n\\]"
-  },
-  {
-    "objectID": "lectures/2.html#example-1",
-    "href": "lectures/2.html#example-1",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "lectures/2.html#while-loops-1",
-    "href": "lectures/2.html#while-loops-1",
-    "title": "Functional Programming",
-    "section": "while Loops",
-    "text": "while Loops\nA while loop is a combination of a for loop and a break statement. The loop will continue indefinitely until a condition becomes false.\n\n# Initial Condition\ncondition &lt;- starting TRUE condition\n\nwhile (condition){\n  perform task\n  condition &lt;- update condition\n}"
-  },
-  {
-    "objectID": "lectures/2.html#example-2",
-    "href": "lectures/2.html#example-2",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nSimulate from a \\(N(0,1)\\) distribution until you have 50 positive numbers.\n\n\nCode\nn &lt;- 0\npos_num &lt;- c()\n\nwhile (n &lt; 51){\n  x &lt;- rnorm(1)\n  if (x &gt; 0) {\n    pos_num &lt;- c(pos_num, x)\n    n &lt;- n + 1\n  }\n}\n\npos_num"
-  },
-  {
-    "objectID": "lectures/2.html#example-3",
-    "href": "lectures/2.html#example-3",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nFind the value of \\(x\\) where the function \\(y=1/x\\) relative converges (\\(\\frac{|y_{old}-y_{new}|}{y_{old}}\\)) at a level of \\(10^-6\\) as \\(x\\rightarrow \\infty\\).\n\n\nCode\ndiff &lt;- 10\nx &lt;- 2\ny_old &lt;- 1\nwhile (diff &gt; 1e-6){\n  y_new &lt;- 1 / x\n  diff &lt;- abs(y_old - y_new) / y_old\n  x &lt;- x + 1\n  y_old &lt;- y_new\n}"
-  },
-  {
-    "objectID": "lectures/2.html#example-4",
-    "href": "lectures/2.html#example-4",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nSimulate from a \\(Binom(1,.2)\\) distribution until the sum of the random variables generated is 50.\n\n\nCode\nsum_bin &lt;- 0\nx &lt;- c()\nwhile (sum_bin &lt;51) {\n  x &lt;- c(x, rbinom(1, 1, 0.2))\n  sum_bin &lt;- sum(x)\n}\nsum_bin\nlength(x)"
-  },
-  {
-    "objectID": "lectures/2.html#example-5",
-    "href": "lectures/2.html#example-5",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "lectures/2.html#example-6",
-    "href": "lectures/2.html#example-6",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nUsing the code below:\n\nx &lt;- rnorm(5000)\n\nCreate a new vector containing all the positive values of x. The new vector should be less than 5000.\nAnswer:\n\n\nCode\nnn &lt;- length(x)\npos &lt;- c()\nfor (i in 1:nn){\n  if (x[i] &gt; 0) {\n    pos &lt;- c(pos, x[i])\n  }\n}\npos"
-  },
-  {
-    "objectID": "lectures/2.html#example-7",
-    "href": "lectures/2.html#example-7",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\n\\[\nf(x,y) = x^2 + y^2 + \\ln(x+y)\n\\]\nFind all the values of \\(f(x,y)\\) for every combination of \\(x \\in \\{1, 8, 13, 25, 42, 67, 95\\}\\) and \\(y \\in \\{6, 12, 18, 52, 61, 79, 83\\}\\)\nStore values in a \\(7\\times 7\\) matrix.\nAnswer:\n\n\nCode\nx &lt;- c(1, 8, 13, 25, 42, 67, 95)\ny &lt;- c(6, 12, 18, 52, 61, 79, 83)\nres &lt;- matrix(nrow = 7, ncol = 7)\ncolnames(res) &lt;- as.character(x)\nrownames(res) &lt;- as.character(y)\n\nfor (i in 1:7){\n  for (ii in 1:7){\n    res[ii,i] &lt;- x[i]^2 + y[ii]^2 + log(x[i] + y[ii])\n  }\n}\nprint(res)"
-  },
-  {
-    "objectID": "lectures/2.html#vectorized-code-1",
-    "href": "lectures/2.html#vectorized-code-1",
-    "title": "Functional Programming",
-    "section": "Vectorized Code",
-    "text": "Vectorized Code\nVectorized code is programming where functions or processes are applied to vectors instead of individual values.\n\nIndicating a loop is not necessary to apply a function to each individual element in a vector."
-  },
-  {
-    "objectID": "lectures/2.html#vectorized-code-2",
-    "href": "lectures/2.html#vectorized-code-2",
-    "title": "Functional Programming",
-    "section": "Vectorized Code",
-    "text": "Vectorized Code\nMathematical Operations are conducted element-wise to 2 or more vectors\n\nElement 1 in vector x is applied to element 1 in vector y"
-  },
-  {
-    "objectID": "lectures/2.html#example-8",
-    "href": "lectures/2.html#example-8",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "lectures/2.html#example-9",
-    "href": "lectures/2.html#example-9",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "lectures/2.html#built-in-functions-1",
-    "href": "lectures/2.html#built-in-functions-1",
-    "title": "Functional Programming",
-    "section": "Built-in Functions",
-    "text": "Built-in Functions\nThere are several available functions in R to conduct specific statistical methods or tasks"
-  },
-  {
-    "objectID": "lectures/2.html#help-documentation",
-    "href": "lectures/2.html#help-documentation",
-    "title": "Functional Programming",
-    "section": "Help Documentation",
-    "text": "Help Documentation\n\n\n\n\n\n\n\nSection\nDescription\n\n\n\n\nDescription\nProvides a brief introduction of the function\n\n\nUsage\nProvides potential usage of the function\n\n\nArguments\nArguments that the function can take\n\n\nDetails\nAn in depth description of the function\n\n\nValue\nProvides information of the output produced by the function\n\n\nNotes\nAny need to know information about the function\n\n\nAuthors\nDevelopers of the function\n\n\nReferences\nReferences to the model and function\n\n\nSee Also\nProvide information of supporting functions\n\n\nExamples\nExamples of the function"
-  },
-  {
-    "objectID": "lectures/2.html#generic-functions",
-    "href": "lectures/2.html#generic-functions",
-    "title": "Functional Programming",
-    "section": "Generic Functions",
-    "text": "Generic Functions\nSeveral R objects have a known class attached to it. A specialized object designed to be read by generic functions, such as summary() and plot().\nFor example, the summary() is a generic for several types of functions: summary.aov(), summary.lm(), summary.glm(), and many more."
-  },
-  {
-    "objectID": "lectures/2.html#commonly-used-function",
-    "href": "lectures/2.html#commonly-used-function",
-    "title": "Functional Programming",
-    "section": "Commonly-used Function",
-    "text": "Commonly-used Function\n\n\n\nFunctions\nDescription\n\n\n\n\naov()\nFits an ANOVA Model\n\n\nlm()\nFits a linear model\n\n\nglm()\nFits a general linear model\n\n\nt.test()\nConducts a t-test"
-  },
-  {
-    "objectID": "lectures/2.html#user-built-functions-1",
-    "href": "lectures/2.html#user-built-functions-1",
-    "title": "Functional Programming",
-    "section": "User-built functions",
-    "text": "User-built functions\n\nFunctions created by the user for analysis\nNeeds to be ran once to the R environment\nWill be lost when R session is closed"
-  },
-  {
-    "objectID": "lectures/2.html#anatomy",
-    "href": "lectures/2.html#anatomy",
-    "title": "Functional Programming",
-    "section": "Anatomy",
-    "text": "Anatomy\n\nname_of_function &lt;- function(data_1, data_2 = NULL, \n                             argument_1, argument_2 = TRUE, argument_3 = NULL,\n                             ...){\n  # Conduct Task\n  # Conduct Task\n  output_object &lt;- Tasks\n  return(output_object)\n}\n\n\n\nfunction: used to construct the function\ndata1: first data argument that needs to supplied\ndata2: second data argument that does not need to be supplied\nargument1: first argument must be supplied to alter function\nargument2: second argument to alter function, set to TRUE\nargument3: third argument that does not need to be supplied\n…: additional arguments supplied to other functions"
-  },
-  {
-    "objectID": "lectures/2.html#example-10",
-    "href": "lectures/2.html#example-10",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nCreate a function for\n\\[\ny = \\ln(x^2)\n\\]"
-  },
-  {
-    "objectID": "lectures/2.html#example-11",
-    "href": "lectures/2.html#example-11",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nCreate a function for\n\\[\nf(x) = \\left\\{\\begin{array}{cc}\nx^3 & x&lt;0\\\\\nx^2 + 5 & \\mathrm{otherwise}\n\\end{array} \\right.\n\\]"
-  },
-  {
-    "objectID": "lectures/2.html#example-12",
-    "href": "lectures/2.html#example-12",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nCreate a function for\n\\[\nf(x,y) = \\left\\{\\begin{array}{cc}\nx^3 e^y &  x&lt;0\\ \\\\\nx^2 + 5 + \\ln(y) & \\mathrm{otherwise}\n\\end{array} \\right.\n\\]"
-  },
-  {
-    "objectID": "lectures/2.html#example-13",
-    "href": "lectures/2.html#example-13",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nCreate the function that allows your to compute the z-score of a specific value x using the sampling distribution from a set of data (y vector):\n\\[\nz =  \\frac{x-\\bar y}{\\sqrt{s^2_{y}/n_y}}\n\\]"
-  },
-  {
-    "objectID": "lectures/2.html#example-14",
-    "href": "lectures/2.html#example-14",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "lectures/2.html#apply-1",
-    "href": "lectures/2.html#apply-1",
-    "title": "Functional Programming",
-    "section": "apply()",
-    "text": "apply()\nThe apply function returns a vector, array, or list of values by applying a function to the margins of an array. You will need to specify the following arguments:\n\nX: an array to be indexed and applied\nMARGIN: specifyng which index(es) to subset by\nFUN: function to be applied\n…: further arguments to be applied to FUN, must be labeled\n\n\napply(X, MARGIN, FUN, ...)"
-  },
-  {
-    "objectID": "lectures/2.html#example-15",
-    "href": "lectures/2.html#example-15",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nFind the standard deviation of all the columns of the following matrix:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "lectures/2.html#example-16",
-    "href": "lectures/2.html#example-16",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nFind the \\(25th\\), \\(50th\\), and \\(75th\\) quartiles for each row of the following matrix:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "lectures/2.html#lapply-1",
-    "href": "lectures/2.html#lapply-1",
-    "title": "Functional Programming",
-    "section": "lapply()",
-    "text": "lapply()\nThe lapply function applies a function to all the elements of a vector or matrix, and it will return a list. You will need to specify the following arguments:\n\nX: object to be iterated\nFUN: a function to be applied\n…: further arguments to be passed along to FUN\n\n\nlapply(X, FUN, ...)"
-  },
-  {
-    "objectID": "lectures/2.html#example-17",
-    "href": "lectures/2.html#example-17",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nCreate a function that returns a labeled list for with the following values: mean, standard deviation, median, max, and min."
-  },
-  {
-    "objectID": "lectures/2.html#sapply-1",
-    "href": "lectures/2.html#sapply-1",
-    "title": "Functional Programming",
-    "section": "sapply()",
-    "text": "sapply()\nThe sapply() function will apply a function to each element of a list or vector, and it will return a simplified object, vector, matrix, or array. The sapply() function uses 4 main arguments:\n\nX: a vector or list to be iterated\nFUN: a function to be applied\n…: arguments passed along to FUN, must be labeled\nsimplify: indicates how to simplify the function, defaults to n-dimensional array based on output\n\n\nsapply(X, FUN, ..., simplify = TRUE)"
-  },
-  {
-    "objectID": "lectures/2.html#example-18",
-    "href": "lectures/2.html#example-18",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nUsing the vector below, compute the length of each string using sapply and str_length() from stringr\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "lectures/2.html#example-19",
-    "href": "lectures/2.html#example-19",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nUsing the list generated below, compute the mean of each element of the list using sapply.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "lectures/2.html#example-20",
-    "href": "lectures/2.html#example-20",
-    "title": "Functional Programming",
-    "section": "Example",
-    "text": "Example\nUsing the vector below, use the sapply() to find \\(\\log(x)\\) for each value and return a matrix:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to Monte Carlo Methods!",
-    "section": "",
-    "text": "Brief Introduction\n\n\n\n\n\nWelcome to the course! This is the home page of the course where I will provide a recap on what was covered in the week. Here I will post any documents or videos for your reference. If you have any questions, please email me at isaac.qs@csuci.edu.\n\n\n\n\n\n\n\n\n\nQuarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Statistics Book\n\n\n\n\n\nhttps://openintro-ims.netlify.app/\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\n\n\n\nMEET Wednesday (7/3)\n\n\n\n\n\nApr 24, 2028\n\n\n\n\n\n\n\nWeek 5\n\n\n\n\n\nMEET Wednesday (6/26)\n\n\n\n\n\nJun 24, 2027\n\n\n\n\n\n\n\nWeek 4\n\n\n\n\n\nMEET Tuesday (6/18)\n\n\n\n\n\nJan 24, 2027\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\nMEET Wednesday (6/12)\n\n\n\n\n\nJun 7, 2024\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\nMEET TUESDAY (6/4) INSTEAD OF WED.\n\n\n\n\n\nJun 1, 2024\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\nThis week we will dive into R and control flow programming.\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/5.html",
-    "href": "posts/5.html",
-    "title": "Week 5",
-    "section": "",
-    "text": "Hypothesis Testing\nMonte Carlo P-Value\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nVideo 1 | Video 2"
-  },
-  {
-    "objectID": "posts/5.html#learning-outcomes",
-    "href": "posts/5.html#learning-outcomes",
-    "title": "Week 5",
-    "section": "",
-    "text": "Hypothesis Testing\nMonte Carlo P-Value\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nVideo 1 | Video 2"
-  },
-  {
-    "objectID": "posts/5.html#further-reading",
-    "href": "posts/5.html#further-reading",
-    "title": "Week 5",
-    "section": "Further Reading",
-    "text": "Further Reading\n\nAvailable from Broome Library\nComputational Statistics: Chapter 11\n\n\nGreat Books (Don’t Buy)\nStatistical Computing in R: Chapter 7\n\n\nWebsites\nData Science and Statistical Computing"
-  },
-  {
-    "objectID": "posts/6.html",
-    "href": "posts/6.html",
-    "title": "Week 6",
-    "section": "",
-    "text": "Power Analysis\nPermutation Tests\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide"
-  },
-  {
-    "objectID": "posts/6.html#learning-outcomes",
-    "href": "posts/6.html#learning-outcomes",
-    "title": "Week 6",
-    "section": "",
-    "text": "Power Analysis\nPermutation Tests\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide"
-  },
-  {
-    "objectID": "posts/6.html#further-reading",
-    "href": "posts/6.html#further-reading",
-    "title": "Week 6",
-    "section": "Further Reading",
-    "text": "Further Reading\n\nAvailable from Broome Library\nComputational Statistics: Chapter 12\nPermutation Statistical Methods with R\n\n\nGreat Books (Don’t Buy)\nStatistical Computing in R: Chapter 10\n\n\nWebsites"
-  },
-  {
-    "objectID": "posts/3.html",
-    "href": "posts/3.html",
-    "title": "Week 3",
-    "section": "",
-    "text": "Random Variables\nRandom Number Generation\nRandom Variable Generations\nCentral Limit Theorem"
-  },
-  {
-    "objectID": "posts/3.html#learning-outcomes",
-    "href": "posts/3.html#learning-outcomes",
-    "title": "Week 3",
-    "section": "",
-    "text": "Random Variables\nRandom Number Generation\nRandom Variable Generations\nCentral Limit Theorem"
-  },
-  {
-    "objectID": "posts/3.html#resources",
-    "href": "posts/3.html#resources",
-    "title": "Week 3",
-    "section": "Resources",
-    "text": "Resources\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nVideo"
-  },
-  {
-    "objectID": "posts/3.html#further-reading",
-    "href": "posts/3.html#further-reading",
-    "title": "Week 3",
-    "section": "Further Reading",
-    "text": "Further Reading\n\nAvailable from Broome Library\nIntroducing Monte Carlo Methods in R: Chapter 2\nExplorations in Monte Carlo Methods: Chapter 2\nComputational Statistics: Chapter 7\n\n\nGreat Books (Don’t Buy)\nSimulation and the Monte Carlo Method: Chapter 2\nStatistical Computing in R: Chapter 3\n\n\nWebsites\nStatLect"
-  },
-  {
-    "objectID": "books.html",
-    "href": "books.html",
-    "title": "Books",
-    "section": "",
-    "text": "A list of recommended books to learn more about Statistics, the majority are freely available from the Broome Library:"
-  },
-  {
-    "objectID": "books.html#basics",
-    "href": "books.html#basics",
-    "title": "Books",
-    "section": "Basics",
-    "text": "Basics\n\nIntroduction to Statistics and Data Analysis\n\nHeumann and Shalabh\n\nStatistical Foundations, Reasoning and Inference\n\nKauermann, Küchenhoff, and Heumann"
-  },
-  {
-    "objectID": "books.html#regression",
-    "href": "books.html#regression",
-    "title": "Books",
-    "section": "Regression",
-    "text": "Regression\n\nGeneralized Linear Models With Examples in R\n\nDunn and Smyth\nGraduate\n\nLinear and Generalized Linear Mixed Models and Their Applications (2nd Edition)\n\nJiang and Nguyen\nGraudate\n\nRegression Modeling Strategies\n\nHarrell\nUndergraduate\n\nVector Generalized Linear and Additive Models\n\nYee\nGraduate"
-  },
-  {
-    "objectID": "books.html#nonparametric",
-    "href": "books.html#nonparametric",
-    "title": "Books",
-    "section": "Nonparametric",
-    "text": "Nonparametric\n\nSemiparametric Regression with R\n\nHarezlak, Ruppert, and Wand\nGraduate"
-  },
-  {
-    "objectID": "books.html#computational",
-    "href": "books.html#computational",
-    "title": "Books",
-    "section": "Computational",
-    "text": "Computational\n\nBootstrap Methods with applications in R\n\nDikta and Scheer\nGraduate\n\nModern Optimization with R (2nd Edition)\n\nCortez\nGraduate\n\nComputational Statistics\n\nGentle\n\nMonte Carlo and Quasi-Monte Carlo Sampling\n\nLemieux\n\nStatistics With Julia\n\nNazarathy andKlok\n\nIntroducing Monte Carlo Methods in R\n\nRobert and Casella\n\nPermutation Statistical Methods with R\n\nBerry, Kvamme, Johnston, and Mielke\n\nMonte Carlo Strategies in Scientific Computing\n\nLiu"
-  },
-  {
-    "objectID": "books.html#bayesian",
-    "href": "books.html#bayesian",
-    "title": "Books",
-    "section": "Bayesian",
-    "text": "Bayesian\n\nIntroduction to Bayesian Inference, Methods and Computation\n\nHeard\n\nApplied Bayesian Statistics\n\nCowles\n\nBayesian Statistical Modeling with Stan, R, and Python\n\nMatsuura\n\nBayesian Essentials in R\n\nMarin and Robert"
-  },
-  {
-    "objectID": "books.html#theoretical",
-    "href": "books.html#theoretical",
-    "title": "Books",
-    "section": "Theoretical",
-    "text": "Theoretical\n\nEssentials of Stochastic Processes (3rd Edition)\n\nDurrett\nGraduate\n\nA Concise Introduction to Measure Theory\n\nShirali\nGraduate\n\nLarge Sample Techniques for Statistics (2nd Edition)\n\nJiang\nGraduate\n\nA Course in Mathematical Statistics and Large Sample Theory\n\nBhattacharya, Lin, and Patrangenaru\nGraduate\n\nMixture and Hidden Markov Models with R\n\nVisser and Speekenbrink\nUndergraduate\n\nModern Mathematical Statistics (3rd Edition)\n\nDevore, Berk, and Carlton\nUndergraduate\n\nProbability Theory (3rd Edition)\n\nKlenke\nGraduate\n\nTesting Statistical Hypotheses (4th Edition)\n\nLehmann and Romano\nGraduate\n\nTheory of Point Estimation\n\nLehmann and Casella\nGraduate\nMay not be available"
-  },
-  {
-    "objectID": "books.html#longitudinal-data-analysis",
-    "href": "books.html#longitudinal-data-analysis",
-    "title": "Books",
-    "section": "Longitudinal Data Analysis",
-    "text": "Longitudinal Data Analysis\n\nLongitudinal Categorical Data Analysis\n\nSutradhar"
-  },
-  {
-    "objectID": "books.html#survival-analysis",
-    "href": "books.html#survival-analysis",
-    "title": "Books",
-    "section": "Survival Analysis",
-    "text": "Survival Analysis\n\nStatistical Modelling of Survival Data with Random Effects\n\nHa, Jeong, and Lee\n\nSurvival Analysis (3rd Edition)\n\nKleinbaum and Klein\n\nApplied Survival Analysis in R\n\nMoore\n\nBayesian Survival Analysis\n\nIbrahim, Chen, and Sinha\n\nSurvival Analysis Techniques for Censored and Truncated Data (2nd Edition)\n\nKlein and Moeschberger"
-  },
-  {
-    "objectID": "books.html#machine-learning",
-    "href": "books.html#machine-learning",
-    "title": "Books",
-    "section": "Machine Learning",
-    "text": "Machine Learning\n\nFundamental of High-Dimensional Statistics\n\nLederer\n\nAn Introduction to Statistical Learning (2nd Edition)\n\nJames, Witten, Hastie and Tibshirani\n\nStatistical Learning from a Regression Perspective (2nd Edition)\n\nBerk\n\nElements of Statistical Learning\n\nHastie, Friedman, and Tibshirani\n\nStatistics for High Dimensional Data\n\nBühlmann and van der Geer\n\nProbability and Statistics for Machine Learning\n\nDas Gupta"
-  },
-  {
-    "objectID": "books.html#time-series",
-    "href": "books.html#time-series",
-    "title": "Books",
-    "section": "Time-Series",
-    "text": "Time-Series\n\nIntroduction to Time Series and Forcasting (3rd Edition)\n\nBrockwell and Davis\n\nTime Series Analysis and Its Applications\n\nShumway and Stoffer\n\nTime Series Analysis for the State-Space Model with R/Stan\n\nHagiwara"
-  },
-  {
-    "objectID": "books.html#study-desing-and-causal-inference",
-    "href": "books.html#study-desing-and-causal-inference",
-    "title": "Books",
-    "section": "Study Desing and Causal Inference",
-    "text": "Study Desing and Causal Inference\n\nCausal Inference What IF\n\nHernán and Robins\n\nDesign of Observational Studies\n\nRosenbaum\n\n\nBolded Titles, I have read thoroughly."
-  },
-  {
-    "objectID": "hw/hw3.html",
-    "href": "hw/hw3.html",
-    "title": "Homework 3",
-    "section": "",
-    "text": "Due 7/12/24 @ 11:59 PM\nYou must comment all your code to receive credit.\nEmail me the *.html file to isaac.qs@csuci.edu.\nUse Monte Carlo Methods to evaluate the following integrals:"
-  },
-  {
-    "objectID": "hw/hw3.html#problem-1",
-    "href": "hw/hw3.html#problem-1",
-    "title": "Homework 3",
-    "section": "Problem 1",
-    "text": "Problem 1\n\\[\n\\int^\\infty_0 e^{-\\frac{x^2 - 4x +4}{8}}dx\n\\]"
-  },
-  {
-    "objectID": "hw/hw3.html#problem-2",
-    "href": "hw/hw3.html#problem-2",
-    "title": "Homework 3",
-    "section": "Problem 2",
-    "text": "Problem 2\n\\[\n\\int^3_1 x^3dx\n\\]"
-  },
-  {
-    "objectID": "hw/hw3.html#problem-3",
-    "href": "hw/hw3.html#problem-3",
-    "title": "Homework 3",
-    "section": "Problem 3",
-    "text": "Problem 3\n\\[\n\\int^\\infty_{-\\infty}\\frac{\\ln(x)}{\\sqrt{2\\pi}}e^{-\\frac{x^2}{2}}dx\n\\]"
-  },
-  {
-    "objectID": "hw/hw1.html",
-    "href": "hw/hw1.html",
-    "title": "Homework 1",
-    "section": "",
-    "text": "Due 6/14/24 @ 11:59 PM\nYou must comment all your code to receive credit.\nSubmit the *.html file to canvas.\nFor all problems, you must use at least one for or while loop."
-  },
-  {
-    "objectID": "hw/hw1.html#problem-1",
-    "href": "hw/hw1.html#problem-1",
-    "title": "Homework 1",
-    "section": "Problem 1",
-    "text": "Problem 1\nUsing the following code:\n\nx &lt;- matrix(rnorm(1500), nrow = 10)\n\nWrite the code to produce the output if you use the rowMeans() on the R object x."
-  },
-  {
-    "objectID": "hw/hw1.html#problem-2",
-    "href": "hw/hw1.html#problem-2",
-    "title": "Homework 1",
-    "section": "Problem 2",
-    "text": "Problem 2\nUsing the following code:\n\ny &lt;- matrix(sample(1:400, 100, replace = T), nrow = 10)\n\nFind the median value for each column of the matrix y."
-  },
-  {
-    "objectID": "hw/hw1.html#problem-3",
-    "href": "hw/hw1.html#problem-3",
-    "title": "Homework 1",
-    "section": "Problem 3",
-    "text": "Problem 3\nWrite the code that will generate the first 1000 numbers of the Fibonacci Sequence."
-  },
-  {
-    "objectID": "hw/hw1.html#problem-4",
-    "href": "hw/hw1.html#problem-4",
-    "title": "Homework 1",
-    "section": "Problem 4",
-    "text": "Problem 4\nWrite a function for the following equation:\n\\[\nf(x, y, z) =\\left\\{\\begin{array}{cc}\nx^2+\\sqrt y & z  = 0 \\\\\nx^2+2x+3+ \\log(y) & z = 1\n\\end{array}\\right.\n\\]\nInclude any error messages if necessary."
-  },
-  {
-    "objectID": "hw/hw1.html#problem-5",
-    "href": "hw/hw1.html#problem-5",
-    "title": "Homework 1",
-    "section": "Problem 5",
-    "text": "Problem 5\nCreate a function that will give you the first x Fibonacci numbers. You must use a for loop."
-  },
-  {
-    "objectID": "hw/hw2.html",
-    "href": "hw/hw2.html",
-    "title": "Homework 2",
-    "section": "",
-    "text": "Due 6/28/24 @ 11:59 PM\nYou must comment all your code to receive credit.\nEmail me the *.html file to isaac.qs@csuci.edu."
-  },
-  {
-    "objectID": "hw/hw2.html#problem-1",
-    "href": "hw/hw2.html#problem-1",
-    "title": "Homework 2",
-    "section": "Problem 1",
-    "text": "Problem 1\nUse the Discrete Inverse Technique to simulate a \\(NB(0.2, 4)\\)."
-  },
-  {
-    "objectID": "hw/hw2.html#problem-2",
-    "href": "hw/hw2.html#problem-2",
-    "title": "Homework 2",
-    "section": "Problem 2",
-    "text": "Problem 2\nUse the Accept-Reject algorithm to generate a \\(Beta(4,6)\\)."
-  },
-  {
-    "objectID": "hw/hw2.html#problem-3",
-    "href": "hw/hw2.html#problem-3",
-    "title": "Homework 2",
-    "section": "Problem 3",
-    "text": "Problem 3\nUse the Accept-Reject algorithm to generate a \\(Weibull(2,3)\\)."
-  },
-  {
-    "objectID": "hw/hw2.html#problem-4",
-    "href": "hw/hw2.html#problem-4",
-    "title": "Homework 2",
-    "section": "Problem 4",
-    "text": "Problem 4\nUse the Accept-Reject algorithm to generate a \\(Pareto(1,4)\\). The pdf of the Pareto distribution can be obtained from the EnvStats Package"
-  },
-  {
-    "objectID": "hw/hw4.html",
-    "href": "hw/hw4.html",
-    "title": "Homework 4",
-    "section": "",
-    "text": "Due 7/26/24 @ 11:59 PM\nYou must comment all your code to receive credit.\nEmail me the *.html file to isaac.qs@csuci.edu.\nUse Monte Carlo Methods to evaluate the following integrals:"
-  },
-  {
-    "objectID": "hw.html",
-    "href": "hw.html",
-    "title": "Homework",
-    "section": "",
-    "text": "Quarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\nBelow are the different homework assignments for the course. Make sure to upload your assignment as a single file on Canvas.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\n\nJul 3, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\n\nJul 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\n\nJun 13, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2024\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/2.html",
-    "href": "posts/2.html",
-    "title": "Week 2",
-    "section": "",
-    "text": "Nested Loops\nWhile Loops\nVectorized Code\nFunctions\n*apply functions"
-  },
-  {
-    "objectID": "posts/2.html#learning-outcomes",
-    "href": "posts/2.html#learning-outcomes",
-    "title": "Week 2",
-    "section": "",
-    "text": "Nested Loops\nWhile Loops\nVectorized Code\nFunctions\n*apply functions"
-  },
-  {
-    "objectID": "posts/2.html#resources",
-    "href": "posts/2.html#resources",
-    "title": "Week 2",
-    "section": "Resources",
-    "text": "Resources\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nVideo"
-  },
-  {
-    "objectID": "posts/4.html",
-    "href": "posts/4.html",
-    "title": "Week 4",
-    "section": "",
-    "text": "Monte Carlo Integration\nImportance Sampling\nMonte Carlo Optimization\nStochastic Gradient Methods\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nVideo 1 | Video 2 | Video 3"
-  },
-  {
-    "objectID": "posts/4.html#learning-outcomes",
-    "href": "posts/4.html#learning-outcomes",
-    "title": "Week 4",
-    "section": "",
-    "text": "Monte Carlo Integration\nImportance Sampling\nMonte Carlo Optimization\nStochastic Gradient Methods\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nVideo 1 | Video 2 | Video 3"
-  },
-  {
-    "objectID": "posts/4.html#further-reading",
-    "href": "posts/4.html#further-reading",
-    "title": "Week 4",
-    "section": "Further Reading",
-    "text": "Further Reading\n\nAvailable from Broome Library\nIntroducing Monte Carlo Methods in R: Chapter 3 and 5\nExplorations in Monte Carlo Methods: Chapter 5 and 6\nComputational Statistics: Chapter 4\n\n\nGreat Books (Don’t Buy)\nSimulation and the Monte Carlo Method: Chapter 5\nStatistical Computing in R: Chapter 6\n\n\nWebsites\nDartmouth"
-  },
-  {
-    "objectID": "posts/week_1.html",
-    "href": "posts/week_1.html",
-    "title": "Week 1",
-    "section": "",
-    "text": "Installing R and RStudio\nScripts\nR Calculator\nR Objects\nR Packages"
-  },
-  {
-    "objectID": "posts/week_1.html#learning-outcomes",
-    "href": "posts/week_1.html#learning-outcomes",
-    "title": "Week 1",
-    "section": "",
-    "text": "Installing R and RStudio\nScripts\nR Calculator\nR Objects\nR Packages"
-  },
-  {
-    "objectID": "posts/week_1.html#resources",
-    "href": "posts/week_1.html#resources",
-    "title": "Week 1",
-    "section": "Resources",
-    "text": "Resources\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nNot Available"
+    "objectID": "lectures/7.html#r-packages",
+    "href": "lectures/7.html#r-packages",
+    "title": "Monte Carlo Methods",
+    "section": "R Packages",
+    "text": "R Packages\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\ntheme_set(theme_bw())\ntheme_update(axis.title = element_text(size = 24))\n\n\ntuesdata &lt;- tidytuesdayR::tt_load(2020, week = 28)\n\n#&gt; \n#&gt;  Downloading file 1 of 1: `coffee_ratings.csv`\n\ncoffee_ratings &lt;- tuesdata$coffee_ratings\ncoffee_aroma &lt;- coffee_ratings |&gt; filter(aroma &gt; 5.5)\n\nshuffle &lt;- function(x){\n  n &lt;- length(x)\n  return(sample(x, n))\n}\n\nresample &lt;- function(df){\n  if (!is.data.frame(df)){\n    stop(\"The df object must be a data frame.\")\n  }\n  dplyr::slice_sample(df, n = nrow(df), replace = T )\n}\n\n\npenguins &lt;- penguins |&gt; drop_na()"
   },
   {
     "objectID": "lectures/3.html#random-process",
@@ -2028,6 +1433,608 @@
     "title": "Monte Carlo Methods",
     "section": "Cauchy Distribution",
     "text": "Cauchy Distribution\n\n\nCode\nnorm &lt;- function(x){\n  rcauchy(10000, location = -1)\n}\nX &lt;- sapply(1:1000, norm)\nXbar &lt;- apply(X, 2, mean)\nXbar |&gt; tibble(x = _) |&gt; \n  ggplot(aes(x=x)) +\n    geom_histogram(bins = 100)"
+  },
+  {
+    "objectID": "posts/week_1.html",
+    "href": "posts/week_1.html",
+    "title": "Week 1",
+    "section": "",
+    "text": "Installing R and RStudio\nScripts\nR Calculator\nR Objects\nR Packages"
+  },
+  {
+    "objectID": "posts/week_1.html#learning-outcomes",
+    "href": "posts/week_1.html#learning-outcomes",
+    "title": "Week 1",
+    "section": "",
+    "text": "Installing R and RStudio\nScripts\nR Calculator\nR Objects\nR Packages"
+  },
+  {
+    "objectID": "posts/week_1.html#resources",
+    "href": "posts/week_1.html#resources",
+    "title": "Week 1",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nNot Available"
+  },
+  {
+    "objectID": "posts/4.html",
+    "href": "posts/4.html",
+    "title": "Week 4",
+    "section": "",
+    "text": "Monte Carlo Integration\nImportance Sampling\nMonte Carlo Optimization\nStochastic Gradient Methods\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nVideo 1 | Video 2 | Video 3"
+  },
+  {
+    "objectID": "posts/4.html#learning-outcomes",
+    "href": "posts/4.html#learning-outcomes",
+    "title": "Week 4",
+    "section": "",
+    "text": "Monte Carlo Integration\nImportance Sampling\nMonte Carlo Optimization\nStochastic Gradient Methods\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nVideo 1 | Video 2 | Video 3"
+  },
+  {
+    "objectID": "posts/4.html#further-reading",
+    "href": "posts/4.html#further-reading",
+    "title": "Week 4",
+    "section": "Further Reading",
+    "text": "Further Reading\n\nAvailable from Broome Library\nIntroducing Monte Carlo Methods in R: Chapter 3 and 5\nExplorations in Monte Carlo Methods: Chapter 5 and 6\nComputational Statistics: Chapter 4\n\n\nGreat Books (Don’t Buy)\nSimulation and the Monte Carlo Method: Chapter 5\nStatistical Computing in R: Chapter 6\n\n\nWebsites\nDartmouth"
+  },
+  {
+    "objectID": "posts/2.html",
+    "href": "posts/2.html",
+    "title": "Week 2",
+    "section": "",
+    "text": "Nested Loops\nWhile Loops\nVectorized Code\nFunctions\n*apply functions"
+  },
+  {
+    "objectID": "posts/2.html#learning-outcomes",
+    "href": "posts/2.html#learning-outcomes",
+    "title": "Week 2",
+    "section": "",
+    "text": "Nested Loops\nWhile Loops\nVectorized Code\nFunctions\n*apply functions"
+  },
+  {
+    "objectID": "posts/2.html#resources",
+    "href": "posts/2.html#resources",
+    "title": "Week 2",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nVideo"
+  },
+  {
+    "objectID": "hw.html",
+    "href": "hw.html",
+    "title": "Homework",
+    "section": "",
+    "text": "Quarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\nBelow are the different homework assignments for the course. Make sure to upload your assignment as a single file on Canvas.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\n\nJul 3, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 3\n\n\n\n\n\n\n\n\n\n\n\nJul 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 2\n\n\n\n\n\n\n\n\n\n\n\nJun 13, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 1\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "hw/hw4.html",
+    "href": "hw/hw4.html",
+    "title": "Homework 4",
+    "section": "",
+    "text": "Due 7/26/24 @ 11:59 PM\nYou must comment all your code to receive credit.\nEmail me the *.html file to isaac.qs@csuci.edu.\nUse Monte Carlo Methods to evaluate the following integrals:"
+  },
+  {
+    "objectID": "hw/hw2.html",
+    "href": "hw/hw2.html",
+    "title": "Homework 2",
+    "section": "",
+    "text": "Due 6/28/24 @ 11:59 PM\nYou must comment all your code to receive credit.\nEmail me the *.html file to isaac.qs@csuci.edu."
+  },
+  {
+    "objectID": "hw/hw2.html#problem-1",
+    "href": "hw/hw2.html#problem-1",
+    "title": "Homework 2",
+    "section": "Problem 1",
+    "text": "Problem 1\nUse the Discrete Inverse Technique to simulate a \\(NB(0.2, 4)\\)."
+  },
+  {
+    "objectID": "hw/hw2.html#problem-2",
+    "href": "hw/hw2.html#problem-2",
+    "title": "Homework 2",
+    "section": "Problem 2",
+    "text": "Problem 2\nUse the Accept-Reject algorithm to generate a \\(Beta(4,6)\\)."
+  },
+  {
+    "objectID": "hw/hw2.html#problem-3",
+    "href": "hw/hw2.html#problem-3",
+    "title": "Homework 2",
+    "section": "Problem 3",
+    "text": "Problem 3\nUse the Accept-Reject algorithm to generate a \\(Weibull(2,3)\\)."
+  },
+  {
+    "objectID": "hw/hw2.html#problem-4",
+    "href": "hw/hw2.html#problem-4",
+    "title": "Homework 2",
+    "section": "Problem 4",
+    "text": "Problem 4\nUse the Accept-Reject algorithm to generate a \\(Pareto(1,4)\\). The pdf of the Pareto distribution can be obtained from the EnvStats Package"
+  },
+  {
+    "objectID": "hw/hw1.html",
+    "href": "hw/hw1.html",
+    "title": "Homework 1",
+    "section": "",
+    "text": "Due 6/14/24 @ 11:59 PM\nYou must comment all your code to receive credit.\nSubmit the *.html file to canvas.\nFor all problems, you must use at least one for or while loop."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-1",
+    "href": "hw/hw1.html#problem-1",
+    "title": "Homework 1",
+    "section": "Problem 1",
+    "text": "Problem 1\nUsing the following code:\n\nx &lt;- matrix(rnorm(1500), nrow = 10)\n\nWrite the code to produce the output if you use the rowMeans() on the R object x."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-2",
+    "href": "hw/hw1.html#problem-2",
+    "title": "Homework 1",
+    "section": "Problem 2",
+    "text": "Problem 2\nUsing the following code:\n\ny &lt;- matrix(sample(1:400, 100, replace = T), nrow = 10)\n\nFind the median value for each column of the matrix y."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-3",
+    "href": "hw/hw1.html#problem-3",
+    "title": "Homework 1",
+    "section": "Problem 3",
+    "text": "Problem 3\nWrite the code that will generate the first 1000 numbers of the Fibonacci Sequence."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-4",
+    "href": "hw/hw1.html#problem-4",
+    "title": "Homework 1",
+    "section": "Problem 4",
+    "text": "Problem 4\nWrite a function for the following equation:\n\\[\nf(x, y, z) =\\left\\{\\begin{array}{cc}\nx^2+\\sqrt y & z  = 0 \\\\\nx^2+2x+3+ \\log(y) & z = 1\n\\end{array}\\right.\n\\]\nInclude any error messages if necessary."
+  },
+  {
+    "objectID": "hw/hw1.html#problem-5",
+    "href": "hw/hw1.html#problem-5",
+    "title": "Homework 1",
+    "section": "Problem 5",
+    "text": "Problem 5\nCreate a function that will give you the first x Fibonacci numbers. You must use a for loop."
+  },
+  {
+    "objectID": "hw/hw3.html",
+    "href": "hw/hw3.html",
+    "title": "Homework 3",
+    "section": "",
+    "text": "Due 7/12/24 @ 11:59 PM\nYou must comment all your code to receive credit.\nEmail me the *.html file to isaac.qs@csuci.edu.\nUse Monte Carlo Methods to evaluate the following integrals:"
+  },
+  {
+    "objectID": "hw/hw3.html#problem-1",
+    "href": "hw/hw3.html#problem-1",
+    "title": "Homework 3",
+    "section": "Problem 1",
+    "text": "Problem 1\n\\[\n\\int^\\infty_0 e^{-\\frac{x^2 - 4x +4}{8}}dx\n\\]"
+  },
+  {
+    "objectID": "hw/hw3.html#problem-2",
+    "href": "hw/hw3.html#problem-2",
+    "title": "Homework 3",
+    "section": "Problem 2",
+    "text": "Problem 2\n\\[\n\\int^3_1 x^3dx\n\\]"
+  },
+  {
+    "objectID": "hw/hw3.html#problem-3",
+    "href": "hw/hw3.html#problem-3",
+    "title": "Homework 3",
+    "section": "Problem 3",
+    "text": "Problem 3\n\\[\n\\int^\\infty_{-\\infty}\\frac{\\ln(x)}{\\sqrt{2\\pi}}e^{-\\frac{x^2}{2}}dx\n\\]"
+  },
+  {
+    "objectID": "books.html",
+    "href": "books.html",
+    "title": "Books",
+    "section": "",
+    "text": "A list of recommended books to learn more about Statistics, the majority are freely available from the Broome Library:"
+  },
+  {
+    "objectID": "books.html#basics",
+    "href": "books.html#basics",
+    "title": "Books",
+    "section": "Basics",
+    "text": "Basics\n\nIntroduction to Statistics and Data Analysis\n\nHeumann and Shalabh\n\nStatistical Foundations, Reasoning and Inference\n\nKauermann, Küchenhoff, and Heumann"
+  },
+  {
+    "objectID": "books.html#regression",
+    "href": "books.html#regression",
+    "title": "Books",
+    "section": "Regression",
+    "text": "Regression\n\nGeneralized Linear Models With Examples in R\n\nDunn and Smyth\nGraduate\n\nLinear and Generalized Linear Mixed Models and Their Applications (2nd Edition)\n\nJiang and Nguyen\nGraudate\n\nRegression Modeling Strategies\n\nHarrell\nUndergraduate\n\nVector Generalized Linear and Additive Models\n\nYee\nGraduate"
+  },
+  {
+    "objectID": "books.html#nonparametric",
+    "href": "books.html#nonparametric",
+    "title": "Books",
+    "section": "Nonparametric",
+    "text": "Nonparametric\n\nSemiparametric Regression with R\n\nHarezlak, Ruppert, and Wand\nGraduate"
+  },
+  {
+    "objectID": "books.html#computational",
+    "href": "books.html#computational",
+    "title": "Books",
+    "section": "Computational",
+    "text": "Computational\n\nBootstrap Methods with applications in R\n\nDikta and Scheer\nGraduate\n\nModern Optimization with R (2nd Edition)\n\nCortez\nGraduate\n\nComputational Statistics\n\nGentle\n\nMonte Carlo and Quasi-Monte Carlo Sampling\n\nLemieux\n\nStatistics With Julia\n\nNazarathy andKlok\n\nIntroducing Monte Carlo Methods in R\n\nRobert and Casella\n\nPermutation Statistical Methods with R\n\nBerry, Kvamme, Johnston, and Mielke\n\nMonte Carlo Strategies in Scientific Computing\n\nLiu"
+  },
+  {
+    "objectID": "books.html#bayesian",
+    "href": "books.html#bayesian",
+    "title": "Books",
+    "section": "Bayesian",
+    "text": "Bayesian\n\nIntroduction to Bayesian Inference, Methods and Computation\n\nHeard\n\nApplied Bayesian Statistics\n\nCowles\n\nBayesian Statistical Modeling with Stan, R, and Python\n\nMatsuura\n\nBayesian Essentials in R\n\nMarin and Robert"
+  },
+  {
+    "objectID": "books.html#theoretical",
+    "href": "books.html#theoretical",
+    "title": "Books",
+    "section": "Theoretical",
+    "text": "Theoretical\n\nEssentials of Stochastic Processes (3rd Edition)\n\nDurrett\nGraduate\n\nA Concise Introduction to Measure Theory\n\nShirali\nGraduate\n\nLarge Sample Techniques for Statistics (2nd Edition)\n\nJiang\nGraduate\n\nA Course in Mathematical Statistics and Large Sample Theory\n\nBhattacharya, Lin, and Patrangenaru\nGraduate\n\nMixture and Hidden Markov Models with R\n\nVisser and Speekenbrink\nUndergraduate\n\nModern Mathematical Statistics (3rd Edition)\n\nDevore, Berk, and Carlton\nUndergraduate\n\nProbability Theory (3rd Edition)\n\nKlenke\nGraduate\n\nTesting Statistical Hypotheses (4th Edition)\n\nLehmann and Romano\nGraduate\n\nTheory of Point Estimation\n\nLehmann and Casella\nGraduate\nMay not be available"
+  },
+  {
+    "objectID": "books.html#longitudinal-data-analysis",
+    "href": "books.html#longitudinal-data-analysis",
+    "title": "Books",
+    "section": "Longitudinal Data Analysis",
+    "text": "Longitudinal Data Analysis\n\nLongitudinal Categorical Data Analysis\n\nSutradhar"
+  },
+  {
+    "objectID": "books.html#survival-analysis",
+    "href": "books.html#survival-analysis",
+    "title": "Books",
+    "section": "Survival Analysis",
+    "text": "Survival Analysis\n\nStatistical Modelling of Survival Data with Random Effects\n\nHa, Jeong, and Lee\n\nSurvival Analysis (3rd Edition)\n\nKleinbaum and Klein\n\nApplied Survival Analysis in R\n\nMoore\n\nBayesian Survival Analysis\n\nIbrahim, Chen, and Sinha\n\nSurvival Analysis Techniques for Censored and Truncated Data (2nd Edition)\n\nKlein and Moeschberger"
+  },
+  {
+    "objectID": "books.html#machine-learning",
+    "href": "books.html#machine-learning",
+    "title": "Books",
+    "section": "Machine Learning",
+    "text": "Machine Learning\n\nFundamental of High-Dimensional Statistics\n\nLederer\n\nAn Introduction to Statistical Learning (2nd Edition)\n\nJames, Witten, Hastie and Tibshirani\n\nStatistical Learning from a Regression Perspective (2nd Edition)\n\nBerk\n\nElements of Statistical Learning\n\nHastie, Friedman, and Tibshirani\n\nStatistics for High Dimensional Data\n\nBühlmann and van der Geer\n\nProbability and Statistics for Machine Learning\n\nDas Gupta"
+  },
+  {
+    "objectID": "books.html#time-series",
+    "href": "books.html#time-series",
+    "title": "Books",
+    "section": "Time-Series",
+    "text": "Time-Series\n\nIntroduction to Time Series and Forcasting (3rd Edition)\n\nBrockwell and Davis\n\nTime Series Analysis and Its Applications\n\nShumway and Stoffer\n\nTime Series Analysis for the State-Space Model with R/Stan\n\nHagiwara"
+  },
+  {
+    "objectID": "books.html#study-desing-and-causal-inference",
+    "href": "books.html#study-desing-and-causal-inference",
+    "title": "Books",
+    "section": "Study Desing and Causal Inference",
+    "text": "Study Desing and Causal Inference\n\nCausal Inference What IF\n\nHernán and Robins\n\nDesign of Observational Studies\n\nRosenbaum\n\n\nBolded Titles, I have read thoroughly."
+  },
+  {
+    "objectID": "posts/3.html",
+    "href": "posts/3.html",
+    "title": "Week 3",
+    "section": "",
+    "text": "Random Variables\nRandom Number Generation\nRandom Variable Generations\nCentral Limit Theorem"
+  },
+  {
+    "objectID": "posts/3.html#learning-outcomes",
+    "href": "posts/3.html#learning-outcomes",
+    "title": "Week 3",
+    "section": "",
+    "text": "Random Variables\nRandom Number Generation\nRandom Variable Generations\nCentral Limit Theorem"
+  },
+  {
+    "objectID": "posts/3.html#resources",
+    "href": "posts/3.html#resources",
+    "title": "Week 3",
+    "section": "Resources",
+    "text": "Resources\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nVideo"
+  },
+  {
+    "objectID": "posts/3.html#further-reading",
+    "href": "posts/3.html#further-reading",
+    "title": "Week 3",
+    "section": "Further Reading",
+    "text": "Further Reading\n\nAvailable from Broome Library\nIntroducing Monte Carlo Methods in R: Chapter 2\nExplorations in Monte Carlo Methods: Chapter 2\nComputational Statistics: Chapter 7\n\n\nGreat Books (Don’t Buy)\nSimulation and the Monte Carlo Method: Chapter 2\nStatistical Computing in R: Chapter 3\n\n\nWebsites\nStatLect"
+  },
+  {
+    "objectID": "posts/6.html",
+    "href": "posts/6.html",
+    "title": "Week 6",
+    "section": "",
+    "text": "Power Analysis\nPermutation Tests\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide"
+  },
+  {
+    "objectID": "posts/6.html#learning-outcomes",
+    "href": "posts/6.html#learning-outcomes",
+    "title": "Week 6",
+    "section": "",
+    "text": "Power Analysis\nPermutation Tests\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide"
+  },
+  {
+    "objectID": "posts/6.html#further-reading",
+    "href": "posts/6.html#further-reading",
+    "title": "Week 6",
+    "section": "Further Reading",
+    "text": "Further Reading\n\nAvailable from Broome Library\nComputational Statistics: Chapter 12\nPermutation Statistical Methods with R\n\n\nGreat Books (Don’t Buy)\nStatistical Computing in R: Chapter 10\n\n\nWebsites"
+  },
+  {
+    "objectID": "posts/5.html",
+    "href": "posts/5.html",
+    "title": "Week 5",
+    "section": "",
+    "text": "Hypothesis Testing\nMonte Carlo P-Value\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nVideo 1 | Video 2"
+  },
+  {
+    "objectID": "posts/5.html#learning-outcomes",
+    "href": "posts/5.html#learning-outcomes",
+    "title": "Week 5",
+    "section": "",
+    "text": "Hypothesis Testing\nMonte Carlo P-Value\n\n\n\n\nLecture\nVideos\n\n\n\n\nSlide\nVideo 1 | Video 2"
+  },
+  {
+    "objectID": "posts/5.html#further-reading",
+    "href": "posts/5.html#further-reading",
+    "title": "Week 5",
+    "section": "Further Reading",
+    "text": "Further Reading\n\nAvailable from Broome Library\nComputational Statistics: Chapter 11\n\n\nGreat Books (Don’t Buy)\nStatistical Computing in R: Chapter 7\n\n\nWebsites\nData Science and Statistical Computing"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Monte Carlo Methods!",
+    "section": "",
+    "text": "Brief Introduction\n\n\n\n\n\nWelcome to the course! This is the home page of the course where I will provide a recap on what was covered in the week. Here I will post any documents or videos for your reference. If you have any questions, please email me at isaac.qs@csuci.edu.\n\n\n\n\n\n\n\n\n\nQuarto Template for HW\n\n\n\n\n\nDownload it here: Github Repo\nOR Type this in the RStudio terminal:\nquarto use template inqs909/m408_hw\nType Y for the trust author. Type a name of a new directory in where to save the file. For example, type hw1.\nOR Save this in an empty source quarto document:\n---\ntitle: \"Title\"\nauthor: \"Name Here\"\ndate: \"`r format(Sys.time(),'%m-%d-%Y')`\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n    code-fold: true\n    code-tools: true\n    code-line-numbers: true\n    embed-resources: true\nknitr:\n  opts_chunk:\n    echo: true\n    message: false\n    warning: false\n    error: true\n    tidy: styler\n    R.options:\n      digits: 3\n      max.print: 100\n---\n\n## Problem 1\n\n## Problem 2\n\n## Problem 3\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Statistics Book\n\n\n\n\n\nhttps://openintro-ims.netlify.app/\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\n\n\n\nMEET Wednesday (7/3)\n\n\n\n\n\nApr 24, 2028\n\n\n\n\n\n\n\nWeek 5\n\n\n\n\n\nMEET Wednesday (6/26)\n\n\n\n\n\nJun 24, 2027\n\n\n\n\n\n\n\nWeek 4\n\n\n\n\n\nMEET Tuesday (6/18)\n\n\n\n\n\nJan 24, 2027\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\nMEET Wednesday (6/12)\n\n\n\n\n\nJun 7, 2024\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\nMEET TUESDAY (6/4) INSTEAD OF WED.\n\n\n\n\n\nJun 1, 2024\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\nThis week we will dive into R and control flow programming.\n\n\n\n\n\nMay 22, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "lectures/2.html#homework",
+    "href": "lectures/2.html#homework",
+    "title": "Functional Programming",
+    "section": "Homework",
+    "text": "Homework\nHomework 1 is assigned and can be found here: http://m497.inqs.info/hw.html"
+  },
+  {
+    "objectID": "lectures/2.html#quarto-documentation",
+    "href": "lectures/2.html#quarto-documentation",
+    "title": "Functional Programming",
+    "section": "Quarto Documentation",
+    "text": "Quarto Documentation\nquarto use template inqs909/qs_hw"
+  },
+  {
+    "objectID": "lectures/2.html#quarto-resources",
+    "href": "lectures/2.html#quarto-resources",
+    "title": "Functional Programming",
+    "section": "Quarto Resources",
+    "text": "Quarto Resources\n\nhttps://www.inqs.info/stat_comp/document.html\nhttps://quarto.org/docs/output-formats/html-basics.html"
+  },
+  {
+    "objectID": "lectures/2.html#nested-for-loops-1",
+    "href": "lectures/2.html#nested-for-loops-1",
+    "title": "Functional Programming",
+    "section": "Nested for Loops",
+    "text": "Nested for Loops\nNested for loops are for loops within another for loop. You can stack these loops as much as needed. Just make sure the index is different for each loop. The general format for a loop goes as follow:\n\nfor (i in vector_1){\n  for (ii in vector_2){\n    perform task\n  }\n}"
+  },
+  {
+    "objectID": "lectures/2.html#example",
+    "href": "lectures/2.html#example",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nWithout using the sd() function, compute the standard deviation for each column of the matrix:\n\nx &lt;- matrix(rnorm(1000), nrow = 10)\n\n\\[\ns^2 = \\frac{1}{n-1}\\sum^n_{i=1}(x_i-\\bar x)^2\n\\]"
+  },
+  {
+    "objectID": "lectures/2.html#example-1",
+    "href": "lectures/2.html#example-1",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "lectures/2.html#while-loops-1",
+    "href": "lectures/2.html#while-loops-1",
+    "title": "Functional Programming",
+    "section": "while Loops",
+    "text": "while Loops\nA while loop is a combination of a for loop and a break statement. The loop will continue indefinitely until a condition becomes false.\n\n# Initial Condition\ncondition &lt;- starting TRUE condition\n\nwhile (condition){\n  perform task\n  condition &lt;- update condition\n}"
+  },
+  {
+    "objectID": "lectures/2.html#example-2",
+    "href": "lectures/2.html#example-2",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nSimulate from a \\(N(0,1)\\) distribution until you have 50 positive numbers.\n\n\nCode\nn &lt;- 0\npos_num &lt;- c()\n\nwhile (n &lt; 51){\n  x &lt;- rnorm(1)\n  if (x &gt; 0) {\n    pos_num &lt;- c(pos_num, x)\n    n &lt;- n + 1\n  }\n}\n\npos_num"
+  },
+  {
+    "objectID": "lectures/2.html#example-3",
+    "href": "lectures/2.html#example-3",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nFind the value of \\(x\\) where the function \\(y=1/x\\) relative converges (\\(\\frac{|y_{old}-y_{new}|}{y_{old}}\\)) at a level of \\(10^-6\\) as \\(x\\rightarrow \\infty\\).\n\n\nCode\ndiff &lt;- 10\nx &lt;- 2\ny_old &lt;- 1\nwhile (diff &gt; 1e-6){\n  y_new &lt;- 1 / x\n  diff &lt;- abs(y_old - y_new) / y_old\n  x &lt;- x + 1\n  y_old &lt;- y_new\n}"
+  },
+  {
+    "objectID": "lectures/2.html#example-4",
+    "href": "lectures/2.html#example-4",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nSimulate from a \\(Binom(1,.2)\\) distribution until the sum of the random variables generated is 50.\n\n\nCode\nsum_bin &lt;- 0\nx &lt;- c()\nwhile (sum_bin &lt;51) {\n  x &lt;- c(x, rbinom(1, 1, 0.2))\n  sum_bin &lt;- sum(x)\n}\nsum_bin\nlength(x)"
+  },
+  {
+    "objectID": "lectures/2.html#example-5",
+    "href": "lectures/2.html#example-5",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "lectures/2.html#example-6",
+    "href": "lectures/2.html#example-6",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nUsing the code below:\n\nx &lt;- rnorm(5000)\n\nCreate a new vector containing all the positive values of x. The new vector should be less than 5000.\nAnswer:\n\n\nCode\nnn &lt;- length(x)\npos &lt;- c()\nfor (i in 1:nn){\n  if (x[i] &gt; 0) {\n    pos &lt;- c(pos, x[i])\n  }\n}\npos"
+  },
+  {
+    "objectID": "lectures/2.html#example-7",
+    "href": "lectures/2.html#example-7",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\n\\[\nf(x,y) = x^2 + y^2 + \\ln(x+y)\n\\]\nFind all the values of \\(f(x,y)\\) for every combination of \\(x \\in \\{1, 8, 13, 25, 42, 67, 95\\}\\) and \\(y \\in \\{6, 12, 18, 52, 61, 79, 83\\}\\)\nStore values in a \\(7\\times 7\\) matrix.\nAnswer:\n\n\nCode\nx &lt;- c(1, 8, 13, 25, 42, 67, 95)\ny &lt;- c(6, 12, 18, 52, 61, 79, 83)\nres &lt;- matrix(nrow = 7, ncol = 7)\ncolnames(res) &lt;- as.character(x)\nrownames(res) &lt;- as.character(y)\n\nfor (i in 1:7){\n  for (ii in 1:7){\n    res[ii,i] &lt;- x[i]^2 + y[ii]^2 + log(x[i] + y[ii])\n  }\n}\nprint(res)"
+  },
+  {
+    "objectID": "lectures/2.html#vectorized-code-1",
+    "href": "lectures/2.html#vectorized-code-1",
+    "title": "Functional Programming",
+    "section": "Vectorized Code",
+    "text": "Vectorized Code\nVectorized code is programming where functions or processes are applied to vectors instead of individual values.\n\nIndicating a loop is not necessary to apply a function to each individual element in a vector."
+  },
+  {
+    "objectID": "lectures/2.html#vectorized-code-2",
+    "href": "lectures/2.html#vectorized-code-2",
+    "title": "Functional Programming",
+    "section": "Vectorized Code",
+    "text": "Vectorized Code\nMathematical Operations are conducted element-wise to 2 or more vectors\n\nElement 1 in vector x is applied to element 1 in vector y"
+  },
+  {
+    "objectID": "lectures/2.html#example-8",
+    "href": "lectures/2.html#example-8",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "lectures/2.html#example-9",
+    "href": "lectures/2.html#example-9",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "lectures/2.html#built-in-functions-1",
+    "href": "lectures/2.html#built-in-functions-1",
+    "title": "Functional Programming",
+    "section": "Built-in Functions",
+    "text": "Built-in Functions\nThere are several available functions in R to conduct specific statistical methods or tasks"
+  },
+  {
+    "objectID": "lectures/2.html#help-documentation",
+    "href": "lectures/2.html#help-documentation",
+    "title": "Functional Programming",
+    "section": "Help Documentation",
+    "text": "Help Documentation\n\n\n\n\n\n\n\nSection\nDescription\n\n\n\n\nDescription\nProvides a brief introduction of the function\n\n\nUsage\nProvides potential usage of the function\n\n\nArguments\nArguments that the function can take\n\n\nDetails\nAn in depth description of the function\n\n\nValue\nProvides information of the output produced by the function\n\n\nNotes\nAny need to know information about the function\n\n\nAuthors\nDevelopers of the function\n\n\nReferences\nReferences to the model and function\n\n\nSee Also\nProvide information of supporting functions\n\n\nExamples\nExamples of the function"
+  },
+  {
+    "objectID": "lectures/2.html#generic-functions",
+    "href": "lectures/2.html#generic-functions",
+    "title": "Functional Programming",
+    "section": "Generic Functions",
+    "text": "Generic Functions\nSeveral R objects have a known class attached to it. A specialized object designed to be read by generic functions, such as summary() and plot().\nFor example, the summary() is a generic for several types of functions: summary.aov(), summary.lm(), summary.glm(), and many more."
+  },
+  {
+    "objectID": "lectures/2.html#commonly-used-function",
+    "href": "lectures/2.html#commonly-used-function",
+    "title": "Functional Programming",
+    "section": "Commonly-used Function",
+    "text": "Commonly-used Function\n\n\n\nFunctions\nDescription\n\n\n\n\naov()\nFits an ANOVA Model\n\n\nlm()\nFits a linear model\n\n\nglm()\nFits a general linear model\n\n\nt.test()\nConducts a t-test"
+  },
+  {
+    "objectID": "lectures/2.html#user-built-functions-1",
+    "href": "lectures/2.html#user-built-functions-1",
+    "title": "Functional Programming",
+    "section": "User-built functions",
+    "text": "User-built functions\n\nFunctions created by the user for analysis\nNeeds to be ran once to the R environment\nWill be lost when R session is closed"
+  },
+  {
+    "objectID": "lectures/2.html#anatomy",
+    "href": "lectures/2.html#anatomy",
+    "title": "Functional Programming",
+    "section": "Anatomy",
+    "text": "Anatomy\n\nname_of_function &lt;- function(data_1, data_2 = NULL, \n                             argument_1, argument_2 = TRUE, argument_3 = NULL,\n                             ...){\n  # Conduct Task\n  # Conduct Task\n  output_object &lt;- Tasks\n  return(output_object)\n}\n\n\n\nfunction: used to construct the function\ndata1: first data argument that needs to supplied\ndata2: second data argument that does not need to be supplied\nargument1: first argument must be supplied to alter function\nargument2: second argument to alter function, set to TRUE\nargument3: third argument that does not need to be supplied\n…: additional arguments supplied to other functions"
+  },
+  {
+    "objectID": "lectures/2.html#example-10",
+    "href": "lectures/2.html#example-10",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nCreate a function for\n\\[\ny = \\ln(x^2)\n\\]"
+  },
+  {
+    "objectID": "lectures/2.html#example-11",
+    "href": "lectures/2.html#example-11",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nCreate a function for\n\\[\nf(x) = \\left\\{\\begin{array}{cc}\nx^3 & x&lt;0\\\\\nx^2 + 5 & \\mathrm{otherwise}\n\\end{array} \\right.\n\\]"
+  },
+  {
+    "objectID": "lectures/2.html#example-12",
+    "href": "lectures/2.html#example-12",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nCreate a function for\n\\[\nf(x,y) = \\left\\{\\begin{array}{cc}\nx^3 e^y &  x&lt;0\\ \\\\\nx^2 + 5 + \\ln(y) & \\mathrm{otherwise}\n\\end{array} \\right.\n\\]"
+  },
+  {
+    "objectID": "lectures/2.html#example-13",
+    "href": "lectures/2.html#example-13",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nCreate the function that allows your to compute the z-score of a specific value x using the sampling distribution from a set of data (y vector):\n\\[\nz =  \\frac{x-\\bar y}{\\sqrt{s^2_{y}/n_y}}\n\\]"
+  },
+  {
+    "objectID": "lectures/2.html#example-14",
+    "href": "lectures/2.html#example-14",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "lectures/2.html#apply-1",
+    "href": "lectures/2.html#apply-1",
+    "title": "Functional Programming",
+    "section": "apply()",
+    "text": "apply()\nThe apply function returns a vector, array, or list of values by applying a function to the margins of an array. You will need to specify the following arguments:\n\nX: an array to be indexed and applied\nMARGIN: specifyng which index(es) to subset by\nFUN: function to be applied\n…: further arguments to be applied to FUN, must be labeled\n\n\napply(X, MARGIN, FUN, ...)"
+  },
+  {
+    "objectID": "lectures/2.html#example-15",
+    "href": "lectures/2.html#example-15",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nFind the standard deviation of all the columns of the following matrix:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "lectures/2.html#example-16",
+    "href": "lectures/2.html#example-16",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nFind the \\(25th\\), \\(50th\\), and \\(75th\\) quartiles for each row of the following matrix:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "lectures/2.html#lapply-1",
+    "href": "lectures/2.html#lapply-1",
+    "title": "Functional Programming",
+    "section": "lapply()",
+    "text": "lapply()\nThe lapply function applies a function to all the elements of a vector or matrix, and it will return a list. You will need to specify the following arguments:\n\nX: object to be iterated\nFUN: a function to be applied\n…: further arguments to be passed along to FUN\n\n\nlapply(X, FUN, ...)"
+  },
+  {
+    "objectID": "lectures/2.html#example-17",
+    "href": "lectures/2.html#example-17",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nCreate a function that returns a labeled list for with the following values: mean, standard deviation, median, max, and min."
+  },
+  {
+    "objectID": "lectures/2.html#sapply-1",
+    "href": "lectures/2.html#sapply-1",
+    "title": "Functional Programming",
+    "section": "sapply()",
+    "text": "sapply()\nThe sapply() function will apply a function to each element of a list or vector, and it will return a simplified object, vector, matrix, or array. The sapply() function uses 4 main arguments:\n\nX: a vector or list to be iterated\nFUN: a function to be applied\n…: arguments passed along to FUN, must be labeled\nsimplify: indicates how to simplify the function, defaults to n-dimensional array based on output\n\n\nsapply(X, FUN, ..., simplify = TRUE)"
+  },
+  {
+    "objectID": "lectures/2.html#example-18",
+    "href": "lectures/2.html#example-18",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nUsing the vector below, compute the length of each string using sapply and str_length() from stringr\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "lectures/2.html#example-19",
+    "href": "lectures/2.html#example-19",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nUsing the list generated below, compute the mean of each element of the list using sapply.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "lectures/2.html#example-20",
+    "href": "lectures/2.html#example-20",
+    "title": "Functional Programming",
+    "section": "Example",
+    "text": "Example\nUsing the vector below, use the sapply() to find \\(\\log(x)\\) for each value and return a matrix:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "lectures/1.html#introductions",

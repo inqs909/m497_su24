@@ -1,0 +1,73 @@
+---
+title: "Monte Carlo Methods"
+subtitle: "Statistical Inference"
+format:
+  revealjs:
+    include-in-header: "math_commands.html"
+    scrollable: true
+    navigation-mode: vertical
+    controls-layout: bottom-right
+    controls-tutorial: true
+    incremental: false 
+    chalkboard:
+      src: chalkboard.json
+      storage: chalkboard_pres
+      theme: whiteboard
+      chalk-width: 4
+engine: knitr
+knitr:
+  opts_chunk: 
+    code-fold: true
+    echo: true
+    eval: true
+    comment: "#>" 
+filters: 
+  - reveal-header
+  - reveal-auto-agenda
+  - code-fullscreen
+  - webr
+webr: 
+  show-startup-message: true
+  packages: ['ggplot2', 'dplyr', 'stringr']
+editor_options: 
+  chunk_output_type: console
+---
+## R Packages
+
+```{r}
+#| code-fold: false
+
+library(tidyverse)
+library(palmerpenguins)
+
+theme_set(theme_bw())
+theme_update(axis.title = element_text(size = 24))
+
+
+tuesdata <- tidytuesdayR::tt_load(2020, week = 28)
+coffee_ratings <- tuesdata$coffee_ratings
+coffee_aroma <- coffee_ratings |> filter(aroma > 5.5)
+
+shuffle <- function(x){
+  n <- length(x)
+  return(sample(x, n))
+}
+
+resample <- function(df){
+  if (!is.data.frame(df)){
+    stop("The df object must be a data frame.")
+  }
+  dplyr::slice_sample(df, n = nrow(df), replace = T )
+}
+
+
+penguins <- penguins |> drop_na() 
+```
+
+
+# Bootstrap
+
+# Parameteric Bootstrap
+
+# Nonparameteric Bootstrap
+
