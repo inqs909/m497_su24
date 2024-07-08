@@ -1,7 +1,7 @@
 ---
-title:  Week 6
-date: 6-28-24
-description: MEET Wednesday (7/3)
+title:  Week 7
+date: 7-07-24
+description: MEET Tuesday (7/9)
 editor: visual
 editor_options: 
   chunk_output_type: console
@@ -9,9 +9,7 @@ editor_options:
 
 ## Learning Outcomes
 
--   Power Analysis
-
--   Permutation Tests
+-   Bootstrapping Methods
 
 | Lecture                                                | Videos                                                                             |
 |:-------------------------------------------------------|:-----------------------------------------------------------------------------------|
@@ -21,12 +19,10 @@ editor_options:
 
 ### Available from Broome Library
 
-[Computational Statistics](https://link-springer-com.ezproxy.csuci.edu/book/10.1007/978-0-387-98144-4): Chapter 12
-
-[Permutation Statistical Methods with R](https://link-springer-com.ezproxy.csuci.edu/book/10.1007/978-3-030-74361-1)
+[Computational Statistics](https://link-springer-com.ezproxy.csuci.edu/book/10.1007/978-0-387-98144-4): Chapter 13
 
 ### Great Books (Don't Buy)
 
-[Statistical Computing in R](https://www.routledge.com/Statistical-Computing-with-R-Second-Edition/Rizzo/p/book/9781466553323): Chapter 10
+[Statistical Computing in R](https://www.routledge.com/Statistical-Computing-with-R-Second-Edition/Rizzo/p/book/9781466553323): Chapter 8
 
 ### Websites

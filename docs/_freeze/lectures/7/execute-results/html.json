@@ -1,0 +1,19 @@
+{
+  "hash": "12bfb0578f424458e433123a95686746",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Monte Carlo Methods\"\nsubtitle: \"Statistical Inference\"\nformat:\n  revealjs:\n    include-in-header: \"math_commands.html\"\n    scrollable: true\n    navigation-mode: vertical\n    controls-layout: bottom-right\n    controls-tutorial: true\n    incremental: false \n    chalkboard:\n      src: chalkboard.json\n      storage: chalkboard_pres\n      theme: whiteboard\n      chalk-width: 4\nengine: knitr\nknitr:\n  opts_chunk: \n    code-fold: true\n    echo: true\n    eval: true\n    comment: \"#>\" \nfilters: \n  - reveal-header\n  - reveal-auto-agenda\n  - code-fullscreen\n  - webr\nwebr: \n  show-startup-message: true\n  packages: ['ggplot2', 'dplyr', 'stringr']\neditor_options: \n  chunk_output_type: console\n---\n\n## R Packages\n\n\n::: {.cell}\n\n```{.r .cell-code  code-fold=\"false\"}\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\ntheme_set(theme_bw())\ntheme_update(axis.title = element_text(size = 24))\n\n\ntuesdata <- tidytuesdayR::tt_load(2020, week = 28)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n#> \n#> \tDownloading file 1 of 1: `coffee_ratings.csv`\n```\n\n\n:::\n\n```{.r .cell-code  code-fold=\"false\"}\ncoffee_ratings <- tuesdata$coffee_ratings\ncoffee_aroma <- coffee_ratings |> filter(aroma > 5.5)\n\nshuffle <- function(x){\n  n <- length(x)\n  return(sample(x, n))\n}\n\nresample <- function(df){\n  if (!is.data.frame(df)){\n    stop(\"The df object must be a data frame.\")\n  }\n  dplyr::slice_sample(df, n = nrow(df), replace = T )\n}\n\n\npenguins <- penguins |> drop_na() \n```\n:::\n\n\n\n# Bootstrap\n\n# Parameteric Bootstrap\n\n# Nonparameteric Bootstrap\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
