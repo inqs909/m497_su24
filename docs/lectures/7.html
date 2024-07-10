@@ -543,7 +543,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Monte Carlo Methods</h1>
-  <p class="subtitle">Statistical Inference</p>
+  <p class="subtitle">Bootstrap Methods</p>
 
 <div class="quarto-title-authors">
 </div>
@@ -583,6 +583,7 @@
 <span id="cb3-17"><a></a>penguins <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span> <span class="fu">drop_na</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
+<section>
 <section id="bootstrap" class="title-slide slide level1 agenda-slide center">
 <h1>Bootstrap</h1>
 <div class="agenda">
@@ -596,10 +597,52 @@
 <li><div class="agenda-inactive agenda-post-active">
 <p>Nonparameteric Bootstrap</p>
 </div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Markov Chain Monte Carlo Methods</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Bayesian Analysis</p>
+</div></li>
 </ul>
 </div>
 </section>
-
+<section id="empirical-distribution-function" class="slide level2">
+<h2>Empirical Distribution Function</h2>
+<p>The empirical distribution function is designed to estimate a random variable’s distribution function. For an observed sample <span class="math inline">\(\{x_i\}^n_{i=1}\)</span>, the empirical distribution function is</p>
+<p><span class="math display">\[
+F_n(x) \left\{\begin{array}{cc}
+0, &amp; x &lt; x_{(1)} \\
+\frac{i}{n},&amp; x_{(i)} \leq x &lt;x_{(i+1)},\ i = 1,\ldots,n-1\\
+1,&amp; x_{(n)}\leq x
+\end{array}
+\right.
+\]</span></p>
+<p>where <span class="math inline">\(x_{(1)}, \ldots, x_{(n)}\)</span> are the ordered sample.</p>
+</section>
+<section id="sampling-an-unknown-f" class="slide level2">
+<h2>Sampling an unknown <span class="math inline">\(F\)</span></h2>
+<p>The idea behind bootstrapping is that the data comes from a distribution <span class="math inline">\(F\)</span> with unknown parameters.</p>
+<p>Using the sample, we can get parameters that explain a parameteric distribution or the emperical distribution for a nonparameteric approach.</p>
+</section>
+<section id="the-bootstrap-method" class="slide level2">
+<h2>The Bootstrap Method</h2>
+<p>The Bootstrap Method utilizes the sample to describe the target distribution function to construct a sampling mechanism of the target distribution.</p>
+<p>This method will allow us to construct a new sample that targets the distribution.</p>
+<p>We can then construct the sampling distribution of a statistic based on the data.</p>
+</section>
+<section id="standard-error" class="slide level2">
+<h2>Standard Error</h2>
+<p>The bootstrap-based standard error of a test statistic is shown to provide an unbiased estimate of the true standard error.</p>
+</section>
+<section id="limitation-to-boostrap-methods" class="slide level2">
+<h2>Limitation to Boostrap Methods</h2>
+<p>The assumption is that the data provides a good estimate of the distribution function.</p>
+<p>If the data set is small, it may not contain enough information to accurately describe the distribution.</p>
+</section>
+<section id="limitation-example" class="slide level2">
+<h2>Limitation Example</h2>
+</section></section>
+<section>
 <section id="parameteric-bootstrap" class="title-slide slide level1 agenda-slide center">
 <h1>Parameteric Bootstrap</h1>
 <div class="agenda">
@@ -613,10 +656,67 @@
 <li><div class="agenda-inactive agenda-post-active">
 <p>Nonparameteric Bootstrap</p>
 </div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Markov Chain Monte Carlo Methods</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Bayesian Analysis</p>
+</div></li>
 </ul>
 </div>
 </section>
-
+<section id="parameteric-bootstrap-1" class="slide level2">
+<h2>Parameteric Bootstrap</h2>
+<p>Parametric bootstrap methods are statistical techniques used to estimate the sampling distribution of an estimator or test statistic by resampling with a model-based approach. This method assumes that the data follow a known probability distribution, and utilizes the estimated statistics as the parameters for the distribution function to construct the sampling distribution.</p>
+</section>
+<section id="parameteric-bootstrap-algorithm" class="slide level2 scrollable">
+<h2>Parameteric Bootstrap Algorithm</h2>
+<ol type="1">
+<li><p>Estimate the Parameters: Fit a parametric model to the observed data and estimate the parameters of the model.</p></li>
+<li><p>Generate Bootstrap Samples: Using the estimated parameters, generate a large number of new data sets (bootstrap samples) from the fitted model. These samples are simulated data sets that mimic the original data but are generated from the parametric model.</p></li>
+<li><p>Compute the Statistic of Interest: For each bootstrap sample, calculate the statistic of interest (e.g., the mean, variance, regression coefficients, etc.).</p></li>
+<li><p>Construct the Sampling Distribution: Use the calculated statistics from all the bootstrap samples to construct an empirical sampling distribution.</p></li>
+<li><p>Estimate Confidence Intervals: Use the empirical sampling distribution to estimate confidence intervals.</p></li>
+</ol>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<p>Use a parameteric bootstrap model to determine the standard errors of the mean body mass of each penguin species.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>penguins <span class="sc">|&gt;</span> <span class="fu">group_by</span>(species) <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a></a>  <span class="fu">summarise</span>(<span class="at">mean =</span> <span class="fu">mean</span>(body_mass_g),</span>
+<span id="cb4-3"><a></a>            <span class="at">se =</span> <span class="fu">sd</span>(body_mass_g) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fu">n</span>()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; # A tibble: 3 × 3
+#&gt;   species    mean    se
+#&gt;   &lt;fct&gt;     &lt;dbl&gt; &lt;dbl&gt;
+#&gt; 1 Adelie    3706.  38.0
+#&gt; 2 Chinstrap 3733.  46.6
+#&gt; 3 Gentoo    5092.  46.0</code></pre>
+</div>
+</div>
+<p>Answer:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>means <span class="ot">&lt;-</span> penguins<span class="sc">$</span>body_mass_g <span class="sc">|&gt;</span> <span class="fu">tapply</span>(penguins<span class="sc">$</span>species, mean)</span>
+<span id="cb6-2"><a></a>nns <span class="ot">&lt;-</span> penguins<span class="sc">$</span>body_mass_g <span class="sc">|&gt;</span> <span class="fu">tapply</span>(penguins<span class="sc">$</span>species, length)</span>
+<span id="cb6-3"><a></a>sds <span class="ot">&lt;-</span> penguins<span class="sc">$</span>body_mass_g <span class="sc">|&gt;</span> <span class="fu">tapply</span>(penguins<span class="sc">$</span>species, sd)</span>
+<span id="cb6-4"><a></a>Ameans <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">10000</span>)</span>
+<span id="cb6-5"><a></a>Cmeans <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">10000</span>)</span>
+<span id="cb6-6"><a></a>Gmeans <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">10000</span>)</span>
+<span id="cb6-7"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10000</span>){</span>
+<span id="cb6-8"><a></a>  Ameans[i] <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(nns[<span class="dv">1</span>], <span class="at">mean =</span> means[<span class="dv">1</span>], <span class="at">sd =</span> sds[<span class="dv">1</span>]) <span class="sc">|&gt;</span> <span class="fu">mean</span>()</span>
+<span id="cb6-9"><a></a>  Cmeans[i] <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(nns[<span class="dv">2</span>], <span class="at">mean =</span> means[<span class="dv">2</span>], <span class="at">sd =</span> sds[<span class="dv">2</span>]) <span class="sc">|&gt;</span> <span class="fu">mean</span>()</span>
+<span id="cb6-10"><a></a>  Gmeans[i] <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(nns[<span class="dv">3</span>], <span class="at">mean =</span> means[<span class="dv">3</span>], <span class="at">sd =</span> sds[<span class="dv">3</span>]) <span class="sc">|&gt;</span> <span class="fu">mean</span>()</span>
+<span id="cb6-11"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section></section>
+<section>
 <section id="nonparameteric-bootstrap" class="title-slide slide level1 agenda-slide center">
 <h1>Nonparameteric Bootstrap</h1>
 <div class="agenda">
@@ -630,7 +730,227 @@
 <li><div class="agenda-active">
 <p>Nonparameteric Bootstrap</p>
 </div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Markov Chain Monte Carlo Methods</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Bayesian Analysis</p>
+</div></li>
 </ul>
+</div>
+</section>
+<section id="nonparameteric-bootsrap" class="slide level2">
+<h2>Nonparameteric Bootsrap</h2>
+<p>The nonparameteric approach assumes that distribution function of the data does not follow a common distribution function. Therefore, the data itself will be contain all the information needed to construct the sampling distribution.</p>
+<p>This requires sampling with replacement.</p>
+</section>
+<section id="nonparameteric-bootstrap-algorithm" class="slide level2 scrollable">
+<h2>Nonparameteric Bootstrap Algorithm</h2>
+<ol type="1">
+<li>Draw a sample <span class="math inline">\(X*\)</span> of size <span class="math inline">\(n\)</span> with replacement from the original data <span class="math inline">\(X\)</span>.
+<ol type="1">
+<li><span class="math inline">\(n\)</span> is the size of the data</li>
+</ol></li>
+<li>Compute the bootstrap replicate statistic <span class="math inline">\(T* = g(X*)\)</span>, where <span class="math inline">\(g(\cdot)\)</span> is the function that computes the statistic of interest.</li>
+<li>Repeat steps 1-2 <span class="math inline">\(B\)</span> times to obtain <span class="math inline">\(B\)</span> bootstrap replicates <span class="math inline">\({T*_1, T*_2, ..., T*_B}\)</span>.</li>
+<li>The computed statistics from <span class="math inline">\(B\)</span> samples are the empirical bootstrap distribution of the statistic, <span class="math inline">\(g(X)\)</span>.</li>
+<li>Calculate the bootstrap standard error of the statistic, <span class="math inline">\(se_b(g(X))\)</span>, as the standard deviation of the bootstrap replicates.</li>
+<li>Calculate the bootstrap confidence interval for the statistic, <span class="math inline">\(CI(g(X))\)</span>, with the <span class="math inline">\(\alpha\)</span> and <span class="math inline">\((1-\alpha)%\)</span> percentiles of the bootstrap replicates, where <span class="math inline">\(\alpha\)</span> is the desired level of significance.</li>
+</ol>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example</h2>
+<p>Fitting the following model:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb7-2"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb7-3"><a></a>penguins <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span> <span class="fu">drop_na</span>()</span>
+<span id="cb7-4"><a></a>penguins <span class="sc">|&gt;</span> <span class="fu">lm</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> bill_length_mm <span class="sc">+</span> bill_depth_mm,</span>
+<span id="cb7-5"><a></a>               <span class="at">data =</span> _)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; 
+#&gt; Call:
+#&gt; lm(formula = body_mass_g ~ flipper_length_mm + bill_length_mm + 
+#&gt;     bill_depth_mm, data = penguins)
+#&gt; 
+#&gt; Coefficients:
+#&gt;       (Intercept)  flipper_length_mm     bill_length_mm      bill_depth_mm  
+#&gt;         -6445.476             50.762              3.293             17.836</code></pre>
+</div>
+</div>
+<p>Obtain the Bootstrap-based Standard Errors for the regression coefficients. Use <span class="math inline">\(B=1000\)</span> bootstrap samples.</p>
+</section></section>
+<section>
+<section id="markov-chain-monte-carlo-methods" class="title-slide slide level1 agenda-slide center">
+<h1>Markov Chain Monte Carlo Methods</h1>
+<div class="agenda">
+<ul>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Bootstrap</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Parameteric Bootstrap</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Nonparameteric Bootstrap</p>
+</div></li>
+<li><div class="agenda-active">
+<p>Markov Chain Monte Carlo Methods</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Bayesian Analysis</p>
+</div></li>
+</ul>
+</div>
+</section>
+<section id="markov-chain" class="slide level2 smaller">
+<h2>Markov Chain</h2>
+<div>
+<ul>
+<li class="fragment"><p>A Markov chain is a collection states of a certain phenomenom</p>
+<ul>
+<li class="fragment"><span class="math inline">\(X^{(0)},X^{(1)},X^{(2)},X^{(3)},X^{(4)},X^{(5)},X^{(6)},X^{(7)}, \cdots, X^{(k)}\)</span></li>
+</ul></li>
+<li class="fragment"><p>The changing of the state is only dependent on the current state, not the previous states</p>
+<ul>
+<li class="fragment"><span class="math inline">\(P\left\{X^{(k+1)}\boldsymbol{\Big|}X^{(k)},X^{(k-1)},X^{(k-2)},\ldots,X^{(1)},X^{(0)}\right\}=P\left\{X^{(k+1)}\boldsymbol{\Big |}X^{(k)}\right\}\)</span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="cat-markov-chains" class="slide level2">
+<h2>Cat Markov Chains</h2>
+
+<img data-src="7_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<section id="markov-kernel" class="slide level2">
+<h2>Markov Kernel</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div>
+<ul>
+<li class="fragment"><p>A Markov kernel provides the probability of going to another state, given the current state</p></li>
+<li class="fragment"><p>Also known a transition matrix</p></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragement">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="7_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="stationary-limiting-distribution" class="slide level2">
+<h2>Stationary (limiting) distribution</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="conditions">Conditions</h3>
+<div>
+<ul>
+<li class="fragment"><p><em>Irreducibility:</em> The kernel allows for free movement of all the state space</p></li>
+<li class="fragment"><p><em>Recurrent:</em> The chain will return to any nonnegligible set an infinite number of times</p></li>
+<li class="fragment"><p><em>Aperiodic:</em> The chain can return to any state immediately</p></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<h3 id="resulting">Resulting</h3>
+<div>
+<ul>
+<li class="fragment"><p><span class="math inline">\(X^{(t)}\rightarrow X\)</span></p>
+<ul>
+<li class="fragment">Regardless of <span class="math inline">\(X^{(0)}\)</span></li>
+</ul></li>
+<li class="fragment"><p><span class="math inline">\(X \sim f\)</span></p>
+<ul>
+<li class="fragment"><span class="math inline">\(f\)</span>: is a distribution function</li>
+</ul></li>
+<li class="fragment"><p><span class="math inline">\(\frac{1}{T}\sum_{t=1}^{T} h\{X^{(t)}\} \rightarrow E_f\{h(X)\}\)</span></p>
+<ul>
+<li class="fragment"><p><span class="math inline">\(h\)</span>: any integrable function</p></li>
+<li class="fragment"><p>by Law of Large Numbers</p></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="markov-chains-monte-carlo" class="slide level2">
+<h2>Markov Chains Monte Carlo</h2>
+<div>
+<ul>
+<li class="fragment"><p>MCMC Methods are used to a distribution function that is not easily obtained.</p></li>
+<li class="fragment"><p>A Markov chain is contructed by simulating Monte Carlo Samples and accepted based on a certain criteria</p></li>
+<li class="fragment"><p>Based on the MCMC Central Limit Theorem, the Markov chain will construct a limiting distribution that is desired.</p></li>
+</ul>
+</div>
+</section>
+<section id="hamiltonian-monte-carlo" class="slide level2">
+<h2>Hamiltonian Monte Carlo</h2>
+<ul>
+<li><p>Hamiltonian Monte Carlo is a relatively new MCMC technique used to construct the target distribution</p></li>
+<li><p>It utilizes Hamiltonian dynamics to simulate the next random variable</p></li>
+<li><p>The random variable is the accepted based the MH probability</p></li>
+<li><p>Using Hamiltonian dyanmics improves the mixing properties of the chain and draws are more targeted to the desired distribution</p></li>
+</ul>
+</section></section>
+<section>
+<section id="bayesian-analysis" class="title-slide slide level1 agenda-slide center">
+<h1>Bayesian Analysis</h1>
+<div class="agenda">
+<ul>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Bootstrap</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Parameteric Bootstrap</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Nonparameteric Bootstrap</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Markov Chain Monte Carlo Methods</p>
+</div></li>
+<li><div class="agenda-active">
+<p>Bayesian Analysis</p>
+</div></li>
+</ul>
+</div>
+</section>
+<section id="bayesian-analysis-1" class="slide level2">
+<h2>Bayesian Analysis</h2>
+</section>
+<section id="bayesian-analysis-in-r" class="slide level2">
+<h2>Bayesian Analysis in R</h2>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">library</span>(brms)</span>
+<span id="cb9-2"><a></a>y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>, <span class="at">mean =</span> <span class="dv">3</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span>
+<span id="cb9-3"><a></a><span class="fu">brm</span>(y<span class="sc">~</span><span class="dv">1</span>, <span class="at">data =</span> <span class="fu">tibble</span>(<span class="at">y =</span> y),</span>
+<span id="cb9-4"><a></a>    <span class="at">family =</span> <span class="fu">gaussian</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="bayesian-analysis-in-r-1" class="slide level2">
+<h2>Bayesian Analysis in R</h2>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">library</span>(brms)</span>
+<span id="cb10-2"><a></a>y <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="dv">10000</span>, <span class="dv">3</span>)</span>
+<span id="cb10-3"><a></a><span class="fu">brm</span>(y<span class="sc">~</span><span class="dv">1</span>, <span class="at">data =</span> <span class="fu">tibble</span>(<span class="at">y =</span> y),</span>
+<span id="cb10-4"><a></a>    <span class="at">family =</span> <span class="fu">poisson</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 
 <div class="quarto-auto-generated-content">
@@ -652,7 +972,7 @@
 <p> </p>
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

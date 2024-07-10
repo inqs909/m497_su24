@@ -707,6 +707,153 @@
     "text": "R Packages\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\ntheme_set(theme_bw())\ntheme_update(axis.title = element_text(size = 24))\n\n\ntuesdata &lt;- tidytuesdayR::tt_load(2020, week = 28)\n\n#&gt; \n#&gt;  Downloading file 1 of 1: `coffee_ratings.csv`\n\ncoffee_ratings &lt;- tuesdata$coffee_ratings\ncoffee_aroma &lt;- coffee_ratings |&gt; filter(aroma &gt; 5.5)\n\nshuffle &lt;- function(x){\n  n &lt;- length(x)\n  return(sample(x, n))\n}\n\nresample &lt;- function(df){\n  if (!is.data.frame(df)){\n    stop(\"The df object must be a data frame.\")\n  }\n  dplyr::slice_sample(df, n = nrow(df), replace = T )\n}\n\n\npenguins &lt;- penguins |&gt; drop_na()"
   },
   {
+    "objectID": "lectures/7.html#empirical-distribution-function",
+    "href": "lectures/7.html#empirical-distribution-function",
+    "title": "Monte Carlo Methods",
+    "section": "Empirical Distribution Function",
+    "text": "Empirical Distribution Function\nThe empirical distribution function is designed to estimate a random variable’s distribution function. For an observed sample \\(\\{x_i\\}^n_{i=1}\\), the empirical distribution function is\n\\[\nF_n(x) \\left\\{\\begin{array}{cc}\n0, & x &lt; x_{(1)} \\\\\n\\frac{i}{n},& x_{(i)} \\leq x &lt;x_{(i+1)},\\ i = 1,\\ldots,n-1\\\\\n1,& x_{(n)}\\leq x\n\\end{array}\n\\right.\n\\]\nwhere \\(x_{(1)}, \\ldots, x_{(n)}\\) are the ordered sample."
+  },
+  {
+    "objectID": "lectures/7.html#sampling-an-unknown-f",
+    "href": "lectures/7.html#sampling-an-unknown-f",
+    "title": "Monte Carlo Methods",
+    "section": "Sampling an unknown \\(F\\)",
+    "text": "Sampling an unknown \\(F\\)\nThe idea behind bootstrapping is that the data comes from a distribution \\(F\\) with unknown parameters.\nUsing the sample, we can get parameters that explain a parameteric distribution or the emperical distribution for a nonparameteric approach."
+  },
+  {
+    "objectID": "lectures/7.html#the-bootstrap-method",
+    "href": "lectures/7.html#the-bootstrap-method",
+    "title": "Monte Carlo Methods",
+    "section": "The Bootstrap Method",
+    "text": "The Bootstrap Method\nThe Bootstrap Method utilizes the sample to describe the target distribution function to construct a sampling mechanism of the target distribution.\nThis method will allow us to construct a new sample that targets the distribution.\nWe can then construct the sampling distribution of a statistic based on the data."
+  },
+  {
+    "objectID": "lectures/7.html#standard-error",
+    "href": "lectures/7.html#standard-error",
+    "title": "Monte Carlo Methods",
+    "section": "Standard Error",
+    "text": "Standard Error\nThe bootstrap-based standard error of a test statistic is shown to provide an unbiased estimate of the true standard error."
+  },
+  {
+    "objectID": "lectures/7.html#limitation-to-boostrap-methods",
+    "href": "lectures/7.html#limitation-to-boostrap-methods",
+    "title": "Monte Carlo Methods",
+    "section": "Limitation to Boostrap Methods",
+    "text": "Limitation to Boostrap Methods\nThe assumption is that the data provides a good estimate of the distribution function.\nIf the data set is small, it may not contain enough information to accurately describe the distribution."
+  },
+  {
+    "objectID": "lectures/7.html#limitation-example",
+    "href": "lectures/7.html#limitation-example",
+    "title": "Monte Carlo Methods",
+    "section": "Limitation Example",
+    "text": "Limitation Example"
+  },
+  {
+    "objectID": "lectures/7.html#parameteric-bootstrap-1",
+    "href": "lectures/7.html#parameteric-bootstrap-1",
+    "title": "Monte Carlo Methods",
+    "section": "Parameteric Bootstrap",
+    "text": "Parameteric Bootstrap\nParametric bootstrap methods are statistical techniques used to estimate the sampling distribution of an estimator or test statistic by resampling with a model-based approach. This method assumes that the data follow a known probability distribution, and utilizes the estimated statistics as the parameters for the distribution function to construct the sampling distribution."
+  },
+  {
+    "objectID": "lectures/7.html#parameteric-bootstrap-algorithm",
+    "href": "lectures/7.html#parameteric-bootstrap-algorithm",
+    "title": "Monte Carlo Methods",
+    "section": "Parameteric Bootstrap Algorithm",
+    "text": "Parameteric Bootstrap Algorithm\n\nEstimate the Parameters: Fit a parametric model to the observed data and estimate the parameters of the model.\nGenerate Bootstrap Samples: Using the estimated parameters, generate a large number of new data sets (bootstrap samples) from the fitted model. These samples are simulated data sets that mimic the original data but are generated from the parametric model.\nCompute the Statistic of Interest: For each bootstrap sample, calculate the statistic of interest (e.g., the mean, variance, regression coefficients, etc.).\nConstruct the Sampling Distribution: Use the calculated statistics from all the bootstrap samples to construct an empirical sampling distribution.\nEstimate Confidence Intervals: Use the empirical sampling distribution to estimate confidence intervals."
+  },
+  {
+    "objectID": "lectures/7.html#example",
+    "href": "lectures/7.html#example",
+    "title": "Monte Carlo Methods",
+    "section": "Example",
+    "text": "Example\nUse a parameteric bootstrap model to determine the standard errors of the mean body mass of each penguin species.\n\n\nCode\npenguins |&gt; group_by(species) |&gt; \n  summarise(mean = mean(body_mass_g),\n            se = sd(body_mass_g) / sqrt(n()))\n\n\n#&gt; # A tibble: 3 × 3\n#&gt;   species    mean    se\n#&gt;   &lt;fct&gt;     &lt;dbl&gt; &lt;dbl&gt;\n#&gt; 1 Adelie    3706.  38.0\n#&gt; 2 Chinstrap 3733.  46.6\n#&gt; 3 Gentoo    5092.  46.0\n\n\nAnswer:\n\n\nCode\nmeans &lt;- penguins$body_mass_g |&gt; tapply(penguins$species, mean)\nnns &lt;- penguins$body_mass_g |&gt; tapply(penguins$species, length)\nsds &lt;- penguins$body_mass_g |&gt; tapply(penguins$species, sd)\nAmeans &lt;- numeric(10000)\nCmeans &lt;- numeric(10000)\nGmeans &lt;- numeric(10000)\nfor (i in 1:10000){\n  Ameans[i] &lt;- rnorm(nns[1], mean = means[1], sd = sds[1]) |&gt; mean()\n  Cmeans[i] &lt;- rnorm(nns[2], mean = means[2], sd = sds[2]) |&gt; mean()\n  Gmeans[i] &lt;- rnorm(nns[3], mean = means[3], sd = sds[3]) |&gt; mean()\n}"
+  },
+  {
+    "objectID": "lectures/7.html#nonparameteric-bootsrap",
+    "href": "lectures/7.html#nonparameteric-bootsrap",
+    "title": "Monte Carlo Methods",
+    "section": "Nonparameteric Bootsrap",
+    "text": "Nonparameteric Bootsrap\nThe nonparameteric approach assumes that distribution function of the data does not follow a common distribution function. Therefore, the data itself will be contain all the information needed to construct the sampling distribution.\nThis requires sampling with replacement."
+  },
+  {
+    "objectID": "lectures/7.html#nonparameteric-bootstrap-algorithm",
+    "href": "lectures/7.html#nonparameteric-bootstrap-algorithm",
+    "title": "Monte Carlo Methods",
+    "section": "Nonparameteric Bootstrap Algorithm",
+    "text": "Nonparameteric Bootstrap Algorithm\n\nDraw a sample \\(X*\\) of size \\(n\\) with replacement from the original data \\(X\\).\n\n\\(n\\) is the size of the data\n\nCompute the bootstrap replicate statistic \\(T* = g(X*)\\), where \\(g(\\cdot)\\) is the function that computes the statistic of interest.\nRepeat steps 1-2 \\(B\\) times to obtain \\(B\\) bootstrap replicates \\({T*_1, T*_2, ..., T*_B}\\).\nThe computed statistics from \\(B\\) samples are the empirical bootstrap distribution of the statistic, \\(g(X)\\).\nCalculate the bootstrap standard error of the statistic, \\(se_b(g(X))\\), as the standard deviation of the bootstrap replicates.\nCalculate the bootstrap confidence interval for the statistic, \\(CI(g(X))\\), with the \\(\\alpha\\) and \\((1-\\alpha)%\\) percentiles of the bootstrap replicates, where \\(\\alpha\\) is the desired level of significance."
+  },
+  {
+    "objectID": "lectures/7.html#example-1",
+    "href": "lectures/7.html#example-1",
+    "title": "Monte Carlo Methods",
+    "section": "Example",
+    "text": "Example\nFitting the following model:\n\n\nCode\nlibrary(palmerpenguins)\nlibrary(tidyverse)\npenguins &lt;- penguins |&gt; drop_na()\npenguins |&gt; lm(body_mass_g ~ flipper_length_mm + bill_length_mm + bill_depth_mm,\n               data = _)\n\n\n#&gt; \n#&gt; Call:\n#&gt; lm(formula = body_mass_g ~ flipper_length_mm + bill_length_mm + \n#&gt;     bill_depth_mm, data = penguins)\n#&gt; \n#&gt; Coefficients:\n#&gt;       (Intercept)  flipper_length_mm     bill_length_mm      bill_depth_mm  \n#&gt;         -6445.476             50.762              3.293             17.836\n\n\nObtain the Bootstrap-based Standard Errors for the regression coefficients. Use \\(B=1000\\) bootstrap samples."
+  },
+  {
+    "objectID": "lectures/7.html#markov-chain",
+    "href": "lectures/7.html#markov-chain",
+    "title": "Monte Carlo Methods",
+    "section": "Markov Chain",
+    "text": "Markov Chain\n\n\nA Markov chain is a collection states of a certain phenomenom\n\n\\(X^{(0)},X^{(1)},X^{(2)},X^{(3)},X^{(4)},X^{(5)},X^{(6)},X^{(7)}, \\cdots, X^{(k)}\\)\n\nThe changing of the state is only dependent on the current state, not the previous states\n\n\\(P\\left\\{X^{(k+1)}\\boldsymbol{\\Big|}X^{(k)},X^{(k-1)},X^{(k-2)},\\ldots,X^{(1)},X^{(0)}\\right\\}=P\\left\\{X^{(k+1)}\\boldsymbol{\\Big |}X^{(k)}\\right\\}\\)"
+  },
+  {
+    "objectID": "lectures/7.html#cat-markov-chains",
+    "href": "lectures/7.html#cat-markov-chains",
+    "title": "Monte Carlo Methods",
+    "section": "Cat Markov Chains",
+    "text": "Cat Markov Chains"
+  },
+  {
+    "objectID": "lectures/7.html#markov-kernel",
+    "href": "lectures/7.html#markov-kernel",
+    "title": "Monte Carlo Methods",
+    "section": "Markov Kernel",
+    "text": "Markov Kernel\n\n\n\n\nA Markov kernel provides the probability of going to another state, given the current state\nAlso known a transition matrix"
+  },
+  {
+    "objectID": "lectures/7.html#stationary-limiting-distribution",
+    "href": "lectures/7.html#stationary-limiting-distribution",
+    "title": "Monte Carlo Methods",
+    "section": "Stationary (limiting) distribution",
+    "text": "Stationary (limiting) distribution\n\n\nConditions\n\n\nIrreducibility: The kernel allows for free movement of all the state space\nRecurrent: The chain will return to any nonnegligible set an infinite number of times\nAperiodic: The chain can return to any state immediately\n\n\n\nResulting\n\n\n\\(X^{(t)}\\rightarrow X\\)\n\nRegardless of \\(X^{(0)}\\)\n\n\\(X \\sim f\\)\n\n\\(f\\): is a distribution function\n\n\\(\\frac{1}{T}\\sum_{t=1}^{T} h\\{X^{(t)}\\} \\rightarrow E_f\\{h(X)\\}\\)\n\n\\(h\\): any integrable function\nby Law of Large Numbers"
+  },
+  {
+    "objectID": "lectures/7.html#markov-chains-monte-carlo",
+    "href": "lectures/7.html#markov-chains-monte-carlo",
+    "title": "Monte Carlo Methods",
+    "section": "Markov Chains Monte Carlo",
+    "text": "Markov Chains Monte Carlo\n\n\nMCMC Methods are used to a distribution function that is not easily obtained.\nA Markov chain is contructed by simulating Monte Carlo Samples and accepted based on a certain criteria\nBased on the MCMC Central Limit Theorem, the Markov chain will construct a limiting distribution that is desired."
+  },
+  {
+    "objectID": "lectures/7.html#hamiltonian-monte-carlo",
+    "href": "lectures/7.html#hamiltonian-monte-carlo",
+    "title": "Monte Carlo Methods",
+    "section": "Hamiltonian Monte Carlo",
+    "text": "Hamiltonian Monte Carlo\n\nHamiltonian Monte Carlo is a relatively new MCMC technique used to construct the target distribution\nIt utilizes Hamiltonian dynamics to simulate the next random variable\nThe random variable is the accepted based the MH probability\nUsing Hamiltonian dyanmics improves the mixing properties of the chain and draws are more targeted to the desired distribution"
+  },
+  {
+    "objectID": "lectures/7.html#bayesian-analysis-1",
+    "href": "lectures/7.html#bayesian-analysis-1",
+    "title": "Monte Carlo Methods",
+    "section": "Bayesian Analysis",
+    "text": "Bayesian Analysis"
+  },
+  {
+    "objectID": "lectures/7.html#bayesian-analysis-in-r",
+    "href": "lectures/7.html#bayesian-analysis-in-r",
+    "title": "Monte Carlo Methods",
+    "section": "Bayesian Analysis in R",
+    "text": "Bayesian Analysis in R\n\n\nCode\nlibrary(brms)\ny &lt;- rnorm(10000, mean = 3, sd = 1)\nbrm(y~1, data = tibble(y = y),\n    family = gaussian())"
+  },
+  {
+    "objectID": "lectures/7.html#bayesian-analysis-in-r-1",
+    "href": "lectures/7.html#bayesian-analysis-in-r-1",
+    "title": "Monte Carlo Methods",
+    "section": "Bayesian Analysis in R",
+    "text": "Bayesian Analysis in R\n\n\nCode\nlibrary(brms)\ny &lt;- rpois(10000, 3)\nbrm(y~1, data = tibble(y = y),\n    family = poisson())"
+  },
+  {
     "objectID": "lectures/3.html#random-process",
     "href": "lectures/3.html#random-process",
     "title": "Monte Carlo Methods",
