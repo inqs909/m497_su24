@@ -1,6 +1,6 @@
 ---
 title:  Week 7
-date: 7-07-24
+date: 7-10-24
 description: MEET Wednesday (7/10)
 editor: visual
 editor_options: 
@@ -11,9 +11,9 @@ editor_options:
 
 -   Bootstrapping Methods
 
-| Lecture                                                | Videos                                                                             |
-|:----------------------------|:------------------------------------------|
-| [Slide](http://m497.inqs.info/lectures/6#/title-slide) | [Video 1](https://youtu.be/UfHkx7r7SZk) \| [Video 2](https://youtu.be/wZWXMYWftC4) |
+| Lecture                                                | Videos |
+|:-------------------------------------------------------|:-------|
+| [Slide](http://m497.inqs.info/lectures/6#/title-slide) |        |
 
 ## Further Reading
 
