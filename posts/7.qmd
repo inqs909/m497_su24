@@ -13,7 +13,7 @@ editor_options:
 
 | Lecture                                                | Videos |
 |:-------------------------------------------------------|:-------|
-| [Slide](http://m497.inqs.info/lectures/6#/title-slide) |        |
+| [Slide](http://m497.inqs.info/lectures/7#/title-slide) |        |
 
 ## Further Reading
 
