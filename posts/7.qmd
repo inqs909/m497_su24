@@ -11,9 +11,9 @@ editor_options:
 
 -   Bootstrapping Methods
 
-| Lecture                                                | Videos |
-|:-------------------------------------------------------|:-------|
-| [Slide](http://m497.inqs.info/lectures/7#/title-slide) |        |
+| Lecture                                                | Videos                                                                             |
+|:-------------------------------------------------------|:-----------------------------------------------------------------------------------|
+| [Slide](http://m497.inqs.info/lectures/7#/title-slide) | [Video 1](https://youtu.be/JN42un8vl5E) \| [Video 2](https://youtu.be/TSUPHHGZ81U) |
 
 ## Further Reading
 

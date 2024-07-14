@@ -433,4 +433,3 @@ brm(y~1, data = tibble(y = y),
     family = poisson())
 ```
 
-

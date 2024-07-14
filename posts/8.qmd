@@ -1,0 +1,20 @@
+---
+title:  Week 8
+date: 7-11-24
+description: MEET Tuesday (7/16)
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## Learning Outcomes
+
+-   Simulation Study
+
+-   Linear Regression
+
+-   Generalized Linear Model
+
+| Lecture                                                | Videos |
+|:-------------------------------------------------------|:-------|
+| [Slide](http://m497.inqs.info/lectures/8#/title-slide) |        |
