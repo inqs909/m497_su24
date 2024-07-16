@@ -3168,18 +3168,32 @@
     "href": "lectures/8.html#nonparameteric-models-1",
     "title": "Simulation Studies",
     "section": "Nonparameteric Models",
-    "text": "Nonparameteric Models"
+    "text": "Nonparameteric Models\n\\[\nY = f(X) + \\varepsilon\n\\]"
   },
   {
     "objectID": "lectures/8.html#nonlinear-models",
     "href": "lectures/8.html#nonlinear-models",
     "title": "Simulation Studies",
     "section": "Nonlinear Models",
-    "text": "Nonlinear Models\n\n\nCode\nx &lt;- rnorm(1000, 2)\ny &lt;- 3 + sinpi(x/2) + rnorm(1000, sd = 0.3)\ndf &lt;- tibble(x, y)\nxlm &lt;- df |&gt; lm(y ~ rcs(x, parms = 10), data = _)\ndf |&gt; ggplot(aes(x, y)) +\n  geom_point() +\n  geom_line(aes(x, predict(xlm)), col = \"red\")"
+    "text": "Nonlinear Models\n\\[\n\\hat Y = \\hat f(X)\n\\]"
   },
   {
     "objectID": "lectures/8.html#nonlinear-models-1",
     "href": "lectures/8.html#nonlinear-models-1",
+    "title": "Simulation Studies",
+    "section": "Nonlinear Models",
+    "text": "Nonlinear Models\n\nParameteric Model\nRegression Splines\nPenalized Splines"
+  },
+  {
+    "objectID": "lectures/8.html#nonlinear-models-2",
+    "href": "lectures/8.html#nonlinear-models-2",
+    "title": "Simulation Studies",
+    "section": "Nonlinear Models",
+    "text": "Nonlinear Models\n\n\nCode\nx &lt;- rnorm(1000, 2)\ny &lt;- 3 + sinpi(x/2) + rnorm(1000, sd = 0.3)\ndf &lt;- tibble(x, y)\nxlm &lt;- df |&gt; lm(y ~ rcs(x, parms = 10), data = _)\ndf |&gt; ggplot(aes(x, y)) +\n  geom_point() +\n  geom_line(aes(x, predict(xlm)), col = \"red\")"
+  },
+  {
+    "objectID": "lectures/8.html#nonlinear-models-3",
+    "href": "lectures/8.html#nonlinear-models-3",
     "title": "Simulation Studies",
     "section": "Nonlinear Models",
     "text": "Nonlinear Models\n\n\nCode\nx &lt;- rnorm(1000, -4)\ny &lt;- 3 +  cospi(x/2) + rnorm(1000, sd = 0.3)\ndf &lt;- tibble(x, y)\nxlm &lt;- df |&gt; lm(y ~ rcs(x, parms = 10), data = _)\ndf |&gt; ggplot(aes(x, y)) +\n  geom_point() +\n  geom_line(aes(x, predict(xlm)), col = \"red\")"

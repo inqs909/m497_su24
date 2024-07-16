@@ -249,6 +249,22 @@ brm(y~x,
 
 ## Nonparameteric Models
 
+$$
+Y = f(X) + \varepsilon
+$$
+
+## Nonlinear Models
+
+$$
+\hat Y = \hat f(X)
+$$
+
+## Nonlinear Models
+
+-   Parameteric Model
+-   Regression Splines
+-   Penalized Splines
+
 ## Nonlinear Models
 
 ```{r}
