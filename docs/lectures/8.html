@@ -17,7 +17,7 @@
 <link href="../site_libs/quarto-contrib/reveal-auto-agenda-0.0.3/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.54">
 
-  <title>MATH 497 – Unsupervised Machine Learning</title>
+  <title>MATH 497 – Simulation Studies</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -107,8 +107,6 @@
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/verticator/verticator.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -544,440 +542,407 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title"><p>Unsupervised<br>
-Machine Learning</p></h1>
+  <h1 class="title">Simulation Studies</h1>
+  <p class="subtitle">Linear and Generalized Linear Models</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section>
-<section id="unsupervised-machine-learning" class="title-slide slide level1 agenda-slide center">
-<h1>Unsupervised Machine Learning</h1>
-<div class="agenda">
-<ul>
-<li><div class="agenda-active">
-<p>Unsupervised Machine Learning</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>Topic Modeling with Talor Swift</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>The Missing Statistics Semester</p>
-</div></li>
-</ul>
-</div>
-</section>
-<section id="supervised-machine-learning" class="slide level2">
-<h2>Supervised Machine Learning</h2>
-<p><span class="math display">\[
-\boldsymbol X = (X_1, X_2, \cdots, X_n)\mrTr
-\]</span> where</p>
-<p><span class="math display">\[
-X_i = (x_{i1}, x_{i2}, \cdots, x_{in})
-\]</span> and</p>
-<p><span class="math display">\[
-\boldsymbol Y = (Y_1, Y_2, \cdots, Y_n)\mrTr
-\]</span></p>
-</section>
-<section id="unsupervised-machine-learning-1" class="slide level2">
-<h2>Unsupervised Machine Learning</h2>
-<p>Given:</p>
-<p><span class="math display">\[
-\boldsymbol X = (X_1, X_2, \cdots, X_n)\mrTr
-\]</span> where</p>
-<p><span class="math display">\[
-X_i = (x_{i1}, x_{i2}, \cdots, x_{in})
-\]</span></p>
-<p>Group the data to <span class="math inline">\(K\)</span> categories.</p>
-</section>
-<section id="unsupervised-machine-learning-2" class="slide level2">
-<h2>Unsupervised Machine Learning</h2>
-<p>We can naturally group data with the following techniques:</p>
-<ul>
-<li>Principal Component Analysis</li>
-<li>K-Means Clustering</li>
-<li>Hierarchical Clustering</li>
-<li>Mixture Models</li>
-</ul>
-</section>
-<section id="principal-componenet-analysis" class="slide level2">
-<h2>Principal Componenet Analysis</h2>
-<p>Principal Component Analysis (PCA) is a dimensionality reduction technique used to simplify complex datasets while retaining as much of the original variability as possible. It accomplishes this by transforming the original variables into a new set of orthogonal variables called principal components. PCA is widely used in data analysis, visualization, and machine learning for tasks such as feature extraction, data compression, and noise reduction.</p>
-</section>
-<section id="k-means-clustering" class="slide level2">
-<h2>K-Means Clustering</h2>
-<p>K-Means clustering is one of the most popular unsupervised machine learning algorithms used for partitioning a dataset into a predetermined number of clusters. It aims to group similar data points together and discover underlying patterns or structures within the data. K-Means is simple, efficient, and widely applicable in various domains, including data analysis, image processing, and customer segmentation.</p>
-</section>
-<section id="hierarchical-clustering" class="slide level2">
-<h2>Hierarchical Clustering</h2>
-<p>Hierarchical clustering is a method used to cluster data into a hierarchy of clusters. Unlike K-Means, which requires specifying the number of clusters upfront, hierarchical clustering builds a tree-like structure (dendrogram) that reflects the relationships between data points at different levels of granularity. Hierarchical clustering can be divided into two main types: agglomerative and divisive.</p>
-</section>
-<section id="mixture-models" class="slide level2">
-<h2>Mixture Models</h2>
-<p>Mixture models for clustering, often referred to as Gaussian Mixture Models (GMMs), are probabilistic models used to describe the distribution of data as a mixture of multiple Gaussian distributions. Unlike K-Means or hierarchical clustering, which assign data points to discrete clusters, GMMs represent each cluster as a probability distribution over the entire feature space. This allows for more flexible modeling of complex data distributions and enables soft assignment of data points to clusters based on their probabilities.</p>
-</section></section>
-<section>
-<section id="topic-modeling-with-talor-swift" class="title-slide slide level1 agenda-slide center">
-<h1>Topic Modeling with Talor Swift</h1>
-<div class="agenda">
-<ul>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Unsupervised Machine Learning</p>
-</div></li>
-<li><div class="agenda-active">
-<p>Topic Modeling with Talor Swift</p>
-</div></li>
-<li><div class="agenda-inactive agenda-post-active">
-<p>The Missing Statistics Semester</p>
-</div></li>
-</ul>
-</div>
-</section>
-<section id="topic-modelling" class="slide level2">
-<h2>Topic Modelling</h2>
-<p>Topic modeling is a statistical technique used to identify latent topics or themes within a collection of text documents. It aims to uncover the underlying structure of the text data by automatically clustering documents into topics based on the distribution of words across documents. Topic modeling is widely used in natural language processing (NLP) and text mining for tasks such as document clustering, information retrieval, and content analysis.</p>
-</section>
-<section id="latent-dirichlet-allocation" class="slide level2">
-<h2>Latent Dirichlet Allocation</h2>
-<p>Latent Dirichlet Allocation (LDA) is a probabilistic model used for topic modeling in natural language processing (NLP). LDA assumes that each document in the corpus is generated by a probabilistic process involving a mixture of topics. It posits that documents exhibit multiple topics, and each word within a document is associated with one of these topics.</p>
-</section>
-<section id="structural-topic-model" class="slide level2">
-<h2>Structural Topic Model</h2>
-<p>The Structural Topic Model (STM) is an extension of the Latent Dirichlet Allocation (LDA) model that incorporates document metadata and covariates to capture the structural aspects of text data. Unlike LDA, which assumes that topics are generated independently of document metadata, STM allows for the incorporation of metadata or covariates associated with each document. Covariates could include document-level characteristics such as authorship, publication year, geographic location, or any other relevant metadata.</p>
-</section>
-<section id="text-mining-resource" class="slide level2">
-<h2>Text Mining Resource</h2>
-<p><a href="https://www.tidytextmining.com/"><img data-src="https://www.tidytextmining.com/images/cover.png"></a></p>
-</section>
 <section id="r-packages" class="slide level2">
 <h2>R Packages</h2>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a></a><span class="fu">library</span>(taylor)</span>
-<span id="cb1-3"><a></a><span class="fu">library</span>(tidytext)</span>
-<span id="cb1-4"><a></a><span class="fu">library</span>(stm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="data-cleaning" class="slide level2">
-<h2>Data Cleaning</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>tidy_taylor <span class="ot">&lt;-</span></span>
-<span id="cb2-2"><a></a>  taylor_album_songs <span class="sc">|&gt;</span></span>
-<span id="cb2-3"><a></a>  <span class="fu">unnest</span>(lyrics) <span class="sc">|&gt;</span> </span>
-<span id="cb2-4"><a></a>  <span class="fu">unnest_tokens</span>(word, lyric)</span>
-<span id="cb2-5"><a></a></span>
-<span id="cb2-6"><a></a></span>
-<span id="cb2-7"><a></a>tidy_taylor <span class="sc">|&gt;</span> </span>
-<span id="cb2-8"><a></a>  <span class="fu">anti_join</span>(<span class="fu">get_stopwords</span>()) <span class="sc">|&gt;</span> </span>
-<span id="cb2-9"><a></a>  <span class="fu">count</span>(track_name, word, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-10"><a></a>  <span class="fu">head</span>(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>#&gt; # A tibble: 4 × 3
-#&gt;   track_name                          word      n
-#&gt;   &lt;chr&gt;                               &lt;chr&gt; &lt;int&gt;
-#&gt; 1 Red (Taylor's Version)              red     107
-#&gt; 2 I Did Something Bad                 di       81
-#&gt; 3 I Wish You Would (Taylor's Version) wish     81
-#&gt; 4 Shake It Off (Taylor's Version)     shake    70</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>lyrics_sparse <span class="ot">&lt;-</span></span>
-<span id="cb4-2"><a></a>  tidy_taylor <span class="sc">|&gt;</span> </span>
-<span id="cb4-3"><a></a>  <span class="fu">count</span>(track_name, word) <span class="sc">|&gt;</span> </span>
-<span id="cb4-4"><a></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">3</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb4-5"><a></a>  <span class="fu">cast_sparse</span>(track_name, word, n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="topic-modelling-1" class="slide level2">
-<h2>Topic Modelling</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb5-2"><a></a>topic_model <span class="ot">&lt;-</span> <span class="fu">stm</span>(lyrics_sparse, <span class="at">K =</span> <span class="dv">8</span>, <span class="at">verbose =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="summary" class="slide level2">
-<h2>Summary</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">summary</span>(topic_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>#&gt; A topic model with 8 topics, 209 documents and a 909 word dictionary.</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>#&gt; Topic 1 Top Words:
-#&gt;       Highest Prob: i, was, you, the, it, like, and 
-#&gt;       FREX: red, isn't, snow, beach, him, was, too 
-#&gt;       Lift: between, hair, prayer, rare, sacred, stairs, wind 
-#&gt;       Score: red, snow, beach, him, was, isn't, there 
-#&gt; Topic 2 Top Words:
-#&gt;       Highest Prob: i, you, the, and, me, wanna, what 
-#&gt;       FREX: shake, wanna, wish, would, mm, bye, game 
-#&gt;       Lift: team, stephen, hide, fancy, tear, game, bye 
-#&gt;       Score: shake, wanna, wish, mm, off, fake, hung 
-#&gt; Topic 3 Top Words:
-#&gt;       Highest Prob: you, i, and, the, me, to, my 
-#&gt;       FREX: fly, left, losing, jump, go, someday, belong 
-#&gt;       Lift: shoulda, okay, ours, superstar, slope, lately, start 
-#&gt;       Score: la, times, fly, mean, bet, losing, smile 
-#&gt; Topic 4 Top Words:
-#&gt;       Highest Prob: the, i, we, in, you, and, of 
-#&gt;       FREX: woods, clear, huh, mine, car, getaway, walk 
-#&gt;       Lift: ready, shimmer, walk, checkin, mailbox, ridin, huh 
-#&gt;       Score: clear, woods, yet, daylight, out, walk, street 
-#&gt; Topic 5 Top Words:
-#&gt;       Highest Prob: oh, you, and, the, this, i, is 
-#&gt;       FREX: trouble, oh, rains, this, grow, asking, last 
-#&gt;       Lift: promises, sing, these, lovin, rest, usin, flew 
-#&gt;       Score: oh, last, trouble, asking, grow, rains, being 
-#&gt; Topic 6 Top Words:
-#&gt;       Highest Prob: you, the, ooh, i, and, ah, to 
-#&gt;       FREX: ha, starlight, ah, ooh, twenty, thing, whoa 
-#&gt;       Lift: bought, count, keeping, everyone's, humming, kitchen, push 
-#&gt;       Score: ooh, ha, ah, dorothea, starlight, twenty, you'll 
-#&gt; Topic 7 Top Words:
-#&gt;       Highest Prob: you, it, a, i, and, the, we 
-#&gt;       FREX: di, karma, blood, beautiful, wonderland, call, we've 
-#&gt;       Lift: deep, worship, sad, turns, felt, why's, boyfriend 
-#&gt;       Score: di, blood, karma, call, we've, hey, da 
-#&gt; Topic 8 Top Words:
-#&gt;       Highest Prob: you, i, to, the, me, been, and 
-#&gt;       FREX: york, welcome, mr, been, stay, i've, would've 
-#&gt;       Lift: guiding, caught, both, quite, beat, bright, closure 
-#&gt;       Score: york, welcome, stay, mr, would've, new, soundtrack</code></pre>
-</div>
-</div>
-</section>
-<section id="plot" class="slide level2">
-<h2>Plot</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>lyrics_gamma <span class="ot">&lt;-</span> <span class="fu">tidy</span>(</span>
-<span id="cb9-2"><a></a>  topic_model, </span>
-<span id="cb9-3"><a></a>  <span class="at">matrix =</span> <span class="st">"gamma"</span>,</span>
-<span id="cb9-4"><a></a>  <span class="at">document_names =</span> <span class="fu">rownames</span>(lyrics_sparse)</span>
-<span id="cb9-5"><a></a>) </span>
-<span id="cb9-6"><a></a></span>
-<span id="cb9-7"><a></a>lyrics_gamma <span class="sc">|&gt;</span> </span>
-<span id="cb9-8"><a></a>  <span class="fu">left_join</span>(</span>
-<span id="cb9-9"><a></a>    taylor_album_songs <span class="sc">|&gt;</span> </span>
-<span id="cb9-10"><a></a>      <span class="fu">select</span>(album_name, <span class="at">document =</span> track_name) <span class="sc">|&gt;</span> </span>
-<span id="cb9-11"><a></a>      <span class="fu">mutate</span>(<span class="at">album_name =</span> <span class="fu">fct_inorder</span>(album_name))</span>
-<span id="cb9-12"><a></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb9-13"><a></a>  <span class="fu">mutate</span>(<span class="at">topic =</span> <span class="fu">factor</span>(topic)) <span class="sc">|&gt;</span> </span>
-<span id="cb9-14"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(gamma, topic, <span class="at">fill =</span> topic)) <span class="sc">+</span></span>
-<span id="cb9-15"><a></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb9-16"><a></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(album_name)) <span class="sc">+</span></span>
-<span id="cb9-17"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="fu">expression</span>(gamma))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a></a><span class="fu">library</span>(Hmisc)</span>
+<span id="cb1-3"><a></a><span class="fu">library</span>(rms)</span>
+<span id="cb1-4"><a></a><span class="fu">library</span>(gam)</span>
+<span id="cb1-5"><a></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+</div>
+</section>
+<section id="simulation-studies" class="title-slide slide level1 agenda-slide center">
+<h1>Simulation Studies</h1>
+<div class="agenda">
+<ul>
+<li><div class="agenda-active">
+<p>Simulation Studies</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Linear Models</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Generalized Linear Models</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Nonparameteric Models</p>
+</div></li>
+</ul>
+</div>
+</section>
 
-</div>
-<img data-src="15b_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
-<section id="significant-effects" class="slide level2">
-<h2>Significant Effects</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">set.seed</span>(<span class="dv">909</span>)</span>
-<span id="cb10-2"><a></a></span>
-<span id="cb10-3"><a></a>effects <span class="ot">&lt;-</span></span>
-<span id="cb10-4"><a></a>  <span class="fu">estimateEffect</span>(</span>
-<span id="cb10-5"><a></a>    <span class="dv">1</span><span class="sc">:</span><span class="dv">8</span> <span class="sc">~</span> album_name,</span>
-<span id="cb10-6"><a></a>    topic_model,</span>
-<span id="cb10-7"><a></a>    taylor_album_songs <span class="sc">|&gt;</span> <span class="fu">distinct</span>(track_name, album_name) <span class="sc">|&gt;</span> <span class="fu">arrange</span>(track_name)</span>
-<span id="cb10-8"><a></a>  )</span>
-<span id="cb10-9"><a></a></span>
-<span id="cb10-10"><a></a></span>
-<span id="cb10-11"><a></a><span class="fu">tidy</span>(effects) <span class="sc">|&gt;</span>  </span>
-<span id="cb10-12"><a></a>  <span class="fu">filter</span>(term <span class="sc">!=</span> <span class="st">"(Intercept)"</span>, p.value <span class="sc">&lt;</span> <span class="fl">0.1</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb10-13"><a></a>  <span class="fu">select</span>(topic, term, p.value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>#&gt; # A tibble: 8 × 3
-#&gt;   topic term                                   p.value
-#&gt;   &lt;int&gt; &lt;chr&gt;                                    &lt;dbl&gt;
-#&gt; 1     1 album_nameMidnights                    0.0313 
-#&gt; 2     2 album_nameMidnights                    0.0781 
-#&gt; 3     3 album_nameFearless (Taylor's Version)  0.0205 
-#&gt; 4     3 album_namefolklore                     0.00472
-#&gt; 5     3 album_nameSpeak Now (Taylor's Version) 0.0242 
-#&gt; 6     3 album_nameTaylor Swift                 0.0289 
-#&gt; 7     7 album_nameFearless (Taylor's Version)  0.0475 
-#&gt; 8     7 album_nameSpeak Now (Taylor's Version) 0.0441</code></pre>
-</div>
-</div>
-</section>
-<section id="topic-3" class="slide level2">
-<h2>Topic 3</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">tidy</span>(topic_model, <span class="at">matrix =</span> <span class="st">"lift"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb12-2"><a></a>  <span class="fu">filter</span>(topic <span class="sc">==</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>#&gt; # A tibble: 909 × 2
-#&gt;    topic term     
-#&gt;    &lt;int&gt; &lt;chr&gt;    
-#&gt;  1     3 shoulda  
-#&gt;  2     3 okay     
-#&gt;  3     3 ours     
-#&gt;  4     3 superstar
-#&gt;  5     3 slope    
-#&gt;  6     3 lately   
-#&gt;  7     3 start    
-#&gt;  8     3 under    
-#&gt;  9     3 peace    
-#&gt; 10     3 lover    
-#&gt; # ℹ 899 more rows</code></pre>
-</div>
-</div>
-</section></section>
-<section>
-<section id="the-missing-statistics-semester" class="title-slide slide level1 agenda-slide center">
-<h1>The Missing Statistics Semester</h1>
+<section id="linear-models" class="title-slide slide level1 agenda-slide center">
+<h1>Linear Models</h1>
 <div class="agenda">
 <ul>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>Unsupervised Machine Learning</p>
-</div></li>
-<li><div class="agenda-inactive agenda-pre-active">
-<p>Topic Modeling with Talor Swift</p>
+<p>Simulation Studies</p>
 </div></li>
 <li><div class="agenda-active">
-<p>The Missing Statistics Semester</p>
+<p>Linear Models</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Generalized Linear Models</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Nonparameteric Models</p>
 </div></li>
 </ul>
 </div>
 </section>
-<section id="the-missing-statistics-sememster" class="slide level2">
-<h2>The Missing Statistics Sememster</h2>
-<p>Here is a list of resources to expand on topics not covered in your education.</p>
-<p>Adapted from <a href="https://missing.csail.mit.edu/" class="uri">https://missing.csail.mit.edu/</a></p>
-</section>
-<section id="introduction-to-statistics" class="slide level2">
-<h2>Introduction to Statistics</h2>
+
+<section>
+<section id="generalized-linear-models" class="title-slide slide level1 agenda-slide center">
+<h1>Generalized Linear Models</h1>
+<div class="agenda">
 <ul>
-<li><a href="https://bookdown.org/lgpcappiello/introstats/introduction-to-hypothesis-testing.html#p-value-approach-to-hypothesis-testing">Traditional Statistics</a></li>
-<li><a href="https://openintro-ims.netlify.app/">Modern Basic Statistics</a></li>
-<li><a href="https://statistical-modeling.netlify.app/">Statistical Modeling</a></li>
-<li><a href="https://dtkaplan.github.io/Lessons-in-statistical-thinking/">Statistical Thinking</a></li>
-<li><a href="https://edge.sagepub.com/salkindfrey7e">Stats for People Who Hate Stats</a></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Simulation Studies</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Linear Models</p>
+</div></li>
+<li><div class="agenda-active">
+<p>Generalized Linear Models</p>
+</div></li>
+<li><div class="agenda-inactive agenda-post-active">
+<p>Nonparameteric Models</p>
+</div></li>
+</ul>
+</div>
+</section>
+<section id="exponential-family-of-distributions" class="slide level2">
+<h2>Exponential Family of Distributions</h2>
+<p>An exponential family of distributions are random variables that allow their probability density function to have the following form:</p>
+<p><span class="math display">\[
+f(y; \theta,\phi) = a(y,\phi)\exp\left\{\frac{y\theta-\kappa(\theta)}{\phi}\right\}
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(\theta\)</span>: is the canonical parameter (also a function of other parameters)</p></li>
+<li><p><span class="math inline">\(\kappa(\theta)\)</span>: is a known cumulant function</p></li>
+<li><p><span class="math inline">\(\phi&gt;0\)</span>: dispersion parameter function</p></li>
+<li><p><span class="math inline">\(a(y,\phi)\)</span>: normalizing constant</p></li>
 </ul>
 </section>
-<section id="statistical-computing" class="slide level2">
-<h2>Statistical Computing</h2>
+<section id="canonical-parameter" class="slide level2">
+<h2>Canonical Parameter</h2>
+<p>The canonical parameter represents the relationship between the random variable and the <span class="math inline">\(E(Y)=\mu\)</span></p>
+</section>
+<section id="normal-distribution" class="slide level2">
+<h2>Normal Distribution</h2>
+<p><span class="math display">\[
+f(y;\mu,\sigma^2)=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(y-\mu)^2}{2\sigma^2}}
+\]</span></p>
+</section>
+<section id="binomial-distribution" class="slide level2">
+<h2>Binomial Distribution</h2>
+<p><span class="math display">\[
+f(y;n,p)=\big(^n_y\big) p^y(1-p)^{n-y}
+\]</span></p>
+</section>
+<section id="poisson-distribution" class="slide level2">
+<h2>Poisson Distribution</h2>
+<p><span class="math display">\[
+f(y;\lambda) = \frac{e^{-\lambda}\lambda^y}{y!}
+\]</span></p>
+</section>
+<section id="negative-binomial-distribution" class="slide level2">
+<h2>Negative Binomial Distribution</h2>
+<p><span class="math display">\[
+f(y;\mu, \theta) = \left(\begin{array}{c}
+y+\theta+1\\
+y
+\end{array}\right)
+\left(\frac{\mu}{\mu+\theta}\right)^y
+\left(\frac{\theta}{\mu+\theta}\right)^\theta
+\]</span></p>
 <ul>
-<li>Computational Statistics (2009, Springer; Download from CSUCI Library)</li>
-<li>Basic Elements of Computational Statistics (2017, Springer; Download from CSUCI)</li>
-<li>Optimization (2013, Springer; Download from CSUCI)</li>
+<li><span class="math inline">\(\mu\)</span>: average count</li>
+<li><span class="math inline">\(\theta\)</span>: dispersion of data</li>
+<li><span class="math inline">\(E(Y)=\mu\)</span></li>
+<li><span class="math inline">\(Var(Y) = \mu + \mu^2/\theta\)</span></li>
 </ul>
 </section>
-<section id="regression" class="slide level2">
-<h2>Regression</h2>
+<section id="gamma-distribution" class="slide level2">
+<h2>Gamma Distribution</h2>
+</section>
+<section id="common-distributions-and-canonical-parameters" class="slide level2">
+<h2>Common Distributions and Canonical Parameters</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Random Variable</th>
+<th>Canonical Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Normal</td>
+<td><span class="math inline">\(\mu\)</span></td>
+</tr>
+<tr class="even">
+<td>Binomial</td>
+<td><span class="math inline">\(\log\left(\frac{\mu}{1-\mu}\right)\)</span></td>
+</tr>
+<tr class="odd">
+<td>Negative Binomial</td>
+<td><span class="math inline">\(\log\left(\frac{\mu}{\mu+k}\right)\)</span></td>
+</tr>
+<tr class="even">
+<td>Poisson</td>
+<td><span class="math inline">\(\log(\mu)\)</span></td>
+</tr>
+<tr class="odd">
+<td>Gamma</td>
+<td><span class="math inline">\(-\frac{1}{\mu}\)</span></td>
+</tr>
+<tr class="even">
+<td>Inverse Gaussian</td>
+<td><span class="math inline">\(-\frac{1}{2\mu^2}\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="generalized-linear-models-1" class="slide level2">
+<h2>Generalized Linear Models</h2>
+<p>A generalized linear model (GLM) is used to model the association between an outcome variable (of any data type) and a set of predictor values. We estimate a set of regression coefficients <span class="math inline">\(\boldsymbol \beta\)</span> to explain how each predictor is related to the expected value of the outcome.</p>
+</section>
+<section id="generalized-linear-models-2" class="slide level2">
+<h2>Generalized Linear Models</h2>
+<p>A GLM is composed of a systematic and random component.</p>
+</section>
+<section id="random-component" class="slide level2">
+<h2>Random Component</h2>
+<p>The random component is the random variable that defines the randomness and variation of the outcome variable.</p>
+</section>
+<section id="systematic-component" class="slide level2">
+<h2>Systematic Component</h2>
+<p>The systematic component is the linear model that models the association between a set of predictors and the expected value of Y:</p>
+<p><span class="math display">\[
+g(\mu)=\eta=\boldsymbol X_i^\mathrm T \boldsymbol \beta
+\]</span></p>
 <ul>
-<li><a href="https://bookdown.org/roback/bookdown-BeyondMLR/">Beyond Linear Regression</a></li>
-<li><a href="https://hbiostat.org/rmsc/">Regression Modelling Strategies</a> (Download from CSUCI Library)</li>
-<li><a href="https://bookdown.org/pingapang9/linear_models_bookdown/">Linear Models</a></li>
-<li>Generalized Linear Models With Examples in R (Download from CSUCI Library)</li>
-<li>Linear and Generalized Linear Mixed Models and Their Applications (2nd Edition) (Download from CSUCI Library)</li>
-<li>Vector Generalized Linear and Additive Models; Yee (Download from CSUCI Library)</li>
+<li><p><span class="math inline">\(\boldsymbol\beta\)</span>: regression coefficients</p></li>
+<li><p><span class="math inline">\(\boldsymbol X_i=(1, X_{i1}, \ldots, X_{ip})^\mathrm T\)</span>: design vector</p></li>
+<li><p><span class="math inline">\(\eta\)</span>: linear model</p></li>
+<li><p><span class="math inline">\(\mu=E(Y)\)</span></p></li>
+<li><p><span class="math inline">\(g(\cdot)\)</span>: link function</p></li>
 </ul>
 </section>
-<section id="other-statistics-resources" class="slide level2">
-<h2>Other Statistics Resources</h2>
-<ul>
-<li><a href="https://www.statlect.com/">StatLect</a></li>
-<li><a href="https://www.r-causal.org/">Causal Inference</a></li>
-<li><a href="https://shainarace.github.io/LinearAlgebra/index.html">Linear Algebra</a></li>
-</ul>
+<section id="simulating-bernoulli" class="slide level2">
+<h2>Simulating Bernoulli</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>)</span>
+<span id="cb2-2"><a></a>eta <span class="ot">&lt;-</span> boot<span class="sc">::</span><span class="fu">inv.logit</span>(<span class="sc">-</span><span class="fl">0.85</span> <span class="sc">+</span> <span class="fl">1.3</span> <span class="sc">*</span> x)</span>
+<span id="cb2-3"><a></a>y <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">1000</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">prob =</span> eta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
-<section id="r-programming" class="slide level2">
-<h2>R Programming</h2>
-<ul>
-<li><a href="https://r4ds.hadley.nz/">Basic R</a></li>
-<li><a href="https://jjallaire.github.io/hopr/">Basic R</a></li>
-<li><a href="https://adv-r.hadley.nz/">Advanced R</a></li>
-<li><a href="https://csgillespie.github.io/efficientR/">Efficient R</a></li>
-<li><a href="https://r-bootcamp.netlify.app/">R Bootcamp</a></li>
-<li><a href="https://deepr.gagolewski.com/index.html">Deep R</a></li>
-<li><a href="https://www.rcpp.org/">Rcpp</a></li>
-<li><a href="https://teuder.github.io/rcpp4everyone_en/">Rcpp 4 Everyone</a></li>
-<li><a href="http://dirk.eddelbuettel.com/code/rcpp.armadillo.html">Rcpp Armadillo</a></li>
-</ul>
+<section id="simulating-poisson-rv" class="slide level2">
+<h2>Simulating Poisson RV</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>)</span>
+<span id="cb3-2"><a></a>eta <span class="ot">&lt;-</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.85</span> <span class="sc">+</span> <span class="fl">1.3</span> <span class="sc">*</span> x)</span>
+<span id="cb3-3"><a></a>y <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="dv">1000</span>, <span class="at">lambda =</span> eta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
-<section id="python-programming" class="slide level2">
-<h2>Python Programming</h2>
-<ul>
-<li><a href="https://wesmckinney.com/book/">Basic Python</a></li>
-<li><a href="https://docs.anaconda.com/free/anaconda/install/">Anaconda</a></li>
-<li><a href="https://www.learnpython.org/">Learn Python</a></li>
-<li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science</a></li>
-<li><a href="https://rstudio.github.io/reticulate/">Reticulate</a></li>
-</ul>
+<section id="simulating-negative-binomial-rv" class="slide level2">
+<h2>Simulating Negative Binomial RV</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>)</span>
+<span id="cb4-2"><a></a>eta <span class="ot">&lt;-</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.85</span> <span class="sc">+</span> <span class="fl">1.3</span> <span class="sc">*</span> x)</span>
+<span id="cb4-3"><a></a>y <span class="ot">&lt;-</span> <span class="fu">rnbinom</span>(<span class="dv">1000</span>, <span class="at">mu =</span> eta, <span class="at">size =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
-<section id="sql" class="slide level2">
-<h2>SQL</h2>
-<ul>
-<li><a href="https://mode.com/sql-tutorial/introduction-to-sql">SQL for Data Science</a></li>
-<li><a href="https://www.khanacademy.org/computing/computer-programming/sql">Khan Academy</a></li>
-<li><a href="https://sqlbolt.com/">SQLBolt</a></li>
-<li><a href="https://sqlzoo.net/wiki/SQL_Tutorial">SQLZoo</a></li>
-</ul>
+<section id="simulating-a-gamma-rv" class="slide level2">
+<h2>Simulating a Gamma RV</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>)</span>
+<span id="cb5-2"><a></a>y_true <span class="ot">&lt;-</span> <span class="fu">exp</span>(<span class="fl">0.75</span> <span class="sc">+</span> <span class="fl">1.3</span> <span class="sc">*</span> x)</span>
+<span id="cb5-3"><a></a>y <span class="ot">&lt;-</span> <span class="fu">rgamma</span>(<span class="dv">1000</span>, <span class="at">rate =</span> <span class="dv">10</span> <span class="sc">/</span> y_true, <span class="at">shape =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
-<section id="shell-terminal" class="slide level2">
-<h2>Shell-Terminal</h2>
-<ul>
-<li><a href="https://missing.csail.mit.edu/2020/shell-tools/">Missing Semester</a></li>
-<li><a href="https://swcarpentry.github.io/shell-novice/">Shell</a></li>
-<li><a href="https://explainshell.com/">Explain Shell</a></li>
-<li><a href="https://vim-adventures.com/">Vim Adventures</a></li>
-<li><a href="https://neovim.io/">Neovim</a></li>
-<li><a href="https://github.com/tmux/tmux/wiki">tmux</a></li>
-<li><a href="https://hpcc.ucr.edu/manuals/">HPCC Manuals</a></li>
-</ul>
+<section id="bayesian-regression-model-in-r" class="slide level2">
+<h2>Bayesian Regression Model in R</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="annotated-cell-6"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-6-1"><a href="#annotated-cell-6-1"></a><span class="fu">library</span>(brms)</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-6-2" class="code-annotation-target"><a href="#annotated-cell-6-2"></a><span class="fu">brm</span>(formula,</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-6-3" class="code-annotation-target"><a href="#annotated-cell-6-3"></a>    data,</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-6-4" class="code-annotation-target"><a href="#annotated-cell-6-4"></a>    family)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-6" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-6" data-code-lines="2" data-code-annotation="1">Supply a formula for R</span>
+</dd>
+<dt data-target-cell="annotated-cell-6" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-6" data-code-lines="3" data-code-annotation="2">Supply the data frame</span>
+</dd>
+<dt data-target-cell="annotated-cell-6" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-6" data-code-lines="4" data-code-annotation="3">Which family and link function is used to model data</span>
+</dd>
+</dl>
+</div>
+</div>
 </section>
-<section id="git" class="slide level2">
-<h2>Git</h2>
-<ul>
-<li><a href="https://missing.csail.mit.edu/2020/version-control/">Missing Semester</a></li>
-<li><a href="https://happygitwithr.com/">Happy Git</a><br>
-</li>
-<li><a href="https://git-scm.com/book/en/v2">Pro Git</a><br>
-</li>
-<li><a href="https://ohshitgit.com/">Oh S***, Git!?!</a><br>
-</li>
-<li><a href="https://xosh.org/explain-git-in-simple-words/">Git in Simple Words</a></li>
-</ul>
+<section id="logistic-binomial-regression" class="slide level2">
+<h2>Logistic (Binomial) Regression</h2>
+<p>Logistic Regression is used when your outcome is binary:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">brm</span>(y<span class="sc">~</span>x, </span>
+<span id="cb6-2"><a></a>    data, </span>
+<span id="cb6-3"><a></a>    <span class="at">family =</span> <span class="fu">bernoulli</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
-<section id="markdown" class="slide level2">
-<h2>Markdown</h2>
-<ul>
-<li><a href="https://bookdown.org/yihui/rmarkdown/">R Mardown</a></li>
-<li><a href="https://quarto.org/">Quarto</a></li>
-<li><a href="https://tobi.oetiker.ch/lshort/lshort.pdf">LaTeX</a></li>
-<li><a href="https://www.colorado.edu/aps/sites/default/files/attached-files/latex_primer.pdf">LaTeX for Beginners</a></li>
-<li><a href="https://typst.app/">Typst</a></li>
-</ul>
+<section id="poisson-regression" class="slide level2">
+<h2>Poisson Regression</h2>
+<p>Poisson Regression is used when the outcome is count data:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">brm</span>(y<span class="sc">~</span>x, </span>
+<span id="cb7-2"><a></a>    data, </span>
+<span id="cb7-3"><a></a>    <span class="at">family =</span> <span class="fu">poisson</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
-<section id="dashboards" class="slide level2">
-<h2>Dashboards</h2>
-<ul>
-<li><a href="https://shiny.posit.co/">Shiny</a></li>
-<li><a href="https://quarto.org/docs/dashboards/">Quarto Dashboards</a></li>
-<li><a href="https://www.tableau.com/learn/training">Tableau</a></li>
-<li><a href="https://learn.microsoft.com/en-us/training/powerplatform/power-bi">Power BI</a></li>
-</ul>
+<section id="gamma-regression" class="slide level2">
+<h2>Gamma Regression</h2>
+<p>Gamma Regression is used when modeling the association between predictors and positive continuous values:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">brm</span>(y<span class="sc">~</span>x, </span>
+<span id="cb8-2"><a></a>    data, </span>
+<span id="cb8-3"><a></a>    <span class="at">family =</span> <span class="fu">Gamma</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
-<section id="other-programming" class="slide level2">
-<h2>Other Programming</h2>
+<section id="negative-binomial-regression" class="slide level2">
+<h2>Negative Binomial Regression</h2>
+<p>Negative Binomial Regression is used four with overdispersed count data, where the variance is larger than expected.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">brm</span>(y<span class="sc">~</span>x, </span>
+<span id="cb9-2"><a></a>    data,</span>
+<span id="cb9-3"><a></a>    <span class="at">family =</span> <span class="fu">negbinomial</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section></section>
+<section>
+<section id="nonparameteric-models" class="title-slide slide level1 agenda-slide center">
+<h1>Nonparameteric Models</h1>
+<div class="agenda">
 <ul>
-<li><a href="https://www.learncpp.com/">Cpp</a></li>
-<li><a href="https://arma.sourceforge.net/">Cpp Armadillo</a></li>
-<li><a href="https://juliadatascience.io/">Julia Data Science</a></li>
-<li><a href="https://learn.arcgis.com/en/gallery/">ArcGIS</a></li>
-<li><a href="https://www.sas.com/en_us/home.html">SAS</a></li>
-<li><a href="https://www.stata.com/">Stata</a></li>
-<li><a href="https://www.ibm.com/spss">SPSS</a></li>
-<li><a href="https://learn.microsoft.com/en-us/office/vba/library-reference/concepts/getting-started-with-vba-in-office">VBA</a></li>
-<li><a href="https://www.jmp.com/en_us/home.html">JMP</a></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Simulation Studies</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Linear Models</p>
+</div></li>
+<li><div class="agenda-inactive agenda-pre-active">
+<p>Generalized Linear Models</p>
+</div></li>
+<li><div class="agenda-active">
+<p>Nonparameteric Models</p>
+</div></li>
 </ul>
+</div>
+</section>
+<section id="nonparameteric-models-1" class="slide level2">
+<h2>Nonparameteric Models</h2>
+</section>
+<section id="nonlinear-models" class="slide level2">
+<h2>Nonlinear Models</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="dv">2</span>)</span>
+<span id="cb10-2"><a></a>y <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">+</span> <span class="fu">sinpi</span>(x<span class="sc">/</span><span class="dv">2</span>) <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">sd =</span> <span class="fl">0.3</span>)</span>
+<span id="cb10-3"><a></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(x, y)</span>
+<span id="cb10-4"><a></a>xlm <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> <span class="fu">lm</span>(y <span class="sc">~</span> <span class="fu">rcs</span>(x, <span class="at">parms =</span> <span class="dv">10</span>), <span class="at">data =</span> _)</span>
+<span id="cb10-5"><a></a>df <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb10-6"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb10-7"><a></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(x, <span class="fu">predict</span>(xlm)), <span class="at">col =</span> <span class="st">"red"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="nonlinear-models-1" class="slide level2">
+<h2>Nonlinear Models</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">4</span>)</span>
+<span id="cb11-2"><a></a>y <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">+</span>  <span class="fu">cospi</span>(x<span class="sc">/</span><span class="dv">2</span>) <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">sd =</span> <span class="fl">0.3</span>)</span>
+<span id="cb11-3"><a></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(x, y)</span>
+<span id="cb11-4"><a></a>xlm <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> <span class="fu">lm</span>(y <span class="sc">~</span> <span class="fu">rcs</span>(x, <span class="at">parms =</span> <span class="dv">10</span>), <span class="at">data =</span> _)</span>
+<span id="cb11-5"><a></a>df <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb11-6"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb11-7"><a></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(x, <span class="fu">predict</span>(xlm)), <span class="at">col =</span> <span class="st">"red"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="generalized-additive-models" class="slide level2">
+<h2>Generalized Additive Models</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>x1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="dv">2</span>)</span>
+<span id="cb12-2"><a></a>x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">4</span>)</span>
+<span id="cb12-3"><a></a>y <span class="ot">&lt;-</span> <span class="fu">sinpi</span>(x1<span class="sc">/</span><span class="dv">2</span>) <span class="sc">+</span> <span class="fu">cospi</span>(x2<span class="sc">/</span><span class="dv">2</span>) <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">sd =</span> <span class="fl">0.5</span>)</span>
+<span id="cb12-4"><a></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(x1, x2, y)</span>
+<span id="cb12-5"><a></a></span>
+<span id="cb12-6"><a></a>xgam <span class="ot">&lt;-</span> <span class="fu">gam</span>(y <span class="sc">~</span> <span class="fu">rcs</span>(x1,<span class="dv">10</span>) <span class="sc">+</span> <span class="fu">rcs</span>(x2, <span class="dv">10</span>))</span>
+<span id="cb12-7"><a></a>xgam<span class="sc">$</span>coefficients</span>
+<span id="cb12-8"><a></a></span>
+<span id="cb12-9"><a></a>df1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> x1,</span>
+<span id="cb12-10"><a></a>              <span class="at">y =</span> <span class="fu">sinpi</span>(x1<span class="sc">/</span><span class="dv">2</span>),</span>
+<span id="cb12-11"><a></a>              <span class="at">pred =</span> <span class="fu">rcs</span>(x1,<span class="dv">10</span>) <span class="sc">%*%</span> xgam<span class="sc">$</span>coefficients[<span class="dv">2</span><span class="sc">:</span><span class="dv">10</span>]) </span>
+<span id="cb12-12"><a></a>df2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> x2,</span>
+<span id="cb12-13"><a></a>              <span class="at">y =</span> <span class="fu">cospi</span>(x2<span class="sc">/</span><span class="dv">2</span>),</span>
+<span id="cb12-14"><a></a>              <span class="at">pred =</span> <span class="fu">rcs</span>(x2,<span class="dv">10</span>) <span class="sc">%*%</span> xgam<span class="sc">$</span>coefficients[<span class="dv">11</span><span class="sc">:</span><span class="dv">19</span>]) </span>
+<span id="cb12-15"><a></a>df1 <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb12-16"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb12-17"><a></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(x, pred), <span class="at">col =</span> <span class="st">"red"</span>) </span>
+<span id="cb12-18"><a></a></span>
+<span id="cb12-19"><a></a>df2 <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb12-20"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb12-21"><a></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(x, pred), <span class="at">col =</span> <span class="st">"red"</span>) </span>
+<span id="cb12-22"><a></a></span>
+<span id="cb12-23"><a></a><span class="fu">plot</span>(xgam)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -1010,8 +975,6 @@ X_i = (x_{i1}, x_{i2}, \cdots, x_{in})
   <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
-  <script src="../site_libs/revealjs/plugin/verticator/verticator.js"></script>
   <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1034,8 +997,6 @@ X_i = (x_{i1}, x_{i2}, \cdots, x_{in})
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true,"src":"chalkboard.json","storage":"chalkboard_pres","theme":"whiteboard","chalkWidth":4},
-'pointer': {"key":"q","color":"red","pointerSize":16,"alwaysVisible":false},
-'verticator': {"themetag":"h1","color":"","inversecolor":"","skipuncounted":false,"clickable":true,"position":"auto","offset":"3vmin","autogenerate":true,"tooltip":false,"scale":1},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1206,7 +1167,7 @@ X_i = (x_{i1}, x_{i2}, \cdots, x_{in})
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, RevealPointer, Verticator, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,

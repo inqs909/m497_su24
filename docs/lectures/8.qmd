@@ -205,6 +205,7 @@ brm(formula, # <1>
 Logistic Regression is used when your outcome is binary:
 
 ```{r}
+#| eval: false
 brm(y~x, 
     data, 
     family = bernoulli())
@@ -215,6 +216,7 @@ brm(y~x,
 Poisson Regression is used when the outcome is count data:
 
 ```{r}
+#| eval: false
 brm(y~x, 
     data, 
     family = poisson())
@@ -225,6 +227,7 @@ brm(y~x,
 Gamma Regression is used when modeling the association between predictors and positive continuous values:
 
 ```{r}
+#| eval: false
 brm(y~x, 
     data, 
     family = Gamma())
@@ -235,6 +238,7 @@ brm(y~x,
 Negative Binomial Regression is used four with overdispersed count data, where the variance is larger than expected.
 
 ```{r}
+#| eval: false
 brm(y~x, 
     data,
     family = negbinomial())
@@ -243,9 +247,12 @@ brm(y~x,
 
 # Nonparameteric Models
 
+## Nonparameteric Models
+
 ## Nonlinear Models
 
 ```{r}
+#| eval: false
 x <- rnorm(1000, 2)
 y <- 3 + sinpi(x/2) + rnorm(1000, sd = 0.3)
 df <- tibble(x, y)
@@ -260,6 +267,7 @@ df |> ggplot(aes(x, y)) +
 ## Nonlinear Models
 
 ```{r}
+#| eval: false
 x <- rnorm(1000, -4)
 y <- 3 +  cospi(x/2) + rnorm(1000, sd = 0.3)
 df <- tibble(x, y)
@@ -273,6 +281,7 @@ df |> ggplot(aes(x, y)) +
 ## Generalized Additive Models
 
 ```{r}
+#| eval: false
 x1 <- rnorm(1000, 2)
 x2 <- rnorm(1000, -4)
 y <- sinpi(x1/2) + cospi(x2/2) + rnorm(1000, sd = 0.5)

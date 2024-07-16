@@ -15,9 +15,9 @@
 <link href="../site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/reveal-auto-agenda-0.0.3/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.554">
+  <meta name="generator" content="quarto-1.5.54">
 
-  <title>MATH 497 - Functional Programming</title>
+  <title>MATH 497 – Functional Programming</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -48,7 +48,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -76,7 +76,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -90,7 +90,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -600,7 +600,7 @@
   };
 
   // Store cell data
-  globalThis.qwebrCellDetails = [{"code":"x <- matrix(rnorm(1000), nrow = 10)","options":{"fig-height":5,"out-width":"700px","warning":"true","out-height":"","classes":"","output":"true","editor-quick-suggestions":"false","dpi":72,"message":"true","fig-width":7,"context":"interactive","comment":"","read-only":"false","label":"unnamed-chunk-1","editor-max-height":"","autorun":"false","fig-cap":"","editor-font-scale":1,"results":"markup"},"id":1},{"code":"","options":{"fig-height":5,"out-width":"700px","warning":"true","out-height":"","classes":"","output":"true","editor-quick-suggestions":"false","dpi":72,"message":"true","fig-width":7,"context":"interactive","comment":"","read-only":"false","label":"unnamed-chunk-2","editor-max-height":"","autorun":"false","fig-cap":"","editor-font-scale":1,"results":"markup"},"id":2},{"code":"x <- 1:20\npost <- vector(length = 20)\nfor (i in seq_along(x)){\n  post[i] <- sinpi(x[i])\n}\npost\n\n## OR\n\nsinpi(x)","options":{"fig-height":5,"out-width":"700px","warning":"true","out-height":"","classes":"","output":"true","editor-quick-suggestions":"false","dpi":72,"message":"true","fig-width":7,"context":"interactive","comment":"","read-only":"false","label":"unnamed-chunk-3","editor-max-height":"","autorun":"false","fig-cap":"","editor-font-scale":1,"results":"markup"},"id":3},{"code":"x <- 1:5\ny <- 1:5","options":{"fig-height":5,"out-width":"700px","warning":"true","out-height":"","classes":"","output":"true","editor-quick-suggestions":"false","dpi":72,"message":"true","fig-width":7,"context":"interactive","comment":"","read-only":"false","label":"unnamed-chunk-4","editor-max-height":"","autorun":"false","fig-cap":"","editor-font-scale":1,"results":"markup"},"id":4},{"code":"","options":{"fig-height":5,"out-width":"700px","warning":"true","out-height":"","classes":"","output":"true","editor-quick-suggestions":"false","dpi":72,"message":"true","fig-width":7,"context":"interactive","comment":"","read-only":"false","label":"unnamed-chunk-5","editor-max-height":"","autorun":"false","fig-cap":"","editor-font-scale":1,"results":"markup"},"id":5},{"code":"x <- matrix(rnorm(1000), nrow = 10)","options":{"fig-height":5,"out-width":"700px","warning":"true","out-height":"","classes":"","output":"true","editor-quick-suggestions":"false","dpi":72,"message":"true","fig-width":7,"context":"interactive","comment":"","read-only":"false","label":"unnamed-chunk-6","editor-max-height":"","autorun":"false","fig-cap":"","editor-font-scale":1,"results":"markup"},"id":6},{"code":"x <- matrix(rnorm(1000), nrow = 20)","options":{"fig-height":5,"out-width":"700px","warning":"true","out-height":"","classes":"","output":"true","editor-quick-suggestions":"false","dpi":72,"message":"true","fig-width":7,"context":"interactive","comment":"","read-only":"false","label":"unnamed-chunk-7","editor-max-height":"","autorun":"false","fig-cap":"","editor-font-scale":1,"results":"markup"},"id":7},{"code":"fruits <- c(\"apple\", \"banana\", \"cherry\", \"date\", \"elderberry\", \"fig\", \"grape\", \"honeydew\", \"kiwi\", \"lemon\")","options":{"fig-height":5,"out-width":"700px","warning":"true","out-height":"","classes":"","output":"true","editor-quick-suggestions":"false","dpi":72,"message":"true","fig-width":7,"context":"interactive","comment":"","read-only":"false","label":"unnamed-chunk-8","editor-max-height":"","autorun":"false","fig-cap":"","editor-font-scale":1,"results":"markup"},"id":8},{"code":"# Generate a list of 10 lists, each containing 5 random numbers\nlists <- lapply(1:10, function(i) {\n  means <- rpois(1, 3)\n  rnorm(5, means)\n})","options":{"fig-height":5,"out-width":"700px","warning":"true","out-height":"","classes":"","output":"true","editor-quick-suggestions":"false","dpi":72,"message":"true","fig-width":7,"context":"interactive","comment":"","read-only":"false","label":"unnamed-chunk-9","editor-max-height":"","autorun":"false","fig-cap":"","editor-font-scale":1,"results":"markup"},"id":9},{"code":"numbers <- 4:400","options":{"fig-height":5,"out-width":"700px","warning":"true","out-height":"","classes":"","output":"true","editor-quick-suggestions":"false","dpi":72,"message":"true","fig-width":7,"context":"interactive","comment":"","read-only":"false","label":"unnamed-chunk-10","editor-max-height":"","autorun":"false","fig-cap":"","editor-font-scale":1,"results":"markup"},"id":10}];
+  globalThis.qwebrCellDetails = [{"id":1,"code":"x <- matrix(rnorm(1000), nrow = 10)","options":{"editor-quick-suggestions":"false","results":"markup","fig-width":7,"out-height":"","comment":"","output":"true","dpi":72,"editor-font-scale":1,"fig-height":5,"out-width":"700px","context":"interactive","label":"unnamed-chunk-1","warning":"true","autorun":"false","message":"true","classes":"","editor-max-height":"","fig-cap":"","read-only":"false"}},{"id":2,"code":"","options":{"editor-quick-suggestions":"false","results":"markup","fig-width":7,"out-height":"","comment":"","output":"true","dpi":72,"editor-font-scale":1,"fig-height":5,"out-width":"700px","context":"interactive","label":"unnamed-chunk-2","warning":"true","autorun":"false","message":"true","classes":"","editor-max-height":"","fig-cap":"","read-only":"false"}},{"id":3,"code":"x <- 1:20\npost <- vector(length = 20)\nfor (i in seq_along(x)){\n  post[i] <- sinpi(x[i])\n}\npost\n\n## OR\n\nsinpi(x)","options":{"editor-quick-suggestions":"false","results":"markup","fig-width":7,"out-height":"","comment":"","output":"true","dpi":72,"editor-font-scale":1,"fig-height":5,"out-width":"700px","context":"interactive","label":"unnamed-chunk-3","warning":"true","autorun":"false","message":"true","classes":"","editor-max-height":"","fig-cap":"","read-only":"false"}},{"id":4,"code":"x <- 1:5\ny <- 1:5","options":{"editor-quick-suggestions":"false","results":"markup","fig-width":7,"out-height":"","comment":"","output":"true","dpi":72,"editor-font-scale":1,"fig-height":5,"out-width":"700px","context":"interactive","label":"unnamed-chunk-4","warning":"true","autorun":"false","message":"true","classes":"","editor-max-height":"","fig-cap":"","read-only":"false"}},{"id":5,"code":"","options":{"editor-quick-suggestions":"false","results":"markup","fig-width":7,"out-height":"","comment":"","output":"true","dpi":72,"editor-font-scale":1,"fig-height":5,"out-width":"700px","context":"interactive","label":"unnamed-chunk-5","warning":"true","autorun":"false","message":"true","classes":"","editor-max-height":"","fig-cap":"","read-only":"false"}},{"id":6,"code":"x <- matrix(rnorm(1000), nrow = 10)","options":{"editor-quick-suggestions":"false","results":"markup","fig-width":7,"out-height":"","comment":"","output":"true","dpi":72,"editor-font-scale":1,"fig-height":5,"out-width":"700px","context":"interactive","label":"unnamed-chunk-6","warning":"true","autorun":"false","message":"true","classes":"","editor-max-height":"","fig-cap":"","read-only":"false"}},{"id":7,"code":"x <- matrix(rnorm(1000), nrow = 20)","options":{"editor-quick-suggestions":"false","results":"markup","fig-width":7,"out-height":"","comment":"","output":"true","dpi":72,"editor-font-scale":1,"fig-height":5,"out-width":"700px","context":"interactive","label":"unnamed-chunk-7","warning":"true","autorun":"false","message":"true","classes":"","editor-max-height":"","fig-cap":"","read-only":"false"}},{"id":8,"code":"fruits <- c(\"apple\", \"banana\", \"cherry\", \"date\", \"elderberry\", \"fig\", \"grape\", \"honeydew\", \"kiwi\", \"lemon\")","options":{"editor-quick-suggestions":"false","results":"markup","fig-width":7,"out-height":"","comment":"","output":"true","dpi":72,"editor-font-scale":1,"fig-height":5,"out-width":"700px","context":"interactive","label":"unnamed-chunk-8","warning":"true","autorun":"false","message":"true","classes":"","editor-max-height":"","fig-cap":"","read-only":"false"}},{"id":9,"code":"# Generate a list of 10 lists, each containing 5 random numbers\nlists <- lapply(1:10, function(i) {\n  means <- rpois(1, 3)\n  rnorm(5, means)\n})","options":{"editor-quick-suggestions":"false","results":"markup","fig-width":7,"out-height":"","comment":"","output":"true","dpi":72,"editor-font-scale":1,"fig-height":5,"out-width":"700px","context":"interactive","label":"unnamed-chunk-9","warning":"true","autorun":"false","message":"true","classes":"","editor-max-height":"","fig-cap":"","read-only":"false"}},{"id":10,"code":"numbers <- 4:400","options":{"editor-quick-suggestions":"false","results":"markup","fig-width":7,"out-height":"","comment":"","output":"true","dpi":72,"editor-font-scale":1,"fig-height":5,"out-width":"700px","context":"interactive","label":"unnamed-chunk-10","warning":"true","autorun":"false","message":"true","classes":"","editor-max-height":"","fig-cap":"","read-only":"false"}}];
 
   </script>
   <script type="module">
@@ -2043,7 +2043,7 @@ f(x,y) = x^2 + y^2 + \ln(x+y)
 </section>
 <section id="help-documentation" class="slide level2">
 <h2>Help Documentation</h2>
-<table>
+<table class="caption-top">
 <colgroup>
 <col style="width: 17%">
 <col style="width: 82%">
@@ -2105,7 +2105,7 @@ f(x,y) = x^2 + y^2 + \ln(x+y)
 </section>
 <section id="commonly-used-function" class="slide level2">
 <h2>Commonly-used Function</h2>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Functions</th>
@@ -2719,18 +2719,7 @@ z =  \frac{x-\bar y}{\sqrt{s^2_{y}/n_y}}
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -2762,7 +2751,29 @@ z =  \frac{x-\bar y}{\sqrt{s^2_{y}/n_y}}
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("www\.inqs\.info\/m497_su24");
@@ -2770,7 +2781,7 @@ z =  \frac{x-\bar y}{\sqrt{s^2_{y}/n_y}}
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
