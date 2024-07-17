@@ -1,6 +1,6 @@
 ---
 title:  Week 6
-date: 6-28-24
+date: 06-28-24
 description: MEET Wednesday (7/3)
 editor: visual
 editor_options: 
@@ -14,7 +14,7 @@ editor_options:
 -   Permutation Tests
 
 | Lecture                                                | Videos                                                                             |
-|:-------------------------------------------------------|:-----------------------------------------------------------------------------------|
+|:----------------------------|:------------------------------------------|
 | [Slide](http://m497.inqs.info/lectures/6#/title-slide) | [Video 1](https://youtu.be/UfHkx7r7SZk) \| [Video 2](https://youtu.be/wZWXMYWftC4) |
 
 ## Further Reading

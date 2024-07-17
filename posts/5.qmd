@@ -1,6 +1,6 @@
 ---
 title:  Week 5
-date: 6-18-24
+date: 06-18-24
 description: MEET Wednesday (6/26)
 editor: visual
 editor_options: 
@@ -14,7 +14,7 @@ editor_options:
 -   Monte Carlo P-Value
 
 | Lecture                                                | Videos                                                                             |
-|:-------------------------------------------------------|:-----------------------------------------------------------------------------------|
+|:----------------------------|:------------------------------------------|
 | [Slide](http://m497.inqs.info/lectures/5#/title-slide) | [Video 1](https://youtu.be/BZZXxfAl7_g) \| [Video 2](https://youtu.be/a2ppggFdOt8) |
 
 ## Further Reading

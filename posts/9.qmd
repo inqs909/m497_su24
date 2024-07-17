@@ -1,0 +1,24 @@
+---
+title:  Week 9
+date: 07-17-24
+description: MEET Tuesday (7/16)
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## Learning Outcomes
+
+-   Zero-Inflated Models
+
+    -   Poisson
+
+    -   Negative Binomial
+
+-   Hurdle Models
+
+-   Cox Proportional Hazard Models
+
+| Lecture                                                | Videos |
+|:-------------------------------------------------------|:-------|
+| [Slide](http://m497.inqs.info/lectures/9#/title-slide) |        |

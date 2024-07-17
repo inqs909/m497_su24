@@ -1,6 +1,6 @@
 ---
 title: Week 4
-date: 6-13-24
+date: 06-13-24
 description: MEET Tuesday (6/18)
 editor: visual
 editor_options: 
@@ -18,7 +18,7 @@ editor_options:
 -   Stochastic Gradient Methods
 
 | Lecture                                                | Videos                                                                                                                        |
-|:---------------------|:------------------------------------------------|
+|:----------------------|:------------------------------------------------|
 | [Slide](http://m497.inqs.info/lectures/4#/title-slide) | [Video 1](https://youtu.be/EHiGqAjtyrI) \| [Video 2](https://youtu.be/OcezuhJ_Hjs) \| [Video 3](https://youtu.be/XB4u8jcr7Nw) |
 
 ## Further Reading

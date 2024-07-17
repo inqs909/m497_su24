@@ -1,6 +1,6 @@
 ---
 title:  Week 8
-date: 7-11-24
+date: 07-11-24
 description: MEET Tuesday (7/16)
 editor: visual
 editor_options: 
@@ -15,6 +15,6 @@ editor_options:
 
 -   Generalized Linear Model
 
-| Lecture                                                | Videos |
-|:-------------------------------------------------------|:-------|
-| [Slide](http://m497.inqs.info/lectures/8#/title-slide) |        |
+| Lecture                                                | Videos                                                                             |
+|:-------------------------------------------------------|:-----------------------------------------------------------------------------------|
+| [Slide](http://m497.inqs.info/lectures/8#/title-slide) | [Video 1](https://youtu.be/E71cCvP7x0g) \| [Video 2](https://youtu.be/ElaR0m8tTok) |
