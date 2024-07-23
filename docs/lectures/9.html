@@ -785,13 +785,20 @@ P(x=0) = \left\{\begin{array}{cc}
 <li>Gamma</li>
 </ul>
 </section>
+<section id="hurdle-poisson-and-negative-binomial" class="slide level2">
+<h2>Hurdle Poisson and Negative Binomial</h2>
+<p>Both Negative Binomial and Poisson Models can generate a 0 value.</p>
+<div class="fragment">
+<p>Therefore, these distributions are truncated at 1 to be utilized in a hurdle model.</p>
+</div>
+</section>
 <section id="simulating-hurdle-poisson" class="slide level2">
 <h2>Simulating Hurdle Poisson</h2>
 <h3 id="zero-2">Zero</h3>
 <p><span class="math display">\[
 g(\pi) = 1.1 + 3.1 X
 \]</span></p>
-<h3 id="poisson-1">Poisson</h3>
+<h3 id="truncated-poisson">Truncated-Poisson</h3>
 <p><span class="math display">\[
 h(\lambda) = 0.75+1.3X
 \]</span></p>
@@ -830,7 +837,7 @@ h(\lambda) = 0.75+1.3X
 <p><span class="math display">\[
 g(\pi) = 1.1 + 3.1 X
 \]</span></p>
-<h3 id="poisson-2">Poisson</h3>
+<h3 id="poisson-1">Poisson</h3>
 <p><span class="math display">\[
 h(\lambda) = 0.75+1.3X
 \]</span></p>

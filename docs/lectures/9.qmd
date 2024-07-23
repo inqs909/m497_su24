@@ -254,6 +254,15 @@ This is modeled using a Binary (logistic) GLM.
 -   Log-Normal
 -   Gamma
 
+## Hurdle Poisson and Negative Binomial
+
+Both Negative Binomial and Poisson Models can generate a 0 value.
+
+::: fragment
+Therefore, these distributions are truncated at 1 to be utilized in a hurdle model.
+:::
+
+
 ## Simulating Hurdle Poisson
 
 ### Zero
@@ -262,7 +271,7 @@ $$
 g(\pi) = 1.1 + 3.1 X
 $$
 
-### Poisson
+### Truncated-Poisson
 
 $$
 h(\lambda) = 0.75+1.3X

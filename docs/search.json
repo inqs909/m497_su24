@@ -413,11 +413,18 @@
     "text": "Hurdle Models\n\nPoisson\nNegative Binomial Model\nLog-Normal\nGamma"
   },
   {
+    "objectID": "lectures/9.html#hurdle-poisson-and-negative-binomial",
+    "href": "lectures/9.html#hurdle-poisson-and-negative-binomial",
+    "title": "Simulation Studies",
+    "section": "Hurdle Poisson and Negative Binomial",
+    "text": "Hurdle Poisson and Negative Binomial\nBoth Negative Binomial and Poisson Models can generate a 0 value.\n\nTherefore, these distributions are truncated at 1 to be utilized in a hurdle model."
+  },
+  {
     "objectID": "lectures/9.html#simulating-hurdle-poisson",
     "href": "lectures/9.html#simulating-hurdle-poisson",
     "title": "Simulation Studies",
     "section": "Simulating Hurdle Poisson",
-    "text": "Simulating Hurdle Poisson\nZero\n\\[\ng(\\pi) = 1.1 + 3.1 X\n\\]\nPoisson\n\\[\nh(\\lambda) = 0.75+1.3X\n\\]"
+    "text": "Simulating Hurdle Poisson\nZero\n\\[\ng(\\pi) = 1.1 + 3.1 X\n\\]\nTruncated-Poisson\n\\[\nh(\\lambda) = 0.75+1.3X\n\\]"
   },
   {
     "objectID": "lectures/9.html#hurdle-poisson-model",
