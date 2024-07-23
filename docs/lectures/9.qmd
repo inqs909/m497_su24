@@ -1,0 +1,463 @@
+---
+title: "Simulation Studies"
+subtitle: "Zero Models"
+format:
+  revealjs:
+    include-in-header: "math_commands.html"
+    scrollable: true
+    navigation-mode: vertical
+    controls-layout: bottom-right
+    controls-tutorial: true
+    incremental: false 
+    chalkboard:
+      src: chalkboard.json
+      storage: chalkboard_pres
+      theme: whiteboard
+      chalk-width: 4
+engine: knitr
+knitr:
+  opts_chunk: 
+    code-fold: show
+    echo: true
+    eval: false
+    comment: "#>" 
+filters: 
+  - reveal-header
+  - reveal-auto-agenda
+  - code-fullscreen
+  - webr
+webr: 
+  show-startup-message: true
+  packages: ['ggplot2', 'dplyr', 'stringr']
+editor_options: 
+  chunk_output_type: console
+---
+
+## R Packages
+
+```{r}
+#| code-fold: false
+#| eval: true
+library(extraDistr)
+library(mvtnorm)
+library(splines2)
+library(tidyverse)
+library(brms)
+theme_set(theme_bw())
+```
+
+
+# Zero-Inflated Models
+
+## Zero-Inflated Models
+
+Zero-inflated models is a mixture model where random variables are generated from 2 or more distributions. 
+
+::: fragment
+On distribution that states the value came from 2 possible distributions. All other values could have come from a common distribution. 
+:::
+
+::: fragment
+
+:::
+
+
+## Mixture Models
+
+$$
+f(x) = \pi g(x) + (1-\pi)h(x)
+$$
+
+-   $\pi\in(0,1)$
+
+## Zero-Inflated Distribution
+
+A zero-inflated distribution is a mixture model, where the observed value of 0 can com from 2 distributions.
+
+::: fragment
+This forces the data to produce more 0's than from a standard distribution.
+:::
+
+
+## Zero-Inflated
+
+$$
+P(x=0) = \left\{\begin{array}{cc}
+\pi + (1-\pi)g(x) & X=0 \\
+(1-\pi)g(x) & otherwise
+\end{array}
+\right.
+$$
+
+## Modelling 0
+
+When modeling a ZI-model, we need to determine where the 0 came from.
+
+::: fragment
+This is modeled using a Binary (logistic) GLM.
+:::
+
+## ZI-Poisson
+
+If you believe that the data comes from a Poisson distribution, but there is an abnormal amount of 0's, It may indicate that 0 may come from 2 sources of distributions.
+
+::: fragment
+Hence the Zero-inflated Poison model may be appropriate.
+:::
+
+## Simulating ZI-Poisson
+
+### Zero
+
+$$
+g(\pi) = -1.85 + 1.1 X_1
+$$
+
+### Poisson
+
+$$
+h(\lambda) = 4-2X_2
+$$
+
+## Simulating ZI-Poisson
+
+```{r}
+n <- 10000
+x1 <- rnorm(n, mean = 2)
+x2 <- rnorm(n, mean = 2.5)
+eta <- boot::inv.logit(-1.85 + 1.1 * x1)
+zi <- rbinom(n, size = 1, prob = eta)
+mu <- exp(4 - 2 * x2)
+p <- rpois(n, mu)
+y <- (zi == 0) * p
+```
+
+## Bayesian Model
+
+```{r}
+brm(bf(y ~ x2, 
+       zi ~ x1), 
+    data = tibble(y, x1, x2),
+    family = zero_inflated_poisson(),
+    cores = 4)
+```
+
+
+## ZI-Negative Binomial
+
+If you believe that the data comes from a negative binomial distribution, but there is an abnormal amount of 0's, It may indicate that 0 may come from 2 sources of distributions.
+
+::: fragment
+Hence the Zero-inflated Poison model may be appropriate.
+:::
+
+## Simulating ZI-Negative Binomial
+
+### Zero
+
+$$
+g(\pi) = -1.85 + 1.1 X_1
+$$
+
+### Negative Binomial
+
+$$
+h(\mu) = -0.85-1.3X_2
+$$
+
+## Simulating ZI-Negative Binomial
+
+```{r}
+n <- 10000
+x1 <- rnorm(n, mean = 2)
+x2 <- rnorm(n)
+eta <- boot::inv.logit(-1.85 + 1.1 * x1)
+zi <- rbinom(n, size = 1, prob = eta)
+mu <- exp(-0.85 + 1.3 * x2)
+p <- rnbinom(n, mu = mu, size = 0.5)
+y <- (zi == 0) * p
+```
+
+## Bayesian Model
+
+```{r}
+brm(bf(y ~ x2, 
+       zi ~ x1), 
+    data = tibble(y, x1, x2),
+    family = zero_inflated_negbinomial(),
+    cores = 4)
+
+```
+
+
+# Hurdle Models
+
+## Hurdle Models
+
+Hurdle models are used to model data where the value 0 is believed to come from one distribution, and all the other values come from a separate distribution.
+
+::: fragment
+It can be thought of as data points had to overcome a hurdle to escape 0 to obtain a different value.
+:::
+
+## Hurdle Models
+
+$$
+P(x=0) = \left\{\begin{array}{cc}
+\pi & X=0 \\
+(1-\pi)g(x) & otherwise
+\end{array}
+\right.
+$$
+
+## ZI vs Hurdle
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Hurdle Models
+
+$$
+\begin{array}{c}
+\pi \\
+(1-\pi)g(x)
+\end{array}
+$$
+:::
+
+::: {.column width="50%"}
+### ZI Models
+
+$$
+\begin{array}{cc}
+\pi + (1-\pi)g(x) & X=0 \\
+(1-\pi)g(x) & otherwise
+\end{array}
+$$
+:::
+
+::::
+
+## Modelling 0
+
+When modeling a ZI-model, we need to determine where the 0 came from.
+
+::: fragment
+This is modeled using a Binary (logistic) GLM.
+:::
+
+## Hurdle Models
+
+-   Poisson
+-   Negative Binomial Model
+-   Log-Normal
+-   Gamma
+
+## Simulating Hurdle Poisson
+
+### Zero
+
+$$
+g(\pi) = 1.1 + 3.1 X
+$$
+
+### Poisson
+
+$$
+h(\lambda) = 0.75+1.3X
+$$
+
+
+## Hurdle Poisson Model
+
+```{r}
+n <- 10000
+x <- rnorm(n)
+eta <- boot::inv.logit(1.1 + 3.1 * x)
+zi <- rbinom(n, 1, eta)
+mu <- exp(0.75 + 1.3 * x)
+p <- rtpois(n, lambda = mu, a = 0)
+y <- (zi == 0) * p
+
+```
+
+## Bayesian Model
+
+```{r}
+brm(bf(y ~ x,
+       hu ~ x),
+    data = tibble(y, x),
+    family = hurdle_poisson(),
+    cores = 4)
+```
+
+
+## Simulating Hurdle Gamma
+
+### Zero
+
+$$
+g(\pi) = 1.1 + 3.1 X
+$$
+
+### Poisson
+
+$$
+h(\lambda) = 0.75+1.3X
+$$
+
+## Hurdle Gamma Model
+
+```{r}
+n <- 10000
+x <- rnorm(n, mean  = -0.25)
+eta <- boot::inv.logit(1.1 + 3.1 * x)
+zi <- rbinom(n, 1, eta)
+mu <- exp(0.75 + 1.3 * x)
+p <- rgamma(n, shape = 2, scale = mu / 2)
+y <- (zi == 0) * p
+```
+
+
+## Bayesian model
+
+```{r}
+brm(bf(y ~ x, 
+       hu ~ x), 
+    data = tibble(y, x),
+    family = hurdle_gamma(),
+    cores = 4)
+```
+
+
+# Cox Proportional Hazard Models
+
+## Cox Proportional Hazard Models
+
+Cox proportional hazard model was used to model the association between a set of predictors and a time-to-event, in the presence of an independent censoring mechanism.
+
+## Data Type
+
+::: incremental
+-   Data is typically recorded as time-to-event data
+
+-   For biomedical studies, researchers are interested in time from diagnosis to death, known as time-to-death
+:::
+
+
+## Censoring
+
+::: incremental
+-   Censoring is a mechanism where we do not observe the true time-to-event
+
+-   Not all the time is observed
+
+-   Three common types of censoring mechanisms: *Right, Left,* and *Interval*
+:::
+
+## Left Censoring
+
+```{r}
+#| eval: true
+dat <- data.frame(ID = 1:10, 
+                  t1 = c(7, 9, 10, 5, 5, 10, 5, 6, 6, 7) , 
+                  censored = c(1, 1, 1, 0, 0, 1, 0, 1, 1, 1))
+ggplot(dat, aes(x = ID, y = t1, shape = ifelse(censored, "Death", "Censored"))) + geom_point(size = 4) + 
+    geom_linerange(aes(ymin = 0, ymax = t1)) +
+    geom_hline(yintercept = 5, lty = 2) +
+    coord_flip() + 
+    scale_shape_manual(name = "Event", values = c(19, 15)) +
+    # ggtitle("Left Censoring") + 
+    xlab("Patient ID") +  ylab("Months") + 
+    theme_bw()
+
+```
+
+## Data Construction
+
+::: incremental
+-   $T_i^*$: True time-to-event
+
+-   $C_i$: Censoring Time
+
+-   $T_i=\min(T_i^*,C_i)$: Observed time-to-event
+
+-   $\delta_i = I(T_i^*<C_i)$: Event indicator
+:::
+
+## Hazard Function
+
+$$
+h(t) = \lim_{\Delta t \rightarrow 0} \frac{P(t \le T^* < t + \Delta t \mid T^* \ge t)}{\Delta t}
+$$
+
+## Proportional Hazard Model
+
+$$
+h(t \mid \boldsymbol X) = h_0(t) \exp(\boldsymbol\beta^\mathrm T\boldsymbol X)
+$$
+-   $h_0(t)$: baseline hazard function
+
+-   $\boldsymbol\beta$: regression coefficients
+
+-   $\boldsymbol X$: predictor variables
+
+## Simulated Model
+
+$$
+h(t \mid \boldsymbol X) = 1.5t^{0.5} \exp(-1.5X_1 + 2.3X_2)
+$$
+$$
+C_i\sim Exp(3.5)
+$$
+
+## Simulating Model
+
+```{r}
+n <- 10000
+tdf <- tibble()
+for (i in 1:10000){
+  phi <- 1.5
+  x.vec <- c(mvtnorm::rmvnorm(1,c(0,1.5),diag(c(1,.5))))
+  invS = function(t, u){
+    h = function(s) 
+    {
+      phi * s^(phi - 1) * exp(-x.vec[1] * 1.5 + x.vec[2] * 2.3)
+    }     
+    
+    integrate(h, lower = 0, upper = t, subdivisions = 2000)$value + log(u)			
+  }
+  u = runif(1)
+  Up <- 1
+  Root <- try(uniroot(invS, interval = c(0, Up), u = u)$root, TRUE)
+  while(inherits(Root, "try-error") | Root == 0) {
+    Up <- Up + 2
+    Root <- try(uniroot(invS, interval = c(0, Up), u = u)$root, TRUE)
+    if (Root == 0) {u <- runif(1)}
+  }
+  trueTimes <- if (!inherits(Root, "try-error")) Root else NA
+  
+  rateC = 3.5
+  Ctimes = rexp(1, rate = rateC)
+  
+  event.times = pmin(trueTimes, Ctimes,1)
+  delta_i = as.numeric(trueTimes <= min(Ctimes,1))
+  wdf <- tibble(x1 = x.vec[1], x2 = x.vec[2], time = event.times, censor = delta_i)
+  tdf <- bind_rows(tdf, wdf)
+}
+
+```
+
+## Bayesian Model
+
+
+```{r}
+
+brm(time | cens(1-censor) ~ x1 + x2,
+    data = tdf,
+    family = cox(),
+    cores = 4)
+
+```
+

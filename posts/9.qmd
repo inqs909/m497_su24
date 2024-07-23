@@ -17,6 +17,12 @@ editor_options:
 
 -   Hurdle Models
 
+    -   Poisson
+
+    -   Negative Binomial
+
+    -   Gamma
+
 -   Cox Proportional Hazard Models
 
 | Lecture                                                | Videos |
