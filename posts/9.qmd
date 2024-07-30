@@ -25,6 +25,6 @@ editor_options:
 
 -   Cox Proportional Hazard Models
 
-| Lecture                                                | Videos |
-|:-------------------------------------------------------|:-------|
-| [Slide](http://m497.inqs.info/lectures/9#/title-slide) |        |
+| Lecture                                                | Videos                                |
+|:-------------------------------------------------------|:--------------------------------------|
+| [Slide](http://m497.inqs.info/lectures/9#/title-slide) | [Video](https://youtu.be/dnfOGsg0Dxg) |
