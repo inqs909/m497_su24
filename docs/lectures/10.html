@@ -877,7 +877,7 @@ Y_{ijk} = \beta_0 + \beta_1 X_{ij} + \beta_2 t_{ijk} + b_i + b_{ij} + \varepsilo
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">brm</span>(y <span class="sc">~</span> x <span class="sc">+</span> t <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>jid) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>id),</span>
 <span id="cb7-2"><a></a>    <span class="at">data =</span> df,</span>
 <span id="cb7-3"><a></a>    <span class="at">family =</span> <span class="fu">gaussian</span>(),</span>
-<span id="cb7-4"><a></a>    <span class="at">iter =</span> <span class="dv">20000</span>,</span>
+<span id="cb7-4"><a></a>    <span class="at">iter =</span> <span class="dv">2000</span>,</span>
 <span id="cb7-5"><a></a>    <span class="at">cores =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
@@ -900,26 +900,9 @@ Y_{ijk} = \beta_0 + \beta_1 X_{ij} + \beta_2 t_{ijk} + b_i + b_{ij} + \varepsilo
 </section>
 <section id="random-effects-on-species" class="slide level2">
 <h2>Random Effects on Species</h2>
-$$ (
-<span class="math display">\[\begin{array}{c}
-S_1\\
-S_2\\
-S_3
-\end{array}\]</span>
-<p>) </p>
-N{(
-<span class="math display">\[\begin{array}{c}
-0\\
-0\\
-0
-\end{array}\]</span>
-), (
-<span class="math display">\[\begin{array}{c}
-\sigma_{1}^2 &amp; \sigma_{12} &amp; \sigma_{13}\\
-\sigma_{12} &amp; \sigma_{2}^2 &amp; \sigma_{23}\\
-\sigma_{13} &amp; \sigma_{23} &amp; \sigma_{3}^2
-\end{array}\]</span>
-<p>) } $$</p>
+<p><span class="math display">\[
+\left(\begin{array}{c}S_1\\S_2\\S_3\end{array}\right) \sim N\left\{\left(\begin{array}{c}0\\0\\0\end{array}\right), \left(\begin{array}{ccc}\sigma_{1}^2 &amp; \sigma_{12} &amp; \sigma_{13}\\\sigma_{12} &amp; \sigma_{2}^2 &amp; \sigma_{23}\\\sigma_{13} &amp; \sigma_{23} &amp; \sigma_{3}^2\end{array}\right) \right\}
+\]</span></p>
 </section>
 <section id="model-1" class="slide level2">
 <h2>Model</h2>
@@ -951,7 +934,7 @@ Y_{ijk} = \beta_0 + \beta_1 X_{i1} + \beta_2 t_j + b_{ij} + b_{i} + b_{sp(ij)} +
 <span id="cb8-3"><a></a>x3 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.10</span>, <span class="fl">0.43</span>, <span class="dv">1</span>)</span>
 <span id="cb8-4"><a></a>corr_x <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">rbind</span>(x1, x2, x3))</span>
 <span id="cb8-5"><a></a>cov_x <span class="ot">&lt;-</span> <span class="fl">2.2</span><span class="sc">^</span><span class="dv">2</span> <span class="sc">*</span> corr_x </span>
-<span id="cb8-6"><a></a>spe_id <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">times =</span> <span class="dv">5</span>)</span>
+<span id="cb8-6"><a></a>spe_id <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">times =</span> <span class="dv">10</span>)</span>
 <span id="cb8-7"><a></a>spe_re <span class="ot">&lt;-</span> <span class="fu">rmvnorm</span>(<span class="dv">1</span>, <span class="at">sigma =</span> cov_x)</span>
 <span id="cb8-8"><a></a></span>
 <span id="cb8-9"><a></a><span class="fu">rownames</span>(corr_x) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>)</span>
@@ -964,7 +947,7 @@ Y_{ijk} = \beta_0 + \beta_1 X_{i1} + \beta_2 t_j + b_{ij} + b_{i} + b_{sp(ij)} +
 <span id="cb8-16"><a></a>t <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">3</span></span>
 <span id="cb8-17"><a></a></span>
 <span id="cb8-18"><a></a>n <span class="ot">&lt;-</span> <span class="dv">15</span></span>
-<span id="cb8-19"><a></a>nn <span class="ot">&lt;-</span> <span class="dv">15</span></span>
+<span id="cb8-19"><a></a>nn <span class="ot">&lt;-</span> <span class="dv">30</span></span>
 <span id="cb8-20"><a></a>j <span class="ot">&lt;-</span> <span class="dv">1</span></span>
 <span id="cb8-21"><a></a></span>
 <span id="cb8-22"><a></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n){</span>
@@ -1003,8 +986,8 @@ Y_{ijk} = \beta_0 + \beta_1 X_{i1} + \beta_2 t_j + b_{ij} + b_{i} + b_{sp(ij)} +
 <span id="cb9-9"><a></a>      <span class="fu">prior</span>(<span class="fu">student_t</span>(<span class="dv">3</span>, <span class="dv">0</span>, <span class="dv">20</span>), <span class="st">"sigma"</span>)</span>
 <span id="cb9-10"><a></a>    ),</span>
 <span id="cb9-11"><a></a>    <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.99</span>,</span>
-<span id="cb9-12"><a></a>                   <span class="at">max_treedepth =</span> <span class="dv">20</span>),</span>
-<span id="cb9-13"><a></a>    <span class="at">iter =</span> <span class="dv">20000</span>,</span>
+<span id="cb9-12"><a></a>                   <span class="at">max_treedepth =</span> <span class="dv">30</span>),</span>
+<span id="cb9-13"><a></a>    <span class="at">iter =</span> <span class="dv">4000</span>,</span>
 <span id="cb9-14"><a></a>    <span class="at">cores =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>

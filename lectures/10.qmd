@@ -104,7 +104,6 @@ $$
 -   $\varepsilon_{ij} \sim N(0, \sigma^2_\varepsilon)$
 -   $b_i \perp \varepsilon_{ij}$
 
-
 ## Simulation Study
 
 -   500 Units (patients)
@@ -144,8 +143,6 @@ brm(y ~ x + t + (t|id),
     cores = 4)
 ```
 
-
-
 # Generalized Linear Mixed-Effects Models
 
 ## GLMM
@@ -162,7 +159,6 @@ $$
 -   $Y_{ij} \sim Bern(p_{ij})$
 -   $b_{i0}\sim N(0, 1.8^2)$
 -   $b_{i1}\sim N(0,1.5^2)$
-
 
 ## Simulation
 
@@ -276,7 +272,7 @@ for(i in 1:n){
 brm(y ~ x + t + (1|jid) + (1|id),
     data = df,
     family = gaussian(),
-    iter = 20000,
+    iter = 2000,
     cores = 4)
 ```
 
@@ -287,7 +283,6 @@ brm(y ~ x + t + (1|jid) + (1|id),
 ![](https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0516/0079.jpeg)
 
 ![](https://reptilesmagazine.com/wp-content/uploads/data-import/420237ac/golden-poison-dart-frog-shutterstock_521542363.jpg)
-
 
 ## Frog Species
 
@@ -301,25 +296,10 @@ Could they be evolutionarily related to each other?
 We need to account the relatedness using random effects.
 :::
 
-## Random Effects on Species 
+## Random Effects on Species
 
 $$
-\left(\begin{array}{c}
-S_1\\
-S_2\\
-S_3
-\end{array}\right) \sim
-
-N\left\{\left(\begin{array}{c}
-0\\
-0\\
-0
-\end{array}\right), \left(\begin{array}{c}
-\sigma_{1}^2 & \sigma_{12} & \sigma_{13}\\
-\sigma_{12} & \sigma_{2}^2 & \sigma_{23}\\
-\sigma_{13} & \sigma_{23} & \sigma_{3}^2
-\end{array}\right) 
-\right\}
+\left(\begin{array}{c}S_1\\S_2\\S_3\end{array}\right) \sim N\left\{\left(\begin{array}{c}0\\0\\0\end{array}\right), \left(\begin{array}{ccc}\sigma_{1}^2 & \sigma_{12} & \sigma_{13}\\\sigma_{12} & \sigma_{2}^2 & \sigma_{23}\\\sigma_{13} & \sigma_{23} & \sigma_{3}^2\end{array}\right) \right\}
 $$
 
 ## Model
@@ -328,12 +308,11 @@ $$
 Y_{ijk} = \beta_0 + \beta_1 X_{i1} + \beta_2 t_j + b_{ij} + b_{i} + b_{sp(ij)} + \varepsilon_{ijk}
 $$
 
-
 ## Simulation Study
 
 -   15 Housing Unit
 -   For each Housing Unit, there are 15 frogs
--   For each Housing Unit, there are 5 frogs of each species 
+-   For each Housing Unit, there are 5 frogs of each species
 -   For each frog, there are 4 repeated measurements
 -   $Y_{ijk} = 2 - 1.56 X_{i1} - 1.3 t_j + b_{ij} + b_{i} + b_{sp(ij)} + \varepsilon_{ijk}$
 -   $\varepsilon_{ijk} \sim N(0, 4)$
@@ -349,7 +328,7 @@ x2 <- c(0.80, 1, 0.43)
 x3 <- c(0.10, 0.43, 1)
 corr_x <- as.matrix(rbind(x1, x2, x3))
 cov_x <- 2.2^2 * corr_x 
-spe_id <- rep(1:3, times = 5)
+spe_id <- rep(1:3, times = 10)
 spe_re <- rmvnorm(1, sigma = cov_x)
 
 rownames(corr_x) <- c("A", "B", "C")
@@ -362,7 +341,7 @@ beta2 <- -1.3
 t <- 0:3
 
 n <- 15
-nn <- 15
+nn <- 30
 j <- 1
 
 for(i in 1:n){
@@ -399,7 +378,7 @@ brm(y ~ x + t + (1|jid) + (1|id) + (1|gr(spe, cov = A)),
       prior(student_t(3, 0, 20), "sigma")
     ),
     control = list(adapt_delta = 0.99,
-                   max_treedepth = 20),
-    iter = 20000,
+                   max_treedepth = 30),
+    iter = 4000,
     cores = 4)
 ```

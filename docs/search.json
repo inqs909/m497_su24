@@ -3441,7 +3441,7 @@
     "href": "lectures/10.html#bayesian-analysis-in-r-2",
     "title": "Simulation Studies",
     "section": "Bayesian Analysis in R",
-    "text": "Bayesian Analysis in R\n\n\nCode\nbrm(y ~ x + t + (1|jid) + (1|id),\n    data = df,\n    family = gaussian(),\n    iter = 20000,\n    cores = 4)"
+    "text": "Bayesian Analysis in R\n\n\nCode\nbrm(y ~ x + t + (1|jid) + (1|id),\n    data = df,\n    family = gaussian(),\n    iter = 2000,\n    cores = 4)"
   },
   {
     "objectID": "lectures/10.html#frog-study",
@@ -3462,7 +3462,7 @@
     "href": "lectures/10.html#random-effects-on-species",
     "title": "Simulation Studies",
     "section": "Random Effects on Species",
-    "text": "Random Effects on Species\n$$ (\n\\[\\begin{array}{c}\nS_1\\\\\nS_2\\\\\nS_3\n\\end{array}\\]\n) \nN{(\n\\[\\begin{array}{c}\n0\\\\\n0\\\\\n0\n\\end{array}\\]\n), (\n\\[\\begin{array}{c}\n\\sigma_{1}^2 & \\sigma_{12} & \\sigma_{13}\\\\\n\\sigma_{12} & \\sigma_{2}^2 & \\sigma_{23}\\\\\n\\sigma_{13} & \\sigma_{23} & \\sigma_{3}^2\n\\end{array}\\]\n) } $$"
+    "text": "Random Effects on Species\n\\[\n\\left(\\begin{array}{c}S_1\\\\S_2\\\\S_3\\end{array}\\right) \\sim N\\left\\{\\left(\\begin{array}{c}0\\\\0\\\\0\\end{array}\\right), \\left(\\begin{array}{ccc}\\sigma_{1}^2 & \\sigma_{12} & \\sigma_{13}\\\\\\sigma_{12} & \\sigma_{2}^2 & \\sigma_{23}\\\\\\sigma_{13} & \\sigma_{23} & \\sigma_{3}^2\\end{array}\\right) \\right\\}\n\\]"
   },
   {
     "objectID": "lectures/10.html#model-1",
@@ -3483,14 +3483,14 @@
     "href": "lectures/10.html#simulation-3",
     "title": "Simulation Studies",
     "section": "Simulation",
-    "text": "Simulation\n\n\nCode\nx1 &lt;- c(1, 0.80, 0.10)\nx2 &lt;- c(0.80, 1, 0.43)\nx3 &lt;- c(0.10, 0.43, 1)\ncorr_x &lt;- as.matrix(rbind(x1, x2, x3))\ncov_x &lt;- 2.2^2 * corr_x \nspe_id &lt;- rep(1:3, times = 5)\nspe_re &lt;- rmvnorm(1, sigma = cov_x)\n\nrownames(corr_x) &lt;- c(\"A\", \"B\", \"C\")\ncolnames(corr_x) &lt;- c(\"A\", \"B\", \"C\")\n\ndf &lt;- tibble()\nbeta0 &lt;- 2\nbeta1 &lt;- -1.56\nbeta2 &lt;- -1.3\nt &lt;- 0:3\n\nn &lt;- 15\nnn &lt;- 15\nj &lt;- 1\n\nfor(i in 1:n){\n  xi &lt;- rnorm(1, sd = .6)\n  for(ii in 1:nn){\n    b0 &lt;- rnorm(1, sd = 1.1)\n    x.vec &lt;- rmvnorm(1, sigma = diag(rep(1, 4))) |&gt; as.vector()\n    y &lt;- beta0 + beta1 * t + beta2 * x.vec + \n          b0 + xi + spe_re[spe_id[ii]] + rnorm(4, sd = 2) |&gt; \n      as.vector()\n    df &lt;- bind_rows(df,\n                    tibble(y = y, x = x.vec, t = t, \n                           id = i, id2 = ii, jid = j, \n                           spe = case_when(spe_id[ii] == 1 ~ \"A\",\n                                           spe_id[ii] == 2 ~ \"B\",\n                                           spe_id[ii] == 3 ~ \"C\")))\n    j &lt;- j + 1\n  }\n}"
+    "text": "Simulation\n\n\nCode\nx1 &lt;- c(1, 0.80, 0.10)\nx2 &lt;- c(0.80, 1, 0.43)\nx3 &lt;- c(0.10, 0.43, 1)\ncorr_x &lt;- as.matrix(rbind(x1, x2, x3))\ncov_x &lt;- 2.2^2 * corr_x \nspe_id &lt;- rep(1:3, times = 10)\nspe_re &lt;- rmvnorm(1, sigma = cov_x)\n\nrownames(corr_x) &lt;- c(\"A\", \"B\", \"C\")\ncolnames(corr_x) &lt;- c(\"A\", \"B\", \"C\")\n\ndf &lt;- tibble()\nbeta0 &lt;- 2\nbeta1 &lt;- -1.56\nbeta2 &lt;- -1.3\nt &lt;- 0:3\n\nn &lt;- 15\nnn &lt;- 30\nj &lt;- 1\n\nfor(i in 1:n){\n  xi &lt;- rnorm(1, sd = .6)\n  for(ii in 1:nn){\n    b0 &lt;- rnorm(1, sd = 1.1)\n    x.vec &lt;- rmvnorm(1, sigma = diag(rep(1, 4))) |&gt; as.vector()\n    y &lt;- beta0 + beta1 * t + beta2 * x.vec + \n          b0 + xi + spe_re[spe_id[ii]] + rnorm(4, sd = 2) |&gt; \n      as.vector()\n    df &lt;- bind_rows(df,\n                    tibble(y = y, x = x.vec, t = t, \n                           id = i, id2 = ii, jid = j, \n                           spe = case_when(spe_id[ii] == 1 ~ \"A\",\n                                           spe_id[ii] == 2 ~ \"B\",\n                                           spe_id[ii] == 3 ~ \"C\")))\n    j &lt;- j + 1\n  }\n}"
   },
   {
     "objectID": "lectures/10.html#bayesian-analysis-in-r-3",
     "href": "lectures/10.html#bayesian-analysis-in-r-3",
     "title": "Simulation Studies",
     "section": "Bayesian Analysis in R",
-    "text": "Bayesian Analysis in R\n\n\nCode\nbrm(y ~ x + t + (1|jid) + (1|id) + (1|gr(spe, cov = A)),\n    data = df,\n    data2 = list(A = corr_x),\n    family = gaussian(),\n    prior = c(\n      prior(normal(0, 10), \"b\"),\n      prior(normal(0, 50), \"Intercept\"),\n      prior(student_t(3, 0, 20), \"sd\"),\n      prior(student_t(3, 0, 20), \"sigma\")\n    ),\n    control = list(adapt_delta = 0.99,\n                   max_treedepth = 20),\n    iter = 20000,\n    cores = 4)"
+    "text": "Bayesian Analysis in R\n\n\nCode\nbrm(y ~ x + t + (1|jid) + (1|id) + (1|gr(spe, cov = A)),\n    data = df,\n    data2 = list(A = corr_x),\n    family = gaussian(),\n    prior = c(\n      prior(normal(0, 10), \"b\"),\n      prior(normal(0, 50), \"Intercept\"),\n      prior(student_t(3, 0, 20), \"sd\"),\n      prior(student_t(3, 0, 20), \"sigma\")\n    ),\n    control = list(adapt_delta = 0.99,\n                   max_treedepth = 30),\n    iter = 4000,\n    cores = 4)"
   },
   {
     "objectID": "lectures/8.html#r-packages",
