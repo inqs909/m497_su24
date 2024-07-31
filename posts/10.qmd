@@ -17,6 +17,6 @@ editor_options:
 
 -   Multilevel Models
 
-| Lecture                                                 | Videos |
-|:--------------------------------------------------------|:-------|
-| [Slide](http://m497.inqs.info/lectures/10#/title-slide) |        |
+| Lecture                                                 | Videos                                |
+|:--------------------------------------------------------|:--------------------------------------|
+| [Slide](http://m497.inqs.info/lectures/10#/title-slide) | [Video](https://youtu.be/F6Wk0a8d14w) |
